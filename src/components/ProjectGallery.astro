@@ -19,14 +19,15 @@ const { items, title = 'مشاريع منفذة' } = Astro.props;
   <h2 class="gallery__title" id="projects-heading">{title}</h2>
   <ul class="gallery__grid">
     {
-      items.map((item, i) => (
+      items.map((item) => (
         <li class="gallery__item">
           <Image
             src={item.file}
             alt={item.alt}
             widths={[400, 600, 800]}
             sizes="(max-width: 640px) 50vw, (max-width: 960px) 33vw, 25vw"
-            loading={i < 2 ? 'eager' : 'lazy'}
+            loading="lazy"
+            fetchpriority="low"
             decoding="async"
             class="gallery__img"
           />

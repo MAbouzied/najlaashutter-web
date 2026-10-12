@@ -31,7 +31,8 @@
 
 | Build | Performance | LCP | TBT | A11y | Notes |
 |-------|-------------|-----|-----|------|--------|
-| **GTM on** (`build:staging`) | **68** | 4.0 s | **760 ms** | 96 | `docs/review-screenshots/lighthouse-mobile-gtm-on.json` |
+| **GTM on** (`build:staging`, after 2A.1) | **90** | 2.4 s | **340 ms** | 96 | `lighthouse-mobile-gtm-on.json` (2026-10-12) |
+| **GTM on** (pre-2A.1 baseline) | **68** | 4.0 s | **760 ms** | 96 | earlier run |
 | **GTM off** (`PUBLIC_DISABLE_GTM=true`) | **95** | 2.8 s | **0 ms** | 96 | Diagnostic only — `lighthouse-mobile-gtm-off.json` |
 
 **TBT cause (GTM on):** bootup-time dominated by `googletagmanager.com/gtm.js` (GTM-WXVGK7F4) and `gtag/js?id=AW-17774174461` (Google Ads via GTM). First-party Astro HTML/JS is negligible.
@@ -40,4 +41,16 @@
 
 **Fonts:** Google Fonts removed; Noto Kufi Arabic self-hosted under `/public/fonts/` (subset woff2). GTM-off run includes self-hosted fonts; use GTM-off delta mainly to isolate tag manager cost.
 
-**SEO score 69:** staging `noindex` + `robots.txt` Disallow — expected for review builds, not production launch config.
+**SEO score 69:** staging `noindex` + `robots.txt` Disallow — expected for review builds, not production launch config. Do **not** report staging SEO as 100.
+
+## Launch checklist (separate from Phase 2A)
+
+- [ ] **GTM container optimization** — TBT/LCP cost is primarily GTM + Google Ads tag `AW-17774174461`. Review tag firing, deferral, and Ads-only loads in GTM UI before/after cutover. Do **not** delay-load GTM in site code without a signed-off GTM plan.
+
+## Phase 2A.1
+
+- **Mobile overflow:** `site-header__actions { display: none }` below 768px — verified `scrollWidth === clientWidth` at 320, 360, 375, 390, 412, 430 (`docs/review-screenshots/mobile-overflow-test.json`).
+- **Raw hero:** `uploads/2024/03/WhatsApp-Image-2024-03-06-at-3.28.45-PM.jpeg` (three black roller shutters, no embedded «Our works» art). Other raw candidates in backup: `…3.28.46-PM-1.jpeg`, `…3.28.47-PM-3.jpeg`.
+- **Gallery:** all `loading="lazy"`, `fetchpriority="low"`.
+- **Hero subline:** توريد وتركيب شتر نوافذ خارجي وداخلي، يدوي وكهربائي في جدة.
+- **Screenshots:** Playwright `fullPage: true` — see `docs/review-screenshots/`.

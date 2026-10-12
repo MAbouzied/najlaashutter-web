@@ -1,0 +1,42 @@
+{
+  "testedAt": "2026-10-12T16:02:33.873Z",
+  "url": "http://127.0.0.1:4325/window-shutters-jeddah/",
+  "results": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "ok": true
+    },
+    {
+      "width": 360,
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "ok": true
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "ok": true
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "ok": true
+    },
+    {
+      "width": 412,
+      "scrollWidth": 412,
+      "clientWidth": 412,
+      "ok": true
+    },
+    {
+      "width": 430,
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "ok": true
+    }
+  ]
+}

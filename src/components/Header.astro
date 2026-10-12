@@ -37,8 +37,8 @@ const { minimal = true } = Astro.props;
       )
     }
     <div class="site-header__actions">
-      <PhoneCTA class="site-header__phone hide-mobile" variant="ghost" />
-      <WhatsAppCTA class="hide-mobile" label="واتساب" />
+      <PhoneCTA class="site-header__phone" variant="ghost" />
+      <WhatsAppCTA label="واتساب" />
     </div>
   </div>
 </header>
@@ -91,9 +91,14 @@ const { minimal = true } = Astro.props;
     color: rgba(255, 255, 255, 0.92);
   }
   .site-header__actions {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 0.5rem;
+  }
+  @media (min-width: 768px) {
+    .site-header__actions {
+      display: flex;
+    }
   }
   .site-header__actions :global(.btn--ghost) {
     color: #fff;
@@ -104,8 +109,11 @@ const { minimal = true } = Astro.props;
     color: #fff;
   }
   @media (max-width: 767px) {
-    .hide-mobile {
-      display: none !important;
+    .site-header__brand {
+      min-width: 0;
+    }
+    .site-header__wordmark {
+      min-width: 0;
     }
   }
 </style>

@@ -10,13 +10,13 @@ import p7 from '../assets/images/projects/WhatsApp-Image-2025-11-24-at-18.49.47-
 import p8 from '../assets/images/projects/WhatsApp-Image-2025-11-24-at-18.49.47.jpeg';
 import logo from '../assets/brand/logo.png';
 
-/** Real project photo — black roller shutter on exterior wall (WP uploads/2025/11). */
-import heroProject from '../assets/images/projects/WhatsApp-Image-2025-11-24-at-18.49.48-3.jpeg';
+/** Raw WhatsApp project photo (no «من أعمالنا» overlay) — WP uploads/2024/03. */
+import heroProject from '../assets/images/hero-project-raw.jpeg';
 
 export const assetSources = {
   hero: {
     file: heroProject,
-    source: 'uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-3.jpeg',
+    source: 'uploads/2024/03/WhatsApp-Image-2024-03-06-at-3.28.45-PM.jpeg',
   },
   logo: {
     file: logo,

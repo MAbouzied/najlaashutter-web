@@ -12,9 +12,12 @@
     "build:staging:no-gtm": "PUBLIC_STAGING=true PUBLIC_DISABLE_GTM=true astro build",
     "preview": "astro preview",
     "deploy": "wrangler deploy",
+    "review:screenshots": "node scripts/capture-review-screenshots.mjs",
+    "review:overflow": "node scripts/verify-mobile-overflow.mjs",
     "astro": "astro"
   },
   "devDependencies": {
+    "playwright": "^1.55.0",
     "wrangler": "^4.149.0"
   },
   "dependencies": {

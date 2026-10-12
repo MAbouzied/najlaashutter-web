@@ -22,9 +22,10 @@ npm run preview  # serve dist/
 
 - **Build command:** `npm run build` (production) or `npm run build:staging` (noindex preview)
 - **Build output directory:** `dist`
-- **Deploy command:** leave **empty** — Pages uploads `dist` automatically from Git.
+- **Build output directory:** `dist`
+- **Deploy command:** leave **empty** when the project is connected to Git. Cloudflare publishes `dist` after `npm run build` — no Wrangler step needed.
 
-Do **not** use `npx wrangler deploy` (Workers). That fails on this static site with “Missing entry-point to Worker script”. If you must deploy from CI with Wrangler, use `npm run pages:deploy` (`wrangler pages deploy dist`). Project name and `pages_build_output_dir` are in `wrangler.toml`.
+Do **not** use `npx wrangler deploy` (Workers). Do **not** set `npm run pages:deploy` on Git builds unless you need a manual Wrangler upload; it calls the Pages API and can fail with token/auth errors even when the build is fine. For local CLI deploy only: `npm run pages:deploy` (uses `name` in `wrangler.toml`).
 
 - Node: 22+ (matches `package.json` engines)
 

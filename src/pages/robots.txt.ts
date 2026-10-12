@@ -1,15 +1,9 @@
 import type { APIRoute } from 'astro';
-import { isAdsSite } from '../config/env';
 import { site } from '../config/site';
 
-/** Production robots; non-production hosts override via Cloudflare Worker / Pages _headers. */
+/** Production robots; non-production hosts override via Cloudflare Worker. */
 export const GET: APIRoute = () => {
-  const body = isAdsSite
-    ? `# ads.najlaashutter.com — paid landing (no organic sitemap)
-User-agent: *
-Disallow:
-`
-    : `# najlaashutter.com
+  const body = `# najlaashutter.com
 User-agent: *
 Allow: /
 

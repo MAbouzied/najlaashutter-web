@@ -8,7 +8,6 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "build:ads": "node scripts/build-ads.mjs",
     "build:staging": "PUBLIC_STAGING=true astro build",
     "build:staging:no-gtm": "PUBLIC_STAGING=true PUBLIC_DISABLE_GTM=true astro build",
     "preview": "astro preview",

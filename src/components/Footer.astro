@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import { assetSources } from '../config/project-images';
-import { isAdsSite } from '../config/env';
 import { site } from '../config/site';
 
 interface Props {
@@ -11,13 +10,12 @@ interface Props {
 }
 
 const { minimal = true, serviceAreaNote = site.serviceAreaNote } = Astro.props;
-const brandHref = isAdsSite ? '/' : site.paths.landingJeddah;
 ---
 
 <footer class="site-footer">
   <div class="site-footer__inner">
     <div class="site-footer__brand">
-      <a href={brandHref} class="site-footer__brand-link" aria-label={site.name}>
+      <a href={site.paths.landingJeddah} class="site-footer__brand-link" aria-label={site.name}>
         <Image
           src={assetSources.logo.file}
           alt=""

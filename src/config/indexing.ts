@@ -1,0 +1,18 @@
+/** Production hosts that may be indexed (canonical domain only). */
+export const PRODUCTION_HOSTS = new Set(['najlaashutter.com', 'www.najlaashutter.com']);
+
+export function isProductionHost(hostname: string): boolean {
+  const host = hostname.toLowerCase().split(':')[0];
+  return PRODUCTION_HOSTS.has(host);
+}
+
+/** Non-production preview hosts must never be indexed. */
+export function shouldBlockIndexing(hostname: string): boolean {
+  const host = hostname.toLowerCase().split(':')[0];
+  if (isProductionHost(host)) return false;
+  if (host === 'localhost' || host === '127.0.0.1') return true;
+  if (host.endsWith('.workers.dev')) return true;
+  if (host.endsWith('.pages.dev')) return true;
+  if (host.includes('preview')) return true;
+  return true;
+}

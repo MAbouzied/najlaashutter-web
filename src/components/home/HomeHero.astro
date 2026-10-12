@@ -1,0 +1,96 @@
+---
+import { Image } from 'astro:assets';
+import { homepageContent, homepageThemeAssets } from '../../config/homepage-content';
+import { site } from '../../config/site';
+---
+
+<section class="position-relative" aria-label="العرض الرئيسي">
+  <div id="hero-desktop-mount" class="hero-desktop-only" data-hero-desktop-mount></div>
+
+  <template id="hero-desktop-template">
+    <div
+      class="hero-carousel hero-carousel--desktop hero-carousel-fade"
+      data-fade-carousel
+      data-autoplay-delay="7000"
+    >
+      <div class="hero-carousel__slides">
+        {
+          homepageContent.heroDesktopSlider.map((slide, i) => (
+            <div class:list={['hero-carousel__slide', { 'is-active': i === 0 }]}>
+              <div id="top-image">
+                <Image
+                  src={slide.image}
+                  alt={slide.title}
+                  widths={[768, 1200, 1600]}
+                  sizes="100vw"
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                  fetchpriority={i === 0 ? 'high' : 'low'}
+                  decoding="async"
+                />
+              </div>
+              <div class="carousel-caption">
+                <p class="text-main">{slide.title}</p>
+                <p class="excerpt">{slide.excerpt}</p>
+                <button type="button" class="pw-btn btn-unq" data-open-dialog="pw-book-modal">
+                  استشارة مجانية
+                </button>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <div class="hero-carousel__controls">
+        <button type="button" data-fade-prev aria-label="الشريحة السابقة">›</button>
+        <button type="button" data-fade-next aria-label="الشريحة التالية">‹</button>
+      </div>
+    </div>
+  </template>
+
+  <div
+    class="hero-carousel hero-carousel--mobile hero-mobile-only hero-carousel-fade"
+    data-fade-carousel
+    data-autoplay-delay="7000"
+  >
+    <div class="hero-carousel__slides">
+      {
+        homepageThemeAssets.heroMobile.map((img, i) => (
+          <div class:list={['hero-carousel__slide', { 'is-active': i === 0 }]}>
+            <div id="top-image">
+              <Image
+                src={img}
+                alt={site.nameEn}
+                widths={[390, 780]}
+                sizes="100vw"
+                loading={i === 0 ? 'eager' : 'lazy'}
+                fetchpriority={i === 0 ? 'high' : 'low'}
+                decoding="async"
+              />
+              <div class="img-overlay" />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="carousel-caption">
+      <button type="button" class="btn-home" data-open-dialog="pw-book-modal">اتصل بنا</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const mount = document.querySelector('[data-hero-desktop-mount]');
+  const tpl = document.getElementById('hero-desktop-template') as HTMLTemplateElement | null;
+  const desktopMq = window.matchMedia('(min-width: 992px)');
+
+  function mountDesktopHero() {
+    if (!mount || !tpl || mount.childElementCount > 0) return;
+    if (!desktopMq.matches) return;
+    mount.appendChild(tpl.content.cloneNode(true));
+    document.dispatchEvent(new CustomEvent('home:carousels-init'));
+  }
+
+  if (desktopMq.matches) mountDesktopHero();
+  desktopMq.addEventListener('change', (e) => {
+    if (e.matches) mountDesktopHero();
+  });
+</script>

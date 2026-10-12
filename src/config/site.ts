@@ -41,7 +41,20 @@ export const site = {
     mapsUrl: 'https://maps.app.goo.gl/A5XTwRhtwWvPCETU6',
   },
 
-  /** Service area wording aligned with existing footer (Jeddah + Makkah). */
+  /**
+   * Homepage / main-site service area (Jeddah + Makkah).
+   * FLAG: confirm with client — WP copy also mentions broader claims in some blocks.
+   */
+  serviceArea: {
+    homepagePromo: 'تركيب شتر النوافذ في جدة ومكة',
+    footerNote: 'تركيب شتر النوافذ في جدة ومكة',
+    needsBusinessConfirmation: true as const,
+  },
+
+  /** Verified Google Business Profile (reviews sync deferred). */
+  googleBusinessProfileUrl: 'https://maps.app.goo.gl/GLKGw6Q6KkzqDohA6',
+
+  /** @deprecated Use serviceArea.homepagePromo */
   serviceAreaNote: 'تركيب شتر النوافذ في جدة ومكة',
 
   offers: {

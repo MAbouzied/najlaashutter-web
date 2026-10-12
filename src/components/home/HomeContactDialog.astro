@@ -1,0 +1,57 @@
+---
+import { site } from '../../config/site';
+---
+
+<dialog id="pw-book-modal" class="home-dialog" aria-labelledby="pw-book-title">
+  <div class="home-dialog__panel">
+    <button type="button" class="home-dialog__close" data-close-dialog aria-label="إغلاق">×</button>
+    <h2 id="pw-book-title" class="text-main">اتصل بنا</h2>
+    <p class="text-sub">نحن على استعداد لتقديم استشارة تناسب احتياجك.</p>
+    <div class="home-dialog__actions">
+      <a
+        class="pw-btn btn-main"
+        href={site.phone.telHref}
+        data-conversion="phone"
+        data-close-dialog-link
+      >
+        اتصل: {site.phone.display}
+      </a>
+      <a
+        class="pw-btn btn-unq"
+        href={site.whatsapp.href('السلام عليكم، أرغب في استشارة حول شتر النوافذ.')}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-conversion="whatsapp"
+      >
+        واتساب
+      </a>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="pw-search-modal" class="home-dialog" aria-labelledby="pw-search-title">
+  <div class="home-dialog__panel">
+    <button type="button" class="home-dialog__close" data-close-dialog aria-label="إغلاق">×</button>
+    <h2 id="pw-search-title" class="text-main">بحث الموقع</h2>
+    <p class="text-sub">
+      البحث الكامل سيتوفر بعد نقل صفحات المدونة والخدمات. حتى ذلك الحين يمكنك التواصل معنا مباشرة.
+    </p>
+    <a class="pw-btn btn-main" href={site.phone.telHref} data-conversion="phone">اتصل بنا</a>
+  </div>
+</dialog>
+
+<script>
+  document.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement | null;
+    const openBtn = target?.closest('[data-open-dialog]');
+    if (openBtn) {
+      const id = openBtn.getAttribute('data-open-dialog');
+      const dlg = id ? (document.getElementById(id) as HTMLDialogElement | null) : null;
+      dlg?.showModal();
+      return;
+    }
+    if (target?.closest('[data-close-dialog]')) {
+      (target.closest('dialog') as HTMLDialogElement | null)?.close();
+    }
+  });
+</script>

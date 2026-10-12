@@ -4,16 +4,26 @@ import { assetSources } from '../../config/project-images';
 import { site } from '../../config/site';
 import { homepageContent } from '../../config/homepage-content';
 import { menuItemHref } from '../../config/home-routes';
+import footerBg from '../../assets/theme/footer-bg.jpg';
 
 const foot1 = homepageContent.navMenus['foot-1'];
 const foot2 = homepageContent.navMenus['foot-2'];
 const footMenu = homepageContent.navMenus['foot-menu'];
 ---
 
-<footer class="home-footer">
+<footer id="footer" class="home-footer">
+  <Image
+    src={footerBg}
+    alt=""
+    class="home-footer__bg"
+    widths={[768, 1400]}
+    sizes="100vw"
+    loading="lazy"
+    decoding="async"
+  />
   <div class="container home-footer__grid">
-    <div>
-      <a href="/" class="home-header__brand">
+    <div class="home-footer__brand-col">
+      <a href="/" class="home-header__brand pw-logo-footer">
         <Image
           src={assetSources.logo.file}
           alt=""
@@ -26,18 +36,20 @@ const footMenu = homepageContent.navMenus['foot-menu'];
         />
         <span class="visually-hidden">{site.name}</span>
       </a>
-      <p style="margin-top:0.75rem; opacity:0.9">{site.description}</p>
-      <p style="margin-top:0.5rem">
+      <p class="home-footer__desc">{site.description}</p>
+      <div class="contact-list">
         <a href={site.phone.telHref} data-conversion="phone">{site.phone.display}</a>
-      </p>
-      <p>
         <a href={site.email.href}>{site.email.address}</a>
-      </p>
-      <p>{site.location.shortLabel}</p>
+        <span>{site.location.shortLabel}</span>
+      </div>
+      <div class="socials" aria-label="وسائل التواصل (قيد التحقق)">
+        <span class="social-icon social-icon--disabled" title="حسابات التواصل قيد التحقق">f</span>
+        <span class="social-icon social-icon--disabled" title="حسابات التواصل قيد التحقق">in</span>
+      </div>
     </div>
     <div>
       <h3>روابط سريعة</h3>
-      <ul>
+      <ul class="pw-fot-lst">
         {
           foot1.map((item) => (
             <li>
@@ -49,7 +61,7 @@ const footMenu = homepageContent.navMenus['foot-menu'];
     </div>
     <div>
       <h3>خدماتنا</h3>
-      <ul>
+      <ul class="pw-fot-lst">
         {
           foot2.map((item) => (
             <li>
@@ -70,7 +82,7 @@ const footMenu = homepageContent.navMenus['foot-menu'];
     }
   </ul>
   <p class="home-footer__copy container">
-    © {new Date().getFullYear()} {site.name} — {site.serviceAreaNote}
+    © {new Date().getFullYear()} {site.name} — {site.serviceArea.footerNote}
   </p>
 </footer>
 

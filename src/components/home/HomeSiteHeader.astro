@@ -12,10 +12,10 @@ const childrenOf = (parentId: number) =>
 const sideItems = homepageContent.navMenus['side-menu'];
 ---
 
-<div class="home-header-top">
+<div class="home-header-top" id="pw-header-top">
   <div class="container home-header-top__inner">
-    <p class="promo-text">{site.serviceAreaNote}</p>
-    <div class="home-header-top__contact">
+    <p class="promo-text">{site.serviceArea.homepagePromo}</p>
+    <div class="home-header-top__contact contact-info">
       <a href={site.phone.telHref} data-conversion="phone">{site.phone.display}</a>
       <a href={site.email.href}>{site.email.address}</a>
     </div>
@@ -24,7 +24,7 @@ const sideItems = homepageContent.navMenus['side-menu'];
 
 <header id="pw-header">
   <div class="container home-header__inner">
-    <a href={homePaths.home} class="home-header__brand">
+    <a href={homePaths.home} class="home-header__brand pw-logo">
       <Image
         src={assetSources.logo.file}
         alt=""
@@ -35,7 +35,7 @@ const sideItems = homepageContent.navMenus['side-menu'];
         decoding="async"
         class="nav-logo"
       />
-      <span class="home-header__najlaa">{site.nameEn}</span>
+      <span class="home-header__najlaa najlaa">{site.nameEn}</span>
     </a>
 
     <nav id="pw-main-nav" aria-label="التنقل الرئيسي">
@@ -65,18 +65,17 @@ const sideItems = homepageContent.navMenus['side-menu'];
     </nav>
 
     <div class="home-header__actions">
-      <a
-        class="pw-head-btn2"
-        href={site.whatsapp.href('السلام عليكم، أرغب في استشارة مجانية حول شتر النوافذ.')}
-        target="_blank"
-        rel="noopener noreferrer"
-        data-conversion="whatsapp"
+      <button
+        type="button"
+        class="pw-head-btn1 pw-btn-search header-icon"
+        aria-label="بحث الموقع"
+        data-open-dialog="pw-search-modal"
       >
-        واتساب
-      </a>
-      <a class="pw-head-btn2" href={site.phone.telHref} data-conversion="phone">
-        اتصل
-      </a>
+        🔍
+      </button>
+      <button type="button" class="pw-head-btn2" data-open-dialog="pw-book-modal">
+        اتصل بنا
+      </button>
     </div>
 
     <button type="button" class="home-header__menu-toggle" aria-expanded="false" aria-controls="pw-side-menu" data-open-nav>
@@ -104,16 +103,17 @@ const sideItems = homepageContent.navMenus['side-menu'];
 
 <script>
   const menu = document.getElementById('pw-side-menu');
-  const openBtn = document.querySelector('[data-open-nav]');
-  const closeEls = document.querySelectorAll('[data-close-nav], [data-close-nav-link]');
+  const openBtns = document.querySelectorAll('[data-open-nav]');
 
   function setOpen(open: boolean) {
     menu?.classList.toggle('is-open', open);
     menu?.setAttribute('aria-hidden', open ? 'false' : 'true');
-    openBtn?.setAttribute('aria-expanded', open ? 'true' : 'false');
+    openBtns.forEach((btn) => btn.setAttribute('aria-expanded', open ? 'true' : 'false'));
     document.body.style.overflow = open ? 'hidden' : '';
   }
 
-  openBtn?.addEventListener('click', () => setOpen(true));
-  closeEls.forEach((el) => el.addEventListener('click', () => setOpen(false)));
+  openBtns.forEach((btn) => btn.addEventListener('click', () => setOpen(true)));
+  document.querySelectorAll('[data-close-nav], [data-close-nav-link]').forEach((el) => {
+    el.addEventListener('click', () => setOpen(false));
+  });
 </script>

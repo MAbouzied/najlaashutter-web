@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import PageMeta from '../components/PageMeta.astro';
 import { site } from '../config/site';
-import { isGtmDisabled, isStaging } from '../config/env';
+import { isGtmDisabled } from '../config/env';
 import type { ImageMetadata } from 'astro';
 
 interface Props {
@@ -26,7 +26,8 @@ const {
 } = Astro.props;
 
 const gtmId = isGtmDisabled ? undefined : site.tracking.gtmId;
-const robotsNoindex = noindex || isStaging;
+/** Production HTML stays indexable; preview hosts get noindex via `src/worker.ts`. */
+const robotsNoindex = noindex || import.meta.env.DEV;
 ---
 
 <!doctype html>

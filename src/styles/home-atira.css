@@ -784,3 +784,214 @@
 body.home-atira.has-mobile-bar {
   padding-bottom: 4.25rem;
 }
+
+body.home-atira.has-fixed-footer {
+  padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+}
+@media (min-width: 992px) {
+  body.home-atira.has-fixed-footer {
+    padding-bottom: 0;
+  }
+}
+
+.home-atira .pw-fixed-footer {
+  z-index: 9001;
+  position: fixed;
+  bottom: 0;
+  inset-inline: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 5px #333;
+  padding: 0.35rem 0.15rem calc(0.35rem + env(safe-area-inset-bottom, 0px));
+}
+@media (min-width: 992px) {
+  .home-atira .pw-fixed-footer {
+    display: none;
+  }
+}
+.home-atira .pw-fixed-footer a,
+.home-atira .pw-fixed-footer button {
+  display: inline-block;
+  width: 18%;
+  background: none;
+  border: none;
+  color: var(--pw-main);
+  text-align: center;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.15rem;
+  text-decoration: none;
+}
+.home-atira .pw-fixed-footer span {
+  display: block;
+  font-size: 0.78rem;
+  margin: 0.2rem auto 0;
+}
+.home-atira .pw-fixed-footer__icon {
+  display: inline-block;
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.home-atira .home-cont-ban {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.home-atira .home-cont-ban__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.home-atira .home-cont-ban .container {
+  position: relative;
+  z-index: 2;
+}
+.home-atira .home-cont-ban .ban-content {
+  text-align: center;
+  max-width: 720px;
+  margin: auto;
+}
+.home-atira .home-cont-ban h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+.home-atira .home-cont-ban p {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.home-atira .home-dialog {
+  border: none;
+  padding: 0;
+  border-radius: 12px;
+  max-width: min(92vw, 440px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+.home-atira .home-dialog::backdrop {
+  background: rgba(19, 48, 78, 0.55);
+}
+.home-atira .home-dialog__panel {
+  padding: 1.5rem;
+}
+.home-atira .home-dialog__close {
+  float: inline-end;
+  border: none;
+  background: transparent;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--pw-main);
+}
+.home-atira .home-dialog__actions {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.home-atira .pw-rev {
+  position: relative;
+  height: 210px;
+  overflow: auto;
+  padding: 1.25rem 1rem 1rem 3rem;
+  margin: 1rem auto;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 14px rgba(19, 48, 78, 0.08);
+  max-width: 400px;
+}
+.home-atira .pw-rev-img {
+  width: 40px;
+  position: absolute;
+  inset-inline-start: 15px;
+  top: 15px;
+}
+.home-atira .pw-rev--pending h3 {
+  font-size: 1.15rem;
+  margin: 0.5rem 0;
+}
+
+.home-atira .pw-hgal-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+}
+
+.home-atira .home-lightbox {
+  border: none;
+  padding: 0;
+  max-width: min(96vw, 1100px);
+  background: #000;
+}
+.home-atira .home-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+.home-atira .home-lightbox img {
+  display: block;
+  max-width: 96vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+.home-atira .home-lightbox__close {
+  position: fixed;
+  top: 1rem;
+  inset-inline-end: 1rem;
+  z-index: 2;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--pw-main);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.home-atira .home-footer {
+  position: relative;
+  overflow: hidden;
+}
+.home-atira .home-footer__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.home-atira .home-footer__grid,
+.home-atira .home-footer__copy,
+.home-atira .pw-fot-mnu {
+  position: relative;
+  z-index: 1;
+}
+.home-atira .pw-logo-footer .nav-logo {
+  max-width: 100px;
+}
+.home-atira .pw-fot-lst {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.home-atira .pw-fot-lst a {
+  color: #fff;
+}
+.home-atira .social-icon--disabled {
+  opacity: 0.45;
+  cursor: default;
+}

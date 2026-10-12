@@ -1,11 +1,15 @@
 ---
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HomeSiteHeader from '../components/home/HomeSiteHeader.astro';
 import HomeSiteFooter from '../components/home/HomeSiteFooter.astro';
-import HomeMobileBar from '../components/home/HomeMobileBar.astro';
+import HomeFixedFooter from '../components/home/HomeFixedFooter.astro';
+import HomeHero from '../components/home/HomeHero.astro';
+import HomeContactBan from '../components/home/HomeContactBan.astro';
+import HomeContactDialog from '../components/home/HomeContactDialog.astro';
 import GoogleReviewsSlot from '../components/home/GoogleReviewsSlot.astro';
 import {
+  blogFeaturedByPostId,
   homepageContent,
   homepageThemeAssets,
   serviceCoverByFile,
@@ -22,6 +26,13 @@ const formatBlogDate = (sqlDate: string) => {
   const d = new Date(sqlDate.replace(' ', 'T'));
   return d.toLocaleDateString('ar-SA', { day: '2-digit', month: '2-digit', year: 'numeric' });
 };
+
+const gallerySlides = await Promise.all(
+  projectGalleryImages.map(async (item) => {
+    const optimized = await getImage({ src: item.file, width: 1200, format: 'webp' });
+    return { ...item, fullSrc: optimized.src };
+  }),
+);
 
 const localBusiness = {
   '@context': 'https://schema.org',
@@ -44,8 +55,7 @@ const localBusiness = {
   {title}
   {description}
   canonicalPath="/"
-  showMobileBar
-  bodyClass="home-atira"
+  bodyClass="home-atira has-fixed-footer"
 >
   <script
     type="application/ld+json"
@@ -58,82 +68,7 @@ const localBusiness = {
   <div>
     <h1 class="visually-hidden">{site.name} — تركيب شتر نوافذ في جدة</h1>
 
-    <!-- Hero -->
-    <section class="position-relative" aria-label="العرض الرئيسي">
-      <div
-        class="hero-carousel hero-carousel--desktop hero-desktop-only hero-carousel-fade"
-        data-fade-carousel
-        data-interval="6000"
-      >
-        <div class="hero-carousel__slides">
-          {
-            homepageContent.heroDesktopSlider.map((slide, i) => (
-              <div class:list={['hero-carousel__slide', { 'is-active': i === 0 }]}>
-                <div id="top-image">
-                  <Image
-                    src={slide.image}
-                    alt={slide.title}
-                    widths={[768, 1200, 1600]}
-                    sizes="100vw"
-                    loading="lazy"
-                    fetchpriority="low"
-                    decoding="async"
-                    class="d-block w-100"
-                  />
-                </div>
-                <div class="carousel-caption">
-                  <p class="text-main">{slide.title}</p>
-                  <p class="excerpt">{slide.excerpt}</p>
-                  <a
-                    class="pw-btn btn-unq"
-                    href={site.whatsapp.href('السلام عليكم، أرغب في استشارة مجانية حول شتر النوافذ.')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-conversion="whatsapp"
-                  >
-                    استشارة مجانية
-                  </a>
-                </div>
-              </div>
-            ))
-          }
-        </div>
-        <div class="hero-carousel__controls d-none d-lg-flex">
-          <button type="button" data-fade-prev aria-label="الشريحة السابقة">›</button>
-          <button type="button" data-fade-next aria-label="الشريحة التالية">‹</button>
-        </div>
-      </div>
-
-      <div
-        class="hero-carousel hero-carousel--mobile hero-mobile-only hero-carousel-fade"
-        data-fade-carousel
-        data-interval="5500"
-      >
-        <div class="hero-carousel__slides">
-          {
-            homepageThemeAssets.heroMobile.map((img, i) => (
-              <div class:list={['hero-carousel__slide', { 'is-active': i === 0 }]}>
-                <div id="top-image">
-                  <Image
-                    src={img}
-                    alt={site.nameEn}
-                    widths={[390, 780]}
-                    sizes="100vw"
-                    loading={i === 0 ? 'eager' : 'lazy'}
-                    fetchpriority={i === 0 ? 'high' : 'low'}
-                    decoding="async"
-                  />
-                  <div class="img-overlay" />
-                </div>
-              </div>
-            ))
-          }
-        </div>
-        <div class="carousel-caption">
-          <a class="btn-home" href={site.phone.telHref} data-conversion="phone">اتصل بنا</a>
-        </div>
-      </div>
-    </section>
+    <HomeHero />
 
     <!-- Services -->
     <section class="py-5 services section-bg" id="main-srv" aria-labelledby="services-heading">
@@ -156,10 +91,10 @@ const localBusiness = {
                           <Image
                             src={img}
                             alt=""
-                            widths={[360, 720]}
+                            widths={[360, 720, 1024]}
                             sizes="(max-width:768px) 88vw, 360px"
                             width={360}
-                            height={155}
+                            height={156}
                             loading="lazy"
                             decoding="async"
                             class="w-100"
@@ -249,17 +184,24 @@ const localBusiness = {
         <div class="h-track-wrap">
           <div class="h-track" data-h-track id="projects-track">
             {
-              projectGalleryImages.map((item) => (
+              gallerySlides.map((item) => (
                 <div class="h-track__slide">
-                  <Image
-                    src={item.file}
-                    alt={item.alt}
-                    widths={[400, 600, 800]}
-                    sizes="(max-width:768px) 88vw, 380px"
-                    loading="lazy"
-                    decoding="async"
-                    class="pw-hgal-img"
-                  />
+                  <button
+                    type="button"
+                    class="pw-hgal-btn"
+                    data-lightbox-open={item.fullSrc}
+                    aria-label={`عرض صورة: ${item.alt}`}
+                  >
+                    <Image
+                      src={item.file}
+                      alt={item.alt}
+                      widths={[400, 600, 800]}
+                      sizes="(max-width:768px) 88vw, 380px"
+                      loading="lazy"
+                      decoding="async"
+                      class="pw-hgal-img"
+                    />
+                  </button>
                 </div>
               ))
             }
@@ -301,7 +243,7 @@ const localBusiness = {
           </div>
         </div>
         <div>
-          <h2 id="why-heading" class="text-main fs-1 mb-4">لمذا تختارنا؟</h2>
+          <h2 id="why-heading" class="text-main fs-1 mb-4">لماذا تختارنا؟</h2>
           <div class="feature-box">
             <div class="feature-box__row">
               <div class="feature-icon" aria-hidden="true">★</div>
@@ -339,6 +281,8 @@ const localBusiness = {
         </div>
       </div>
     </section>
+
+    <HomeContactBan />
 
     <!-- FAQ -->
     <section class="py-5 bg-new" aria-labelledby="faq-heading">
@@ -391,15 +335,18 @@ const localBusiness = {
         <div class="h-track-wrap">
           <div class="h-track" data-h-track id="blog-track">
             {
-              homepageContent.blogRecent.map((post) => (
+              homepageContent.blogRecent.map((post) => {
+                const featured =
+                  blogFeaturedByPostId[post.id] ?? homepageThemeAssets.defaultCard;
+                return (
                 <div class="h-track__slide">
                   <article class="blog-card bg-main">
                     <div class="pw-clip-btm">
                       <a href={homePaths.blogPost(post.slug)} title={post.title}>
                         <Image
-                          src={homepageThemeAssets.defaultCard}
+                          src={featured}
                           alt=""
-                          widths={[400, 600]}
+                          widths={[400, 600, 800]}
                           sizes="(max-width:768px) 88vw, 380px"
                           loading="lazy"
                           decoding="async"
@@ -418,7 +365,8 @@ const localBusiness = {
                     </div>
                   </article>
                 </div>
-              ))
+              );
+              })
             }
           </div>
           <div class="pw-swp-tol">
@@ -437,8 +385,15 @@ const localBusiness = {
     </section>
   </div>
 
+  <HomeContactDialog />
+
+  <dialog id="pw-project-lightbox" class="home-lightbox">
+    <button type="button" class="home-lightbox__close" data-lightbox-close aria-label="إغلاق">×</button>
+    <img id="pw-project-lightbox-img" alt="" />
+  </dialog>
+
   <HomeSiteFooter slot="footer" />
-  <HomeMobileBar slot="mobile" />
+  <HomeFixedFooter slot="mobile" />
 </BaseLayout>
 
 <style>
@@ -477,27 +432,64 @@ const localBusiness = {
     });
   });
 
-  document.querySelectorAll('[data-fade-carousel]').forEach((root) => {
-    const slides = [...root.querySelectorAll<HTMLElement>('.hero-carousel__slide')];
-    if (!slides.length) return;
-    let idx = slides.findIndex((s) => s.classList.contains('is-active'));
-    if (idx < 0) idx = 0;
+  function initFadeCarousels(root: ParentNode = document) {
+    root.querySelectorAll('[data-fade-carousel]').forEach((rootEl) => {
+      const slides = [...rootEl.querySelectorAll<HTMLElement>('.hero-carousel__slide')];
+      if (!slides.length) return;
+      let idx = slides.findIndex((s) => s.classList.contains('is-active'));
+      if (idx < 0) idx = 0;
 
-    const show = (i: number) => {
-      slides.forEach((s, j) => s.classList.toggle('is-active', j === i));
-      idx = i;
-    };
+      const show = (i: number) => {
+        slides.forEach((s, j) => {
+          s.classList.toggle('is-active', j === i);
+          const img = s.querySelector('img');
+          if (img && j === i && !img.getAttribute('src')) {
+            const dataSrc = img.getAttribute('data-src');
+            if (dataSrc) img.setAttribute('src', dataSrc);
+          }
+        });
+        idx = i;
+      };
 
-    root.querySelector('[data-fade-prev]')?.addEventListener('click', () => {
-      show((idx - 1 + slides.length) % slides.length);
+      rootEl.querySelector('[data-fade-prev]')?.addEventListener('click', () => {
+        show((idx - 1 + slides.length) % slides.length);
+      });
+      rootEl.querySelector('[data-fade-next]')?.addEventListener('click', () => {
+        show((idx + 1) % slides.length);
+      });
+
+      const delay = Number(rootEl.getAttribute('data-autoplay-delay') || 7000);
+      if (delay > 0 && slides.length > 1) {
+        window.addEventListener(
+          'load',
+          () => {
+            setTimeout(() => {
+              setInterval(() => show((idx + 1) % slides.length), delay);
+            }, 3500);
+          },
+          { once: true },
+        );
+      }
     });
-    root.querySelector('[data-fade-next]')?.addEventListener('click', () => {
-      show((idx + 1) % slides.length);
-    });
+  }
 
-    const ms = Number(root.getAttribute('data-interval') || 6000);
-    if (ms > 0 && slides.length > 1) {
-      setInterval(() => show((idx + 1) % slides.length), ms);
-    }
+  initFadeCarousels();
+  document.addEventListener('home:carousels-init', () => initFadeCarousels());
+
+  const lightbox = document.getElementById('pw-project-lightbox') as HTMLDialogElement | null;
+  const lightboxImg = document.getElementById('pw-project-lightbox-img') as HTMLImageElement | null;
+  document.querySelectorAll('[data-lightbox-open]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const src = btn.getAttribute('data-lightbox-open');
+      if (!src || !lightbox || !lightboxImg) return;
+      lightboxImg.src = src;
+      lightbox.showModal();
+    });
+  });
+  document.querySelectorAll('[data-lightbox-close]').forEach((btn) => {
+    btn.addEventListener('click', () => lightbox?.close());
+  });
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox) lightbox.close();
   });
 </script>

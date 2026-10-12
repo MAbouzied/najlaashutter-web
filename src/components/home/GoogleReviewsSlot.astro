@@ -1,9 +1,19 @@
 ---
 /**
- * Placeholder for verified Google Business Profile reviews.
- * Do NOT render fabricated review text — see homepage-content.ts (legacy WP duplicates removed).
+ * ATIRA-style reviews carousel shell — real Google reviews wired later via `GoogleReview[]`.
+ * Do not fabricate review text, names, stars, or counts.
  */
-import { homePaths } from '../../config/home-routes';
+import { site } from '../../config/site';
+
+export interface GoogleReview {
+  authorName: string;
+  text: string;
+  rating: number;
+  publishedAt: string;
+}
+
+/** Empty until Google Business Profile sync is implemented. */
+export const googleReviewsData: GoogleReview[] = [];
 ---
 
 <section class="reviews-section pw-clip-box" aria-labelledby="reviews-heading">
@@ -11,14 +21,68 @@ import { homePaths } from '../../config/home-routes';
     <div class="section-title">
       <h2 id="reviews-heading">آراء عملائنا</h2>
     </div>
-    <div class="reviews-placeholder" data-google-reviews-slot>
-      <p>
-        سيتم عرض تقييمات Google الموثّقة من ملف نشاطنا التجاري هنا. (تمت إزالة شهادات WordPress
-        المكررة/غير الموثّقة.)
-      </p>
-      <a class="pw-btn btn-main" href={homePaths.contact} data-reviews-more hidden>
-        مزيد من التعليقات
-      </a>
+
+    <div class="reviews-carousel">
+      <div class="reviews-carousel__track" data-h-track id="reviews-track">
+        {
+          googleReviewsData.length > 0 ? (
+            googleReviewsData.map((rev) => (
+              <div class="h-track__slide">
+                <article class="pw-rev">
+                  <p class="pw-rev__name text-main">{rev.authorName}</p>
+                  <p class="pw-rev__text">{rev.text}</p>
+                </article>
+              </div>
+            ))
+          ) : (
+            <div class="h-track__slide">
+              <article class="pw-rev pw-rev--pending">
+                <img
+                  class="pw-rev-img"
+                  src="/favicon.png"
+                  alt=""
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                />
+                <h3 class="text-main text-center">تقييمات Google الموثّقة</h3>
+                <p class="text-sub text-center">
+                  سيتم عرض آراء عملائنا من Google Business Profile هنا بعد ربط التقييمات
+                  الرسمية. (تمت إزالة شهادات WordPress المكررة.)
+                </p>
+                <div class="text-center">
+                  <a
+                    class="pw-btn btn-main"
+                    href={site.googleBusinessProfileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    شاهد تقييماتنا على Google
+                  </a>
+                </div>
+              </article>
+            </div>
+          )
+        }
+      </div>
+      <div class="pw-swp-tol">
+        <div class="pw-swp-tol__row">
+          <button type="button" class="h-nav-btn" data-h-prev="reviews-track" aria-label="السابق">
+            ›
+          </button>
+          <a
+            class="pw-btn btn-main"
+            href={site.googleBusinessProfileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            مزيد من التعليقات
+          </a>
+          <button type="button" class="h-nav-btn" data-h-next="reviews-track" aria-label="التالي">
+            ‹
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -7,6 +7,13 @@ import sld_mob_2 from '../assets/theme/sld-mob-2.jpeg';
 import why_choose_us from '../assets/theme/why-choose-us.jpg';
 import faq_home_page from '../assets/theme/faq-home-page.jpg';
 import defaultCardImg from '../assets/theme/default.jpg';
+import contactBanner from '../assets/theme/blog-bannar.jpg';
+import blog515 from '../assets/blog/شتر-النوافذ-أمان-وراحة.jpg';
+import blog511 from '../assets/blog/افضل-شركة-شتر-نجلاء-مكين-حديث.jpg';
+import blog507 from '../assets/blog/نجلاء-شتر-نوافذ-جدة.jpg';
+import blog502 from '../assets/blog/دقة-العمل.jpg';
+import blog493 from '../assets/blog/محرك-شتر-النوافذ-الكهربائي-جدة.jpg';
+import blog490 from '../assets/blog/قالب-مقالات-نجلاء.jpg';
 import sliderElectric from '../assets/theme/slider-شتر-نوافذ-كهربائي.jpg';
 import sliderManual from '../assets/theme/slider-نوافذ-الشتر-في-جدة.jpg';
 import sliderMesh from '../assets/theme/slider-شبك-النامس-جدة.jpg';
@@ -48,11 +55,22 @@ export const wpThemeColors = {
   },
 } as const;
 
+/** WordPress featured images for homepage blog carousel (`_thumbnail_id` from SQL). */
+export const blogFeaturedByPostId: Record<number, ImageMetadata> = {
+  515: blog515,
+  511: blog511,
+  507: blog507,
+  502: blog502,
+  493: blog493,
+  490: blog490,
+};
+
 export const homepageThemeAssets = {
   heroMobile: [sld_mob_1, sld_mob_2, sld_mob_1],
   whyChooseUs: why_choose_us,
   faqSide: faq_home_page,
   defaultCard: defaultCardImg,
+  contactBanner,
 } as const;
 
 export const homepageContent = {

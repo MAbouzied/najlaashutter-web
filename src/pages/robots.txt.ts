@@ -1,11 +1,14 @@
 import type { APIRoute } from 'astro';
-import { isStaging } from '../config/env';
 import { site } from '../config/site';
 
+/** Production robots; non-production hosts override via Cloudflare Worker. */
 export const GET: APIRoute = () => {
-  const body = isStaging
-    ? `# Staging preview — do not index\nUser-agent: *\nDisallow: /\n`
-    : `# Production (pre–full launch)\nUser-agent: *\nAllow: /window-shutters-jeddah/\n\nSitemap: ${site.url}/sitemap-index.xml\n`;
+  const body = `# najlaashutter.com
+User-agent: *
+Allow: /
+
+Sitemap: ${site.url}/sitemap-index.xml
+`;
 
   return new Response(body, {
     headers: { 'Content-Type': 'text/plain; charset=utf-8' },

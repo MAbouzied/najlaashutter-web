@@ -10,7 +10,11 @@
     "build": "astro build",
     "build:staging": "PUBLIC_STAGING=true astro build",
     "preview": "astro preview",
+    "pages:deploy": "wrangler pages deploy dist",
     "astro": "astro"
+  },
+  "devDependencies": {
+    "wrangler": "^4.149.0"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

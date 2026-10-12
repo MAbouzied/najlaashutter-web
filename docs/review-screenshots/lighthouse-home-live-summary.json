@@ -1,38 +1,38 @@
 {
-  "testedAt": "2026-10-12T17:01:31.770Z",
+  "testedAt": "2026-10-12T18:27:14.308Z",
   "url": "https://najlaashutter-web.mohamed-abouzied.workers.dev/",
   "runs": [
     {
       "run": 1,
-      "performance": 61,
-      "accessibility": 96,
+      "performance": 50,
+      "accessibility": 100,
       "bestPractices": 77,
-      "lcp": "7.3 s",
-      "lcpMs": 7293.1669999999995,
-      "tbt": "480 ms",
+      "lcp": "8.0 s",
+      "lcpMs": 8002.86725,
+      "tbt": "880 ms",
       "cls": "0"
     },
     {
       "run": 2,
-      "performance": 69,
-      "accessibility": 96,
+      "performance": 53,
+      "accessibility": 100,
       "bestPractices": 77,
-      "lcp": "8.1 s",
-      "lcpMs": 8140.1500000000015,
-      "tbt": "190 ms",
-      "cls": "0.001"
+      "lcp": "6.5 s",
+      "lcpMs": 6470.2625,
+      "tbt": "700 ms",
+      "cls": "0"
     },
     {
       "run": 3,
-      "performance": 61,
-      "accessibility": 96,
+      "performance": 50,
+      "accessibility": 100,
       "bestPractices": 77,
-      "lcp": "7.3 s",
-      "lcpMs": 7291.763999999999,
-      "tbt": "470 ms",
+      "lcp": "8.1 s",
+      "lcpMs": 8141.7345000000005,
+      "tbt": "810 ms",
       "cls": "0"
     }
   ],
-  "medianPerformance": 61,
-  "medianLcpMs": 7293.1669999999995
+  "medianPerformance": 50,
+  "medianLcpMs": 8002.86725
 }

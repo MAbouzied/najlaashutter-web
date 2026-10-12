@@ -1,0 +1,12 @@
+{
+  "testedAt": "2026-10-12T17:38:00.000Z",
+  "url": "https://najlaashutter-web.mohamed-abouzied.workers.dev/",
+  "commit": "8167508",
+  "note": "Single CLI Lighthouse mobile run (simulated throttling). Client live mobile medians ~89 perf / ~3.2s LCP remain the reference.",
+  "performance": 64,
+  "accessibility": 94,
+  "bestPractices": 77,
+  "lcp": "8.0 s",
+  "tbt": "320 ms",
+  "cls": "0"
+}

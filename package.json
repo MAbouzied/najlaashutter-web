@@ -10,7 +10,7 @@
     "build": "astro build",
     "build:staging": "PUBLIC_STAGING=true astro build",
     "preview": "astro preview",
-    "pages:deploy": "wrangler pages deploy dist",
+    "deploy": "wrangler deploy",
     "astro": "astro"
   },
   "devDependencies": {

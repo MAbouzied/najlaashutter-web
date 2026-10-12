@@ -18,14 +18,19 @@ npm run preview  # serve dist/
 - Landing page: `/window-shutters-jeddah/`
 - Placeholder `/` (noindex) until Phase 2B homepage
 
-## Cloudflare Pages
+## Cloudflare (Workers Builds + Git)
 
-- **Build command:** `npm run build` (production) or `npm run build:staging` (noindex preview)
-- **Build output directory:** `dist`
-- **Build output directory:** `dist`
-- **Deploy command:** leave **empty** when the project is connected to Git. Cloudflare publishes `dist` after `npm run build` — no Wrangler step needed.
+This project uses **Workers Builds** (Workers & Pages → Git). The dashboard **requires** a deploy command — saving with an empty deploy field returns “Invalid request body”.
 
-Do **not** use `npx wrangler deploy` (Workers). Do **not** set `npm run pages:deploy` on Git builds unless you need a manual Wrangler upload; it calls the Pages API and can fail with token/auth errors even when the build is fine. For local CLI deploy only: `npm run pages:deploy` (uses `name` in `wrangler.toml`).
+| Setting | Value |
+|--------|--------|
+| Build command | `npm run build` |
+| Deploy command | `npx wrangler deploy` or `npm run deploy` |
+| Root directory | `/` |
+
+Static files are served from `dist/` via `[assets]` in `wrangler.toml`. Do **not** use `wrangler pages deploy` or `pages_build_output_dir` here.
+
+**Deploy auth error 10000:** In **Settings → Builds**, remove a custom `CLOUDFLARE_API_TOKEN` unless it uses the **Edit Cloudflare Workers** template. Prefer Cloudflare’s auto-generated build token.
 
 - Node: 22+ (matches `package.json` engines)
 

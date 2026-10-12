@@ -1,6 +1,10 @@
-# Must match the Cloudflare Pages project name (Builds → wrangler.toml hint).
+# Workers Builds (Git) — name must match the Worker in the dashboard.
 name = "najlaashutter-web"
 compatibility_date = "2024-09-01"
-pages_build_output_dir = "dist"
+workers_dev = true
 
-# Runtime vars for Pages (optional). Staging noindex uses build-time PUBLIC_STAGING via npm run build:staging.
+# Static Astro output (no Worker script). Do not use pages_build_output_dir here.
+[assets]
+directory = "./dist"
+html_handling = "auto-trailing-slash"
+not_found_handling = "404-page"

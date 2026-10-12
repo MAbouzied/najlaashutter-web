@@ -5,24 +5,32 @@ import { site } from '../config/site';
 
 interface Props {
   minimal?: boolean;
+  /** LP-only override; defaults to global serviceAreaNote. */
+  serviceAreaNote?: string;
 }
 
-const { minimal = true } = Astro.props;
+const { minimal = true, serviceAreaNote = site.serviceAreaNote } = Astro.props;
 ---
 
 <footer class="site-footer">
   <div class="site-footer__inner">
     <div class="site-footer__brand">
-      <Image
-        src={assetSources.logoFooter.file}
-        alt={site.name}
-        width={120}
-        height={120}
-        loading="lazy"
-        decoding="async"
-        class="site-footer__logo"
-      />
-      <p class="site-footer__tagline">{site.serviceAreaNote}</p>
+      <a href={site.paths.landingJeddah} class="site-footer__brand-link" aria-label={site.name}>
+        <Image
+          src={assetSources.logo.file}
+          alt=""
+          width={52}
+          height={52}
+          loading="lazy"
+          decoding="async"
+          class="site-footer__logo"
+        />
+        <span class="site-footer__wordmark">
+          <span class="site-footer__en">NAJLAA</span>
+          <span class="site-footer__sub">SHUTTER</span>
+        </span>
+      </a>
+      <p class="site-footer__tagline">{serviceAreaNote}</p>
     </div>
     <div class="site-footer__contact">
       <a href={site.phone.telHref} data-conversion="phone" class="site-footer__link">
@@ -55,6 +63,7 @@ const { minimal = true } = Astro.props;
     color: rgba(255, 255, 255, 0.92);
     padding: 2rem 1rem 1.25rem;
     margin-top: auto;
+    border-top: 3px solid var(--color-secondary);
   }
   .site-footer__inner {
     width: var(--container);
@@ -65,18 +74,38 @@ const { minimal = true } = Astro.props;
     align-items: flex-start;
     justify-content: space-between;
   }
+  .site-footer__brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: inherit;
+  }
   .site-footer__logo {
-    max-width: 88px;
+    width: 48px;
     height: auto;
-    background: #fff;
-    border-radius: var(--radius-sm);
-    padding: 0.35rem;
+    flex-shrink: 0;
+  }
+  .site-footer__wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+    font-weight: 700;
+    color: var(--color-secondary);
+  }
+  .site-footer__en {
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+  }
+  .site-footer__sub {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
   }
   .site-footer__tagline {
     margin: 0.75rem 0 0;
     font-size: 0.9rem;
     max-width: 22rem;
-    color: var(--color-secondary);
+    color: rgba(255, 255, 255, 0.82);
   }
   .site-footer__contact {
     display: flex;

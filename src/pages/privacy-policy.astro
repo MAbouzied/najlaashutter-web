@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Container from '../components/Container.astro';
+import Section from '../components/Section.astro';
+import { privacyPolicy } from '../config/privacy-policy';
+---
+
+<BaseLayout
+  title={privacyPolicy.meta.title}
+  description={privacyPolicy.meta.description}
+  canonicalPath={privacyPolicy.meta.canonicalPath}
+  noindex
+>
+  <Header slot="header" minimal />
+  <Footer slot="footer" minimal />
+
+  <Section ariaLabelledby="privacy-heading">
+    <Container narrow>
+      <h1 id="privacy-heading" class="page-title">سياسة الخصوصية</h1>
+      <p class="page-lead">
+        النص التالي مأخوذ من صفحة الخصوصية الحالية على موقع نجلاء شتر (WordPress)، مع تحديث
+        عنوان الموقع.
+      </p>
+      {
+        privacyPolicy.sections.map((section) => (
+          <section class="policy-block">
+            <h2>{section.heading}</h2>
+            {'paragraphs' in section &&
+              section.paragraphs?.map((p) => <p>{p}</p>)}
+            {'subsections' in section &&
+              section.subsections?.map((sub) => (
+                <div class="policy-sub">
+                  <h3>{sub.heading}</h3>
+                  {sub.paragraphs.map((p) => (
+                    <p>{p}</p>
+                  ))}
+                </div>
+              ))}
+          </section>
+        ))
+      }
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .page-title {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+  }
+  .page-lead {
+    margin: 0 0 2rem;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+  .policy-block {
+    margin-bottom: 1.75rem;
+  }
+  .policy-block h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-secondary);
+  }
+  .policy-sub {
+    margin-top: 1rem;
+  }
+  .policy-sub h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+    color: var(--color-primary);
+  }
+  .policy-block p,
+  .policy-sub p {
+    margin: 0 0 0.65rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+</style>

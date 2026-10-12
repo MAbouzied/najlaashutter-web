@@ -9,6 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "build:staging": "PUBLIC_STAGING=true astro build",
+    "build:staging:no-gtm": "PUBLIC_STAGING=true PUBLIC_DISABLE_GTM=true astro build",
     "preview": "astro preview",
     "deploy": "wrangler deploy",
     "astro": "astro"

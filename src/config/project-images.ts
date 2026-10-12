@@ -1,59 +1,46 @@
 /**
  * Curated project photos — originals from WP backup (no resized duplicates).
- * Source paths are relative to _wp-reference-readonly/ inside the Najla_shutters repo.
  */
 import p1 from '../assets/images/projects/WhatsApp-Image-2025-11-24-at-18.49.48-5.jpeg';
 import p2 from '../assets/images/projects/WhatsApp-Image-2025-11-24-at-18.49.48-4.jpeg';
-import p3 from '../assets/images/projects/WhatsApp-Image-2025-11-24-at-18.49.48-3.jpeg';
 import p4 from '../assets/images/projects/WhatsApp-Image-2025-11-24-at-18.49.48-2.jpeg';
 import p5 from '../assets/images/projects/WhatsApp-Image-2025-11-24-at-18.49.48-1.jpeg';
 import p6 from '../assets/images/projects/WhatsApp-Image-2025-11-24-at-18.49.48.jpeg';
 import p7 from '../assets/images/projects/WhatsApp-Image-2025-11-24-at-18.49.47-1.jpeg';
 import p8 from '../assets/images/projects/WhatsApp-Image-2025-11-24-at-18.49.47.jpeg';
-import heroImage from '../assets/images/hero-installation.jpg';
 import logo from '../assets/brand/logo.png';
-import logoFooter from '../assets/brand/logo-footer.png';
+
+/** Real project photo — black roller shutter on exterior wall (WP uploads/2025/11). */
+import heroProject from '../assets/images/projects/WhatsApp-Image-2025-11-24-at-18.49.48-3.jpeg';
 
 export const assetSources = {
   hero: {
-    file: heroImage,
-    source:
-      'themes/atira-classic/assets/img/we-experts.jpg (_wp-reference-readonly)',
+    file: heroProject,
+    source: 'uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-3.jpeg',
   },
   logo: {
     file: logo,
-    source:
-      'themes/atira-classic/assets/img/najlaa-logo-icon-trimed.png',
-  },
-  logoFooter: {
-    file: logoFooter,
-    source:
-      'themes/atira-classic/assets/img/najlaa-logo-icon-trimed-main.png',
+    source: 'themes/atira-classic/assets/img/najlaa-logo-icon-trimed.png',
   },
   projects: [
     {
       file: p1,
-      alt: 'تركيب شتر نوافذ — مشروع نجلاء في جدة',
+      alt: 'تركيب شتر نوافذ — مشروع من معرض نجلاء',
       source: 'uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-5.jpeg',
     },
     {
       file: p2,
-      alt: 'شتر نوافذ — عمل منفذ',
+      alt: 'شتر رول على واجهة — من أعمال نجلاء',
       source: 'uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-4.jpeg',
     },
     {
-      file: p3,
-      alt: 'شتر نوافذ خارجي — مشروع سكني',
-      source: 'uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-3.jpeg',
-    },
-    {
       file: p4,
-      alt: 'تركيب شتر — نافذة',
+      alt: 'شتر نوافذ — عمل منفذ',
       source: 'uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-2.jpeg',
     },
     {
       file: p5,
-      alt: 'شتر نوافذ — جدة',
+      alt: 'شتر نوافذ خارجي — مشروع سكني',
       source: 'uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-1.jpeg',
     },
     {
@@ -74,4 +61,8 @@ export const assetSources = {
   ],
 } as const;
 
+/** Gallery excludes hero image to avoid duplicate on the LP. */
 export const projectGalleryImages = assetSources.projects;
+
+/** Featured project for «لماذا نجلاء شتر؟» */
+export const whyNajlaaFeatureImage = p2;

@@ -18,8 +18,9 @@ const { minimal = true } = Astro.props;
       <Image
         src={assetSources.logo.file}
         alt=""
-        width={48}
-        height={48}
+        width={96}
+        height={96}
+        densities={[1, 2]}
         loading="eager"
         decoding="async"
         class="site-header__logo"
@@ -71,7 +72,8 @@ const { minimal = true } = Astro.props;
   }
   .site-header__logo {
     width: 48px;
-    height: auto;
+    height: 48px;
+    object-fit: contain;
   }
   .site-header__wordmark {
     display: flex;

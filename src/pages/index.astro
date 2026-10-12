@@ -1,34 +1,503 @@
 ---
-/**
- * Placeholder root — full homepage comes in Phase 2B.
- * noindex to avoid competing with the legacy site until launch.
- */
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HomeSiteHeader from '../components/home/HomeSiteHeader.astro';
+import HomeSiteFooter from '../components/home/HomeSiteFooter.astro';
+import HomeMobileBar from '../components/home/HomeMobileBar.astro';
+import GoogleReviewsSlot from '../components/home/GoogleReviewsSlot.astro';
+import {
+  homepageContent,
+  homepageThemeAssets,
+  serviceCoverByFile,
+} from '../config/homepage-content';
+import { homePaths } from '../config/home-routes';
+import { projectGalleryImages } from '../config/project-images';
 import { site } from '../config/site';
+import '../styles/home-atira.css';
+
+const title = `${site.name} | تركيب شتر نوافذ في جدة ومكة`;
+const description = site.description;
+
+const formatBlogDate = (sqlDate: string) => {
+  const d = new Date(sqlDate.replace(' ', 'T'));
+  return d.toLocaleDateString('ar-SA', { day: '2-digit', month: '2-digit', year: 'numeric' });
+};
+
+const localBusiness = {
+  '@context': 'https://schema.org',
+  '@type': 'HomeAndConstructionBusiness',
+  name: site.legalName,
+  url: site.url,
+  telephone: site.phone.e164,
+  email: site.email.address,
+  areaServed: [{ '@type': 'City', name: 'Jeddah' }, { '@type': 'City', name: 'Makkah' }],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: site.location.city,
+    addressRegion: site.location.region,
+    addressCountry: 'SA',
+  },
+};
 ---
 
 <BaseLayout
-  title={`${site.name} — الموقع قيد التطوير`}
-  description="الموقع الجديد لنجلاء شتر قيد الإنشاء."
+  {title}
+  {description}
   canonicalPath="/"
-  noindex
+  showMobileBar
+  bodyClass="home-atira"
 >
-  <div class="placeholder">
-    <p>{site.name}</p>
-    <a href={site.paths.landingJeddah}>صفحة شتر نوافذ جدة (معاينة)</a>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(localBusiness)}
+    slot="head"
+  />
+
+  <HomeSiteHeader slot="header" />
+
+  <div>
+    <h1 class="visually-hidden">{site.name} — تركيب شتر نوافذ في جدة</h1>
+
+    <!-- Hero -->
+    <section class="position-relative" aria-label="العرض الرئيسي">
+      <div
+        class="hero-carousel hero-carousel--desktop hero-desktop-only hero-carousel-fade"
+        data-fade-carousel
+        data-interval="6000"
+      >
+        <div class="hero-carousel__slides">
+          {
+            homepageContent.heroDesktopSlider.map((slide, i) => (
+              <div class:list={['hero-carousel__slide', { 'is-active': i === 0 }]}>
+                <div id="top-image">
+                  <Image
+                    src={slide.image}
+                    alt={slide.title}
+                    widths={[768, 1200, 1600]}
+                    sizes="100vw"
+                    loading="lazy"
+                    fetchpriority="low"
+                    decoding="async"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="carousel-caption">
+                  <p class="text-main">{slide.title}</p>
+                  <p class="excerpt">{slide.excerpt}</p>
+                  <a
+                    class="pw-btn btn-unq"
+                    href={site.whatsapp.href('السلام عليكم، أرغب في استشارة مجانية حول شتر النوافذ.')}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-conversion="whatsapp"
+                  >
+                    استشارة مجانية
+                  </a>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+        <div class="hero-carousel__controls d-none d-lg-flex">
+          <button type="button" data-fade-prev aria-label="الشريحة السابقة">›</button>
+          <button type="button" data-fade-next aria-label="الشريحة التالية">‹</button>
+        </div>
+      </div>
+
+      <div
+        class="hero-carousel hero-carousel--mobile hero-mobile-only hero-carousel-fade"
+        data-fade-carousel
+        data-interval="5500"
+      >
+        <div class="hero-carousel__slides">
+          {
+            homepageThemeAssets.heroMobile.map((img, i) => (
+              <div class:list={['hero-carousel__slide', { 'is-active': i === 0 }]}>
+                <div id="top-image">
+                  <Image
+                    src={img}
+                    alt={site.nameEn}
+                    widths={[390, 780]}
+                    sizes="100vw"
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                    fetchpriority={i === 0 ? 'high' : 'low'}
+                    decoding="async"
+                  />
+                  <div class="img-overlay" />
+                </div>
+              </div>
+            ))
+          }
+        </div>
+        <div class="carousel-caption">
+          <a class="btn-home" href={site.phone.telHref} data-conversion="phone">اتصل بنا</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-5 services section-bg" id="main-srv" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="services-heading">خدماتنا</h2>
+          <p class="text-main">نقدّم خدمات عالية الجودة</p>
+        </div>
+        <div class="h-track-wrap">
+          <div class="h-track" data-h-track id="services-track">
+            {
+              homepageContent.services.map((srv) => {
+                const img = serviceCoverByFile[srv.featuredImageFile] ?? homepageThemeAssets.defaultCard;
+                const href = homePaths.service(srv.slug);
+                return (
+                  <div class="h-track__slide box-srv">
+                    <article class="srv-card bg-main">
+                      <div class="pw-clip-btm">
+                        <a href={href} title={srv.title}>
+                          <Image
+                            src={img}
+                            alt=""
+                            widths={[360, 720]}
+                            sizes="(max-width:768px) 88vw, 360px"
+                            width={360}
+                            height={155}
+                            loading="lazy"
+                            decoding="async"
+                            class="w-100"
+                          />
+                        </a>
+                      </div>
+                      <div class="srv-card__body">
+                        <a href={href} class="text-white">
+                          <h3>{srv.title}</h3>
+                        </a>
+                        <p>{srv.excerpt}</p>
+                      </div>
+                      <div class="srv-card__footer">
+                        <a href={href}>مشاهدة التفاصيل</a>
+                      </div>
+                    </article>
+                  </div>
+                );
+              })
+            }
+          </div>
+          <div class="pw-swp-tol">
+            <div class="pw-swp-tol__row">
+              <button type="button" class="h-nav-btn" data-h-prev="services-track" aria-label="السابق">
+                ›
+              </button>
+              <a class="pw-btn btn-main" href={homePaths.services}>عرض المزيد</a>
+              <button type="button" class="h-nav-btn" data-h-next="services-track" aria-label="التالي">
+                ‹
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="py-5 section-bg bg-new" aria-labelledby="about-heading">
+      <div class="container about-grid">
+        <div class="text-center">
+          <div class="pw-home-img position-relative">
+            <div class="pw-home-img-bg" />
+            <Image
+              src={homepageThemeAssets.whyChooseUs}
+              alt="تركيب شتر النوافذ — نجلاء شتر"
+              widths={[480, 640, 800]}
+              sizes="(max-width:992px) 100vw, 480px"
+              loading="lazy"
+              decoding="async"
+              class="img-fluid shadow-sm position-relative"
+            />
+          </div>
+        </div>
+        <div>
+          <h2 id="about-heading" class="text-main mt-3 fs-2 fw-bold">
+            <span class="text-unq">تركيب شتر النوافذ</span> باحترافية تضمن لكم الراحة والحماية
+          </h2>
+          <p class="fs-5">
+            في نجلاء شتر، نقدم حلول شتر متكاملة تجمع بين الجودة والمتانة والأناقة. نحرص على استخدام
+            أفضل المواد وأحدث التقنيات لضمان حصولك على منتجات عملية وجميلة تلبي جميع احتياجات منزلك
+            أو منشأتك.
+          </p>
+          <ul class="list-unstyled fs-5" style="padding:0;list-style:none">
+            <li style="margin-bottom:1rem">
+              <strong class="text-unq">جودة منتجاتنا:</strong> منتجاتنا مصممة بعناية فائقة لتدوم
+              طويلاً وتوفّر الحماية والعزل المثالي.
+            </li>
+            <li>
+              <strong class="text-unq">خبرتنا:</strong> فريقنا من المتخصصين يقدم تركيبًا احترافيًا
+              لكل أنواع الشتر، مع التركيز على التفاصيل لضمان رضا العملاء.
+            </li>
+          </ul>
+          <a class="pw-btn btn-main d-inline-block" href={homePaths.about}>
+            اقرأ المزيد
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="py-5 pw-clip-box" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="projects-heading">استكشف أعمالنا</h2>
+          <p class="text-main">تصفح معرض الصور واكتشف جودة وإبداع أعمالنا</p>
+        </div>
+        <div class="h-track-wrap">
+          <div class="h-track" data-h-track id="projects-track">
+            {
+              projectGalleryImages.map((item) => (
+                <div class="h-track__slide">
+                  <Image
+                    src={item.file}
+                    alt={item.alt}
+                    widths={[400, 600, 800]}
+                    sizes="(max-width:768px) 88vw, 380px"
+                    loading="lazy"
+                    decoding="async"
+                    class="pw-hgal-img"
+                  />
+                </div>
+              ))
+            }
+          </div>
+          <div class="pw-swp-tol">
+            <div class="pw-swp-tol__row">
+              <button type="button" class="h-nav-btn" data-h-prev="projects-track" aria-label="السابق">
+                ›
+              </button>
+              <a class="pw-btn btn-main" href={homePaths.projects}>عرض المزيد</a>
+              <button type="button" class="h-nav-btn" data-h-next="projects-track" aria-label="التالي">
+                ‹
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <GoogleReviewsSlot />
+
+    <!-- Why us -->
+    <section class="section-why-us" aria-labelledby="why-heading">
+      <div class="container why-grid">
+        <div class="text-center">
+          <div class="image-container">
+            <div class="corner-decoration corner-top-left" />
+            <div class="corner-decoration corner-bottom-right" />
+            <div class="pw-home-img rounded-4 shadow">
+              <Image
+                src={homepageThemeAssets.whyChooseUs}
+                alt="لماذا تختار نجلاء شتر"
+                widths={[480, 640]}
+                sizes="(max-width:768px) 100vw, 480px"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 id="why-heading" class="text-main fs-1 mb-4">لمذا تختارنا؟</h2>
+          <div class="feature-box">
+            <div class="feature-box__row">
+              <div class="feature-icon" aria-hidden="true">★</div>
+              <div>
+                <h3 class="fs-5 mb-2 text-main">جودة عالية وأسعار مناسبة</h3>
+                <p class="fs-6 text-sub m-0">
+                  نقدم حلول شتر عالية الجودة تجمع بين المتانة والأناقة، مع أسعار تلائم جميع
+                  الميزانيات
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="feature-box__row">
+              <div class="feature-icon" aria-hidden="true">👥</div>
+              <div>
+                <h3 class="fs-5 mb-2 text-main">فريق محترف وخبرة طويلة</h3>
+                <p class="fs-6 text-sub m-0">
+                  فريقنا يلتزم بتقديم خدمة احترافية منذ البداية وحتى ما بعد التركيب
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="feature-box__row">
+              <div class="feature-icon" aria-hidden="true">✓</div>
+              <div>
+                <h3 class="fs-5 mb-2 text-main">رضا العملاء أولويتنا</h3>
+                <p class="fs-6 text-sub m-0">
+                  نركز على التفاصيل لضمان رضا العملاء التام وتقديم تجربة سلسة وموثوقة
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5 bg-new" aria-labelledby="faq-heading">
+      <div class="container faq-grid">
+        <div>
+          <div class="section-title" style="text-align:center">
+            <h2 id="faq-heading">الأسئلة الشائعة</h2>
+            <p class="text-main">يسعدنا الإجابة على استفساراتكم.</p>
+          </div>
+          <div class="home-faq">
+            {
+              homepageContent.faqs.map((faq) => (
+                <details>
+                  <summary>
+                    <span aria-hidden="true">+</span>
+                    {faq.question}
+                  </summary>
+                  <div class="faq-body">
+                    <p>{faq.answer}</p>
+                  </div>
+                </details>
+              ))
+            }
+          </div>
+          <div class="text-center my-4">
+            <a class="pw-btn btn-main" href={homePaths.faq}>مزيد من الأسئلة الشائعة</a>
+          </div>
+        </div>
+        <div class="text-center">
+          <Image
+            src={homepageThemeAssets.faqSide}
+            alt=""
+            widths={[480, 640]}
+            sizes="(max-width:992px) 100vw, 480px"
+            loading="lazy"
+            decoding="async"
+            class="img-fluid rounded-4 shadow-md"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="py-5" aria-labelledby="blog-heading">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="blog-heading">المدونة</h2>
+          <p class="text-main">احدث المقالات والاخبار</p>
+        </div>
+        <div class="h-track-wrap">
+          <div class="h-track" data-h-track id="blog-track">
+            {
+              homepageContent.blogRecent.map((post) => (
+                <div class="h-track__slide">
+                  <article class="blog-card bg-main">
+                    <div class="pw-clip-btm">
+                      <a href={homePaths.blogPost(post.slug)} title={post.title}>
+                        <Image
+                          src={homepageThemeAssets.defaultCard}
+                          alt=""
+                          widths={[400, 600]}
+                          sizes="(max-width:768px) 88vw, 380px"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </a>
+                    </div>
+                    <div class="srv-card__body">
+                      <a href={homePaths.blogPost(post.slug)} class="text-unq">
+                        <h3>{post.title}</h3>
+                      </a>
+                      <p>{post.excerpt}</p>
+                    </div>
+                    <div class="blog-card__meta">
+                      <span>{formatBlogDate(post.date)}</span>
+                      <a href={homePaths.blogPost(post.slug)}>اقرأ المزيد</a>
+                    </div>
+                  </article>
+                </div>
+              ))
+            }
+          </div>
+          <div class="pw-swp-tol">
+            <div class="pw-swp-tol__row">
+              <button type="button" class="h-nav-btn" data-h-prev="blog-track" aria-label="السابق">
+                ›
+              </button>
+              <a class="pw-btn btn-main" href={homePaths.blog}>عرض المزيد</a>
+              <button type="button" class="h-nav-btn" data-h-next="blog-track" aria-label="التالي">
+                ‹
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
+
+  <HomeSiteFooter slot="footer" />
+  <HomeMobileBar slot="mobile" />
 </BaseLayout>
 
 <style>
-  .placeholder {
-    min-height: 60vh;
-    display: grid;
-    place-content: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 2rem;
-  }
-  .placeholder a {
-    font-weight: 600;
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 </style>
+
+<script>
+  function scrollTrack(id: string, dir: number) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const slide = el.querySelector<HTMLElement>('.h-track__slide');
+    const delta = (slide?.offsetWidth ?? 320) + 16;
+    el.scrollBy({ left: dir * delta * -1, behavior: 'smooth' });
+  }
+
+  document.querySelectorAll('[data-h-prev]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-h-prev');
+      if (id) scrollTrack(id, -1);
+    });
+  });
+  document.querySelectorAll('[data-h-next]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-h-next');
+      if (id) scrollTrack(id, 1);
+    });
+  });
+
+  document.querySelectorAll('[data-fade-carousel]').forEach((root) => {
+    const slides = [...root.querySelectorAll<HTMLElement>('.hero-carousel__slide')];
+    if (!slides.length) return;
+    let idx = slides.findIndex((s) => s.classList.contains('is-active'));
+    if (idx < 0) idx = 0;
+
+    const show = (i: number) => {
+      slides.forEach((s, j) => s.classList.toggle('is-active', j === i));
+      idx = i;
+    };
+
+    root.querySelector('[data-fade-prev]')?.addEventListener('click', () => {
+      show((idx - 1 + slides.length) % slides.length);
+    });
+    root.querySelector('[data-fade-next]')?.addEventListener('click', () => {
+      show((idx + 1) % slides.length);
+    });
+
+    const ms = Number(root.getAttribute('data-interval') || 6000);
+    if (ms > 0 && slides.length > 1) {
+      setInterval(() => show((idx + 1) % slides.length), ms);
+    }
+  });
+</script>

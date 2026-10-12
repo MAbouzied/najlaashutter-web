@@ -19,8 +19,9 @@ const { minimal = true, serviceAreaNote = site.serviceAreaNote } = Astro.props;
         <Image
           src={assetSources.logo.file}
           alt=""
-          width={52}
-          height={52}
+          width={104}
+          height={104}
+          densities={[1, 2]}
           loading="lazy"
           decoding="async"
           class="site-footer__logo"
@@ -83,7 +84,8 @@ const { minimal = true, serviceAreaNote = site.serviceAreaNote } = Astro.props;
   }
   .site-footer__logo {
     width: 48px;
-    height: auto;
+    height: 48px;
+    object-fit: contain;
     flex-shrink: 0;
   }
   .site-footer__wordmark {

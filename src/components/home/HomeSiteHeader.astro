@@ -1,0 +1,119 @@
+---
+import { Image } from 'astro:assets';
+import { assetSources } from '../../config/project-images';
+import { site } from '../../config/site';
+import { homepageContent } from '../../config/homepage-content';
+import { homePaths, menuItemHref } from '../../config/home-routes';
+
+const mainItems = homepageContent.navMenus['main-nav'];
+const topLevel = mainItems.filter((i) => i.parentId === 0);
+const childrenOf = (parentId: number) =>
+  mainItems.filter((i) => i.parentId === parentId);
+const sideItems = homepageContent.navMenus['side-menu'];
+---
+
+<div class="home-header-top">
+  <div class="container home-header-top__inner">
+    <p class="promo-text">{site.serviceAreaNote}</p>
+    <div class="home-header-top__contact">
+      <a href={site.phone.telHref} data-conversion="phone">{site.phone.display}</a>
+      <a href={site.email.href}>{site.email.address}</a>
+    </div>
+  </div>
+</div>
+
+<header id="pw-header">
+  <div class="container home-header__inner">
+    <a href={homePaths.home} class="home-header__brand">
+      <Image
+        src={assetSources.logo.file}
+        alt=""
+        width={100}
+        height={100}
+        densities={[1, 2]}
+        loading="eager"
+        decoding="async"
+        class="nav-logo"
+      />
+      <span class="home-header__najlaa">{site.nameEn}</span>
+    </a>
+
+    <nav id="pw-main-nav" aria-label="التنقل الرئيسي">
+      <ul>
+        {
+          topLevel.map((item) => {
+            const href = menuItemHref(item);
+            const kids = childrenOf(item.id);
+            const isCurrent = href === homePaths.home;
+            return (
+              <li class:list={[{ 'menu-item-has-children': kids.length > 0 }, { 'is-current': isCurrent }]}>
+                <a href={href}>{item.title}</a>
+                {kids.length > 0 && (
+                  <ul class="sub-menu">
+                    {kids.map((child) => (
+                      <li>
+                        <a href={menuItemHref(child)}>{child.title}</a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+
+    <div class="home-header__actions">
+      <a
+        class="pw-head-btn2"
+        href={site.whatsapp.href('السلام عليكم، أرغب في استشارة مجانية حول شتر النوافذ.')}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-conversion="whatsapp"
+      >
+        واتساب
+      </a>
+      <a class="pw-head-btn2" href={site.phone.telHref} data-conversion="phone">
+        اتصل
+      </a>
+    </div>
+
+    <button type="button" class="home-header__menu-toggle" aria-expanded="false" aria-controls="pw-side-menu" data-open-nav>
+      ☰
+    </button>
+  </div>
+</header>
+
+<div id="pw-side-menu" aria-hidden="true">
+  <div class="pw-side-backdrop" data-close-nav />
+  <div class="pw-side-panel" role="dialog" aria-label="القائمة">
+    <ul class="pw-side-menu">
+      {
+        sideItems.map((item) => (
+          <li>
+            <a href={menuItemHref(item)} data-close-nav-link>
+              {item.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<script>
+  const menu = document.getElementById('pw-side-menu');
+  const openBtn = document.querySelector('[data-open-nav]');
+  const closeEls = document.querySelectorAll('[data-close-nav], [data-close-nav-link]');
+
+  function setOpen(open: boolean) {
+    menu?.classList.toggle('is-open', open);
+    menu?.setAttribute('aria-hidden', open ? 'false' : 'true');
+    openBtn?.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  openBtn?.addEventListener('click', () => setOpen(true));
+  closeEls.forEach((el) => el.addEventListener('click', () => setOpen(false)));
+</script>

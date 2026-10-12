@@ -1,0 +1,24 @@
+---
+import { site } from '../../config/site';
+---
+
+<div class="home-mobile-bar" role="navigation" aria-label="اتصال سريع">
+  <a
+    class="btn-home"
+    style="text-align:center"
+    href={site.phone.telHref}
+    data-conversion="phone"
+  >
+    اتصل بنا
+  </a>
+  <a
+    class="btn-home"
+    style="text-align:center;background:var(--color-whatsapp);color:var(--color-whatsapp-text)"
+    href={site.whatsapp.href()}
+    target="_blank"
+    rel="noopener noreferrer"
+    data-conversion="whatsapp"
+  >
+    واتساب
+  </a>
+</div>

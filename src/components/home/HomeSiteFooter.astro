@@ -1,0 +1,89 @@
+---
+import { Image } from 'astro:assets';
+import { assetSources } from '../../config/project-images';
+import { site } from '../../config/site';
+import { homepageContent } from '../../config/homepage-content';
+import { menuItemHref } from '../../config/home-routes';
+
+const foot1 = homepageContent.navMenus['foot-1'];
+const foot2 = homepageContent.navMenus['foot-2'];
+const footMenu = homepageContent.navMenus['foot-menu'];
+---
+
+<footer class="home-footer">
+  <div class="container home-footer__grid">
+    <div>
+      <a href="/" class="home-header__brand">
+        <Image
+          src={assetSources.logo.file}
+          alt=""
+          width={104}
+          height={104}
+          densities={[1, 2]}
+          loading="lazy"
+          decoding="async"
+          class="nav-logo"
+        />
+        <span class="visually-hidden">{site.name}</span>
+      </a>
+      <p style="margin-top:0.75rem; opacity:0.9">{site.description}</p>
+      <p style="margin-top:0.5rem">
+        <a href={site.phone.telHref} data-conversion="phone">{site.phone.display}</a>
+      </p>
+      <p>
+        <a href={site.email.href}>{site.email.address}</a>
+      </p>
+      <p>{site.location.shortLabel}</p>
+    </div>
+    <div>
+      <h3>روابط سريعة</h3>
+      <ul>
+        {
+          foot1.map((item) => (
+            <li>
+              <a href={menuItemHref(item)}>{item.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div>
+      <h3>خدماتنا</h3>
+      <ul>
+        {
+          foot2.map((item) => (
+            <li>
+              <a href={menuItemHref(item)}>{item.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+  <ul class="pw-fot-mnu container">
+    {
+      footMenu.map((item) => (
+        <li>
+          <a href={menuItemHref(item)}>{item.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+  <p class="home-footer__copy container">
+    © {new Date().getFullYear()} {site.name} — {site.serviceAreaNote}
+  </p>
+</footer>
+
+<style>
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>

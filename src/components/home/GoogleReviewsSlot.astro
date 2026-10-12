@@ -1,0 +1,24 @@
+---
+/**
+ * Placeholder for verified Google Business Profile reviews.
+ * Do NOT render fabricated review text — see homepage-content.ts (legacy WP duplicates removed).
+ */
+import { homePaths } from '../../config/home-routes';
+---
+
+<section class="reviews-section pw-clip-box" aria-labelledby="reviews-heading">
+  <div class="container">
+    <div class="section-title">
+      <h2 id="reviews-heading">آراء عملائنا</h2>
+    </div>
+    <div class="reviews-placeholder" data-google-reviews-slot>
+      <p>
+        سيتم عرض تقييمات Google الموثّقة من ملف نشاطنا التجاري هنا. (تمت إزالة شهادات WordPress
+        المكررة/غير الموثّقة.)
+      </p>
+      <a class="pw-btn btn-main" href={homePaths.contact} data-reviews-more hidden>
+        مزيد من التعليقات
+      </a>
+    </div>
+  </div>
+</section>

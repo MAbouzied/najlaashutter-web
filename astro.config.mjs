@@ -9,7 +9,10 @@ export default defineConfig({
   compressHTML: true,
   integrations: [
     sitemap({
-      filter: (page) => page.includes('/window-shutters-jeddah'),
+      filter: (page) =>
+        page.includes('/window-shutters-jeddah') ||
+        page === 'https://najlaashutter.com/' ||
+        page === 'https://najlaashutter.com',
     }),
   ],
   image: {

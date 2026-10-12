@@ -50,6 +50,8 @@
   --color-primary: #13304e;
   --color-secondary: #8e9dad;
   --color-whatsapp: #25d366;
+  /** Navy on WhatsApp green — WCAG AA (~6.8:1), keeps brand green */
+  --color-whatsapp-text: #13304e;
   --color-bg: #f4f5f6;
   --color-surface: #ffffff;
   --color-text: #101010;

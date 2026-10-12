@@ -8,9 +8,11 @@ interface Props {
   canonicalPath: string;
   ogImage?: ImageMetadata;
   noindex?: boolean;
+  nofollow?: boolean;
 }
 
-const { title, description, canonicalPath, ogImage, noindex = false } = Astro.props;
+const { title, description, canonicalPath, ogImage, noindex = false, nofollow = false } =
+  Astro.props;
 
 const canonical = new URL(canonicalPath, site.url).href;
 const ogImageUrl = ogImage
@@ -23,7 +25,11 @@ const ogImageUrl = ogImage
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
-{noindex && <meta name="robots" content="noindex, nofollow" />}
+{
+  noindex && (
+    <meta name="robots" content={nofollow ? 'noindex, nofollow' : 'noindex, follow'} />
+  )
+}
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content={site.locale} />

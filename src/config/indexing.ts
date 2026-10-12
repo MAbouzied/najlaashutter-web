@@ -1,5 +1,8 @@
-/** Production hosts that may be indexed (canonical domain only). */
+/** Production hosts that may be indexed (main WordPress site only). */
 export const PRODUCTION_HOSTS = new Set(['najlaashutter.com', 'www.najlaashutter.com']);
+
+/** Paid ads landing — never index (Worker/Pages + HTML meta). */
+export const ADS_HOSTS = new Set(['ads.najlaashutter.com']);
 
 export function isProductionHost(hostname: string): boolean {
   const host = hostname.toLowerCase().split(':')[0];
@@ -9,6 +12,7 @@ export function isProductionHost(hostname: string): boolean {
 /** Non-production preview hosts must never be indexed. */
 export function shouldBlockIndexing(hostname: string): boolean {
   const host = hostname.toLowerCase().split(':')[0];
+  if (ADS_HOSTS.has(host)) return true;
   if (isProductionHost(host)) return false;
   if (host === 'localhost' || host === '127.0.0.1') return true;
   if (host.endsWith('.workers.dev')) return true;

@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import PageMeta from '../components/PageMeta.astro';
 import { site } from '../config/site';
-import { isGtmDisabled } from '../config/env';
+import { isAdsSite, isGtmDisabled } from '../config/env';
 import type { ImageMetadata } from 'astro';
 
 interface Props {
@@ -26,8 +26,10 @@ const {
 } = Astro.props;
 
 const gtmId = isGtmDisabled ? undefined : site.tracking.gtmId;
-/** Production HTML stays indexable; preview hosts get noindex via `src/worker.ts`. */
-const robotsNoindex = noindex || import.meta.env.DEV;
+/** Ads LP + privacy noindex on build; preview hosts also get noindex via Worker / Pages _headers. */
+const robotsNoindex = noindex || import.meta.env.DEV || isAdsSite;
+/** Paid ads host: noindex,follow; privacy and dev use noindex,nofollow when `noindex` prop set. */
+const robotsNofollow = noindex && !isAdsSite;
 ---
 
 <!doctype html>
@@ -39,6 +41,7 @@ const robotsNoindex = noindex || import.meta.env.DEV;
       canonicalPath={canonicalPath}
       ogImage={ogImage}
       noindex={robotsNoindex}
+      nofollow={robotsNofollow}
     />
     <link rel="preload" href="/fonts/noto-kufi-arabic-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/noto-kufi-arabic-arabic.woff2" as="font" type="font/woff2" crossorigin />

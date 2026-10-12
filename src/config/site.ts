@@ -1,3 +1,8 @@
+/** Canonical origin for meta/sitemap (overridden on ads Pages build). */
+const siteOrigin =
+  (import.meta.env.PUBLIC_SITE_URL as string | undefined)?.replace(/\/$/, '') ||
+  'https://najlaashutter.com';
+
 /** Central site configuration — single source for contact & tracking. */
 export const site = {
   name: 'نجلاء شتر',
@@ -5,7 +10,7 @@ export const site = {
   legalName: 'نجلاء شتر',
   description:
     'تركيب شتر نوافذ في جدة — شتر يدوي وكهربائي، داخلي وخارجي، بجودة عالية وتركيب احترافي.',
-  url: 'https://najlaashutter.com',
+  url: siteOrigin,
   locale: 'ar_SA',
   language: 'ar',
   direction: 'rtl' as const,

@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { assetSources } from '../config/project-images';
+import { isAdsSite } from '../config/env';
 import { site } from '../config/site';
 import PhoneCTA from './PhoneCTA.astro';
 import WhatsAppCTA from './WhatsAppCTA.astro';
@@ -10,11 +11,12 @@ interface Props {
 }
 
 const { minimal = true } = Astro.props;
+const brandHref = isAdsSite ? '/' : site.paths.landingJeddah;
 ---
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a href={site.paths.landingJeddah} class="site-header__brand" aria-label={site.name}>
+    <a href={brandHref} class="site-header__brand" aria-label={site.name}>
       <Image
         src={assetSources.logo.file}
         alt=""

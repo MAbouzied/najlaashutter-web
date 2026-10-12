@@ -3,7 +3,7 @@ import { site } from '../../config/site';
 import AtiraIcon from './AtiraIcon.astro';
 ---
 
-<nav class="pw-fixed-footer" aria-label="تنقل الجوال السفلي">
+<nav class="pw-fixed-footer bg-main" aria-label="تنقل الجوال السفلي">
   <a
     href={site.whatsapp.href()}
     target="_blank"
@@ -17,8 +17,8 @@ import AtiraIcon from './AtiraIcon.astro';
     <span class="pw-fixed-footer__icon"><AtiraIcon name="telephone" /></span>
     <span>اتصل</span>
   </a>
-  <button type="button" data-open-nav aria-label="القائمة">
-    <span class="pw-fixed-footer__icon"><AtiraIcon name="menu" /></span>
+  <button type="button" class="pw-fixed-footer__menu" data-open-nav aria-label="القائمة">
+    <span class="pw-fixed-footer__icon pw-fixed-footer__icon--center"><AtiraIcon name="menu" /></span>
     <span>القائمة</span>
   </button>
   <a href={site.email.href}>
@@ -43,7 +43,7 @@ import AtiraIcon from './AtiraIcon.astro';
       await navigator.clipboard.writeText(url);
       alert('تم نسخ رابط الموقع.');
     } catch {
-      /* user cancelled share */
+      /* cancelled */
     }
   });
 </script>

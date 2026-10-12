@@ -1,30 +1,30 @@
 ---
 import { site } from '../../config/site';
+import AtiraIcon from './AtiraIcon.astro';
 ---
 
-<dialog id="pw-book-modal" class="home-dialog" aria-labelledby="pw-book-title">
-  <div class="home-dialog__panel">
+<dialog id="pw-book-modal" class="home-dialog home-dialog--book" aria-labelledby="pw-book-title">
+  <div class="home-dialog__panel home-dialog__panel--wide">
     <button type="button" class="home-dialog__close" data-close-dialog aria-label="إغلاق">×</button>
-    <h2 id="pw-book-title" class="text-main">اتصل بنا</h2>
-    <p class="text-sub">نحن على استعداد لتقديم استشارة تناسب احتياجك.</p>
-    <div class="home-dialog__actions">
-      <a
-        class="pw-btn btn-main"
-        href={site.phone.telHref}
-        data-conversion="phone"
-        data-close-dialog-link
-      >
-        اتصل: {site.phone.display}
-      </a>
-      <a
-        class="pw-btn btn-unq"
-        href={site.whatsapp.href('السلام عليكم، أرغب في استشارة حول شتر النوافذ.')}
-        target="_blank"
-        rel="noopener noreferrer"
-        data-conversion="whatsapp"
-      >
-        واتساب
-      </a>
+    <div class="home-dialog__book-grid">
+      <div class="home-dialog__book-art" aria-hidden="true"></div>
+      <div>
+        <h2 id="pw-book-title" class="text-main">اتصل بنا</h2>
+        <p class="text-sub">نحن على استعداد لتقديم استشارة تناسب احتياجك.</p>
+        <form id="pw-book-form" data-wa-base={`https://wa.me/${site.whatsapp.e164}`}>
+          <label class="home-dialog__label">
+            الاسم
+            <input class="home-dialog__input" type="text" name="name" autocomplete="name" />
+          </label>
+          <label class="home-dialog__label">
+            رسالتك
+            <textarea class="home-dialog__input" name="message" rows="4"></textarea>
+          </label>
+          <button type="submit" class="pw-btn btn-unq" data-conversion="whatsapp">
+            <AtiraIcon name="whatsapp" /> إرسال عبر واتساب
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </dialog>
@@ -33,10 +33,15 @@ import { site } from '../../config/site';
   <div class="home-dialog__panel">
     <button type="button" class="home-dialog__close" data-close-dialog aria-label="إغلاق">×</button>
     <h2 id="pw-search-title" class="text-main">بحث الموقع</h2>
-    <p class="text-sub">
+    <form class="home-dialog__search" role="search" onsubmit="return false">
+      <input type="search" class="home-dialog__input" placeholder="ابحث في الموقع…" aria-label="بحث" />
+      <button type="button" class="pw-btn btn-main">
+        <AtiraIcon name="search" /> بحث
+      </button>
+    </form>
+    <p class="text-sub home-dialog__search-note">
       البحث الكامل سيتوفر بعد نقل صفحات المدونة والخدمات. حتى ذلك الحين يمكنك التواصل معنا مباشرة.
     </p>
-    <a class="pw-btn btn-main" href={site.phone.telHref} data-conversion="phone">اتصل بنا</a>
   </div>
 </dialog>
 

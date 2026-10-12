@@ -5,9 +5,10 @@ import HomeSiteHeader from '../components/home/HomeSiteHeader.astro';
 import HomeSiteFooter from '../components/home/HomeSiteFooter.astro';
 import HomeFixedFooter from '../components/home/HomeFixedFooter.astro';
 import HomeHero from '../components/home/HomeHero.astro';
-import HomeContactBan from '../components/home/HomeContactBan.astro';
 import HomeContactDialog from '../components/home/HomeContactDialog.astro';
 import GoogleReviewsSlot from '../components/home/GoogleReviewsSlot.astro';
+import HomeFloatingControls from '../components/home/HomeFloatingControls.astro';
+import HomeSwiperNav from '../components/home/HomeSwiperNav.astro';
 import AtiraIcon from '../components/home/AtiraIcon.astro';
 import {
   blogFeaturedByPostId,
@@ -25,7 +26,8 @@ const description = site.description;
 
 const formatBlogDate = (sqlDate: string) => {
   const d = new Date(sqlDate.replace(' ', 'T'));
-  return d.toLocaleDateString('ar-SA', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${pad(d.getDate())}/${pad(d.getMonth() + 1)}/${d.getFullYear()}`;
 };
 
 const gallerySlides = await Promise.all(
@@ -75,102 +77,107 @@ const localBusiness = {
     <section class="py-5 services section-bg" id="main-srv" aria-labelledby="services-heading">
       <div class="container">
         <div class="section-title">
-          <h2 id="services-heading">خدماتنا</h2>
-          <p class="text-main">نقدّم خدمات عالية الجودة</p>
+          <h2 id="services-heading" class="fs-1 fw-bold text-unq">خدماتنا</h2>
+          <p class="fs-5 text-main fw-bold">نقدّم خدمات عالية الجودة</p>
         </div>
-        <div class="h-track-wrap">
-          <div class="h-track" data-h-track id="services-track">
+        <div class="swiper pw-hom-swp1">
+          <div class="swiper-wrapper">
             {
               homepageContent.services.map((srv) => {
                 const img = serviceCoverByFile[srv.featuredImageFile] ?? homepageThemeAssets.defaultCard;
                 const href = homePaths.service(srv.slug);
                 return (
-                  <div class="h-track__slide box-srv">
-                    <article class="srv-card bg-main">
-                      <div class="pw-clip-btm">
-                        <a href={href} title={srv.title}>
-                          <Image
-                            src={img}
-                            alt=""
-                            widths={[360, 720, 1024]}
-                            sizes="(max-width:768px) 88vw, 360px"
-                            width={360}
-                            height={156}
-                            loading="lazy"
-                            decoding="async"
-                            class="w-100"
-                          />
-                        </a>
-                      </div>
-                      <div class="srv-card__body">
-                        <a href={href} class="text-white">
-                          <h3>{srv.title}</h3>
-                        </a>
-                        <p>{srv.excerpt}</p>
-                      </div>
-                      <div class="srv-card__footer">
-                        <a href={href}>مشاهدة التفاصيل</a>
-                      </div>
-                    </article>
+                  <div class="swiper-slide">
+                    <div class="box-srv">
+                      <article class="card h-100 shadow border-0 srv-card bg-main">
+                        <div class="p-0 pw-clip-btm rounded-top overflow-hidden">
+                          <a href={href} title={srv.title}>
+                            <Image
+                              src={img}
+                              alt=""
+                              widths={[360, 720, 1024]}
+                              sizes="(max-width:768px) 88vw, 360px"
+                              width={360}
+                              height={156}
+                              loading="lazy"
+                              decoding="async"
+                              class="w-100"
+                            />
+                          </a>
+                        </div>
+                        <div class="card-body bg-main srv-card__body">
+                          <a href={href} class="text-white text-center">
+                            <h3 class="card-title fs-5 pb-2 fw-bold text-unq pw-2lin">{srv.title}</h3>
+                          </a>
+                          <p class="pw-cex card-text d-none d-lg-block pw-3lin mb-2 text-white fs-6">{srv.excerpt}</p>
+                        </div>
+                        <div class="card-footer bg-main rounded-bottom srv-card__footer">
+                          <div class="text-center">
+                            <a href={href} class="text-white">مشاهدة التفاصيل</a>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
                   </div>
                 );
               })
             }
           </div>
-          <div class="pw-swp-tol">
-            <div class="pw-swp-tol__row">
-              <button type="button" class="h-nav-btn" data-h-prev="services-track" aria-label="السابق">
-                ›
-              </button>
-              <a class="pw-btn btn-main" href={homePaths.services}>عرض المزيد</a>
-              <button type="button" class="h-nav-btn" data-h-next="services-track" aria-label="التالي">
-                ‹
-              </button>
-            </div>
-          </div>
         </div>
+        <HomeSwiperNav
+          prevClass="pw-hom1-prev"
+          nextClass="pw-hom1-next"
+          centerHref={homePaths.services}
+          centerLabel="عرض المزيد"
+        />
       </div>
     </section>
 
     <!-- About -->
     <section class="py-5 section-bg bg-new" aria-labelledby="about-heading">
-      <div class="container about-grid">
-        <div class="text-center">
-          <div class="pw-home-img position-relative">
-            <div class="pw-home-img-bg" />
-            <Image
-              src={homepageThemeAssets.whyChooseUs}
-              alt="تركيب شتر النوافذ — نجلاء شتر"
-              widths={[480, 640, 800]}
-              sizes="(max-width:992px) 100vw, 480px"
-              loading="lazy"
-              decoding="async"
-              class="img-fluid shadow-sm position-relative"
-            />
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-5 text-center">
+            <div class="pw-home-img position-relative rounded-4 overflow-hidden" data-home-animate data-animate="fade-down" style="--home-anim-dur: 1000ms">
+              <div class="pw-home-img-bg" />
+              <Image
+                src={homepageThemeAssets.aboutExperts}
+                alt="تركيب شتر النوافذ — نجلاء شتر"
+                widths={[480, 640, 800]}
+                sizes="(max-width:992px) 100vw, 480px"
+                loading="lazy"
+                decoding="async"
+                class="img-fluid shadow-sm position-relative"
+              />
+            </div>
           </div>
-        </div>
-        <div>
-          <h2 id="about-heading" class="text-main mt-3 fs-2 fw-bold">
-            <span class="text-unq">تركيب شتر النوافذ</span> باحترافية تضمن لكم الراحة والحماية
-          </h2>
-          <p class="fs-5">
-            في نجلاء شتر، نقدم حلول شتر متكاملة تجمع بين الجودة والمتانة والأناقة. نحرص على استخدام
-            أفضل المواد وأحدث التقنيات لضمان حصولك على منتجات عملية وجميلة تلبي جميع احتياجات منزلك
-            أو منشأتك.
-          </p>
-          <ul class="list-unstyled fs-5" style="padding:0;list-style:none">
-            <li style="margin-bottom:1rem">
-              <strong class="text-unq">جودة منتجاتنا:</strong> منتجاتنا مصممة بعناية فائقة لتدوم
-              طويلاً وتوفّر الحماية والعزل المثالي.
-            </li>
-            <li>
-              <strong class="text-unq">خبرتنا:</strong> فريقنا من المتخصصين يقدم تركيبًا احترافيًا
-              لكل أنواع الشتر، مع التركيز على التفاصيل لضمان رضا العملاء.
-            </li>
-          </ul>
-          <a class="pw-btn btn-main d-inline-block" href={homePaths.about}>
-            اقرأ المزيد
-          </a>
+          <div class="col-12 col-lg-7 text-start">
+            <div class="ps-0 ps-lg-5">
+              <h2 id="about-heading" class="text-main mt-3 fs-2 fw-bold">
+                <span class="text-unq">تركيب شتر النوافذ</span> باحترافية تضمن لكم الراحة والحماية
+              </h2>
+              <p class="fs-5 text-justify">
+                في نجلاء شتر، نقدم حلول شتر متكاملة تجمع بين الجودة والمتانة والأناقة. نحرص على
+                استخدام أفضل المواد وأحدث التقنيات لضمان حصولك على منتجات عملية وجميلة تلبي جميع
+                احتياجات منزلك أو منشأتك.
+              </p>
+              <ul class="list-unstyled fs-5">
+                <li class="list-group-item mb-3">
+                  <AtiraIcon name="check-circle" class="text-unq-inline" />
+                  <strong class="text-unq">جودة منتجاتنا:</strong> منتجاتنا مصممة بعناية فائقة
+                  لتدوم طويلاً وتوفّر الحماية والعزل المثالي.
+                </li>
+                <li class="list-group-item">
+                  <AtiraIcon name="check-circle" class="text-unq-inline" />
+                  <strong class="text-unq">خبرتنا:</strong> فريقنا من المتخصصين يقدم تركيبًا
+                  احترافيًا لكل أنواع الشتر، مع التركيز على التفاصيل لضمان رضا العملاء.
+                </li>
+              </ul>
+              <a class="pw-btn btn-main d-inline-block" href={homePaths.about}>
+                <AtiraIcon name="arrow-left-circle" /> اقرأ المزيد
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -182,11 +189,11 @@ const localBusiness = {
           <h2 id="projects-heading">استكشف أعمالنا</h2>
           <p class="text-main">تصفح معرض الصور واكتشف جودة وإبداع أعمالنا</p>
         </div>
-        <div class="h-track-wrap">
-          <div class="h-track" data-h-track id="projects-track">
+        <div class="swiper pw-hom-swp3-projects">
+          <div class="swiper-wrapper">
             {
               gallerySlides.map((item) => (
-                <div class="h-track__slide">
+                <div class="swiper-slide">
                   <button
                     type="button"
                     class="pw-hgal-btn"
@@ -196,29 +203,24 @@ const localBusiness = {
                     <Image
                       src={item.file}
                       alt={item.alt}
-                      widths={[400, 600, 800]}
+                      widths={[400, 600, 830]}
                       sizes="(max-width:768px) 88vw, 380px"
                       loading="lazy"
                       decoding="async"
-                      class="pw-hgal-img"
+                      class="pw-hgal-img w-100 rounded shadow-sm"
                     />
                   </button>
                 </div>
               ))
             }
           </div>
-          <div class="pw-swp-tol">
-            <div class="pw-swp-tol__row">
-              <button type="button" class="h-nav-btn" data-h-prev="projects-track" aria-label="السابق">
-                ›
-              </button>
-              <a class="pw-btn btn-main" href={homePaths.projects}>عرض المزيد</a>
-              <button type="button" class="h-nav-btn" data-h-next="projects-track" aria-label="التالي">
-                ‹
-              </button>
-            </div>
-          </div>
         </div>
+        <HomeSwiperNav
+          prevClass="pw-hom3-prev"
+          nextClass="pw-hom3-next"
+          centerHref={homePaths.projects}
+          centerLabel="عرض المزيد"
+        />
       </div>
     </section>
 
@@ -228,7 +230,7 @@ const localBusiness = {
     <section class="section-why-us" aria-labelledby="why-heading">
       <div class="container why-grid">
         <div class="text-center">
-          <div class="image-container">
+          <div class="image-container" data-home-animate data-animate="zoom-in-left" style="--home-anim-dur: 1500ms">
             <div class="corner-decoration corner-top-left" />
             <div class="corner-decoration corner-bottom-right" />
             <div class="pw-home-img rounded-4 shadow">
@@ -245,7 +247,7 @@ const localBusiness = {
         </div>
         <div>
           <h2 id="why-heading" class="text-main fs-1 mb-4">لماذا تختارنا؟</h2>
-          <div class="feature-box">
+          <div class="feature-box" data-home-animate data-animate="fade-up" style="--home-anim-dur: 1000ms">
             <div class="feature-box__row">
               <div class="feature-icon"><AtiraIcon name="star" /></div>
               <div>
@@ -257,7 +259,7 @@ const localBusiness = {
               </div>
             </div>
           </div>
-          <div class="feature-box">
+          <div class="feature-box" data-home-animate data-animate="fade-up" style="--home-anim-dur: 2000ms">
             <div class="feature-box__row">
               <div class="feature-icon"><AtiraIcon name="people" /></div>
               <div>
@@ -268,7 +270,7 @@ const localBusiness = {
               </div>
             </div>
           </div>
-          <div class="feature-box">
+          <div class="feature-box" data-home-animate data-animate="fade-up" style="--home-anim-dur: 3000ms">
             <div class="feature-box__row">
               <div class="feature-icon"><AtiraIcon name="check-circle" /></div>
               <div>
@@ -283,45 +285,62 @@ const localBusiness = {
       </div>
     </section>
 
-    <HomeContactBan />
-
     <!-- FAQ -->
-    <section class="py-5 bg-new" aria-labelledby="faq-heading">
-      <div class="container faq-grid">
-        <div>
-          <div class="section-title" style="text-align:center">
-            <h2 id="faq-heading">الأسئلة الشائعة</h2>
-            <p class="text-main">يسعدنا الإجابة على استفساراتكم.</p>
-          </div>
-          <div class="home-faq">
-            {
-              homepageContent.faqs.map((faq) => (
-                <details>
-                  <summary>
-                    <span aria-hidden="true">+</span>
-                    {faq.question}
-                  </summary>
-                  <div class="faq-body">
-                    <p>{faq.answer}</p>
+    <section class="py-3 py-lg-5 bg-new" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12 col-md-6 col-lg-7">
+            <div class="text-center mb-2 section-title">
+              <h2 id="faq-heading" class="fs-1 fw-bold text-unq">الأسئلة الشائعة</h2>
+              <p class="fs-5 text-main fw-bold">يسعدنا الإجابة على استفساراتكم.</p>
+            </div>
+            <div class="home-accordion" id="accordionExample">
+              {
+                homepageContent.faqs.map((faq, i) => (
+                  <div
+                    class="accordion-item my-2 rounded-2 border-0 shadow-sm overflow-hidden"
+                    data-faq-item
+                    data-home-animate
+                    data-animate="fade-in"
+                    style={`--home-anim-dur: ${(i + 1) * 1000}ms`}
+                  >
+                    <h3 class="accordion-header">
+                      <button
+                        type="button"
+                        class="accordion-button collapsed"
+                        data-faq-trigger
+                        aria-expanded="false"
+                      >
+                        <AtiraIcon name="plus-circle" /> {faq.question}
+                      </button>
+                    </h3>
+                    <div class="accordion-collapse" data-faq-panel hidden>
+                      <div class="accordion-body">
+                        <p>{faq.answer}</p>
+                      </div>
+                    </div>
                   </div>
-                </details>
-              ))
-            }
+                ))
+              }
+            </div>
+            <div class="text-center my-4 mx-3">
+              <a class="pw-btn btn-main d-inline-block" href={homePaths.faq}>مزيد من الأسئلة الشائعة</a>
+            </div>
           </div>
-          <div class="text-center my-4">
-            <a class="pw-btn btn-main" href={homePaths.faq}>مزيد من الأسئلة الشائعة</a>
+          <div class="col-12 col-md-6 col-lg-5 text-center mb-2">
+            <Image
+              src={homepageThemeAssets.faqSide}
+              alt=""
+              widths={[480, 640]}
+              sizes="(max-width:992px) 100vw, 480px"
+              loading="lazy"
+              decoding="async"
+              class="img-fluid rounded-4 shadow-md"
+              data-home-animate
+              data-animate="fade-down"
+              style="--home-anim-dur: 1000ms"
+            />
           </div>
-        </div>
-        <div class="text-center">
-          <Image
-            src={homepageThemeAssets.faqSide}
-            alt=""
-            widths={[480, 640]}
-            sizes="(max-width:992px) 100vw, 480px"
-            loading="lazy"
-            decoding="async"
-            class="img-fluid rounded-4 shadow-md"
-          />
         </div>
       </div>
     </section>
@@ -333,60 +352,66 @@ const localBusiness = {
           <h2 id="blog-heading">المدونة</h2>
           <p class="text-main">احدث المقالات والاخبار</p>
         </div>
-        <div class="h-track-wrap">
-          <div class="h-track" data-h-track id="blog-track">
+        <div class="swiper pw-hom-swp3-blog">
+          <div class="swiper-wrapper">
             {
               homepageContent.blogRecent.map((post) => {
-                const featured =
-                  blogFeaturedByPostId[post.id] ?? homepageThemeAssets.defaultCard;
+                const featured = blogFeaturedByPostId[post.id] ?? homepageThemeAssets.defaultCard;
                 return (
-                <div class="h-track__slide">
-                  <article class="blog-card bg-main">
-                    <div class="pw-clip-btm">
-                      <a href={homePaths.blogPost(post.slug)} title={post.title}>
-                        <Image
-                          src={featured}
-                          alt=""
-                          widths={[400, 600, 800]}
-                          sizes="(max-width:768px) 88vw, 380px"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </a>
-                    </div>
-                    <div class="srv-card__body">
-                      <a href={homePaths.blogPost(post.slug)} class="text-unq">
-                        <h3>{post.title}</h3>
-                      </a>
-                      <p>{post.excerpt}</p>
-                    </div>
-                    <div class="blog-card__meta">
-                      <span>{formatBlogDate(post.date)}</span>
-                      <a href={homePaths.blogPost(post.slug)}>اقرأ المزيد</a>
-                    </div>
-                  </article>
-                </div>
-              );
+                  <div class="swiper-slide">
+                    <article class="card h-100 shadow-sm blog-card bg-main">
+                      <div class="pw-clip-btm rounded-top-2">
+                        <a href={homePaths.blogPost(post.slug)} title={post.title}>
+                          <Image
+                            src={featured}
+                            alt=""
+                            widths={[400, 600, 800]}
+                            sizes="(max-width:768px) 88vw, 380px"
+                            loading="lazy"
+                            decoding="async"
+                            class="w-100"
+                          />
+                        </a>
+                      </div>
+                      <div class="card-body bg-main srv-card__body">
+                        <a href={homePaths.blogPost(post.slug)} class="text-unq">
+                          <h3 class="card-title fs-5 pb-1 fw-bold pw-2lin">{post.title}</h3>
+                        </a>
+                        <p class="card-text d-none d-lg-block pw-3lin mb-2 text-white fs-6">{post.excerpt}</p>
+                      </div>
+                      <div class="card-footer bg-main blog-card__meta">
+                        <div class="row">
+                          <div class="col">
+                            <p class="card-text m-0">
+                              <small class="text-light">
+                                <AtiraIcon name="calendar" /> {formatBlogDate(post.date)}
+                              </small>
+                            </p>
+                          </div>
+                          <div class="col text-end">
+                            <a href={homePaths.blogPost(post.slug)} class="text-white">اقرأ المزيد</a>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                );
               })
             }
           </div>
-          <div class="pw-swp-tol">
-            <div class="pw-swp-tol__row">
-              <button type="button" class="h-nav-btn" data-h-prev="blog-track" aria-label="السابق">
-                ›
-              </button>
-              <a class="pw-btn btn-main" href={homePaths.blog}>عرض المزيد</a>
-              <button type="button" class="h-nav-btn" data-h-next="blog-track" aria-label="التالي">
-                ‹
-              </button>
-            </div>
-          </div>
         </div>
+        <HomeSwiperNav
+          prevClass="pw-hom4-prev"
+          nextClass="pw-hom4-next"
+          centerHref={homePaths.blog}
+          centerLabel="عرض المزيد"
+        />
       </div>
     </section>
   </div>
 
   <HomeContactDialog />
+  <HomeFloatingControls />
 
   <dialog id="pw-project-lightbox" class="home-lightbox">
     <button type="button" class="home-lightbox__close" data-lightbox-close aria-label="إغلاق">×</button>
@@ -412,26 +437,7 @@ const localBusiness = {
 </style>
 
 <script>
-  function scrollTrack(id: string, dir: number) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const slide = el.querySelector<HTMLElement>('.h-track__slide');
-    const delta = (slide?.offsetWidth ?? 320) + 16;
-    el.scrollBy({ left: dir * delta * -1, behavior: 'smooth' });
-  }
-
-  document.querySelectorAll('[data-h-prev]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const id = btn.getAttribute('data-h-prev');
-      if (id) scrollTrack(id, -1);
-    });
-  });
-  document.querySelectorAll('[data-h-next]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const id = btn.getAttribute('data-h-next');
-      if (id) scrollTrack(id, 1);
-    });
-  });
+  import '../scripts/home-init.ts';
 
   function initFadeCarousels(root: ParentNode = document) {
     root.querySelectorAll('[data-fade-carousel]').forEach((rootEl) => {

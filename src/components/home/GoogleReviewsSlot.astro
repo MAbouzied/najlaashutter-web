@@ -1,9 +1,7 @@
 ---
-/**
- * ATIRA-style reviews carousel shell — real Google reviews wired later via `GoogleReview[]`.
- * Do not fabricate review text, names, stars, or counts.
- */
 import { site } from '../../config/site';
+import HomeSwiperNav from './HomeSwiperNav.astro';
+import AtiraIcon from './AtiraIcon.astro';
 
 export interface GoogleReview {
   authorName: string;
@@ -12,77 +10,79 @@ export interface GoogleReview {
   publishedAt: string;
 }
 
-/** Empty until Google Business Profile sync is implemented. */
+/** Static verified reviews only — no fabrication. API sync is a separate task. */
 export const googleReviewsData: GoogleReview[] = [];
 ---
 
-<section class="reviews-section pw-clip-box" aria-labelledby="reviews-heading">
+<section class="py-lg-5 pw-clip-box reviews-section" aria-labelledby="reviews-heading">
   <div class="container">
-    <div class="section-title">
-      <h2 id="reviews-heading">آراء عملائنا</h2>
+    <div class="my-3 text-center section-title">
+      <h2 id="reviews-heading" class="fs-1 fw-bold text-unq">آراء عملائنا</h2>
     </div>
 
-    <div class="reviews-carousel">
-      <div class="reviews-carousel__track" data-h-track id="reviews-track">
+    <div class="swiper pw-hom-swp2">
+      <div class="swiper-wrapper">
         {
           googleReviewsData.length > 0 ? (
             googleReviewsData.map((rev) => (
-              <div class="h-track__slide">
-                <article class="pw-rev">
-                  <p class="pw-rev__name text-main">{rev.authorName}</p>
-                  <p class="pw-rev__text">{rev.text}</p>
+              <div class="swiper-slide">
+                <article class="p-3 my-4 mx-auto pw-rev rounded-4 shadow-sm">
+                  <img class="pw-rev-img" src="/favicon.png" alt="" width="40" height="40" loading="lazy" />
+                  <h3 class="fs-4 text-main text-center pt-3">{rev.authorName}</h3>
+                  <div class="text-warning text-center" aria-label={`${rev.rating} stars`}>
+                    {[1, 2, 3, 4, 5].map(() => (
+                      <AtiraIcon name="star" />
+                    ))}
+                  </div>
+                  <p class="fst-italic text-muted">
+                    <AtiraIcon name="quote" />
+                    {rev.text}
+                    <AtiraIcon name="quote" />
+                  </p>
                 </article>
               </div>
             ))
           ) : (
-            <div class="h-track__slide">
-              <article class="pw-rev pw-rev--pending">
-                <img
-                  class="pw-rev-img"
-                  src="/favicon.png"
-                  alt=""
-                  width="40"
-                  height="40"
-                  loading="lazy"
-                />
-                <h3 class="text-main text-center">تقييمات Google الموثّقة</h3>
-                <p class="text-main text-center" style="opacity:0.85">
-                  سيتم عرض آراء عملائنا من Google Business Profile هنا بعد ربط التقييمات
-                  الرسمية. (تمت إزالة شهادات WordPress المكررة.)
-                </p>
-                <div class="text-center">
-                  <a
-                    class="pw-btn btn-main"
-                    href={site.googleBusinessProfileUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    شاهد تقييماتنا على Google
-                  </a>
+            <div class="swiper-slide">
+              <article class="p-3 my-4 mx-auto pw-rev rounded-4 shadow-sm pw-rev--shell">
+                <img class="pw-rev-img" src="/favicon.png" alt="" width="40" height="40" loading="lazy" />
+                <h3 class="fs-4 text-main text-center pt-3">—</h3>
+                <div class="text-warning text-center" aria-hidden="true">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <AtiraIcon name="star" />
+                  ))}
                 </div>
+                <p class="fst-italic text-muted text-center">
+                  <span class="visually-hidden">التقييمات:</span>
+                  سيتم عرض آراء عملاء Google الموثّقة هنا. لا تُعرض مراجعات WordPress المكررة.
+                </p>
               </article>
             </div>
           )
         }
       </div>
-      <div class="pw-swp-tol">
-        <div class="pw-swp-tol__row">
-          <button type="button" class="h-nav-btn" data-h-prev="reviews-track" aria-label="السابق">
-            ›
-          </button>
-          <a
-            class="pw-btn btn-main"
-            href={site.googleBusinessProfileUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            مزيد من التعليقات
-          </a>
-          <button type="button" class="h-nav-btn" data-h-next="reviews-track" aria-label="التالي">
-            ‹
-          </button>
-        </div>
-      </div>
     </div>
+
+    <HomeSwiperNav
+      prevClass="pw-hom2-prev"
+      nextClass="pw-hom2-next"
+      centerHref={site.googleBusinessProfileUrl}
+      centerLabel="مزيد من التعليقات"
+      centerExternal
+    />
   </div>
 </section>
+
+<style>
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>

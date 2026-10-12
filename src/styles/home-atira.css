@@ -1,18 +1,14 @@
-/* ATIRA homepage — scoped under .home-atira (from WP theme tokens, no Bootstrap). */
+/* ATIRA homepage — scoped under .home-atira (from WP theme tokens, no Bootstrap runtime). */
+@import './home-containers.css';
+@import './home-animations.css';
 
 .home-atira {
   --pw-main: #13304e;
   --pw-sub: #8e9dad;
   --pw-unq: #8e9dad;
   --pw-fff: #f4f5f6;
-  --pw-container: min(1140px, 100% - 2rem);
   color: #101010;
   background: var(--pw-fff);
-}
-
-.home-atira .container {
-  width: var(--pw-container);
-  margin-inline: auto;
 }
 
 .home-atira .text-main {
@@ -31,7 +27,266 @@
   background: var(--pw-fff);
 }
 .home-atira .bg-new {
-  background: linear-gradient(180deg, #fff 0%, var(--pw-fff) 100%);
+  background-color: #e8f3ff;
+}
+.home-atira #main-srv {
+  background: linear-gradient(178deg, #fdfeff, var(--pw-main));
+}
+.home-atira .text-justify {
+  text-align: justify;
+}
+.home-atira .pw-2lin {
+  line-height: 1.5em;
+  height: 3em;
+  overflow: hidden;
+}
+.home-atira .pw-3lin {
+  line-height: 1.5em;
+  height: 4.5em;
+  overflow: hidden;
+}
+.home-atira .swiper-nav-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--pw-main);
+  cursor: pointer;
+}
+.home-atira .pw-hom1-prev,
+.home-atira .pw-hom2-prev,
+.home-atira .pw-hom3-prev,
+.home-atira .pw-hom4-prev,
+.home-atira .pw-hom1-next,
+.home-atira .pw-hom2-next,
+.home-atira .pw-hom3-next,
+.home-atira .pw-hom4-next {
+  cursor: pointer;
+}
+.home-atira .card.srv-card,
+.home-atira .card.blog-card {
+  max-width: 400px;
+  margin: auto;
+}
+.home-atira .home-header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--pw-main);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.home-atira #pw-header-top .contact-info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+}
+.home-atira #pw-header-top .contact-info a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.home-atira .home-header-top__mobile {
+  margin-inline: calc(var(--bs-gutter-x) * -0.5);
+  padding: 0.25rem calc(var(--bs-gutter-x) * 0.5);
+}
+.home-atira .pw-btn-search.btn-unq {
+  padding: 0.35rem 0.65rem;
+  border-radius: 15px;
+}
+.home-atira .text-unq-inline {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--pw-unq);
+  margin-inline-end: 0.35rem;
+}
+.home-atira .pw-bottom-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  pointer-events: none;
+  visibility: hidden;
+}
+.home-atira .pw-bottom-menu.is-open {
+  pointer-events: auto;
+  visibility: visible;
+}
+.home-atira .pw-bottom-menu__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+.home-atira .pw-bottom-menu__sheet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+  padding: 1rem 1rem 5.5rem;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.28s ease;
+}
+.home-atira .pw-bottom-menu.is-open .pw-bottom-menu__sheet {
+  transform: translateY(0);
+}
+.home-atira .pw-bottom-menu__close {
+  position: absolute;
+  top: 0.5rem;
+  inset-inline-end: 0.75rem;
+  border: none;
+  background: transparent;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+.home-atira .pw-side-menu__sub {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1rem;
+  display: none;
+}
+.home-atira .pw-side-menu__sub.is-open {
+  display: block;
+}
+.home-atira .pw-side-menu__toggle {
+  width: 100%;
+  text-align: start;
+  border: none;
+  background: transparent;
+  color: var(--pw-main);
+  padding: 5px 0;
+  font: inherit;
+  cursor: pointer;
+}
+.home-atira .home-accordion .accordion-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: start;
+  background: #fff;
+  border: none;
+  padding: 1rem 1.1rem;
+  font: inherit;
+  cursor: pointer;
+}
+.home-atira .home-accordion .accordion-item.is-open .accordion-button {
+  background: var(--pw-unq);
+  color: #fff;
+}
+.home-atira .home-accordion .accordion-body {
+  padding: 1rem 1.1rem;
+  background: #fff;
+}
+.home-atira .pw-wts {
+  position: fixed;
+  right: 1rem;
+  bottom: 4.5rem;
+  z-index: 105;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pw-wts, #25d366);
+  color: #13304e;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+.home-atira .progress {
+  position: fixed;
+  left: 1rem;
+  bottom: 4.5rem;
+  z-index: 100;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--pw-main);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.home-atira .progress.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.home-atira .progress__arrow {
+  position: absolute;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.home-atira .heart-beat {
+  animation: icon-heart-beat 2s linear infinite;
+}
+@keyframes icon-heart-beat {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(0.85, 0.85, 1);
+  }
+  60% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+.home-atira .pw-fixed-footer.bg-main {
+  background: var(--pw-main);
+  border-radius: 16px 16px 0 0;
+  padding-top: 0.35rem;
+}
+.home-atira .pw-fixed-footer__menu {
+  position: relative;
+  top: -18px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+.home-atira .pw-fixed-footer__icon--center {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50%;
+  background: var(--pw-unq);
+  color: var(--pw-main);
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-atira .home-footer__copy-bar {
+  position: relative;
+  z-index: 1;
+  background: var(--pw-main);
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem 0;
+  margin-top: 1.5rem;
+}
+.home-atira .home-dialog__input {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid rgba(19, 48, 78, 0.2);
+  border-radius: 8px;
+  font: inherit;
+}
+.home-atira .home-dialog__label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.home-atira .hero-carousel__controls .atira-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 7px;
+  background: var(--pw-main);
+  color: #fff;
+  border-radius: 20%;
 }
 
 .home-atira .pw-btn {
@@ -1028,4 +1283,28 @@ body.home-atira.has-fixed-footer {
 .home-atira .social-icon--disabled {
   opacity: 0.45;
   cursor: default;
+}
+.home-atira .pw-hr-white-right {
+  height: 1px;
+  border: none;
+  background: linear-gradient(to right, var(--pw-fff), var(--pw-fff), transparent);
+  opacity: 1;
+  margin: 0.5rem 0;
+}
+.home-atira .reviews-section {
+  background: linear-gradient(180deg, #e8f3ff 0%, #f4f5f6 100%);
+}
+.home-atira .pw-rev {
+  height: 210px;
+  overflow: auto;
+  background: #fff;
+  position: relative;
+}
+.home-atira .pw-rev-img {
+  width: 40px;
+  position: absolute;
+  left: 15px;
+}
+.home-atira .feature-box {
+  border-right: 4px solid var(--pw-unq);
 }

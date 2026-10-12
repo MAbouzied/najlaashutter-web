@@ -1,0 +1,141 @@
+/* Bootstrap 5 container max-widths — homepage only (.home-atira) */
+
+.home-atira .container,
+.home-atira .container-lg {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
+}
+
+.home-atira {
+  --bs-gutter-x: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  .home-atira .container,
+  .home-atira .container-lg {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-atira .container,
+  .home-atira .container-lg {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-atira .container {
+    max-width: 960px;
+  }
+  .home-atira .container-lg {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-atira .container,
+  .home-atira .container-lg {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .home-atira .container,
+  .home-atira .container-lg {
+    max-width: 1320px;
+  }
+}
+
+.home-atira .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.home-atira .row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-inline: calc(var(--bs-gutter-x) * 0.5);
+}
+
+.home-atira .col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+.home-atira .col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+.home-atira .col-4 {
+  flex: 0 0 auto;
+  width: 33.333%;
+}
+.home-atira .col-8 {
+  flex: 0 0 auto;
+  width: 66.666%;
+}
+.home-atira .col-2 {
+  flex: 0 0 auto;
+  width: 16.666%;
+}
+
+@media (min-width: 768px) {
+  .home-atira .col-md-6 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-atira .col-lg-4 {
+    width: 33.333%;
+  }
+  .home-atira .col-lg-5 {
+    width: 41.666%;
+  }
+  .home-atira .col-lg-7 {
+    width: 58.333%;
+  }
+  .home-atira .d-lg-none {
+    display: none !important;
+  }
+  .home-atira .d-lg-block {
+    display: block !important;
+  }
+  .home-atira .d-lg-flex {
+    display: flex !important;
+  }
+  .home-atira .d-none.d-lg-block {
+    display: block !important;
+  }
+  .home-atira .d-none.d-lg-flex {
+    display: flex !important;
+  }
+}
+
+.home-atira .d-none {
+  display: none !important;
+}
+.home-atira .d-flex {
+  display: flex !important;
+}
+.home-atira .align-items-center {
+  align-items: center !important;
+}
+.home-atira .justify-content-between {
+  justify-content: space-between !important;
+}
+.home-atira .text-center {
+  text-align: center !important;
+}
+.home-atira .text-end {
+  text-align: end !important;
+}
+
+@media (min-width: 992px) {
+  .home-atira .text-lg-start {
+    text-align: start !important;
+  }
+}

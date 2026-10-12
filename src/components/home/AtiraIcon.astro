@@ -10,7 +10,13 @@ interface Props {
     | 'share'
     | 'star'
     | 'people'
-    | 'check-circle';
+    | 'check-circle'
+    | 'arrow-right-circle'
+    | 'arrow-left-circle'
+    | 'headset'
+    | 'calendar'
+    | 'plus-circle'
+    | 'quote';
   class?: string;
 }
 
@@ -79,6 +85,49 @@ const cls = `atira-icon ${className}`.trim();
     <svg class={cls} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
       <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.08 1.04l2.5 2.5a.75.75 0 0 0 1.079-.02l4-5.05Z" />
+    </svg>
+  )
+}
+{
+  name === 'arrow-right-circle' && (
+    <svg class={cls} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+    </svg>
+  )
+}
+{
+  name === 'arrow-left-circle' && (
+    <svg class={cls} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5 7.5a.5.5 0 0 1-.5-.5v-5a.5.5 0 0 1 1 0v5a.5.5 0 0 1-.5.5m-6.354-1.354a.5.5 0 0 1 0-.708L6.793 7.5H1.5a.5.5 0 0 1 0-1h5.293L4.646 4.854a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708z" />
+    </svg>
+  )
+}
+{
+  name === 'headset' && (
+    <svg class={cls} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866-.5l-1.415-2.424a1 1 0 0 1 .17-1.258l.232-.232A1 1 0 0 1 8.366 11H9.5A1.5 1.5 0 0 0 11 9.5V6a5 5 0 0 0-5-5" />
+    </svg>
+  )
+}
+{
+  name === 'calendar' && (
+    <svg class={cls} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
+    </svg>
+  )
+}
+{
+  name === 'plus-circle' && (
+    <svg class={cls} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+    </svg>
+  )
+}
+{
+  name === 'quote' && (
+    <svg class={cls} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.346-.352.806-.613V2.558a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v3.382a1 1 0 0 0 .553.894l.276.138a2 2 0 0 1 .653.566 2 2 0 0 1 .247.906V11a1 1 0 0 0 1 1zM5 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H3.612q0-.527.062-1.054.093-.558.31-.992t.559-.683q.346-.352.806-.613V2.558a1 1 0 0 0-1-1H2.5a1 1 0 0 0-1 1v3.382a1 1 0 0 0 .553.894l.276.138a2 2 0 0 1 .653.566 2 2 0 0 1 .247.906V11a1 1 0 0 0 1 1z" />
     </svg>
   )
 }

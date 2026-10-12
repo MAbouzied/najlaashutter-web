@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import { homepageContent, homepageThemeAssets } from '../../config/homepage-content';
 import { site } from '../../config/site';
+import AtiraIcon from './AtiraIcon.astro';
 ---
 
 <section class="position-relative" aria-label="العرض الرئيسي">
@@ -21,18 +22,20 @@ import { site } from '../../config/site';
                 <Image
                   src={slide.image}
                   alt={slide.title}
-                  widths={[768, 1200, 1600]}
+                  widths={[768, 1280, 1600]}
                   sizes="100vw"
+                  width={1280}
+                  height={551}
                   loading={i === 0 ? 'eager' : 'lazy'}
                   fetchpriority={i === 0 ? 'high' : 'low'}
                   decoding="async"
                 />
               </div>
-              <div class="carousel-caption">
-                <p class="text-main">{slide.title}</p>
-                <p class="excerpt">{slide.excerpt}</p>
-                <button type="button" class="pw-btn btn-unq" data-open-dialog="pw-book-modal">
-                  استشارة مجانية
+              <div class="carousel-caption text-start py-0">
+                <p class="text-main hero-caption-anim-title">{slide.title}</p>
+                <p class="excerpt hero-caption-anim-excerpt">{slide.excerpt}</p>
+                <button type="button" class="pw-btn btn-unq hero-caption-anim-cta" data-open-dialog="pw-book-modal">
+                  <AtiraIcon name="headset" /> استشارة مجانية
                 </button>
               </div>
             </div>
@@ -40,8 +43,12 @@ import { site } from '../../config/site';
         }
       </div>
       <div class="hero-carousel__controls">
-        <button type="button" data-fade-prev aria-label="الشريحة السابقة">›</button>
-        <button type="button" data-fade-next aria-label="الشريحة التالية">‹</button>
+        <button type="button" class="carousel-control-prev" data-fade-prev aria-label="الشريحة السابقة">
+          <AtiraIcon name="arrow-right-circle" />
+        </button>
+        <button type="button" class="carousel-control-next" data-fade-next aria-label="الشريحة التالية">
+          <AtiraIcon name="arrow-left-circle" />
+        </button>
       </div>
     </div>
   </template>

@@ -5,13 +5,14 @@ import { site } from '../../config/site';
 import { homepageContent } from '../../config/homepage-content';
 import { menuItemHref } from '../../config/home-routes';
 import footerBg from '../../assets/theme/footer-bg.jpg';
+import AtiraIcon from './AtiraIcon.astro';
 
 const foot1 = homepageContent.navMenus['foot-1'];
 const foot2 = homepageContent.navMenus['foot-2'];
-const footMenu = homepageContent.navMenus['foot-menu'];
+const footerDesc = `نجلاء شتر – خبراء تركيب الشتر بأعلى جودة وسرعة في ${site.serviceArea.homepagePromo.replace('تركيب شتر النوافذ في ', '')}.`;
 ---
 
-<footer id="footer" class="home-footer">
+<footer id="footer" class="home-footer pt-lg-5 pb-lg-1 pt-5 pb-5">
   <Image
     src={footerBg}
     alt=""
@@ -21,81 +22,94 @@ const footMenu = homepageContent.navMenus['foot-menu'];
     loading="lazy"
     decoding="async"
   />
-  <div class="container home-footer__grid">
-    <div class="home-footer__brand-col">
-      <a href="/" class="home-header__brand pw-logo-footer">
-        <Image
-          src={assetSources.logo.file}
-          alt=""
-          width={104}
-          height={104}
-          densities={[1, 2]}
-          loading="lazy"
-          decoding="async"
-          class="nav-logo"
-        />
-        <span class="visually-hidden">{site.name}</span>
-      </a>
-      <p class="home-footer__desc">{site.description}</p>
-      <div class="contact-list">
-        <a href={site.phone.telHref} data-conversion="phone">{site.phone.display}</a>
-        <a href={site.email.href}>{site.email.address}</a>
-        <span>{site.location.shortLabel}</span>
+  <div class="container">
+    <div class="row align-items-start justify-content-between home-footer__grid">
+      <div class="col-12 col-lg-4 home-footer__brand-col">
+        <div class="row">
+          <div class="col-4">
+            <Image
+              src={assetSources.logo.file}
+              alt={site.name}
+              width={100}
+              height={100}
+              densities={[1, 2]}
+              loading="lazy"
+              class="w-100 p-2 bg-light rounded shadow nav-logo"
+            />
+          </div>
+          <div class="col-8">
+            <p class="text-white fs-6">{footerDesc}</p>
+            <div class="socials" aria-label="وسائل التواصل">
+              <span class="social-icon social-icon--disabled" title="حسابات التواصل قيد التحقق" tabindex="-1"
+                >f</span
+              >
+              <span class="social-icon social-icon--disabled" title="حسابات التواصل قيد التحقق" tabindex="-1"
+                >in</span
+              >
+              <span class="social-icon social-icon--disabled" title="حسابات التواصل قيد التحقق" tabindex="-1"
+                >t</span
+              >
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="socials" aria-label="وسائل التواصل (قيد التحقق)">
-        <span class="social-icon social-icon--disabled" title="حسابات التواصل قيد التحقق">f</span>
-        <span class="social-icon social-icon--disabled" title="حسابات التواصل قيد التحقق">in</span>
+      <div class="col-12 col-lg-7">
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="text-white fs-5">روابط مهمة</h3>
+            <hr class="pw-hr-white-right" />
+            <ul class="pw-fot-lst list-unstyled">
+              {
+                foot1.map((item) => (
+                  <li>
+                    <a href={menuItemHref(item)}>{item.title}</a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3 class="text-white fs-5">الخدمات</h3>
+            <hr class="pw-hr-white-right" />
+            <ul class="pw-fot-lst list-unstyled">
+              {
+                foot2.map((item) => (
+                  <li>
+                    <a href={menuItemHref(item)}>{item.title}</a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3 class="text-white fs-5">تواصل معنا</h3>
+            <hr class="pw-hr-white-right" />
+            <ul class="pw-fot-lst list-unstyled contact-list">
+              <li>
+                <a href={site.phone.telHref} data-conversion="phone">
+                  <AtiraIcon name="telephone" /> {site.phone.display}
+                </a>
+              </li>
+              <li>
+                <a href={site.whatsapp.href()} target="_blank" rel="noopener noreferrer" data-conversion="whatsapp">
+                  <AtiraIcon name="whatsapp" /> واتساب
+                </a>
+              </li>
+              <li>
+                <a href={site.email.href}>
+                  <AtiraIcon name="envelope" /> {site.email.address}
+                </a>
+              </li>
+              <li>
+                <span><AtiraIcon name="check-circle" /> {site.location.shortLabel}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-    <div>
-      <h3>روابط سريعة</h3>
-      <ul class="pw-fot-lst">
-        {
-          foot1.map((item) => (
-            <li>
-              <a href={menuItemHref(item)}>{item.title}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-    <div>
-      <h3>خدماتنا</h3>
-      <ul class="pw-fot-lst">
-        {
-          foot2.map((item) => (
-            <li>
-              <a href={menuItemHref(item)}>{item.title}</a>
-            </li>
-          ))
-        }
-      </ul>
     </div>
   </div>
-  <ul class="pw-fot-mnu container">
-    {
-      footMenu.map((item) => (
-        <li>
-          <a href={menuItemHref(item)}>{item.title}</a>
-        </li>
-      ))
-    }
-  </ul>
-  <p class="home-footer__copy container">
-    © {new Date().getFullYear()} {site.name} — {site.serviceArea.footerNote}
-  </p>
+  <div class="home-footer__copy-bar">
+    <p class="container m-0">© {new Date().getFullYear()} {site.name}. {site.serviceArea.footerNote}</p>
+  </div>
 </footer>
-
-<style>
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-</style>

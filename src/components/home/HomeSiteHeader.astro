@@ -8,23 +8,77 @@ import AtiraIcon from './AtiraIcon.astro';
 
 const mainItems = homepageContent.navMenus['main-nav'];
 const topLevel = mainItems.filter((i) => i.parentId === 0);
-const childrenOf = (parentId: number) =>
-  mainItems.filter((i) => i.parentId === parentId);
+const childrenOf = (parentId: number) => mainItems.filter((i) => i.parentId === parentId);
 const sideItems = homepageContent.navMenus['side-menu'];
+const serviceChildren = sideItems.filter((i) =>
+  ['شتر النوافذ بالتحكم عن بعد', 'شتر النوافذ الذكي', 'شتر النوافذ الداخلي', 'شتر النوافذ الخارجي', 'شتر النوافذ اليدوي'].includes(
+    i.title,
+  ),
+);
+const sideTop = sideItems.filter((i) => !serviceChildren.includes(i));
 ---
 
-<div class="home-header-top" id="pw-header-top">
-  <div class="container home-header-top__inner">
-    <p class="promo-text">{site.serviceArea.homepagePromo}</p>
-    <div class="home-header-top__contact contact-info">
-      <a href={site.phone.telHref} data-conversion="phone">{site.phone.display}</a>
-      <a href={site.email.href}>{site.email.address}</a>
+<section id="pw-header-top" class="bg-fff home-header-top">
+  <div class="container-lg">
+    <div class="row align-items-center d-none d-lg-flex">
+      <div class="col-4" aria-hidden="true"></div>
+      <div class="col-12 col-lg-4 text-center text-lg-start">
+        <span class="promo-text text-main">{site.serviceArea.homepagePromo}</span>
+      </div>
+      <div class="col-4 text-end">
+        <div class="contact-info">
+          <a class="text-main" href={site.phone.telHref} data-conversion="phone">
+            {site.phone.display}
+            <AtiraIcon name="headset" />
+          </a>
+          <a
+            class="text-main"
+            href={site.whatsapp.href('')}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-conversion="whatsapp"
+          >
+            تواصل الان
+            <AtiraIcon name="whatsapp" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center bg-main d-flex d-lg-none home-header-top__mobile">
+      <div class="col-6">
+        <div class="pw-logo py-1 d-flex align-items-center">
+          <div class="d-inline-block me-2 fw-bold text-end text-unq home-header-top__wordmark">
+            <span class="najlaa lh-1">NAJLAA</span><br />SHUTTER
+          </div>
+          <a href={homePaths.home} title={site.name}>
+            <Image
+              src={assetSources.logo.file}
+              alt={site.name}
+              width={70}
+              height={70}
+              densities={[1, 2]}
+              loading="eager"
+              class="img-fluid nav-logo"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="col-6 text-end">
+        <button
+          type="button"
+          class="pw-btn-search btn-unq"
+          aria-label="بحث الموقع"
+          data-open-dialog="pw-search-modal"
+        >
+          <AtiraIcon name="search" />
+        </button>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<header id="pw-header">
-  <div class="container home-header__inner">
+<header id="pw-header" class="home-header-sticky">
+  <div class="container home-header__inner d-none d-lg-flex">
     <a href={homePaths.home} class="home-header__brand pw-logo">
       <Image
         src={assetSources.logo.file}
@@ -74,47 +128,42 @@ const sideItems = homepageContent.navMenus['side-menu'];
       >
         <AtiraIcon name="search" />
       </button>
-      <button type="button" class="pw-head-btn2" data-open-dialog="pw-book-modal">
-        اتصل بنا
-      </button>
+      <button type="button" class="pw-head-btn2" data-open-dialog="pw-book-modal">اتصل بنا</button>
     </div>
-
-    <button type="button" class="home-header__menu-toggle" aria-expanded="false" aria-controls="pw-side-menu" data-open-nav>
-      <AtiraIcon name="menu" />
-    </button>
   </div>
 </header>
 
-<div id="pw-side-menu" aria-hidden="true">
-  <div class="pw-side-backdrop" data-close-nav />
-  <div class="pw-side-panel" role="dialog" aria-label="القائمة">
+<div id="pw-bottom-menu" class="pw-bottom-menu" aria-hidden="true">
+  <div class="pw-bottom-menu__backdrop" data-close-nav></div>
+  <div class="pw-bottom-menu__sheet" role="dialog" aria-label="القائمة">
+    <button type="button" class="pw-bottom-menu__close" data-close-nav aria-label="إغلاق">×</button>
     <ul class="pw-side-menu">
       {
-        sideItems.map((item) => (
+        sideTop.map((item) => (
           <li>
-            <a href={menuItemHref(item)} data-close-nav-link>
-              {item.title}
-            </a>
+            {item.title === 'الخدمات' ? (
+              <>
+                <button type="button" class="pw-side-menu__toggle" data-services-toggle aria-expanded="false">
+                  {item.title}
+                </button>
+                <ul class="pw-side-menu__sub" data-services-sub>
+                  {serviceChildren.map((child) => (
+                    <li>
+                      <a href={menuItemHref(child)} data-close-nav-link>
+                        {child.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <a href={menuItemHref(item)} data-close-nav-link>
+                {item.title}
+              </a>
+            )}
           </li>
         ))
       }
     </ul>
   </div>
 </div>
-
-<script>
-  const menu = document.getElementById('pw-side-menu');
-  const openBtns = document.querySelectorAll('[data-open-nav]');
-
-  function setOpen(open: boolean) {
-    menu?.classList.toggle('is-open', open);
-    menu?.setAttribute('aria-hidden', open ? 'false' : 'true');
-    openBtns.forEach((btn) => btn.setAttribute('aria-expanded', open ? 'true' : 'false'));
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-
-  openBtns.forEach((btn) => btn.addEventListener('click', () => setOpen(true)));
-  document.querySelectorAll('[data-close-nav], [data-close-nav-link]').forEach((el) => {
-    el.addEventListener('click', () => setOpen(false));
-  });
-</script>

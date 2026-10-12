@@ -5,6 +5,7 @@
 import sld_mob_1 from '../assets/theme/sld-mob-1.jpeg';
 import sld_mob_2 from '../assets/theme/sld-mob-2.jpeg';
 import why_choose_us from '../assets/theme/why-choose-us.jpg';
+import we_experts from '../assets/theme/we-experts.jpg';
 import faq_home_page from '../assets/theme/faq-home-page.jpg';
 import defaultCardImg from '../assets/theme/default.jpg';
 import contactBanner from '../assets/theme/blog-bannar.jpg';
@@ -67,6 +68,7 @@ export const blogFeaturedByPostId: Record<number, ImageMetadata> = {
 
 export const homepageThemeAssets = {
   heroMobile: [sld_mob_1, sld_mob_2, sld_mob_1],
+  aboutExperts: we_experts,
   whyChooseUs: why_choose_us,
   faqSide: faq_home_page,
   defaultCard: defaultCardImg,

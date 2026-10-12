@@ -6,7 +6,7 @@ import { chromium } from 'playwright';
 import { writeFileSync } from 'node:fs';
 
 const base =
-  process.argv[2]?.replace(/\/$/, '') || 'http://127.0.0.1:4325/window-shutters-jeddah/';
+  process.argv[2]?.replace(/\/$/, '') || 'http://127.0.0.1:4325/';
 const widths = [320, 360, 375, 390, 412, 430];
 const outDir = new URL('../docs/review-screenshots/', import.meta.url);
 

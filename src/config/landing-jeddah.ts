@@ -1,11 +1,11 @@
-/** Content for /window-shutters-jeddah/ — derived from WP audit, rewritten for clarity. */
+/** Jeddah Google Ads landing page content — derived from WP audit, rewritten for clarity. */
 
 export const landingJeddah = {
   meta: {
     title: 'شتر نوافذ في جدة | تركيب شتر يدوي وكهربائي — نجلاء شتر',
     description:
       'تركيب شتر نوافذ في جدة: شتر خارجي وداخلي، يدوي وكهربائي وذكي. تواصل عبر واتساب أو اتصل الآن لإرسال صورة الشباك أو المقاسات.',
-    canonicalPath: '/window-shutters-jeddah/',
+    canonicalPath: '/',
   },
 
   /** LP-only footer line — global site config still lists broader service area. */

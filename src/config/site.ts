@@ -83,7 +83,9 @@ export const site = {
 
   paths: {
     privacyPolicy: '/privacy-policy/',
-    landingJeddah: '/window-shutters-jeddah/',
+    /** Legacy WP/Google Ads path — 301 to `/` at the edge. */
+    landingJeddahLegacy: '/window-shutters-jeddah/',
+    landingJeddah: '/',
   },
 } as const;
 

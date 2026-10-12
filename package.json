@@ -12,7 +12,6 @@
     "build:staging:no-gtm": "PUBLIC_STAGING=true PUBLIC_DISABLE_GTM=true astro build",
     "preview": "astro preview",
     "deploy": "wrangler deploy",
-    "review:screenshots": "node scripts/capture-review-screenshots.mjs",
     "review:overflow": "node scripts/verify-mobile-overflow.mjs",
     "astro": "astro"
   },
@@ -21,9 +20,7 @@
     "wrangler": "^4.149.0"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.3.8",
-    "sharp": "^0.35.5",
-    "swiper": "^11.2.10"
+    "sharp": "^0.35.5"
   }
 }

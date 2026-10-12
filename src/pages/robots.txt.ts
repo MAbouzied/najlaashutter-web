@@ -1,13 +1,9 @@
 import type { APIRoute } from 'astro';
-import { site } from '../config/site';
 
-/** Production robots; non-production hosts override via Cloudflare Worker. */
+/** Static fallback; Worker overrides on workers.dev / ads host. */
 export const GET: APIRoute = () => {
-  const body = `# najlaashutter.com
-User-agent: *
-Allow: /
-
-Sitemap: ${site.url}/sitemap-index.xml
+  const body = `User-agent: *
+Disallow: /
 `;
 
   return new Response(body, {

@@ -1,0 +1,421 @@
+---
+import { Image, getImage } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileConversionBar from '../components/MobileConversionBar.astro';
+import Container from '../components/Container.astro';
+import Section from '../components/Section.astro';
+import TrustItem from '../components/TrustItem.astro';
+import ProjectGallery from '../components/ProjectGallery.astro';
+import FAQ from '../components/FAQ.astro';
+import WhatsAppCTA from '../components/WhatsAppCTA.astro';
+import PhoneCTA from '../components/PhoneCTA.astro';
+import { landingJeddah } from '../config/landing-jeddah';
+import { assetSources, projectGalleryImages } from '../config/project-images';
+import { site } from '../config/site';
+
+const content = landingJeddah;
+const hero = content.hero;
+const heroPreload = await getImage({
+  src: assetSources.hero.file,
+  width: 960,
+  format: 'webp',
+  quality: 80,
+});
+---
+
+<BaseLayout
+  title={content.meta.title}
+  description={content.meta.description}
+  canonicalPath={content.meta.canonicalPath}
+  ogImage={assetSources.hero.file}
+  showMobileBar
+>
+  <link
+    slot="head"
+    rel="preload"
+    as="image"
+    href={heroPreload.src}
+    fetchpriority="high"
+  />
+  <Header slot="header" minimal />
+  <Footer slot="footer" minimal />
+  <MobileConversionBar slot="mobile" />
+
+  <Section class="hero" ariaLabelledby="hero-heading">
+    <Container>
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">{site.location.city} · {site.name}</p>
+          <h1 id="hero-heading" class="hero__title">{hero.h1}</h1>
+          <p class="hero__sub">{hero.subline}</p>
+          <div class="hero__ctas">
+            <WhatsAppCTA label={hero.whatsappCta} />
+            <PhoneCTA label={hero.phoneCta} variant="ghost" />
+          </div>
+          <p class="hero__hint">{hero.hint}</p>
+        </div>
+        <figure class="hero__media">
+          <Image
+            src={assetSources.hero.file}
+            alt="تركيب شتر نوافذ — مشروع نجلاء في جدة"
+            widths={[480, 720, 960, 1200]}
+            sizes="(max-width: 768px) 100vw, 44vw"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            class="hero__img"
+          />
+        </figure>
+      </div>
+    </Container>
+  </Section>
+
+  <Section variant="surface" ariaLabelledby="trust-heading">
+    <Container>
+      <h2 id="trust-heading" class="section-title sr-only">لماذا تثق بنا</h2>
+      <ul class="trust-grid">
+        {
+          content.trust.map((item) => (
+            <li>
+              <TrustItem title={item.title} text={item.text} />
+            </li>
+          ))
+        }
+      </ul>
+    </Container>
+  </Section>
+
+  <Section ariaLabelledby="benefits-heading">
+    <Container narrow>
+      <h2 id="benefits-heading" class="section-title">لماذا شتر النوافذ في جدة؟</h2>
+      <ul class="benefits-list">
+        {
+          content.benefits.map((b) => (
+            <li>
+              <strong>{b.title}</strong>
+              <span>{b.text}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </Container>
+  </Section>
+
+  <Section variant="surface" ariaLabelledby="types-heading">
+    <Container>
+      <h2 id="types-heading" class="section-title">أنواع الشتر المتوفرة</h2>
+      <ul class="types-grid">
+        {
+          content.shutterTypes.map((t) => (
+            <li class="type-card">
+              <h3 class="type-card__title">{t.title}</h3>
+              <p class="type-card__text">{t.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </Container>
+  </Section>
+
+  <Section ariaLabelledby="projects-heading">
+    <Container>
+      <ProjectGallery items={projectGalleryImages} title="صور من مشاريع نجلاء" />
+    </Container>
+  </Section>
+
+  <Section variant="surface" ariaLabelledby="process-heading">
+    <Container narrow>
+      <h2 id="process-heading" class="section-title">كيف نبدأ؟</h2>
+      <ol class="process-list">
+        {
+          content.process.map((step) => (
+            <li class="process-step">
+              <span class="process-step__num" aria-hidden="true">
+                {step.step}
+              </span>
+              <div>
+                <h3 class="process-step__title">{step.title}</h3>
+                <p class="process-step__text">{step.text}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </Container>
+  </Section>
+
+  <Section ariaLabelledby="why-heading">
+    <Container narrow>
+      <h2 id="why-heading" class="section-title">لماذا نجلاء شتر؟</h2>
+      <ul class="why-list">
+        {
+          content.whyNajlaa.map((w) => (
+            <li>
+              <h3>{w.title}</h3>
+              <p>{w.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </Container>
+  </Section>
+
+  <Section variant="surface" ariaLabelledby="faq-heading">
+    <Container>
+      <FAQ items={content.faq} />
+    </Container>
+  </Section>
+
+  <Section variant="primary" class="final-cta" ariaLabelledby="final-cta-heading">
+    <Container narrow>
+      <h2 id="final-cta-heading" class="final-cta__title">{content.finalCta.title}</h2>
+      <p class="final-cta__sub">{content.finalCta.subline}</p>
+      <div class="final-cta__actions">
+        <WhatsAppCTA label={content.finalCta.whatsapp} />
+        <PhoneCTA label={content.finalCta.phone} variant="ghost" />
+      </div>
+      <p class="final-cta__hint">{content.finalCta.hint}</p>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .section-title {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+  }
+  .hero {
+    padding-top: clamp(1.5rem, 4vw, 2.5rem);
+    background: linear-gradient(180deg, #fff 0%, var(--color-bg) 100%);
+  }
+  .hero__grid {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  @media (min-width: 768px) {
+    .hero__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+  .hero__eyebrow {
+    margin: 0 0 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+  }
+  .hero__title {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.75rem, 5vw, 2.35rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.25;
+  }
+  .hero__sub {
+    margin: 0 0 1.25rem;
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+  }
+  .hero__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-bottom: 0.75rem;
+  }
+  .hero__ctas :global(.btn--ghost) {
+    background: #fff;
+  }
+  .hero__hint {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+  .hero__media {
+    margin: 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+  }
+  .hero__img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .trust-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 640px) {
+    .trust-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 960px) {
+    .trust-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .benefits-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  .benefits-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.85rem 1rem;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+  }
+  .benefits-list strong {
+    color: var(--color-primary);
+  }
+  .benefits-list span {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+  .types-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 640px) {
+    .types-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 960px) {
+    .types-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .type-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.125rem;
+  }
+  .type-card__title {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+    color: var(--color-primary);
+  }
+  .type-card__text {
+    margin: 0;
+    font-size: 0.925rem;
+    color: var(--color-text-muted);
+  }
+  .process-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .process-step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+  }
+  .process-step__num {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    font-weight: 700;
+    border-radius: 50%;
+  }
+  .process-step__title {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+    color: var(--color-primary);
+  }
+  .process-step__text {
+    margin: 0;
+    font-size: 0.925rem;
+    color: var(--color-text-muted);
+  }
+  .why-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .why-list h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+    color: var(--color-primary);
+  }
+  .why-list p {
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+  .final-cta {
+    text-align: center;
+  }
+  .final-cta__title {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.35rem, 4vw, 1.85rem);
+    font-weight: 700;
+  }
+  .final-cta__sub {
+    margin: 0 0 1.25rem;
+    opacity: 0.92;
+  }
+  .final-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem;
+    margin-bottom: 0.75rem;
+  }
+  .final-cta__actions :global(.btn--ghost) {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  .final-cta__hint {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+</style>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: site.name,
+  url: site.url,
+  telephone: site.phone.e164,
+  email: site.email.address,
+  areaServed: [{ '@type': 'City', name: 'Jeddah' }, { '@type': 'City', name: 'Makkah' }],
+  description: content.meta.description,
+})} />

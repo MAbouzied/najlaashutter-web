@@ -1,0 +1,31 @@
+---
+import Button from './Button.astro';
+import { site } from '../config/site';
+
+interface Props {
+  label?: string;
+  message?: string;
+  variant?: 'primary' | 'secondary' | 'whatsapp' | 'ghost';
+  class?: string;
+}
+
+const {
+  label = 'تواصل عبر واتساب',
+  message,
+  variant = 'whatsapp',
+  class: className = '',
+} = Astro.props;
+
+const href = site.whatsapp.href(message);
+---
+
+<Button
+  href={href}
+  variant={variant}
+  external
+  conversion="whatsapp"
+  class={className}
+  ariaLabel="تواصل عبر واتساب"
+>
+  {label}
+</Button>

@@ -1,0 +1,85 @@
+---
+import '../styles/global.css';
+import PageMeta from '../components/PageMeta.astro';
+import { site } from '../config/site';
+import { isStaging } from '../config/env';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  ogImage?: ImageMetadata;
+  noindex?: boolean;
+  showMobileBar?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonicalPath,
+  ogImage,
+  noindex,
+  showMobileBar = false,
+} = Astro.props;
+
+const gtmId = site.tracking.gtmId;
+const robotsNoindex = noindex || isStaging;
+---
+
+<!doctype html>
+<html lang={site.language} dir={site.direction}>
+  <head>
+    <PageMeta
+      title={title}
+      description={description}
+      canonicalPath={canonicalPath}
+      ogImage={ogImage}
+      noindex={robotsNoindex}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    {
+      gtmId && (
+        <script is:inline define:vars={{ gtmId }}>
+          (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+          })(window, document, 'script', 'dataLayer', gtmId);
+        </script>
+      )
+    }
+    <slot name="head" />
+  </head>
+  <body class:list={[{ 'has-mobile-bar': showMobileBar }]}>
+    {
+      gtmId && (
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+            title="Google Tag Manager"
+          />
+        </noscript>
+      )
+    }
+    <slot name="header" />
+    <main id="content">
+      <slot />
+    </main>
+    <slot name="footer" />
+    <slot name="mobile" />
+  </body>
+</html>

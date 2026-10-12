@@ -1,0 +1,65 @@
+---
+interface Item {
+  q: string;
+  a: string;
+}
+
+interface Props {
+  items: readonly Item[];
+  title?: string;
+}
+
+const { items, title = 'أسئلة شائعة' } = Astro.props;
+---
+
+<div class="faq">
+  <h2 class="faq__title" id="faq-heading">{title}</h2>
+  <div class="faq__list">
+    {
+      items.map((item, i) => (
+        <details class="faq__item" open={i === 0 ? undefined : undefined}>
+          <summary class="faq__q">{item.q}</summary>
+          <p class="faq__a">{item.a}</p>
+        </details>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .faq__title {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+  }
+  .faq__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    max-width: 720px;
+    margin-inline: auto;
+  }
+  .faq__item {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 0 1rem;
+  }
+  .faq__q {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 1rem 0;
+    list-style: none;
+  }
+  .faq__q::-webkit-details-marker {
+    display: none;
+  }
+  .faq__a {
+    margin: 0 0 1rem;
+    color: var(--color-text-muted);
+    font-size: 0.975rem;
+  }
+</style>

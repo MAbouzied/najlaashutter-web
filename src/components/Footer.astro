@@ -1,0 +1,106 @@
+---
+import { Image } from 'astro:assets';
+import { assetSources } from '../config/project-images';
+import { site } from '../config/site';
+
+interface Props {
+  minimal?: boolean;
+}
+
+const { minimal = true } = Astro.props;
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <Image
+        src={assetSources.logoFooter.file}
+        alt={site.name}
+        width={120}
+        height={120}
+        loading="lazy"
+        decoding="async"
+        class="site-footer__logo"
+      />
+      <p class="site-footer__tagline">{site.serviceAreaNote}</p>
+    </div>
+    <div class="site-footer__contact">
+      <a href={site.phone.telHref} data-conversion="phone" class="site-footer__link">
+        {site.phone.display}
+      </a>
+      <a
+        href={site.whatsapp.href()}
+        data-conversion="whatsapp"
+        class="site-footer__link"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        واتساب
+      </a>
+      {
+        minimal && (
+          <a href={site.paths.privacyPolicy} class="site-footer__link site-footer__muted">
+            سياسة الخصوصية
+          </a>
+        )
+      }
+    </div>
+  </div>
+  <p class="site-footer__copy">© {new Date().getFullYear()} {site.name}</p>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-primary);
+    color: rgba(255, 255, 255, 0.92);
+    padding: 2rem 1rem 1.25rem;
+    margin-top: auto;
+  }
+  .site-footer__inner {
+    width: var(--container);
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .site-footer__logo {
+    max-width: 88px;
+    height: auto;
+    background: #fff;
+    border-radius: var(--radius-sm);
+    padding: 0.35rem;
+  }
+  .site-footer__tagline {
+    margin: 0.75rem 0 0;
+    font-size: 0.9rem;
+    max-width: 22rem;
+    color: var(--color-secondary);
+  }
+  .site-footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .site-footer__link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .site-footer__link:hover {
+    text-decoration: underline;
+  }
+  .site-footer__muted {
+    font-weight: 400;
+    font-size: 0.875rem;
+    opacity: 0.85;
+  }
+  .site-footer__copy {
+    width: var(--container);
+    margin: 1.25rem auto 0;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    text-align: center;
+  }
+</style>

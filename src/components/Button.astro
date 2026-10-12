@@ -1,0 +1,84 @@
+---
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary' | 'whatsapp' | 'ghost';
+  external?: boolean;
+  class?: string;
+  conversion?: 'phone' | 'whatsapp';
+  ariaLabel?: string;
+}
+
+const {
+  href,
+  variant = 'primary',
+  external = false,
+  class: className = '',
+  conversion,
+  ariaLabel,
+} = Astro.props;
+
+const rel = external ? 'noopener noreferrer' : undefined;
+const target = external ? '_blank' : undefined;
+---
+
+<a
+  href={href}
+  class:list={['btn', `btn--${variant}`, className]}
+  rel={rel}
+  target={target}
+  data-conversion={conversion}
+  aria-label={ariaLabel}
+>
+  <slot />
+</a>
+
+<style>
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    border-radius: var(--radius-btn);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .btn--primary {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    border-color: var(--color-primary);
+  }
+  .btn--primary:hover {
+    background: #0f2740;
+    color: #fff;
+  }
+  .btn--secondary {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+  }
+  .btn--secondary:hover {
+    filter: brightness(1.05);
+  }
+  .btn--whatsapp {
+    background: var(--color-whatsapp);
+    color: #fff;
+    border-color: var(--color-whatsapp);
+  }
+  .btn--whatsapp:hover {
+    filter: brightness(0.95);
+  }
+  .btn--ghost {
+    background: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+  .btn--ghost:hover {
+    background: rgba(19, 48, 78, 0.06);
+  }
+</style>

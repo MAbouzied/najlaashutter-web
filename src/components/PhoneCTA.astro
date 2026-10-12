@@ -1,0 +1,22 @@
+---
+import Button from './Button.astro';
+import { site } from '../config/site';
+
+interface Props {
+  label?: string;
+  variant?: 'primary' | 'secondary' | 'whatsapp' | 'ghost';
+  class?: string;
+}
+
+const { label = 'اتصل الآن', variant = 'ghost', class: className = '' } = Astro.props;
+---
+
+<Button
+  href={site.phone.telHref}
+  variant={variant}
+  conversion="phone"
+  class={className}
+  ariaLabel={`اتصال هاتفي ${site.phone.display}`}
+>
+  {label}
+</Button>

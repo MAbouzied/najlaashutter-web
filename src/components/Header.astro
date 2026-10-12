@@ -1,0 +1,108 @@
+---
+import { Image } from 'astro:assets';
+import { assetSources } from '../config/project-images';
+import { site } from '../config/site';
+import PhoneCTA from './PhoneCTA.astro';
+import WhatsAppCTA from './WhatsAppCTA.astro';
+
+interface Props {
+  minimal?: boolean;
+}
+
+const { minimal = true } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href={site.paths.landingJeddah} class="site-header__brand" aria-label={site.name}>
+      <Image
+        src={assetSources.logo.file}
+        alt=""
+        width={48}
+        height={48}
+        loading="eager"
+        decoding="async"
+        class="site-header__logo"
+      />
+      <span class="site-header__wordmark">
+        <span class="site-header__en">NAJLAA</span>
+        <span class="site-header__sub">SHUTTER</span>
+      </span>
+    </a>
+    {
+      !minimal && (
+        <nav class="site-header__nav" aria-label="التنقل الرئيسي">
+          <slot name="nav" />
+        </nav>
+      )
+    }
+    <div class="site-header__actions">
+      <PhoneCTA class="site-header__phone hide-mobile" variant="ghost" />
+      <WhatsAppCTA class="hide-mobile" label="واتساب" />
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--color-primary);
+    color: #fff;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+  .site-header__inner {
+    width: var(--container);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.65rem 0;
+  }
+  .site-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .site-header__logo {
+    width: 44px;
+    height: auto;
+  }
+  .site-header__wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+    font-weight: 700;
+    color: var(--color-secondary);
+  }
+  .site-header__en {
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+  }
+  .site-header__sub {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+  }
+  .site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .site-header__actions :global(.btn--ghost) {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.45);
+  }
+  .site-header__actions :global(.btn--ghost:hover) {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  @media (max-width: 767px) {
+    .hide-mobile {
+      display: none !important;
+    }
+  }
+</style>

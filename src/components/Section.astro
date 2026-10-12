@@ -1,0 +1,39 @@
+---
+interface Props {
+  id?: string;
+  class?: string;
+  variant?: 'default' | 'surface' | 'primary';
+  ariaLabelledby?: string;
+}
+
+const {
+  id,
+  class: className = '',
+  variant = 'default',
+  ariaLabelledby,
+} = Astro.props;
+---
+
+<section
+  id={id}
+  class:list={['section', `section--${variant}`, className]}
+  aria-labelledby={ariaLabelledby}
+>
+  <slot />
+</section>
+
+<style>
+  .section {
+    padding-block: var(--space-section);
+  }
+  .section--surface {
+    background: var(--color-surface);
+  }
+  .section--primary {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  .section--primary :global(a:not(.btn)) {
+    color: #fff;
+  }
+</style>

@@ -1,0 +1,34 @@
+---
+/**
+ * Placeholder root — full homepage comes in Phase 2B.
+ * noindex to avoid competing with the legacy site until launch.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../config/site';
+---
+
+<BaseLayout
+  title={`${site.name} — الموقع قيد التطوير`}
+  description="الموقع الجديد لنجلاء شتر قيد الإنشاء."
+  canonicalPath="/"
+  noindex
+>
+  <div class="placeholder">
+    <p>{site.name}</p>
+    <a href={site.paths.landingJeddah}>صفحة شتر نوافذ جدة (معاينة)</a>
+  </div>
+</BaseLayout>
+
+<style>
+  .placeholder {
+    min-height: 60vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  .placeholder a {
+    font-weight: 600;
+  }
+</style>

@@ -342,6 +342,9 @@
 .home-atira .hero-carousel__slide.is-active {
   display: block;
 }
+.home-atira #top-image {
+  position: relative;
+}
 .home-atira #top-image img {
   display: block;
   width: 100%;
@@ -354,35 +357,49 @@
   z-index: 1;
   pointer-events: none;
 }
+/* Match WP #pwCarousel .carousel-caption — physical right edge (light art area), not inline-end in RTL */
 .home-atira .hero-carousel--desktop .carousel-caption {
-  width: min(440px, 42%);
+  width: 440px;
+  max-width: 42%;
   position: absolute;
   top: 30%;
-  inset-inline-end: 10%;
+  right: 10%;
+  left: auto;
   z-index: 3;
   text-align: start;
+  padding-block: 0;
 }
 .home-atira .hero-carousel--desktop .carousel-caption p:first-child {
-  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-size: 2rem;
   font-weight: 700;
   color: var(--pw-main);
-  margin: 0.5rem 0;
+  margin: 0.25rem 0 0.5rem;
+  padding-block: 0.5rem;
 }
 .home-atira .hero-carousel--desktop .carousel-caption .excerpt {
-  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-size: 1.5rem;
+  line-height: 1.5;
   color: var(--pw-main);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .home-atira .hero-carousel__controls {
   position: absolute;
   top: 50%;
+  left: 0;
+  right: 0;
+  height: 65px;
   transform: translateY(-50%);
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 0.5rem;
+  align-items: center;
+  padding: 0 7px;
   z-index: 4;
   pointer-events: none;
+}
+.home-atira .hero-carousel--desktop .hero-carousel__controls button {
+  flex: 0 0 6%;
+  max-width: 4rem;
+  min-width: 2.5rem;
 }
 .home-atira .hero-carousel__controls button {
   pointer-events: auto;

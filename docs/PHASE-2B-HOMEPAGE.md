@@ -15,9 +15,14 @@ Generated under `docs/review-screenshots/`:
 - `homepage-desktop-1440-above-fold.png`
 - `homepage-mobile-390-above-fold.png`
 
-## Lighthouse
+## Lighthouse (local preview, mobile, GTM on)
 
-- `docs/review-screenshots/lighthouse-home-mobile.json`
+| Page | Performance | Accessibility | Best practices | LCP |
+|------|-------------|---------------|----------------|-----|
+| `/` | ~84–86 | **100** (post-fix) | ~73 (GTM third-party cookies) | ~2.9–3.0s |
+| `/window-shutters-jeddah/` | ~90 | **100** | ~77 | ~2.6s |
+
+Artifacts: `lighthouse-home-mobile.json`, `lighthouse-home-a11y.json`, `lighthouse-lp-mobile-post-fix.json`
 
 ## Changed files (summary)
 

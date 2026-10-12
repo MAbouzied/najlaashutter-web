@@ -43,7 +43,8 @@ export const site = {
 
   /**
    * Homepage / main-site service area (Jeddah + Makkah).
-   * FLAG: confirm with client — WP copy also mentions broader claims in some blocks.
+   * TODO: SERVICE AREA REQUIRES BUSINESS CONFIRMATION BEFORE PRODUCTION.
+   * Do not broaden to “all Saudi Arabia” until confirmed. LP remains Jeddah-only.
    */
   serviceArea: {
     homepagePromo: 'تركيب شتر النوافذ في جدة ومكة',

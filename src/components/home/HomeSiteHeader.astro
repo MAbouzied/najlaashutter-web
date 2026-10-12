@@ -4,6 +4,7 @@ import { assetSources } from '../../config/project-images';
 import { site } from '../../config/site';
 import { homepageContent } from '../../config/homepage-content';
 import { homePaths, menuItemHref } from '../../config/home-routes';
+import AtiraIcon from './AtiraIcon.astro';
 
 const mainItems = homepageContent.navMenus['main-nav'];
 const topLevel = mainItems.filter((i) => i.parentId === 0);
@@ -71,7 +72,7 @@ const sideItems = homepageContent.navMenus['side-menu'];
         aria-label="بحث الموقع"
         data-open-dialog="pw-search-modal"
       >
-        🔍
+        <AtiraIcon name="search" />
       </button>
       <button type="button" class="pw-head-btn2" data-open-dialog="pw-book-modal">
         اتصل بنا
@@ -79,7 +80,7 @@ const sideItems = homepageContent.navMenus['side-menu'];
     </div>
 
     <button type="button" class="home-header__menu-toggle" aria-expanded="false" aria-controls="pw-side-menu" data-open-nav>
-      ☰
+      <AtiraIcon name="menu" />
     </button>
   </div>
 </header>

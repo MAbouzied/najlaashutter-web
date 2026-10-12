@@ -8,6 +8,7 @@ import HomeHero from '../components/home/HomeHero.astro';
 import HomeContactBan from '../components/home/HomeContactBan.astro';
 import HomeContactDialog from '../components/home/HomeContactDialog.astro';
 import GoogleReviewsSlot from '../components/home/GoogleReviewsSlot.astro';
+import AtiraIcon from '../components/home/AtiraIcon.astro';
 import {
   blogFeaturedByPostId,
   homepageContent,
@@ -246,7 +247,7 @@ const localBusiness = {
           <h2 id="why-heading" class="text-main fs-1 mb-4">لماذا تختارنا؟</h2>
           <div class="feature-box">
             <div class="feature-box__row">
-              <div class="feature-icon" aria-hidden="true">★</div>
+              <div class="feature-icon"><AtiraIcon name="star" /></div>
               <div>
                 <h3 class="fs-5 mb-2 text-main">جودة عالية وأسعار مناسبة</h3>
                 <p class="fs-6 text-sub m-0">
@@ -258,7 +259,7 @@ const localBusiness = {
           </div>
           <div class="feature-box">
             <div class="feature-box__row">
-              <div class="feature-icon" aria-hidden="true">👥</div>
+              <div class="feature-icon"><AtiraIcon name="people" /></div>
               <div>
                 <h3 class="fs-5 mb-2 text-main">فريق محترف وخبرة طويلة</h3>
                 <p class="fs-6 text-sub m-0">
@@ -269,7 +270,7 @@ const localBusiness = {
           </div>
           <div class="feature-box">
             <div class="feature-box__row">
-              <div class="feature-icon" aria-hidden="true">✓</div>
+              <div class="feature-icon"><AtiraIcon name="check-circle" /></div>
               <div>
                 <h3 class="fs-5 mb-2 text-main">رضا العملاء أولويتنا</h3>
                 <p class="fs-6 text-sub m-0">

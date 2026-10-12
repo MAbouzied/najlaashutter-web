@@ -645,6 +645,18 @@
   color: #fff;
   font-size: 1.25rem;
 }
+.home-atira .feature-icon .atira-icon {
+  width: 22px;
+  height: 22px;
+}
+.home-atira .pw-head-btn1 .atira-icon {
+  width: 16px;
+  height: 16px;
+}
+.home-atira .home-header__menu-toggle .atira-icon {
+  width: 20px;
+  height: 20px;
+}
 
 /* FAQ */
 .home-atira .faq-grid {
@@ -830,11 +842,16 @@ body.home-atira.has-fixed-footer {
   margin: 0.2rem auto 0;
 }
 .home-atira .pw-fixed-footer__icon {
-  display: inline-block;
-  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
-  line-height: 30px;
+  margin-inline: auto;
+}
+.home-atira .pw-fixed-footer__icon .atira-icon {
+  width: 18px;
+  height: 18px;
 }
 
 .home-atira .home-cont-ban {

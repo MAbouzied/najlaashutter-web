@@ -1,5 +1,6 @@
 ---
 import { site } from '../../config/site';
+import AtiraIcon from './AtiraIcon.astro';
 ---
 
 <nav class="pw-fixed-footer" aria-label="تنقل الجوال السفلي">
@@ -9,23 +10,23 @@ import { site } from '../../config/site';
     rel="noopener noreferrer"
     data-conversion="whatsapp"
   >
-    <span class="pw-fixed-footer__icon" aria-hidden="true">💬</span>
+    <span class="pw-fixed-footer__icon"><AtiraIcon name="whatsapp" /></span>
     <span>واتساب</span>
   </a>
   <a href={site.phone.telHref} data-conversion="phone">
-    <span class="pw-fixed-footer__icon" aria-hidden="true">📞</span>
+    <span class="pw-fixed-footer__icon"><AtiraIcon name="telephone" /></span>
     <span>اتصل</span>
   </a>
   <button type="button" data-open-nav aria-label="القائمة">
-    <span class="pw-fixed-footer__icon" aria-hidden="true">☰</span>
+    <span class="pw-fixed-footer__icon"><AtiraIcon name="menu" /></span>
     <span>القائمة</span>
   </button>
   <a href={site.email.href}>
-    <span class="pw-fixed-footer__icon" aria-hidden="true">✉</span>
+    <span class="pw-fixed-footer__icon"><AtiraIcon name="envelope" /></span>
     <span>بريد</span>
   </a>
   <button type="button" data-share-site aria-label="مشاركة الموقع">
-    <span class="pw-fixed-footer__icon" aria-hidden="true">↗</span>
+    <span class="pw-fixed-footer__icon"><AtiraIcon name="share" /></span>
     <span>مشاركة</span>
   </button>
 </nav>

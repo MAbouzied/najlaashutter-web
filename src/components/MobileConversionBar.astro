@@ -1,23 +1,27 @@
 ---
 import { site } from '../config/site';
+interface Props { language?: 'ar' | 'en'; }
+const { language = 'ar' } = Astro.props;
+const english = language === 'en';
+const message = english ? 'Hello, I would like a quote for window roller shutters in Jeddah.' : undefined;
 ---
 
-<div class="mobile-bar" role="navigation" aria-label="تواصل سريع">
+<div class="mobile-bar" role="navigation" aria-label={english ? 'Quick contact' : 'تواصل سريع'}>
   <a
-    href={site.whatsapp.href()}
+    href={site.whatsapp.href(message)}
     class="mobile-bar__btn mobile-bar__btn--wa"
     data-conversion="whatsapp"
     rel="noopener noreferrer"
     target="_blank"
   >
-    واتساب
+    {english ? 'WhatsApp quote' : 'واتساب'}
   </a>
   <a
     href={site.phone.telHref}
     class="mobile-bar__btn mobile-bar__btn--tel"
     data-conversion="phone"
   >
-    اتصال
+    {english ? 'Call now' : 'اتصال'}
   </a>
 </div>
 
@@ -35,7 +39,7 @@ import { site } from '../config/site';
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.12);
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .mobile-bar {
       display: none;
     }

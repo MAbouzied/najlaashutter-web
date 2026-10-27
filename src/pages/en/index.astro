@@ -1,6 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+import Header from '../../components/Header.astro';
+import MobileConversionBar from '../../components/MobileConversionBar.astro';
 import Container from '../../components/Container.astro';
 import Section from '../../components/Section.astro';
 import FAQ from '../../components/FAQ.astro';
@@ -27,7 +30,7 @@ const faq = [
 <BaseLayout title="Window Roller Shutters in Jeddah | Manual & Electric | Najlaa Shutter"
   description="Supply and installation of window roller shutters in Jeddah. Explore manual, electric, remote-control, internal and external options. Send photos for a quote."
   canonicalPath="/en/" ogImage={assetSources.hero.file} language="en" direction="ltr" showMobileBar>
-  <header slot="header" class="english-header"><Container><a class="brand" href="/en/"><Image src={assetSources.logo.file} alt="" width={48} height={48} densities={[1,2]} />Najlaa Shutter</a><a href="/" lang="ar" dir="rtl">العربية</a></Container></header>
+  <Header slot="header" minimal language="en" />
   <Section ariaLabelledby="english-hero">
     <Container>
       <div class="hero-grid">
@@ -35,7 +38,7 @@ const faq = [
           <p class="eyebrow">NAJLAA SHUTTER · JEDDAH</p>
           <h1 id="english-hero">Window Roller Shutters in Jeddah</h1>
           <p>Supply and installation of manual and electric window shutters, with remote-control options. Choose an internal or external installation to suit your windows and daily use.</p>
-          <div class="actions"><a class="btn btn--whatsapp" href={whatsapp} target="_blank" rel="noopener noreferrer" data-conversion="whatsapp">Get a quote on WhatsApp</a><a class="btn btn--ghost" href={site.phone.telHref} data-conversion="phone">Call now</a></div>
+          <div class="actions"><Button href={whatsapp} variant="whatsapp" external conversion="whatsapp" ariaLabel="Get a window shutter quote on WhatsApp">WhatsApp quote</Button><Button href={site.phone.telHref} variant="primary" conversion="phone" ariaLabel="Call Najlaa Shutter">Call now</Button></div>
           <p>Send window photos, approximate measurements and your location in Jeddah.</p>
         </div>
         <Image src={assetSources.hero.file} alt="Window roller shutters installed on a building facade — a Najlaa Shutter project" widths={[480,720,960,1200]} sizes="(max-width: 768px) 100vw, 44vw" loading="eager" fetchpriority="high" class="hero-image" />
@@ -54,11 +57,10 @@ const faq = [
     <p><a href={site.googleBusinessProfileUrl} target="_blank" rel="noopener noreferrer">Find Najlaa Shutter and customer reviews on Google Maps</a></p>
   </Container></Section>
   <Section variant="surface" ariaLabelledby="faq-heading"><Container><FAQ title="Frequently asked questions" items={faq} /></Container></Section>
-  <footer slot="footer"><Container><h2>Discuss your window shutters</h2><a href={site.phone.telHref} data-conversion="phone" dir="ltr">{site.phone.display}</a><p><a href={site.email.href}>{site.email.address}</a></p><a href="/privacy-policy/">Privacy policy (Arabic)</a></Container></footer>
-  <nav slot="mobile" class="english-mobile" aria-label="Quick contact"><a href={whatsapp} target="_blank" rel="noopener noreferrer" data-conversion="whatsapp">WhatsApp quote</a><a href={site.phone.telHref} data-conversion="phone">Call now</a></nav>
+  <footer slot="footer"><Container><h2>Discuss your window shutters</h2><div class="actions"><Button href={whatsapp} variant="whatsapp" external conversion="whatsapp">WhatsApp quote</Button><Button href={site.phone.telHref} variant="secondary" conversion="phone">Call now</Button></div><a href={site.phone.telHref} data-conversion="phone" dir="ltr">{site.phone.display}</a><p><a href={site.email.href}>{site.email.address}</a></p><a href="/privacy-policy/">Privacy policy (Arabic)</a></Container></footer>
+  <MobileConversionBar slot="mobile" language="en" />
 </BaseLayout>
 
 <style>
-  .brand{display:flex;align-items:center;gap:0.75rem;text-decoration:none;font-weight:700}.brand img{object-fit:contain;flex-shrink:0}
-  h1,h2,h3{color:var(--color-primary);line-height:1.35}h1{font-size:clamp(2rem,5vw,3rem);margin:0.5rem 0 1rem}p,li{line-height:1.8}li{margin-bottom:0.75rem}.eyebrow{font-size:0.85rem;font-weight:700}.hero-grid{display:grid;gap:2rem;align-items:center}.hero-image{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-lg)}.actions{display:flex;flex-wrap:wrap;gap:0.75rem;margin-block:1.25rem}.cards{display:grid;gap:1rem;margin-top:1.5rem}.cards article{padding:1.25rem;background:white;border:1px solid var(--color-border);border-radius:var(--radius-md)}.cards h3{margin:0 0 0.5rem}.cards p{margin:0}.english-header,footer{background:var(--color-primary);color:white;padding:1.25rem 0}.english-header :global(.container){display:flex;justify-content:space-between;gap:1rem}.english-header a,footer a,footer h2{color:white}footer{padding-block:2rem}.english-mobile{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;inset-inline:0;z-index:60;background:var(--color-primary);padding-bottom:env(safe-area-inset-bottom,0px)}.english-mobile a{padding:1rem 0.5rem;text-align:center;color:white;text-decoration:none;font-weight:700}.english-mobile a:first-child{background:var(--color-whatsapp);color:var(--color-whatsapp-text)}@media(min-width:768px){.hero-grid{grid-template-columns:1fr 1fr}.cards{grid-template-columns:repeat(2,1fr)}.english-mobile{display:none}}
+  h1,h2,h3{color:var(--color-primary);line-height:1.35}h1{font-size:clamp(2rem,5vw,3rem);margin:0.5rem 0 1rem}p,li{line-height:1.8}li{margin-bottom:0.75rem}.eyebrow{font-size:0.85rem;font-weight:700}.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;align-items:center}.hero-image{min-width:0;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-lg)}.actions{display:flex;flex-wrap:wrap;gap:0.75rem;margin-block:1.25rem}.hero-grid>div{min-width:0}@media(max-width:480px){.actions{display:grid;grid-template-columns:1fr 1fr}.actions :global(.btn){padding:0.85rem 0.5rem;font-size:0.9rem;min-height:48px}}.cards{display:grid;gap:1rem;margin-top:1.5rem}.cards article{padding:1.25rem;background:white;border:1px solid var(--color-border);border-radius:var(--radius-md)}.cards h3{margin:0 0 0.5rem}.cards p{margin:0}footer{background:var(--color-primary);color:white;padding:1.25rem 0}footer :global(a:not(.btn)),footer h2{color:white}footer{padding-block:2rem}@media(min-width:768px){.hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.cards{grid-template-columns:repeat(2,1fr)}}
 </style>

@@ -2,19 +2,21 @@
 import { Image } from 'astro:assets';
 import { assetSources } from '../config/project-images';
 import { site } from '../config/site';
-import PhoneCTA from './PhoneCTA.astro';
-import WhatsAppCTA from './WhatsAppCTA.astro';
+import Button from './Button.astro';
 
 interface Props {
   minimal?: boolean;
+  language?: 'ar' | 'en';
 }
 
-const { minimal = true } = Astro.props;
+const { minimal = true, language = 'ar' } = Astro.props;
+const english = language === 'en';
+const whatsappMessage = english ? 'Hello, I would like a quote for window roller shutters in Jeddah.' : undefined;
 ---
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a href={site.paths.landingJeddah} class="site-header__brand" aria-label={site.name}>
+    <a href={english ? '/en/' : site.paths.landingJeddah} class="site-header__brand" aria-label={site.name}>
       <Image
         src={assetSources.logo.file}
         alt=""
@@ -37,10 +39,10 @@ const { minimal = true } = Astro.props;
         </nav>
       )
     }
-    <a class="site-header__language" href="/en/" lang="en" dir="ltr">English</a>
+    <a class="site-header__language" href={english ? '/' : '/en/'} lang={english ? 'ar' : 'en'} dir={english ? 'rtl' : 'ltr'}>{english ? 'العربية' : 'English'}</a>
     <div class="site-header__actions">
-      <PhoneCTA class="site-header__phone" variant="ghost" />
-      <WhatsAppCTA label="واتساب" />
+      <Button href={site.phone.telHref} variant="ghost" conversion="phone" ariaLabel={english ? 'Call Najlaa Shutter' : 'اتصل بنجلاء شتر'}>{english ? 'Call now' : 'اتصل الآن'}</Button>
+      <Button href={site.whatsapp.href(whatsappMessage)} variant="whatsapp" external conversion="whatsapp" ariaLabel={english ? 'Contact Najlaa Shutter on WhatsApp' : 'تواصل مع نجلاء شتر عبر واتساب'}>{english ? 'WhatsApp' : 'واتساب'}</Button>
     </div>
   </div>
 </header>
@@ -100,8 +102,7 @@ const { minimal = true } = Astro.props;
     gap: 0.5rem;
   }
   @media (min-width: 768px) {
-    .site-header__language { color: #fff; font-size: 0.9rem; text-underline-offset: 0.25em; margin-inline-start: auto; }
-  .site-header__actions {
+    .site-header__actions {
       display: flex;
     }
   }

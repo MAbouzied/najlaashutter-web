@@ -1,37 +1,31 @@
-# Najlaa Shutter — custom website (Phase 2A)
+# Najlaa Shutter — Jeddah ads landing pages
 
-Static [Astro](https://astro.build) site for **najlaashutter.com**. WordPress backup is reference-only (`../_wp-reference-readonly/`).
+Static Astro landing pages, deployed by the existing Cloudflare Workers Builds integration.
 
-## Commands
+## Routes
 
-```bash
-cd najlaashutter-web
-npm install
-npm run dev      # http://localhost:4321
-npm run build    # output: dist/
-npm run preview  # serve dist/
-```
+- `/`: Arabic landing page
+- `/en/`: English landing page
+- `/privacy-policy/`: privacy policy
+- `/window-shutters-jeddah/`: legacy redirect to `/`
 
-## Phase 2A scope
+Preview: https://najlaashutter-web.mohamed-abouzied.workers.dev/
+Planned ads host: https://ads.najlaashutter.com/
 
-- Global layout, design tokens, contact/tracking config
-- Landing page: `/window-shutters-jeddah/`
-- Placeholder `/` (noindex) until Phase 2B homepage
+## Build and deploy
 
-## Cloudflare (Workers Builds + Git)
+Use Node 22.12+ and `npm ci`, then `npm run build`.
+Cloudflare build command: `npm run build`.
+Cloudflare deploy command: `npx wrangler deploy` (or `npm run deploy`).
+The Worker name is `najlaashutter-web`; static assets come from `dist/`.
+The production Git branch is `main`. Verify the Cloudflare build result after pushing; a Git commit alone does not prove publication.
 
-This project uses **Workers Builds** (Workers & Pages → Git). The dashboard **requires** a deploy command — saving with an empty deploy field returns “Invalid request body”.
+## Contact buttons and branding
 
-| Setting | Value |
-|--------|--------|
-| Build command | `npm run build` |
-| Deploy command | `npx wrangler deploy` or `npm run deploy` |
-| Root directory | `/` |
+Use `Button.astro` for styled contact CTAs; its CSS is component-scoped, so assigning its class names to a plain anchor is insufficient.
+Both language pages include phone and WhatsApp links with the existing `data-conversion` markers. A fixed contact bar remains visible below 1024px, including portrait tablet layouts. GTM is preserved; live conversion firing must be verified separately.
+Favicons use the original N mark in `src/assets/brand/logo.png`. The favicon link is versioned to refresh cached icons.
 
-Static files are served from `dist/` via `[assets]` in `wrangler.toml`. Do **not** use `wrangler pages deploy` or `pages_build_output_dir` here.
+## Review
 
-**Deploy auth error 10000:** In **Settings → Builds**, remove a custom `CLOUDFLARE_API_TOKEN` unless it uses the **Edit Cloudflare Workers** template. Prefer Cloudflare’s auto-generated build token.
-
-- Node: 22+ (matches `package.json` engines)
-
-See `docs/PHASE-2A-DELIVERABLES.md` for audit trail and open items.
+Before completing a release, visually inspect both languages on mobile, tablet and desktop. Check CTA visibility, text wrapping, horizontal overflow, fixed-bar clearance, images and favicon. Do not click live contact links to manufacture test conversions.

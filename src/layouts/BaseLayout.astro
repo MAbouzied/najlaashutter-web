@@ -7,6 +7,8 @@ import type { ImageMetadata } from 'astro';
 
 interface Props {
   title: string;
+  language?: string;
+  direction?: 'rtl' | 'ltr';
   description: string;
   canonicalPath: string;
   ogImage?: ImageMetadata;
@@ -17,6 +19,8 @@ interface Props {
 
 const {
   title,
+  language = site.language,
+  direction = site.direction,
   description,
   canonicalPath,
   ogImage,
@@ -32,7 +36,7 @@ const robotsNofollow = noindex;
 ---
 
 <!doctype html>
-<html lang={site.language} dir={site.direction}>
+<html lang={language} dir={direction}>
   <head>
     <PageMeta
       title={title}

@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Container from '../../components/Container.astro';
+import Section from '../../components/Section.astro';
+import FAQ from '../../components/FAQ.astro';
+import ProjectGallery from '../../components/ProjectGallery.astro';
+import { assetSources, projectGalleryImages } from '../../config/project-images';
+import { site } from '../../config/site';
+
+const whatsapp = site.whatsapp.href('Hello, I would like a quote for window roller shutters in Jeddah. I can send photos and approximate window measurements.');
+const types = [
+  ['External window shutters', 'Installed outside the window to control sunlight and privacy. We review the facade, shutter box and guide positions before confirming the installation.'],
+  ['Internal window shutters', 'An option for controlling light and privacy from inside your home. Suitability depends on the available space and the way your windows open.'],
+  ['Manual roller shutters', 'Operated by hand without an electric motor. We check the window size and ease of access before recommending manual operation.'],
+  ['Electric shutters with remote control', 'Motor-operated window shutters for convenient opening and closing. Remote-control options depend on the selected motor and system.'],
+  ['Smart window shutters', 'Control options for compatible smart-home systems. We check the motor and existing equipment before confirming integration.'],
+];
+const faq = [
+  { q: 'How much do window shutters cost in Jeddah?', a: 'The quote depends on window sizes, quantity, installation requirements and whether you choose manual or electric operation. Send photos, approximate measurements and your location in Jeddah for a specification-based quote.' },
+  { q: 'Can shutters be installed on existing windows?', a: 'In many cases, yes. We need to review the window, surrounding space and mounting positions first. Send clear photos so we can check suitability.' },
+  { q: 'Are internal and external shutters always manual or electric?', a: 'Installation position and operation are separate choices. The available combination depends on the selected system, window dimensions and site conditions.' },
+  { q: 'What should I confirm before ordering?', a: 'Ask for the agreed shutter specifications, operating method, installation scope, price and any applicable warranty terms in your quote before proceeding.' },
+];
+---
+
+<BaseLayout title="Window Roller Shutters in Jeddah | Manual & Electric | Najlaa Shutter"
+  description="Supply and installation of window roller shutters in Jeddah. Explore manual, electric, remote-control, internal and external options. Send photos for a quote."
+  canonicalPath="/en/" ogImage={assetSources.hero.file} language="en" direction="ltr" showMobileBar>
+  <header slot="header" class="english-header"><Container><a class="brand" href="/en/"><Image src={assetSources.logo.file} alt="" width={48} height={48} densities={[1,2]} />Najlaa Shutter</a><a href="/" lang="ar" dir="rtl">العربية</a></Container></header>
+  <Section ariaLabelledby="english-hero">
+    <Container>
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">NAJLAA SHUTTER · JEDDAH</p>
+          <h1 id="english-hero">Window Roller Shutters in Jeddah</h1>
+          <p>Supply and installation of manual and electric window shutters, with remote-control options. Choose an internal or external installation to suit your windows and daily use.</p>
+          <div class="actions"><a class="btn btn--whatsapp" href={whatsapp} target="_blank" rel="noopener noreferrer" data-conversion="whatsapp">Get a quote on WhatsApp</a><a class="btn btn--ghost" href={site.phone.telHref} data-conversion="phone">Call now</a></div>
+          <p>Send window photos, approximate measurements and your location in Jeddah.</p>
+        </div>
+        <Image src={assetSources.hero.file} alt="Window roller shutters installed on a building facade — a Najlaa Shutter project" widths={[480,720,960,1200]} sizes="(max-width: 768px) 100vw, 44vw" loading="eager" fetchpriority="high" class="hero-image" />
+      </div>
+    </Container>
+  </Section>
+  <Section variant="surface" ariaLabelledby="english-types"><Container>
+    <h2 id="english-types">Choose the right window shutters</h2>
+    <p>Installation position and operation are separate choices. We review your windows before recommending a suitable combination.</p>
+    <div class="cards">{types.map(([title,text]) => <article><h3>{title}</h3><p>{text}</p></article>)}</div>
+  </Container></Section>
+  <Section ariaLabelledby="projects-heading"><Container><ProjectGallery title="Window shutter installation projects" items={projectGalleryImages.map((item) => ({ ...item, alt: 'Window roller shutter installation from the Najlaa Shutter project gallery' }))} /></Container></Section>
+  <Section ariaLabelledby="english-process"><Container narrow>
+    <h2 id="english-process">From window photos to installation</h2>
+    <ol><li>Send photos, window quantity, approximate measurements and your location.</li><li>Discuss the suitable shutter type, controls and installation requirements.</li><li>Confirm the specifications and quote, then agree on the installation schedule.</li></ol>
+    <p><a href={site.googleBusinessProfileUrl} target="_blank" rel="noopener noreferrer">Find Najlaa Shutter and customer reviews on Google Maps</a></p>
+  </Container></Section>
+  <Section variant="surface" ariaLabelledby="faq-heading"><Container><FAQ title="Frequently asked questions" items={faq} /></Container></Section>
+  <footer slot="footer"><Container><h2>Discuss your window shutters</h2><a href={site.phone.telHref} data-conversion="phone" dir="ltr">{site.phone.display}</a><p><a href={site.email.href}>{site.email.address}</a></p><a href="/privacy-policy/">Privacy policy (Arabic)</a></Container></footer>
+  <nav slot="mobile" class="english-mobile" aria-label="Quick contact"><a href={whatsapp} target="_blank" rel="noopener noreferrer" data-conversion="whatsapp">WhatsApp quote</a><a href={site.phone.telHref} data-conversion="phone">Call now</a></nav>
+</BaseLayout>
+
+<style>
+  .brand{display:flex;align-items:center;gap:0.75rem;text-decoration:none;font-weight:700}.brand img{object-fit:contain;flex-shrink:0}
+  h1,h2,h3{color:var(--color-primary);line-height:1.35}h1{font-size:clamp(2rem,5vw,3rem);margin:0.5rem 0 1rem}p,li{line-height:1.8}li{margin-bottom:0.75rem}.eyebrow{font-size:0.85rem;font-weight:700}.hero-grid{display:grid;gap:2rem;align-items:center}.hero-image{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-lg)}.actions{display:flex;flex-wrap:wrap;gap:0.75rem;margin-block:1.25rem}.cards{display:grid;gap:1rem;margin-top:1.5rem}.cards article{padding:1.25rem;background:white;border:1px solid var(--color-border);border-radius:var(--radius-md)}.cards h3{margin:0 0 0.5rem}.cards p{margin:0}.english-header,footer{background:var(--color-primary);color:white;padding:1.25rem 0}.english-header :global(.container){display:flex;justify-content:space-between;gap:1rem}.english-header a,footer a,footer h2{color:white}footer{padding-block:2rem}.english-mobile{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;inset-inline:0;z-index:60;background:var(--color-primary);padding-bottom:env(safe-area-inset-bottom,0px)}.english-mobile a{padding:1rem 0.5rem;text-align:center;color:white;text-decoration:none;font-weight:700}.english-mobile a:first-child{background:var(--color-whatsapp);color:var(--color-whatsapp-text)}@media(min-width:768px){.hero-grid{grid-template-columns:1fr 1fr}.cards{grid-template-columns:repeat(2,1fr)}.english-mobile{display:none}}
+</style>

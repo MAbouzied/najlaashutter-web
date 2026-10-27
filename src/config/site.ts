@@ -6,6 +6,7 @@ export const site = {
   description:
     'تركيب شتر نوافذ في جدة — شتر يدوي وكهربائي، داخلي وخارجي، بجودة عالية وتركيب احترافي.',
   url: 'https://najlaashutter.com',
+  landingUrl: 'https://ads.najlaashutter.com',
   locale: 'ar_SA',
   language: 'ar',
   direction: 'rtl' as const,

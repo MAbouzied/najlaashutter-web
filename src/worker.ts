@@ -4,7 +4,13 @@ interface Env {
   ASSETS: Fetcher;
 }
 
-const STAGING_ROBOTS = `User-agent: *
+const STAGING_ROBOTS = `User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+User-agent: *
 Disallow: /
 `;
 
@@ -81,11 +87,11 @@ export default {
       html = html
         .replace(
           /<link rel="canonical" href="[^"]*"/i,
-          `<link rel="canonical" href="${adsOrigin}/"`,
+          `<link rel="canonical" href="${adsOrigin}${url.pathname}"`,
         )
         .replace(
           /<meta property="og:url" content="[^"]*"/i,
-          `<meta property="og:url" content="${adsOrigin}/"`,
+          `<meta property="og:url" content="${adsOrigin}${url.pathname}"`,
         );
     }
 

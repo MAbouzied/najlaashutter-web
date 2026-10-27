@@ -37,6 +37,7 @@ const { minimal = true } = Astro.props;
         </nav>
       )
     }
+    <a class="site-header__language" href="/en/" lang="en" dir="ltr">English</a>
     <div class="site-header__actions">
       <PhoneCTA class="site-header__phone" variant="ghost" />
       <WhatsAppCTA label="واتساب" />
@@ -92,13 +93,15 @@ const { minimal = true } = Astro.props;
     letter-spacing: 0.08em;
     color: rgba(255, 255, 255, 0.92);
   }
+  .site-header__language { color: #fff; font-size: 0.9rem; text-underline-offset: 0.25em; margin-inline-start: auto; }
   .site-header__actions {
     display: none;
     align-items: center;
     gap: 0.5rem;
   }
   @media (min-width: 768px) {
-    .site-header__actions {
+    .site-header__language { color: #fff; font-size: 0.9rem; text-underline-offset: 0.25em; margin-inline-start: auto; }
+  .site-header__actions {
       display: flex;
     }
   }

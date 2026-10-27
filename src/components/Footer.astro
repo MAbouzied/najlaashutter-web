@@ -34,7 +34,7 @@ const { minimal = true, serviceAreaNote = site.serviceAreaNote } = Astro.props;
       <p class="site-footer__tagline">{serviceAreaNote}</p>
     </div>
     <div class="site-footer__contact">
-      <a href={site.phone.telHref} data-conversion="phone" class="site-footer__link">
+      <a href={site.phone.telHref} data-conversion="phone" class="site-footer__link" dir="ltr">
         {site.phone.display}
       </a>
       <a
@@ -46,6 +46,8 @@ const { minimal = true, serviceAreaNote = site.serviceAreaNote } = Astro.props;
       >
         واتساب
       </a>
+      <a href={site.email.href} class="site-footer__link" dir="ltr">{site.email.address}</a>
+      <a href={site.googleBusinessProfileUrl} class="site-footer__link" target="_blank" rel="noopener noreferrer">موقعنا وآراء العملاء على خرائط جوجل</a>
       {
         minimal && (
           <a href={site.paths.privacyPolicy} class="site-footer__link site-footer__muted">

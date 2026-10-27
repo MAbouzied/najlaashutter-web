@@ -104,6 +104,7 @@ const hero = content.hero;
   <Section variant="surface" ariaLabelledby="types-heading">
     <Container>
       <h2 id="types-heading" class="section-title">أنواع الشتر المتوفرة</h2>
+      <p class="types-intro">اختيار مكان التركيب وطريقة التشغيل خطوتان مختلفتان: يمكن أن يكون الشتر الداخلي أو الخارجي يدويًا أو كهربائيًا، بحسب المقاسات والتجهيزات.</p>
       <ul class="types-grid">
         {
           content.shutterTypes.map((t) => (
@@ -120,6 +121,7 @@ const hero = content.hero;
   <Section ariaLabelledby="projects-heading">
     <Container>
       <ProjectGallery items={projectGalleryImages} title="صور من مشاريع نجلاء" />
+      <p class="types-intro">صور أعمال منفّذة لشتر النوافذ. أرسل صورة شبابيكك لنراجع شكل التركيب المناسب لواجهتك.</p>
     </Container>
   </Section>
 
@@ -315,6 +317,7 @@ const hero = content.hero;
     color: var(--color-text-muted);
     font-size: 0.95rem;
   }
+  .types-intro { max-width: 48rem; margin: 0 auto 1.25rem; color: var(--color-text-muted); line-height: 1.9; }
   .types-grid {
     list-style: none;
     margin: 0;
@@ -324,12 +327,14 @@ const hero = content.hero;
     grid-template-columns: 1fr;
   }
   @media (min-width: 640px) {
-    .types-grid {
+    .types-intro { max-width: 48rem; margin: 0 auto 1.25rem; color: var(--color-text-muted); line-height: 1.9; }
+  .types-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   @media (min-width: 960px) {
-    .types-grid {
+    .types-intro { max-width: 48rem; margin: 0 auto 1.25rem; color: var(--color-text-muted); line-height: 1.9; }
+  .types-grid {
       grid-template-columns: repeat(3, 1fr);
     }
   }
@@ -471,7 +476,7 @@ const hero = content.hero;
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: site.name,
-  url: site.url,
+  url: site.landingUrl,
   telephone: site.phone.e164,
   email: site.email.address,
   areaServed: { '@type': 'City', name: 'Jeddah' },

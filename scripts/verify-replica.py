@@ -30,7 +30,8 @@ class VisibleText(m.HTMLParser):
 
 def invariant(d):
     return [(n['tag'], {k:v for k,v in n['attrs'].items()
-                       if k not in {'href','src','srcset','action','style','poster'}})
+                       if k not in {'href','src','srcset','action','style','poster'}
+                       and not (n['tag']=='meta' and n['attrs'].get('name')=='msapplication-TileImage' and k=='content')})
             for n in d.nodes if not (n['tag']=='script' and n['attrs'].get('src')=='/mirror-runtime.js')]
 
 checked = set()
@@ -43,6 +44,7 @@ for row in pages.values():
     if route in checked: continue
     checked.add(route)
     source = (W / 'source' / row['file']).read_text()
+    if m.sha((W/'source'/row['file']).read_bytes())!=row['sha256']:errors.append('Source page hash mismatch: '+route)
     built_path = W / 'site' / route.lstrip('/') / 'index.html'
     if not built_path.exists(): errors.append('Missing route: '+route); continue
     built = built_path.read_text()

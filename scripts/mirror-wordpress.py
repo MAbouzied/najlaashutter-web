@@ -197,11 +197,12 @@ def capture_assets(external_only=False):
                 print('ASSET', row['status'], len(visited), url, flush=True)
                 if row['status'] == 429:
                     print('Source rate limit: asset capture paused; rerun after cooldown.', flush=True)
-                    return
+                    return False
                 time.sleep(3 if urlsplit(url).netloc == 'najlaashutter.com' else 0.3)
             if row.get('status') == 200 and ('text/css' in row.get('content_type', '') or row['file'].endswith('.css')):
                 refs |= asset_references(asset_bytes(row).decode(), url, css=True)
     print('Assets captured:', sum(r.get('status') == 200 for r in assets.values()), 'known:', len(assets), flush=True)
+    return True
 
 def page_path(url):
     u = urlsplit(url)
@@ -308,9 +309,15 @@ def main():
     p.add_argument('command', choices=['import', 'assets', 'build'])
     p.add_argument('--cache', type=Path)
     p.add_argument('--external-only', action='store_true')
+    p.add_argument('--retry', action='store_true', help='Honor a five-minute cooldown and resume after HTTP 429')
     a = p.parse_args()
     if a.command == 'import': import_cache(a.cache)
-    elif a.command == 'assets': capture_assets(a.external_only)
+    elif a.command == 'assets':
+        while not capture_assets(a.external_only):
+            if not a.retry:break
+            for minute in range(5):
+                print('Respecting source rate limit; cooldown minute',minute+1,'of 5',flush=True)
+                time.sleep(60)
     else: build()
 
 if __name__ == '__main__': main()

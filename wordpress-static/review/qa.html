@@ -5,13 +5,16 @@
 const prefix='/MAbouzied/najlaashutter-web/replica-static-exact-2026-11-01/wordpress-static/review/';
 const current=new URL(location.hostname==='htmlpreview.github.io'?location.search.slice(1):location.href);
 const params=new URLSearchParams(current.search);
-const route=params.get('route')||'/';
-const width=Number(params.get('width')||1200);
+const cases={mobile:{route:'/',width:390},faq:{route:'/faq/'},gallery:{route:'/our-works/'},service:{route:'/window-shutters-with-remote-control/'},search:{route:'/search/'},contact:{route:'/contact-us/'},blog:{route:'/category/blog/'}};
+const selected=cases[params.get('case')]||{};
+const route=params.get('route')||selected.route||'/';
+const width=Number(params.get('width')||selected.width||1200);
 const frame=document.querySelector('#page');
 frame.style.width=width+'px';frame.style.height='1450px';
-document.querySelector('#case').textContent=route+' — viewport '+width+' px';
+document.querySelector('#case').textContent=route+' — viewport '+width+' px — build 4b611c9b0511';
 const results=[];
 const delay=ms=>new Promise(r=>setTimeout(r,ms));
+const event=(element,name)=>new Promise(resolve=>{const timeout=setTimeout(()=>resolve(false),2500);element.addEventListener(name,()=>{clearTimeout(timeout);resolve(true);},{once:true});});
 function check(name,ok,detail=''){results.push({name,ok,detail});const li=document.createElement('li');li.className=ok?'pass':'fail';li.textContent=(ok?'PASS — ':'FAIL — ')+name+(detail?' ('+detail+')':'');document.querySelector('#results').append(li);}
 async function main(){
  const w=frame.contentWindow,d=w.document;
@@ -30,8 +33,8 @@ async function main(){
  check('Responsive contact bar',Boolean(mobile)&&(w.getComputedStyle(mobile).display!=='none')===(width<992));
  for(const id of ['pw-search-modal','pw-book-modal']){
   const el=d.getElementById(id);if(!el){check(id+' exists',false);continue;}
-  const modal=w.bootstrap.Modal.getOrCreateInstance(el);modal.show();await delay(350);
-  check(id+' opens',el.classList.contains('show'));modal.hide();await delay(350);
+  const modal=w.bootstrap.Modal.getOrCreateInstance(el);const shown=event(el,'shown.bs.modal');modal.show();await shown;
+  check(id+' opens',el.classList.contains('show'));const hidden=event(el,'hidden.bs.modal');modal.hide();await hidden;check(id+' closes',!el.classList.contains('show'));
  }
  const name=d.querySelector('#name-model'),message=d.querySelector('#message-model');
  if(name&&message){name.value='Replica QA';message.value='Preview only';name.dispatchEvent(new w.Event('keyup',{bubbles:true}));
@@ -39,12 +42,12 @@ async function main(){
   check('Contact form builds WhatsApp URL',href.includes('966535344170')&&href.includes('Replica QA'));
  }
  const menu=d.getElementById('pw-side-menu');
- if(menu){const canvas=w.bootstrap.Offcanvas.getOrCreateInstance(menu);canvas.show();await delay(350);check('Mobile menu opens',menu.classList.contains('show'));canvas.hide();await delay(350);}
+ if(menu){const canvas=w.bootstrap.Offcanvas.getOrCreateInstance(menu);const shown=event(menu,'shown.bs.offcanvas');canvas.show();await shown;check('Mobile menu opens',menu.classList.contains('show'));const hidden=event(menu,'hidden.bs.offcanvas');canvas.hide();await hidden;check('Mobile menu closes',!menu.classList.contains('show'));}
  const hero=d.getElementById(width<992?'pwCarouselMob':'pwCarousel');
  if(hero){const slides=[...hero.querySelectorAll('.carousel-item')];const before=slides.findIndex(s=>s.classList.contains('active'));const instance=w.bootstrap.Carousel.getOrCreateInstance(hero);instance.pause();instance.next();await delay(750);const after=slides.findIndex(s=>s.classList.contains('active'));check('Hero changes slide',slides.length>1&&before!==after,slides.length+' slides');}
  const swipers=[...d.querySelectorAll('.swiper')].filter(el=>Boolean(el.swiper));
  if(route==='/')check('Original Swiper instances',swipers.length>=3,swipers.length+' instances');
- for(const el of swipers.slice(0,3)){const s=el.swiper;s.autoplay?.stop();const before=s.activeIndex;s.slideNext(0);check('Swiper navigation '+el.className.split(' ').find(c=>c.startsWith('pw-hom-')),s.activeIndex!==before||s.slides.length<=s.params.slidesPerView);}
+ for(const el of swipers.slice(0,3)){const s=el.swiper;s.autoplay?.stop();s.slideTo(0,0);const before=s.activeIndex;s.slideNext(0);check('Swiper navigation '+el.className.split(' ').find(c=>c.startsWith('pw-hom-')),s.activeIndex!==before||s.slides.length<=s.params.slidesPerView);}
  const button=d.querySelector('.accordion-button');
  if(button){button.click();await delay(400);check('Homepage FAQ expands',button.getAttribute('aria-expanded')==='true');}
  if(route==='/faq/')check('Internal FAQ remains static',d.querySelectorAll('.post-content h3').length===10&&!d.querySelector('.post-content .accordion'));
@@ -59,5 +62,5 @@ async function main(){
 }
 let started=false;
 frame.onload=()=>{if(started||frame.contentDocument.documentElement.dataset.replicaReady!=='true')return;started=true;main().catch(e=>{document.querySelector('#status').textContent='ERROR: '+e.message;document.querySelector('#status').className='fail';});};
-frame.src='https://htmlpreview.github.io/?https://raw.githubusercontent.com'+prefix+route.replace(/^\//,'')+'index.html'+(route.startsWith('/search')?'?s='+encodeURIComponent('شتر'):'');
+frame.src='https://htmlpreview.github.io/?https://raw.githubusercontent.com'+prefix+route.replace(/^\//,'')+'index.html'+(route.startsWith('/search')?'?s='+encodeURIComponent('شتر')+'&v=4b611c9b0511':'?v=4b611c9b0511');
 </script></html>

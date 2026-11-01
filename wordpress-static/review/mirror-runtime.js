@@ -21,7 +21,7 @@
   const normalize = s => s.normalize('NFKC').replace(/[\u064B-\u065F\u0670]/g, '').toLocaleLowerCase('ar');
   const header = document.querySelector('.search-results-header');
   if (!header) return;
-  fetch(base + 'search-index.json').then(r => {
+  fetch(base + 'search-index.json'+(window.REPLICA_REVISION?'?v='+window.REPLICA_REVISION:'')).then(r => {
     if (!r.ok) throw new Error('Search index unavailable');
     return r.json();
   }).then(records => {

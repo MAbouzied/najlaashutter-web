@@ -1,0 +1,704 @@
+{
+  "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?ver=5.0.0": {
+    "url": "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?ver=5.0.0",
+    "file": "assets/91189c85fdc7f9545fe9f7c5.css",
+    "status": 200,
+    "content_type": "text/css; charset=utf-8",
+    "final_url": "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?ver=5.0.0",
+    "sha256": "cccf165ed1b87949fb74a28d313ba8599b9bfbe56749f68ea40ffc3c97ef4c1a",
+    "size": 25343
+  },
+  "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?ver=5.0.0": {
+    "url": "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?ver=5.0.0",
+    "file": "assets/d4823797a673bf7b37ca3289.js",
+    "status": 200,
+    "content_type": "application/javascript; charset=utf-8",
+    "final_url": "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?ver=5.0.0",
+    "sha256": "862504070144a4b17a0e507cb065e52a8e243d9e3a522e2a1a9774beb5643a6e",
+    "size": 142361
+  },
+  "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css?ver=1.10.5": {
+    "url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css?ver=1.10.5",
+    "file": "assets/4762f17e3c1de5b4bc88fd9a.css",
+    "status": 200,
+    "content_type": "text/css; charset=utf-8",
+    "final_url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css?ver=1.10.5",
+    "sha256": "f643d6fe7e679f9de3e16311600c5ef5cd6b098f7a3a8828fcc29255d2b33e62",
+    "size": 85875
+  },
+  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js?ver=5.3.3": {
+    "url": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js?ver=5.3.3",
+    "file": "assets/d9e0b06af0efca139089c94a.js",
+    "status": 200,
+    "content_type": "application/javascript; charset=utf-8",
+    "final_url": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js?ver=5.3.3",
+    "sha256": "0833b2e9c3a26c258476c46266e6877fc75218625162e0460be9a3a098a61c6c",
+    "size": 80721
+  },
+  "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?ver=11.0.7": {
+    "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?ver=11.0.7",
+    "file": "assets/86bf8aa9a02ef9e86401c5d9.css",
+    "status": 200,
+    "content_type": "text/css; charset=utf-8",
+    "final_url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?ver=11.0.7",
+    "sha256": "74ca6aae5468dbc924790c3b4d219a089b90a34bad53a0f7ca3a73e73b6f5ab8",
+    "size": 18454
+  },
+  "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?ver=11.0.7": {
+    "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?ver=11.0.7",
+    "file": "assets/821e083ffb7dd3153d0f9f1e.js",
+    "status": 200,
+    "content_type": "application/javascript; charset=utf-8",
+    "final_url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?ver=11.0.7",
+    "sha256": "985f1224c0eeec99d367a9db35e58e44b21e7eb9ce45831b15b4c108e41fd97f",
+    "size": 154597
+  },
+  "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?ver=4.1.1": {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?ver=4.1.1",
+    "file": "assets/84f433fe8738d06e728cb37d.css",
+    "status": 200,
+    "content_type": "text/css; charset=utf-8",
+    "final_url": "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?ver=4.1.1",
+    "sha256": "5fbaeb9f8e25d7e0143bae61d4b1802c16ce7390b96ceb2d498b0d96ff4c853f",
+    "size": 71750
+  },
+  "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.rtl.min.css?ver=5.3.3": {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.rtl.min.css?ver=5.3.3",
+    "file": "assets/bc511f608ca993a64425d15a.css",
+    "status": 200,
+    "content_type": "text/css; charset=utf-8",
+    "final_url": "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.rtl.min.css?ver=5.3.3",
+    "sha256": "879944ecd9bc4a4788a411c763137df6ca4fdd5b8614a97935982ca1c8a5ef39",
+    "size": 232911
+  },
+  "https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap&ver=1.0.0": {
+    "url": "https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap&ver=1.0.0",
+    "file": "assets/71348fd1a737947cfeb477e4.css",
+    "status": 200,
+    "content_type": "text/css; charset=utf-8",
+    "final_url": "https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap&ver=1.0.0",
+    "sha256": "844e8c39219a6d55d08d7bffc370e066a2b3817104d0939633df970bc2d6b70a",
+    "size": 4715
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.47-1-830x1024.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.47-1-830x1024.jpeg",
+    "file": "assets/f631aae5d8000e1077222388.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.47-1-830x1024.jpeg",
+    "sha256": "9d836df46b161f4acc5deea4ffc012fe442d70a214d6d0ec390dca54f3a961b0",
+    "size": 61908
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.47-1.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.47-1.jpeg",
+    "file": "assets/29e86ca4ea1321aff8601033.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.47-1.jpeg",
+    "sha256": "6d4ebaa727ae4e07dbca831dd2d1b69e1d803d9b852ab6eee3faa07b76a1c24b",
+    "size": 126272
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.47-830x1024.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.47-830x1024.jpeg",
+    "file": "assets/be484d60e25eca59898833b9.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.47-830x1024.jpeg",
+    "sha256": "536f3d866bda3af896a824bede0e4c01901395c23d521ed089560954a26ef7f9",
+    "size": 65909
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.47.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.47.jpeg",
+    "file": "assets/97982c489b5679691d69128b.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.47.jpeg",
+    "sha256": "af497fd6778d5ec8cf88f7fd9ddc80c511afc04055159cdb821036ec531bdfc6",
+    "size": 131942
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-1-830x1024.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-1-830x1024.jpeg",
+    "file": "assets/3b45bf25800c09a37d05e354.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-1-830x1024.jpeg",
+    "sha256": "1fee90a3be861ba3ff27cf099ea053577f122e384ae0241bfad3f23681474be9",
+    "size": 67867
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-1.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-1.jpeg",
+    "file": "assets/de167ad9ae184938afef73e5.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-1.jpeg",
+    "sha256": "4c957c878f8c2f5b0cbc47699c89c04d64b1cb4e90278f4c5937c325ddce5641",
+    "size": 139703
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-2-830x1024.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-2-830x1024.jpeg",
+    "file": "assets/ee176c50cad9ebe5234ed145.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-2-830x1024.jpeg",
+    "sha256": "6828af51793d0394988188740ddbf76bb4a2ccaf607fef9d7e4fda3b44a1a1e9",
+    "size": 63428
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-2.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-2.jpeg",
+    "file": "assets/bc85167dd4ae9f4006735494.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-2.jpeg",
+    "sha256": "47ee69ef11bfed0a48ab78daef104647b06b644eb35f562357ae28097bc46f01",
+    "size": 126507
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-3-830x1024.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-3-830x1024.jpeg",
+    "file": "assets/2add748bfe9defc97032ef29.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-3-830x1024.jpeg",
+    "sha256": "da6d8ef6433858d8c9b07691ed097d0f8e0a93470cd93c50dd12e0d4aff3b7a1",
+    "size": 98845
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-3.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-3.jpeg",
+    "file": "assets/adb4bc6f3f0db24d22a4883f.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-3.jpeg",
+    "sha256": "0bb2028c3f24038aca39e6a39b0b24e0c63a5c0fe91f8cb432ddbf54c81c019f",
+    "size": 203989
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-4-830x1024.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-4-830x1024.jpeg",
+    "file": "assets/6ddaadd8e3444e671fd62e61.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-4-830x1024.jpeg",
+    "sha256": "d3a6ede31e2bb74773443b8b561cd343423ce05268be542f5b1586a56bd03bd8",
+    "size": 126380
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-4.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-4.jpeg",
+    "file": "assets/36af1d01b59ea5e51448935f.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-4.jpeg",
+    "sha256": "4e6ee4f84b764b1ece58c36c75547b6155f518b60f65dbf6d195923d46e2eb9e",
+    "size": 263266
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-5-830x1024.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-5-830x1024.jpeg",
+    "file": "assets/d20359099459ad2ea6e4cde7.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-5-830x1024.jpeg",
+    "sha256": "58a654bb2abc68e7a6eda93bcaedf77b6456f51a207372a6451d8fac3141acc4",
+    "size": 112036
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-5.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-5.jpeg",
+    "file": "assets/777052ca6a20fbb70001fe94.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-5.jpeg",
+    "sha256": "46b591cc3f054f38c343062aaa7739d8fdffca1cdde2f09904f6254e1441d15c",
+    "size": 263055
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-830x1024.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-830x1024.jpeg",
+    "file": "assets/87e31de160a91f91046efacd.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48-830x1024.jpeg",
+    "sha256": "8173e6276f7c91095db2f0f937ca71de9929920a15c0f02a13bcd1f0a38d1e1c",
+    "size": 104692
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48.jpeg": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48.jpeg",
+    "file": "assets/384d14d1f47e9c25ef249d66.jpeg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-24-at-18.49.48.jpeg",
+    "sha256": "b86929b7ae395fe76bc0edd2f1b0e82c4634ab535ad102731b6d729e77599b2b",
+    "size": 216207
+  },
+  "https://htmcssjs.com/shut/wp-content/uploads/2025/11/contact.png": {
+    "url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/contact.png",
+    "file": "assets/25a734c56b9b3b7fd2a38e95.png",
+    "status": 200,
+    "content_type": "image/png",
+    "final_url": "https://htmcssjs.com/shut/wp-content/uploads/2025/11/contact.png",
+    "sha256": "502ed9d0ed2ebafe4b1ed30bbaa83e6ea77c37cbc68273f8dcd0a3b8f4dae0d0",
+    "size": 163302
+  },
+  "https://unpkg.com/aos@2.3.1/dist/aos.css?ver=2.3.1": {
+    "url": "https://unpkg.com/aos@2.3.1/dist/aos.css?ver=2.3.1",
+    "file": "assets/7636a69486e8cf7bb3f844b7.css",
+    "status": 200,
+    "content_type": "text/css; charset=utf-8",
+    "final_url": "https://unpkg.com/aos@2.3.1/dist/aos.css?ver=2.3.1",
+    "sha256": "1aa8845fd06e475aefe733d4e55b36a92fcd487975049c8172341827ac9cc03e",
+    "size": 26053
+  },
+  "https://unpkg.com/aos@2.3.1/dist/aos.js?ver=2.3.1": {
+    "url": "https://unpkg.com/aos@2.3.1/dist/aos.js?ver=2.3.1",
+    "file": "assets/34823b62efb76c68992eb08f.js",
+    "status": 200,
+    "content_type": "text/javascript; charset=utf-8",
+    "final_url": "https://unpkg.com/aos@2.3.1/dist/aos.js?ver=2.3.1",
+    "sha256": "f268612ba59ead1b24353bb77d66783bcc435aff1c22be5f93c40bac3869968e",
+    "size": 14239
+  },
+  "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6": {
+    "url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6",
+    "file": "assets/e837c4d1eca8ba005e20f13a.woff2",
+    "status": 200,
+    "content_type": "font/woff2",
+    "final_url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6",
+    "sha256": "476adf42b40325098fcfa8b36ab3e769186bb4f6ce6a249753e2e1a9c22bf99e",
+    "size": 130396
+  },
+  "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6": {
+    "url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6",
+    "file": "assets/1b495e11a3c1ab37201078be.woff",
+    "status": 200,
+    "content_type": "font/woff",
+    "final_url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6",
+    "sha256": "bb1de989b83970f6f4e54de1cd974c5cba55b73582da5e1b225a6d0edf029483",
+    "size": 176032
+  },
+  "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrI0FFlKp.woff2": {
+    "url": "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrI0FFlKp.woff2",
+    "file": "assets/476334400674919dde8b2dc3.woff2",
+    "status": 200,
+    "content_type": "font/woff2",
+    "final_url": "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrI0FFlKp.woff2",
+    "sha256": "aaba41c93b7f907b43e786a36b0e629e756b1f67632e358cee2b6e5c99cbaf58",
+    "size": 14132
+  },
+  "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrJ8FFlKp.woff2": {
+    "url": "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrJ8FFlKp.woff2",
+    "file": "assets/fb52a33a6b58c08a4ea969ee.woff2",
+    "status": 200,
+    "content_type": "font/woff2",
+    "final_url": "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrJ8FFlKp.woff2",
+    "sha256": "712697b4a73aaba66cfd52e2d4aaec4cc5ebc03b21884774903e6fa9c9241e65",
+    "size": 22228
+  },
+  "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrO0FFlKp.woff2": {
+    "url": "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrO0FFlKp.woff2",
+    "file": "assets/e1e82ba324eaeee09952f802.woff2",
+    "status": 200,
+    "content_type": "font/woff2",
+    "final_url": "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrO0FFlKp.woff2",
+    "sha256": "290361339bf74188c75e6600e28e5164cb3623522139ce7c56c5a18bcc3dcb0f",
+    "size": 16500
+  },
+  "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrOMFFg.woff2": {
+    "url": "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrOMFFg.woff2",
+    "file": "assets/a20c794ab6c8d1719846ea5a.woff2",
+    "status": 200,
+    "content_type": "font/woff2",
+    "final_url": "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrOMFFg.woff2",
+    "sha256": "61b046636e1d155cb7b48d924fad2299e0099efaca67a50b4d3cc3b7a07e9b86",
+    "size": 30724
+  },
+  "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrOYFFlKp.woff2": {
+    "url": "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrOYFFlKp.woff2",
+    "file": "assets/8d7cea2aa45ceb0e079f825f.woff2",
+    "status": 200,
+    "content_type": "font/woff2",
+    "final_url": "https://fonts.gstatic.com/s/notokufiarabic/v27/CSRk4ydQnPyaDxEXLFF6LZVLKrodrOYFFlKp.woff2",
+    "sha256": "01290c72f7179c551d8eef0b5e190615b082a5876e3abacca88e341e0e1fafe9",
+    "size": 123688
+  },
+  "https://najlaashutter.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js": {
+    "url": "https://najlaashutter.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+    "file": "assets/169990702e2f9883a5b4063b.js",
+    "status": 200,
+    "content_type": "application/javascript",
+    "final_url": "https://najlaashutter.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+    "sha256": "2595496fe48df6fcf9b1bc57c29a744c121eb4dd11566466bc13d2e52e6bbcc8",
+    "size": 1239
+  },
+  "https://najlaashutter.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-consent-mode-5ef17bce870a966299fc.js": {
+    "url": "https://najlaashutter.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-consent-mode-5ef17bce870a966299fc.js",
+    "file": "assets/d3893929f25d9e204856a2fa.js",
+    "status": 200,
+    "content_type": "application/x-javascript",
+    "final_url": "https://najlaashutter.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-consent-mode-5ef17bce870a966299fc.js",
+    "sha256": "d0f383526029d4b359846000ff717b2e11b4a875be29b85c098bad254ec1080d",
+    "size": 71912
+  },
+  "https://najlaashutter.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-content-events-90bacb156ab34fa090db.js": {
+    "url": "https://najlaashutter.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-content-events-90bacb156ab34fa090db.js",
+    "file": "assets/61f38d3753256d0934427c0f.js",
+    "status": 200,
+    "content_type": "application/x-javascript",
+    "final_url": "https://najlaashutter.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-content-events-90bacb156ab34fa090db.js",
+    "sha256": "6bc96e23a1f1789601d89f075245ca622cb2a32a822c7b9498cdb8fad5dd0b72",
+    "size": 8306
+  },
+  "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/faq-home-page.jpg": {
+    "url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/faq-home-page.jpg",
+    "file": "assets/0b745b050ca6f05292ff29ef.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/faq-home-page.jpg",
+    "sha256": "b9c93bfd418301b749917be4c36588f8ed38f4a5b7a7cdcc4c20c077068b8674",
+    "size": 71748
+  },
+  "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/icon-google-small.png": {
+    "url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/icon-google-small.png",
+    "file": "assets/f1f8e495b3e99383518a3fae.png",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/icon-google-small.png",
+    "sha256": "93649645c4ac2117a42c3e0f94992ad2526fe0ead985b7f231d8a95abfc84e46",
+    "size": 4252
+  },
+  "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/najlaa-logo-icon-trimed-main.png": {
+    "url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/najlaa-logo-icon-trimed-main.png",
+    "file": "assets/8fc2280707d32e4675870cc0.png",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/najlaa-logo-icon-trimed-main.png",
+    "sha256": "dadb0318a1b0cc172a0d34213e55ffa73bedd00a684c93ad9c62b7e83944bdca",
+    "size": 2934
+  },
+  "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/najlaa-logo-icon-trimed.png": {
+    "url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/najlaa-logo-icon-trimed.png",
+    "file": "assets/23cee07b35eaecc4dce54267.png",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/najlaa-logo-icon-trimed.png",
+    "sha256": "fbfa19e0a6d6b811763207e420d97865297a1da397e85458edd80ca1b78eb1c0",
+    "size": 1184
+  },
+  "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/sld-mob-1.jpeg": {
+    "url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/sld-mob-1.jpeg",
+    "file": "assets/0e772b8af647ae615cb30380.jpeg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/sld-mob-1.jpeg",
+    "sha256": "a26cbe69e9395a9e34db632f176d4c55c2c6324b8d38f596b6f69b9249fd52f6",
+    "size": 144704
+  },
+  "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/sld-mob-2.jpeg": {
+    "url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/sld-mob-2.jpeg",
+    "file": "assets/b42824b395b2dd3c3e25d609.jpeg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/sld-mob-2.jpeg",
+    "sha256": "40b2ae92021471e8dd38b91dbe3e4c92ed60034ad6d4bb3216afe72b9727501b",
+    "size": 104810
+  },
+  "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/we-experts.jpg": {
+    "url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/we-experts.jpg",
+    "file": "assets/d749072e4d50df6993ee1a89.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/we-experts.jpg",
+    "sha256": "41f3c061bd0503e5041450d161f246b5354bf7f96510f6d74f7ac17b49697792",
+    "size": 41290
+  },
+  "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/why-choose-us.jpg": {
+    "url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/why-choose-us.jpg",
+    "file": "assets/3b84155b7bcc59817f74cee9.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/img/why-choose-us.jpg",
+    "sha256": "42374b49cdae860d533613e0c923894dd574768cbe7281ad16f653975db26069",
+    "size": 31390
+  },
+  "https://najlaashutter.com/wp-content/themes/atira-classic/assets/js/main.js?ver=1.0.008": {
+    "url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/js/main.js?ver=1.0.008",
+    "file": "assets/29bf278110c1f70de628f916.js",
+    "status": 200,
+    "content_type": "application/x-javascript",
+    "final_url": "https://najlaashutter.com/wp-content/themes/atira-classic/assets/js/main.js?ver=1.0.008",
+    "sha256": "79ffb64c4270dbfcfcb2e2d6ec8580f094d300382823ce07ba614b4f328534b9",
+    "size": 2888
+  },
+  "https://najlaashutter.com/wp-content/themes/atira-classic/rtl.css": {
+    "url": "https://najlaashutter.com/wp-content/themes/atira-classic/rtl.css",
+    "file": "assets/e4c016988ac4b62d72571309.css",
+    "status": 200,
+    "content_type": "text/css",
+    "final_url": "https://najlaashutter.com/wp-content/themes/atira-classic/rtl.css",
+    "sha256": "cb6cea3715dca18a3f1c451937441a6dd4a2cf6129308ba5649255c0cf6b9505",
+    "size": 347
+  },
+  "https://najlaashutter.com/wp-content/themes/atira-classic/style.css?ver=1.0.0022": {
+    "url": "https://najlaashutter.com/wp-content/themes/atira-classic/style.css?ver=1.0.0022",
+    "file": "assets/8d53c11dfbd5645ec2381816.css",
+    "status": 200,
+    "content_type": "text/css",
+    "final_url": "https://najlaashutter.com/wp-content/themes/atira-classic/style.css?ver=1.0.0022",
+    "sha256": "41d80f95669f3042a7039fc21d4daebab85257979447a8e7835f50485106e9a0",
+    "size": 24212
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B0%D9%83%D9%8A-1024x441.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B0%D9%83%D9%8A-1024x441.jpg",
+    "file": "assets/1ab67e7339fd03bef46abb33.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B0%D9%83%D9%8A-1024x441.jpg",
+    "sha256": "72f72a1c6a9a8cd31e95c806222988b305a6e4a25b0c1e64a44594065527f563",
+    "size": 51044
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B0%D9%83%D9%8A-300x129.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B0%D9%83%D9%8A-300x129.jpg",
+    "file": "assets/122e2e622dcd0822e4b2c61d.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B0%D9%83%D9%8A-300x129.jpg",
+    "sha256": "b73de224fd8d4d65fd8224e281a3a93e5753309ca6ddd17e2fd26532f7f05d15",
+    "size": 8290
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B0%D9%83%D9%8A-768x331.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B0%D9%83%D9%8A-768x331.jpg",
+    "file": "assets/861c3d6e8451e954ba057b02.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B0%D9%83%D9%8A-768x331.jpg",
+    "sha256": "34606fe8a4a968430ed39e77f62a57067d49d02c3ba59ddf159c23ae939d8c13",
+    "size": 33005
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B0%D9%83%D9%8A.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B0%D9%83%D9%8A.jpg",
+    "file": "assets/b161611891e030b1fdbd6f76.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B0%D9%83%D9%8A.jpg",
+    "sha256": "741b286fc362dedb0d2f931629da0a9429b69fb08843e012c24640b0712da3f7",
+    "size": 48336
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF-1024x441.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF-1024x441.jpg",
+    "file": "assets/67050162ab2c4bbf3851b554.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF-1024x441.jpg",
+    "sha256": "911925f0b8e331a1813118b7d71d01bba96f33d731174424e3f52c191061ada0",
+    "size": 28574
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF-150x150.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF-150x150.jpg",
+    "file": "assets/014afff89c8a5e961b6cc8be.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF-150x150.jpg",
+    "sha256": "7270c612bab6315a128f590eb3c0fbd5f0d5fd92a95c455ad06b293fc52e77ab",
+    "size": 5404
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF-300x129.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF-300x129.jpg",
+    "file": "assets/a0ffd8ed9d550591841ebcd7.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF-300x129.jpg",
+    "sha256": "051b9b958ae6a639637680aea6ca3031fdf3681274aa0bd828645064603ccec5",
+    "size": 8526
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF-768x331.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF-768x331.jpg",
+    "file": "assets/5180d66efac547ac1a47e68a.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF-768x331.jpg",
+    "sha256": "dd807e6cffc0d4ee785f79788a71c1487ee8a33c7982213428f2dc7fc9fa6bb3",
+    "size": 33197
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF.jpg",
+    "file": "assets/b1ca4618939ab33600c2773d.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AA%D8%AD%D9%83%D9%85-%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF.jpg",
+    "sha256": "3ad568d7862cce5fe563bc1cb06244d5993e575352d1c21ef7141cac6ffd569b",
+    "size": 47722
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-1024x441.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-1024x441.jpg",
+    "file": "assets/fb48ba05c60a591e8cf0deab.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-1024x441.jpg",
+    "sha256": "dab633b44642b4b86976c73a837b475e639f05096db1d34bfef5f4b49e7ca72c",
+    "size": 32000
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-300x129.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-300x129.jpg",
+    "file": "assets/905c5009165963214c9d7aa5.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-300x129.jpg",
+    "sha256": "4378e80a2993c68bc2831c5fc7dcf6792cfb2950f1a6c79f67b973544a8bec33",
+    "size": 8016
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-768x331.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-768x331.jpg",
+    "file": "assets/8bae4d4b266695aef9b4f89e.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-768x331.jpg",
+    "sha256": "50523bf13319d09666bb85ae7bba202e8d419d7803c71adc68db45125428cc87",
+    "size": 32169
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A-%D8%BA%D9%84%D8%A7%D9%81.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A-%D8%BA%D9%84%D8%A7%D9%81.jpg",
+    "file": "assets/2a49498687517e11f691dd8d.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A-%D8%BA%D9%84%D8%A7%D9%81.jpg",
+    "sha256": "453c58517d35c5c8caaab94b2c1f5608b302b47168bac16508be330f09195f16",
+    "size": 54974
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AF%D8%A7%D8%AE%D9%84%D9%8A-1024x441.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AF%D8%A7%D8%AE%D9%84%D9%8A-1024x441.jpg",
+    "file": "assets/c73eecfa662a424ad3deae0e.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AF%D8%A7%D8%AE%D9%84%D9%8A-1024x441.jpg",
+    "sha256": "3a0f94cf9879e85cdea6d376cd5e0952dcdb0e2db9bed81655b237c3e163e0c2",
+    "size": 28224
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AF%D8%A7%D8%AE%D9%84%D9%8A-300x129.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AF%D8%A7%D8%AE%D9%84%D9%8A-300x129.jpg",
+    "file": "assets/9aa849b2be995df82a66bb67.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AF%D8%A7%D8%AE%D9%84%D9%8A-300x129.jpg",
+    "sha256": "a996a452f45ed55e27bf25679ac2fe6969d13a1172b8ac3f54bcd80ec5523bb6",
+    "size": 8054
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AF%D8%A7%D8%AE%D9%84%D9%8A-768x331.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AF%D8%A7%D8%AE%D9%84%D9%8A-768x331.jpg",
+    "file": "assets/c538427274934fd916f52388.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AF%D8%A7%D8%AE%D9%84%D9%8A-768x331.jpg",
+    "sha256": "f677199448c4d5137ab6bbe7f1a0bf5b3b56c969f41bedc549ad39b52c3313ea",
+    "size": 32958
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AF%D8%A7%D8%AE%D9%84%D9%8A.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AF%D8%A7%D8%AE%D9%84%D9%8A.jpg",
+    "file": "assets/0ef06481102bd6d2d2cfacb5.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AF%D8%A7%D8%AE%D9%84%D9%8A.jpg",
+    "sha256": "32d7d48dbe49332a37d2b5ea06eebfbd1572d7768af6b9654a67d3629a821a55",
+    "size": 49072
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A-1024x441.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A-1024x441.jpg",
+    "file": "assets/32ae3669c33e0cb42ca0c815.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A-1024x441.jpg",
+    "sha256": "aad33a403e1c1c8defaf235bc6f4c4565f0d91e097230be719734ac4e516ea24",
+    "size": 45323
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A-300x129.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A-300x129.jpg",
+    "file": "assets/edaa00d45ad548d2312c801f.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A-300x129.jpg",
+    "sha256": "19284be02927e6c33face21e77045d5c27d9d1fbe9b521299a676a94535769e3",
+    "size": 6173
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A-768x331.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A-768x331.jpg",
+    "file": "assets/628d55451410ff45f140e92e.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A-768x331.jpg",
+    "sha256": "b5e6ca88754781f9829d59fe7c8b0da3027ddb7ea8f783aa282b0cbef1247327",
+    "size": 28378
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A.jpg",
+    "file": "assets/faa36f5cab724efc624d8a65.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A.jpg",
+    "sha256": "c8081410ddcb14efec39a688e2028390bfbb74f18072372fcceaa68562a94a4d",
+    "size": 45156
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%8A%D8%AF%D9%88%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-1024x441.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%8A%D8%AF%D9%88%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-1024x441.jpg",
+    "file": "assets/08b4e110cd7a9f375694a03e.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%8A%D8%AF%D9%88%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-1024x441.jpg",
+    "sha256": "1573e860d76afd92c973a2d57e5f36676964a5bb8bd37800ea8bb3c595dde911",
+    "size": 29188
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%8A%D8%AF%D9%88%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-300x129.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%8A%D8%AF%D9%88%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-300x129.jpg",
+    "file": "assets/ef7a48358671ff5aa55898a8.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%8A%D8%AF%D9%88%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-300x129.jpg",
+    "sha256": "0e2921ff61c97b0c49b73d719e55e81eae9012bfbece4a546c491fdd0515537d",
+    "size": 8094
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%8A%D8%AF%D9%88%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-768x331.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%8A%D8%AF%D9%88%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-768x331.jpg",
+    "file": "assets/d78cd0103a62f651448aaaa1.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%8A%D8%AF%D9%88%D9%8A-%D8%BA%D9%84%D8%A7%D9%81-768x331.jpg",
+    "sha256": "fa533bcdeb07de03e36a4b6c6399d5e49a927e7b112ced655d7f0332b128cb57",
+    "size": 33393
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%8A%D8%AF%D9%88%D9%8A-%D8%BA%D9%84%D8%A7%D9%81.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%8A%D8%AF%D9%88%D9%8A-%D8%BA%D9%84%D8%A7%D9%81.jpg",
+    "file": "assets/089996b8096c664c30ec5f18.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%8A%D8%AF%D9%88%D9%8A-%D8%BA%D9%84%D8%A7%D9%81.jpg",
+    "sha256": "be9cd9f7713678012de20d159d9be36b6d042e77dd2654ba8409ea363e9846c8",
+    "size": 50094
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9-1024x441.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9-1024x441.jpg",
+    "file": "assets/886b3ee9f7a184cf572337ea.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9-1024x441.jpg",
+    "sha256": "87d2529971a95a29537f52d3854f652ebeb63eabaf6facabe2d2c1c79892229e",
+    "size": 38201
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9-300x129.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9-300x129.jpg",
+    "file": "assets/b039381ce71185dff4efabc8.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9-300x129.jpg",
+    "sha256": "df43d8d0a2a4e3bd3113a25d4d0cc944de5007fc316f0ba80323c106407400ec",
+    "size": 5931
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9-768x331.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9-768x331.jpg",
+    "file": "assets/848d484260f4e4d95d20d5a7.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9-768x331.jpg",
+    "sha256": "5ccee5720ea28fe763ddac094e9e9e5b56dd2245a53d97a4368954eb65a0a077",
+    "size": 24396
+  },
+  "https://najlaashutter.com/wp-content/uploads/2025/09/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9.jpg": {
+    "url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9.jpg",
+    "file": "assets/c3af4e7f150774dbf31968a7.jpg",
+    "status": 200,
+    "content_type": "image/webp",
+    "final_url": "https://najlaashutter.com/wp-content/uploads/2025/09/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9.jpg",
+    "sha256": "11662ae9e06f8b9572a7db6988916f844348926bb5b9205fa34b10e8128f7dd7",
+    "size": 34002
+  }
+}

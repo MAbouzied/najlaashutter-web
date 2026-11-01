@@ -1,0 +1,307 @@
+{
+  "/": {
+    "source_url": "https://najlaashutter.com/",
+    "file": "index.html",
+    "source_sha256": "16c76854613290085423367d9ff0e177c82ec287975c08b82e698ec9e2d11d98"
+  },
+  "/category/blog/": {
+    "source_url": "https://najlaashutter.com/category/blog/",
+    "file": "category/blog/index.html",
+    "source_sha256": "1cf9d86335afe59bafc3cff534380ec6cd174aa350dfb76d459564bbae592033"
+  },
+  "/category/services/": {
+    "source_url": "https://najlaashutter.com/category/services/",
+    "file": "category/services/index.html",
+    "source_sha256": "f7cf3c6432c3e4b8f383845cad9b955202dd86475fdb9f05817f60bd54661bda"
+  },
+  "/search/": {
+    "source_url": "https://najlaashutter.com/?s=%D8%B4%D8%AA%D8%B1",
+    "file": "search/index.html",
+    "source_sha256": "62a3a8341beb301d43966bca5ce0ed3b277ec299964849d18825081e3b8ff7d4"
+  },
+  "/about-us/": {
+    "source_url": "https://najlaashutter.com/about-us/",
+    "file": "about-us/index.html",
+    "source_sha256": "6e0c7b4d327a5bf7b49351c800fa9f23ff40a04595ffec5a47ab96aec4332852"
+  },
+  "/contact-us/": {
+    "source_url": "https://najlaashutter.com/contact-us/",
+    "file": "contact-us/index.html",
+    "source_sha256": "0a9632fce96357b9c56730b4a4a28b3dde1a2438d509d4b99679f20fb59ac077"
+  },
+  "/faq/": {
+    "source_url": "https://najlaashutter.com/faq/",
+    "file": "faq/index.html",
+    "source_sha256": "814226d8f40527d3795e0b16a16bcd4514ef1b3b49bbc2d51f26db32c4d3b2af"
+  },
+  "/our-works/": {
+    "source_url": "https://najlaashutter.com/our-works/",
+    "file": "our-works/index.html",
+    "source_sha256": "e00a79655bb99c93083af565a0a3dc2b86ba571e0521e496d148b5012e063d1f"
+  },
+  "/window-shutters-with-remote-control/": {
+    "source_url": "https://najlaashutter.com/window-shutters-with-remote-control/",
+    "file": "window-shutters-with-remote-control/index.html",
+    "source_sha256": "bf186556f588bf2ab125b750215d5d771ef7a971c497402a074a23f4494e638b"
+  },
+  "/privacy-policy/": {
+    "source_url": "https://najlaashutter.com/privacy-policy/",
+    "file": "privacy-policy/index.html",
+    "source_sha256": "e989befa74287c27f619b15ee9196cf393c1d591993245f1345f891e72c96c95"
+  },
+  "/slide/": {
+    "source_url": "https://najlaashutter.com/slide/",
+    "file": "slide/index.html",
+    "source_sha256": "2d567ba94f710729b97bd2a1755a501575208e5ec22e89d0a16178f756b593b3"
+  },
+  "/slide-2/": {
+    "source_url": "https://najlaashutter.com/slide-2/",
+    "file": "slide-2/index.html",
+    "source_sha256": "104c32a406c17c36d3e5389bd6a9ba4a2d05fbbbc0bb1f5c2d072635cdf1dd2e"
+  },
+  "/smart-shutter-windows/": {
+    "source_url": "https://najlaashutter.com/smart-shutter-windows/",
+    "file": "smart-shutter-windows/index.html",
+    "source_sha256": "a862d928173b9436b9f31983ee2b4edb9c676a6db54f6847f70656008bf6fc1d"
+  },
+  "/manual-shutter/": {
+    "source_url": "https://najlaashutter.com/manual-shutter/",
+    "file": "manual-shutter/index.html",
+    "source_sha256": "d477236fb692ccd813c49d88b0f2dae628d5c7652be8aeb504d53a2c3048c650"
+  },
+  "/interior-window-shutters/": {
+    "source_url": "https://najlaashutter.com/interior-window-shutters/",
+    "file": "interior-window-shutters/index.html",
+    "source_sha256": "3b6023d3ae4dcbad5b2d6da7374a895a22c7ec4cf7139f31d7ac4417a1f6ee1a"
+  },
+  "/external-window-shutters/": {
+    "source_url": "https://najlaashutter.com/external-window-shutters/",
+    "file": "external-window-shutters/index.html",
+    "source_sha256": "af57f84fb28ca3ae45a85ac70ecb892846d39cfc948931f6e8ec8c048f3469c1"
+  },
+  "/شبك-النوافذ/": {
+    "source_url": "https://najlaashutter.com/%D8%B4%D8%A8%D9%83-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0/",
+    "file": "شبك-النوافذ/index.html",
+    "source_sha256": "8bf8f0b9dc248e88de451d0e72fe2568d29d25056e82fa5438ee26b82e3bf936"
+  },
+  "/how-do-you-choose-the-right-type-of-shutter-for-your-home/": {
+    "source_url": "https://najlaashutter.com/how-do-you-choose-the-right-type-of-shutter-for-your-home/",
+    "file": "how-do-you-choose-the-right-type-of-shutter-for-your-home/index.html",
+    "source_sha256": "0b5081ca39c8ca31cea50e68e725c94b95fc4ccbd20cac044dc9757e7f3567f0"
+  },
+  "/benefits-of-installing-electric-shutters-in-modern-homes/": {
+    "source_url": "https://najlaashutter.com/benefits-of-installing-electric-shutters-in-modern-homes/",
+    "file": "benefits-of-installing-electric-shutters-in-modern-homes/index.html",
+    "source_sha256": "5f4385386d87d2f73771496d2078b4a1c54c2247f559950ac129610c587b81a7"
+  },
+  "/the-importance-of-window-screens-in-protecting-the-home/": {
+    "source_url": "https://najlaashutter.com/the-importance-of-window-screens-in-protecting-the-home/",
+    "file": "the-importance-of-window-screens-in-protecting-the-home/index.html",
+    "source_sha256": "d2d18a0777b4479acc8b727921d4555f7f83687098d5ea21b7b8e2e7c859d3c9"
+  },
+  "/how-does-the-shutter-help-improve-energy-efficiency/": {
+    "source_url": "https://najlaashutter.com/how-does-the-shutter-help-improve-energy-efficiency/",
+    "file": "how-does-the-shutter-help-improve-energy-efficiency/index.html",
+    "source_sha256": "b2ead57b686ce95f68fb2dbcb1b95ebe03ec02cb262604db83ff956b9ecf6a1a"
+  },
+  "/شتر-النوافذ-ومقاومة-الغبار/": {
+    "source_url": "https://najlaashutter.com/%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%88%D9%85%D9%82%D8%A7%D9%88%D9%85%D8%A9-%D8%A7%D9%84%D8%BA%D8%A8%D8%A7%D8%B1/",
+    "file": "شتر-النوافذ-ومقاومة-الغبار/index.html",
+    "source_sha256": "cc03b9cacf1ecc33ba5bc96bff740706b71ff30bde44221a4e597c6467ff6741"
+  },
+  "/شبك-النامس-والحشرات/": {
+    "source_url": "https://najlaashutter.com/%D8%B4%D8%A8%D9%83-%D8%A7%D9%84%D9%86%D8%A7%D9%85%D8%B3-%D9%88%D8%A7%D9%84%D8%AD%D8%B4%D8%B1%D8%A7%D8%AA/",
+    "file": "شبك-النامس-والحشرات/index.html",
+    "source_sha256": "62c8a22d7bfa90215bdc8503b088b36df139bf9172cafc8f468e0d6dfc00efaf"
+  },
+  "/شرائح-شتر-النوافذ-في-جدة/": {
+    "source_url": "https://najlaashutter.com/%D8%B4%D8%B1%D8%A7%D8%A6%D8%AD-%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9/",
+    "file": "شرائح-شتر-النوافذ-في-جدة/index.html",
+    "source_sha256": "5e785cc7e10a44c1317429ec132cc74bb8cf9d96f8d36789a7ff3003fa6e1bcc"
+  },
+  "/الماكينة-الكهربائية-لشتر-النوافذ-سر-ا/": {
+    "source_url": "https://najlaashutter.com/%D8%A7%D9%84%D9%85%D8%A7%D9%83%D9%8A%D9%86%D8%A9-%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D8%A9-%D9%84%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%B3%D8%B1-%D8%A7/",
+    "file": "الماكينة-الكهربائية-لشتر-النوافذ-سر-ا/index.html",
+    "source_sha256": "3f99bcb435c581d29bb9480353d7984a384a346e61f6c0e47c45e419da704063"
+  },
+  "/الدقة-في-العمل/": {
+    "source_url": "https://najlaashutter.com/%D8%A7%D9%84%D8%AF%D9%82%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D9%85%D9%84/",
+    "file": "الدقة-في-العمل/index.html",
+    "source_sha256": "e2f518a24196e5427afbd7c6d01694429d300915be3f397b39ef3adce5d481f0"
+  },
+  "/الدليل-الشامل-لأفضل-أنواع-الشتر-في-جدة-2/": {
+    "source_url": "https://najlaashutter.com/%D8%A7%D9%84%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84-%D9%84%D8%A3%D9%81%D8%B6%D9%84-%D8%A3%D9%86%D9%88%D8%A7%D8%B9-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9-2/",
+    "file": "الدليل-الشامل-لأفضل-أنواع-الشتر-في-جدة-2/index.html",
+    "source_sha256": "5e8fcc0c65b6ac5ade5864a44b1b4ae62d28fe8be8ac463d9adf2ffa4393b4e4"
+  },
+  "/أفضل-شركة-تركيب-شتر-في-جدة-رول-شتر-للنو/": {
+    "source_url": "https://najlaashutter.com/%D8%A3%D9%81%D8%B6%D9%84-%D8%B4%D8%B1%D9%83%D8%A9-%D8%AA%D8%B1%D9%83%D9%8A%D8%A8-%D8%B4%D8%AA%D8%B1-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9-%D8%B1%D9%88%D9%84-%D8%B4%D8%AA%D8%B1-%D9%84%D9%84%D9%86%D9%88/",
+    "file": "أفضل-شركة-تركيب-شتر-في-جدة-رول-شتر-للنو/index.html",
+    "source_sha256": "d4ce043ff841b1b906e904224dfee2556e7a3f8f43610858a7c24c29c375ca74"
+  },
+  "/أفضل-أنواع-شتر-النوافذ-في-جدة-دليل-الأس/": {
+    "source_url": "https://najlaashutter.com/%D8%A3%D9%81%D8%B6%D9%84-%D8%A3%D9%86%D9%88%D8%A7%D8%B9-%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9-%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%A3%D8%B3/",
+    "file": "أفضل-أنواع-شتر-النوافذ-في-جدة-دليل-الأس/index.html",
+    "source_sha256": "bb29c0abfcb3d0d3faa5b8f2974aac3f1a9ab7f6e4fad952798a0c592d4d9bb6"
+  },
+  "/category/slider/": {
+    "source_url": "https://najlaashutter.com/category/slider/",
+    "file": "category/slider/index.html",
+    "source_sha256": "bc936d78889f1e317f9599a192241571d7cedee1c03ddfcc163ea34d0d8bbfbb"
+  },
+  "/tag/شتر-نوافذ/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0/",
+    "file": "tag/شتر-نوافذ/index.html",
+    "source_sha256": "fd96cfffa11e3ec65c6b43e439533d895f0edda334cfd13ed0665d3762f0a3f6"
+  },
+  "/tag/نوافذ-شتر/": {
+    "source_url": "https://najlaashutter.com/tag/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%B4%D8%AA%D8%B1/",
+    "file": "tag/نوافذ-شتر/index.html",
+    "source_sha256": "765075fb332d68b418aea2da786983feb0c14ef02d1481cebbecc4953ba866ec"
+  },
+  "/tag/نجلاء-للشتر/": {
+    "source_url": "https://najlaashutter.com/tag/%D9%86%D8%AC%D9%84%D8%A7%D8%A1-%D9%84%D9%84%D8%B4%D8%AA%D8%B1/",
+    "file": "tag/نجلاء-للشتر/index.html",
+    "source_sha256": "d91150c7de50117c2cb51c466109364d937be19be5ed67d3a3639ff3b590ee20"
+  },
+  "/tag/ستائر-شتر/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B3%D8%AA%D8%A7%D8%A6%D8%B1-%D8%B4%D8%AA%D8%B1/",
+    "file": "tag/ستائر-شتر/index.html",
+    "source_sha256": "14f9e0d2cb2b4c46703fba881ae3daef37e1d981e045776b4a321390d07f6118"
+  },
+  "/tag/شتر-مودرن/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%AA%D8%B1-%D9%85%D9%88%D8%AF%D8%B1%D9%86/",
+    "file": "tag/شتر-مودرن/index.html",
+    "source_sha256": "9a14b2c58cf28d803f3d0fd5cf383db2350371578b795c7a0bf82aa7f985b195"
+  },
+  "/tag/شتر-حديث/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%AA%D8%B1-%D8%AD%D8%AF%D9%8A%D8%AB/",
+    "file": "tag/شتر-حديث/index.html",
+    "source_sha256": "b0564ffa849c8731420797462c1eb2ac267c2c603ad9369ad4a39796660140b1"
+  },
+  "/tag/جدة/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%AC%D8%AF%D8%A9/",
+    "file": "tag/جدة/index.html",
+    "source_sha256": "985dd97cdeca1f769218623490b5d0025e0f86f31228cd04b748bbc4f2a0f9e9"
+  },
+  "/tag/شتر-أبواب/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%AA%D8%B1-%D8%A3%D8%A8%D9%88%D8%A7%D8%A8/",
+    "file": "tag/شتر-أبواب/index.html",
+    "source_sha256": "7bdeb296591cc486a6cde658bf2c415e7726c4527aeba5076982ba1f577e14e3"
+  },
+  "/tag/شتر-كهربائي/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%AA%D8%B1-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A/",
+    "file": "tag/شتر-كهربائي/index.html",
+    "source_sha256": "3d440397d183169d617d46f531f7a00b0f66adb9c75668e0ebb98bf1379cd436"
+  },
+  "/tag/شبك-نامس/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%A8%D9%83-%D9%86%D8%A7%D9%85%D8%B3/",
+    "file": "tag/شبك-نامس/index.html",
+    "source_sha256": "391ee65acf5fa469006e25ee778849887dcb8d9e83c18dfd5148cecd528a0383"
+  },
+  "/tag/شبك/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%A8%D9%83/",
+    "file": "tag/شبك/index.html",
+    "source_sha256": "b4331513c59a3eb07fb4cee64c9fef8dd9fe2b9467b97053e384f7a1343c8a16"
+  },
+  "/tag/حماية-من-الحشرات/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-%D9%85%D9%86-%D8%A7%D9%84%D8%AD%D8%B4%D8%B1%D8%A7%D8%AA/",
+    "file": "tag/حماية-من-الحشرات/index.html",
+    "source_sha256": "19475f56dbe9d8da9f4cf6ad50dd6b362f6cb148ca86f0a655fa30e590aa3d07"
+  },
+  "/tag/شتر/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%AA%D8%B1/",
+    "file": "tag/شتر/index.html",
+    "source_sha256": "0a4fee859dbfc7bea9bcffa8fd10d4ffc803a0c465bf9d3d9f5e2e2fb46ff3aa"
+  },
+  "/tag/شبك-النامس/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%A8%D9%83-%D8%A7%D9%84%D9%86%D8%A7%D9%85%D8%B3/",
+    "file": "tag/شبك-النامس/index.html",
+    "source_sha256": "4e4fb6659ce15301de3d534e07f707333f6d81872016fe429e8a7f090e4dd370"
+  },
+  "/tag/شبك-النامس-للنوافذ/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%A8%D9%83-%D8%A7%D9%84%D9%86%D8%A7%D9%85%D8%B3-%D9%84%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0/",
+    "file": "tag/شبك-النامس-للنوافذ/index.html",
+    "source_sha256": "b50fa41d72e39312511faded981dc8bfbd4d9343cc95344b32fae8200d0a960a"
+  },
+  "/tag/حامي-الحشرات/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%AD%D8%A7%D9%85%D9%8A-%D8%A7%D9%84%D8%AD%D8%B4%D8%B1%D8%A7%D8%AA/",
+    "file": "tag/حامي-الحشرات/index.html",
+    "source_sha256": "b0af774069b85b629ecf2e3e405203b6228d195dfe73b15f4ac3d3b84170d2f1"
+  },
+  "/tag/تركيب-شبك-النامس-في-جدة/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%AA%D8%B1%D9%83%D9%8A%D8%A8-%D8%B4%D8%A8%D9%83-%D8%A7%D9%84%D9%86%D8%A7%D9%85%D8%B3-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9/",
+    "file": "tag/تركيب-شبك-النامس-في-جدة/index.html",
+    "source_sha256": "8125a3bfb6542c8208e7fbf3dcbfd59cb0a8086436e5ae2d755d29a984d29967"
+  },
+  "/tag/نوافذ-الشتر/": {
+    "source_url": "https://najlaashutter.com/tag/%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%B4%D8%AA%D8%B1/",
+    "file": "tag/نوافذ-الشتر/index.html",
+    "source_sha256": "3a657fb864c0673c132fd1b0dbb7e23ad084d3d9c0382c46c1fb0cc76e40456a"
+  },
+  "/tag/أشباك-النامس/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%A3%D8%B4%D8%A8%D8%A7%D9%83-%D8%A7%D9%84%D9%86%D8%A7%D9%85%D8%B3/",
+    "file": "tag/أشباك-النامس/index.html",
+    "source_sha256": "e0f991cc0d1f8ea186ef21412b3e6c5ed3fc8ef5f490c4dd4d066f03d23daf9f"
+  },
+  "/tag/شتر-شبابيك-في-جدة/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%AA%D8%B1-%D8%B4%D8%A8%D8%A7%D8%A8%D9%8A%D9%83-%D9%81%D9%8A-%D8%AC%D8%AF%D8%A9/",
+    "file": "tag/شتر-شبابيك-في-جدة/index.html",
+    "source_sha256": "f4b1f21d17e1afb48ab23274da1b8b5ea96ed8d6b16b7effc737f3a8b8491749"
+  },
+  "/tag/شتر-جدة/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%AA%D8%B1-%D8%AC%D8%AF%D8%A9/",
+    "file": "tag/شتر-جدة/index.html",
+    "source_sha256": "1252c9853faec12f9b12dd05faa784f02e38faf49e2eedf17ea78dfa119b613e"
+  },
+  "/tag/شترات/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%AA%D8%B1%D8%A7%D8%AA/",
+    "file": "tag/شترات/index.html",
+    "source_sha256": "02869aca865b19ceb7eb83f57eeb698c822f5b3efb49e298c6d9de49df40a69d"
+  },
+  "/tag/شتر-شبابيك/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%AA%D8%B1-%D8%B4%D8%A8%D8%A7%D8%A8%D9%8A%D9%83/",
+    "file": "tag/شتر-شبابيك/index.html",
+    "source_sha256": "92a9cdecd55e6cfebd107f9be516685305cdc58c4e5c5c96a263522dd082225b"
+  },
+  "/tag/شترات-جدة/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%AA%D8%B1%D8%A7%D8%AA-%D8%AC%D8%AF%D8%A9/",
+    "file": "tag/شترات-جدة/index.html",
+    "source_sha256": "dfaadc2f0d8845c5caa20ad2d48f5c50613bd27b3fb152633bf2e05b50445ef6"
+  },
+  "/tag/شتر-رول/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%AA%D8%B1-%D8%B1%D9%88%D9%84/",
+    "file": "tag/شتر-رول/index.html",
+    "source_sha256": "9988b3134d3116b61ba5e4a2acf0c5a661a04e1a88eb61903923d97ae2d70b9f"
+  },
+  "/tag/shutter/": {
+    "source_url": "https://najlaashutter.com/tag/shutter/",
+    "file": "tag/shutter/index.html",
+    "source_sha256": "e0759c43e519bbf42392ca3d7a5064062e00de3914f7699b7718b62b5d7d1591"
+  },
+  "/tag/تركيب-شتر-جدة/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%AA%D8%B1%D9%83%D9%8A%D8%A8-%D8%B4%D8%AA%D8%B1-%D8%AC%D8%AF%D8%A9/",
+    "file": "tag/تركيب-شتر-جدة/index.html",
+    "source_sha256": "2aeb5a64185a60e9ed9ba2859addaf8f486df879c8547378b9cfd9bcc8e02401"
+  },
+  "/tag/أسعار-شتر-النوافذ-بجدة/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1-%D8%B4%D8%AA%D8%B1-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%A8%D8%AC%D8%AF%D8%A9/",
+    "file": "tag/أسعار-شتر-النوافذ-بجدة/index.html",
+    "source_sha256": "87f34013a483627d68ca6987c769e3af52a181567eb4733531cf5d0af87c6423"
+  },
+  "/tag/شتر-نوافذ-جدة/": {
+    "source_url": "https://najlaashutter.com/tag/%D8%B4%D8%AA%D8%B1-%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D8%AC%D8%AF%D8%A9/",
+    "file": "tag/شتر-نوافذ-جدة/index.html",
+    "source_sha256": "bdeeea5334b03b7513ef2c8289969bc83a80a870313981046b0e50ccb24ac37b"
+  },
+  "/author/admin_23hgtr/": {
+    "source_url": "https://najlaashutter.com/author/admin_23hgtr/",
+    "file": "author/admin_23hgtr/index.html",
+    "source_sha256": "b3a771f320e8c0c03a49fc8d2705aff8c1bda3666251bf56097534bfd87e3a53"
+  },
+  "/author/pw-admin_uydw1x6s/": {
+    "source_url": "https://najlaashutter.com/author/pw-admin_uydw1x6s/",
+    "file": "author/pw-admin_uydw1x6s/index.html",
+    "source_sha256": "82a31a8ee5c36906862ddc97b33eeaa49e0564a374309c6403a3211279d29512"
+  }
+}

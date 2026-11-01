@@ -13,7 +13,9 @@
     "preview": "astro preview",
     "deploy": "wrangler deploy",
     "review:overflow": "node scripts/verify-mobile-overflow.mjs",
-    "astro": "astro"
+    "astro": "astro",
+    "build:replica": "python3 scripts/mirror-wordpress.py build",
+    "verify:replica": "python3 scripts/verify-replica.py"
   },
   "devDependencies": {
     "playwright": "^1.55.0",

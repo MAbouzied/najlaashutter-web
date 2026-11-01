@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# The replica build is generated offline from captured HTML and original bytes.
+wordpress-static/site/
+wordpress-static/source/assets/*
+!wordpress-static/source/assets/*.b64
+scripts/__pycache__/

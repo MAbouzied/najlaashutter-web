@@ -1,0 +1,9 @@
+# Explicit replica configuration. The existing default deployment is unchanged.
+name = "najlaashutter-web"
+compatibility_date = "2024-09-01"
+workers_dev = true
+
+[assets]
+directory = "./wordpress-static/site"
+html_handling = "auto-trailing-slash"
+not_found_handling = "404-page"

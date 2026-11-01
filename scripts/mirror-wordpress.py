@@ -212,6 +212,7 @@ def page_path(url):
 def build():
     pages = read_json(PAGE_INDEX, {})
     assets = read_json(ASSET_INDEX, {})
+    posts = {normalized(p['link']):p for p in read_json(SOURCE/'posts.json',[])}
     if not pages: raise SystemExit('No captured source pages')
     SITE.mkdir(parents=True, exist_ok=True)
     asset_map = {url: '/mirror-assets/' + Path(row['file']).name for url, row in assets.items() if row.get('status') == 200}
@@ -238,8 +239,13 @@ def build():
                     absolute = normalized(urljoin(base, value))
                     if urlsplit(absolute).netloc in {'najlaashutter.com', 'www.najlaashutter.com'} and not MEDIA.search(absolute):
                         u = urlsplit(value)
-                        result = aliases.get(absolute, (unquote(u.path) or '/') + ('?' + u.query if u.query else ''))
-                        if u.fragment: result += '#' + u.fragment
+                        if 's' in parse_qs(u.query):
+                            page_match=re.search(r'/page/(\d+)/',u.path)
+                            result='/search/?'+u.query+('&page='+page_match[1] if page_match else '')
+                        else:
+                            canonical=normalized(urljoin(base,(u.path.rstrip('/')+'/' if u.path else '/')+('?' + u.query if u.query else '')))
+                            result=aliases.get(absolute,aliases.get(canonical,value))
+                        if u.fragment and result!=value: result += '#' + u.fragment
                     if t == 'form' and a.get('role') == 'search': result = '/search/'
                 elif key in {'src', 'poster', 'href'}: result = local_asset(value, base)
                 elif key == 'srcset' and not value.startswith('data:'):
@@ -281,8 +287,10 @@ def build():
             image = d.find(tag='img', cls='wp-post-image')
             body = d.find(tag='body')
             match = re.search(r'(?:postid-|page-id-)(\d+)', body['attrs'].get('class','')) if body else None
+            post=posts.get(normalized(row['url']),{})
             search_records.append(dict(url=path, title=plain(d.inner(title)), text=plain(d.inner(content)),
-                search_text=html.unescape(d.inner(content)), order=int(match[1]) if match else 0,
+                search_text=html.unescape(d.inner(content)), order=int(re.sub(r'\D','',post['date'])) if post else int(match[1]) if match else 0,
+                excerpt=plain(post.get('excerpt',{}).get('rendered','')),
                 image=image['attrs'].get('src', '') if image else ''))
     # Deduplicate aliases before indexing content.
     search_records = list({r['url']:r for r in search_records}.values())

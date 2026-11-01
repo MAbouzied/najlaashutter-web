@@ -439,5 +439,35 @@
     "status": 200,
     "file": "pages/78ca6a81babd0a2929a060ceace470059156a036738c98ff6c3e9c4289fe2f3a.html",
     "sha256": "82a31a8ee5c36906862ddc97b33eeaa49e0564a374309c6403a3211279d29512"
+  },
+  "https://najlaashutter.com/category/blog/page/2/": {
+    "url": "https://najlaashutter.com/category/blog/page/2/",
+    "requested": "https://najlaashutter.com/category/blog/page/2/",
+    "status": 200,
+    "file": "pages/fa49c7eb89b31a9514b8319936051b6c460651fee3e543c713dcd994c23b017f.html",
+    "sha256": "087a2588fcb732a81011b72d24af7571e53cf848077d7c4dafde9fa41b4d5aa9",
+    "reconstructed_from": "https://najlaashutter.com/category/blog/",
+    "upstream_status": 500,
+    "post_ids": [
+      390,
+      387
+    ],
+    "upstream_error": "upstream-errors/fa49c7eb89b31a9514b8319936051b6c460651fee3e543c713dcd994c23b017f.html",
+    "reason": "Original archive cards; membership and order from public WordPress post metadata"
+  },
+  "https://najlaashutter.com/tag/%D9%86%D8%AC%D9%84%D8%A7%D8%A1-%D9%84%D9%84%D8%B4%D8%AA%D8%B1/page/2/": {
+    "url": "https://najlaashutter.com/tag/%D9%86%D8%AC%D9%84%D8%A7%D8%A1-%D9%84%D9%84%D8%B4%D8%AA%D8%B1/page/2/",
+    "requested": "https://najlaashutter.com/tag/%D9%86%D8%AC%D9%84%D8%A7%D8%A1-%D9%84%D9%84%D8%B4%D8%AA%D8%B1/page/2/",
+    "status": 200,
+    "file": "pages/1ab8ba37f9466c0ef6c01edb5a1093b620066e3fe7ed6c36b15d39669ea52d4d.html",
+    "sha256": "af08e2887db6450e54805d7671b6a471e5528ebf6880d9bd9443db558616cba7",
+    "reconstructed_from": "https://najlaashutter.com/tag/%D9%86%D8%AC%D9%84%D8%A7%D8%A1-%D9%84%D9%84%D8%B4%D8%AA%D8%B1/",
+    "upstream_status": 500,
+    "post_ids": [
+      387,
+      322
+    ],
+    "upstream_error": "upstream-errors/1ab8ba37f9466c0ef6c01edb5a1093b620066e3fe7ed6c36b15d39669ea52d4d.html",
+    "reason": "Original archive cards; membership and order from public WordPress post metadata"
   }
 }

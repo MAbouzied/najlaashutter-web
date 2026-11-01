@@ -3,7 +3,9 @@
  * review can run on a read-only static-file CDN without a hosting configuration. */
 (async () => {
   const base = '__PREFIX__';
-  const pathname = decodeURI(location.pathname.slice(base.length));
+  const renderer = 'https://htmlpreview.github.io/?https://raw.githubusercontent.com';
+  const current = new URL(location.hostname==='htmlpreview.github.io' ? location.search.slice(1) : location.href);
+  const pathname = decodeURI(current.pathname.slice(base.length));
   const route = pathname.replace(/index\.html$/, '');
   const response = await fetch(base + 'pages/' + route + 'index.html');
   if (!response.ok) throw new Error('Review page unavailable: ' + response.status);
@@ -16,13 +18,15 @@
     const url = new URL(value, 'https://replica.example/');
     let path = url.pathname;
     if (path.endsWith('/')) path += 'index.html';
-    return base + path.replace(/^\//, '') + url.search + url.hash;
+    return renderer + base + path.replace(/^\//, '') + url.search + url.hash;
   };
   html = html.replace(/\b(href|action|src)=(["'])(.*?)\2/g, (whole, key, quote, value) => {
     if (!value.startsWith('/') || value.startsWith('//') || value.startsWith('/cdn-cgi/l/email-protection')) return whole;
     return key + '=' + quote + (key==='src' ? base+value.slice(1) : page(value)) + quote;
   });
-  html = html.replace('</head>', '<script>window.REPLICA_BASE='+JSON.stringify(base)+';window.REPLICA_INDEXED_ROUTES=true;<\/script></head>');
+  const config = {REPLICA_BASE:base,REPLICA_INDEXED_ROUTES:true,REPLICA_PATH:'/'+route,REPLICA_SEARCH:current.search,REPLICA_PREVIEW_RENDERER:renderer};
+  html = html.replace('<head>', '<head><base href="https://raw.githubusercontent.com/">');
+  html = html.replace('</head>', '<script>Object.assign(window,'+JSON.stringify(config)+');<\/script></head>');
   html = html.replace('</body>', '<script>document.documentElement.dataset.replicaReady="true";<\/script></body>');
   document.open();
   document.write(html);

@@ -39,6 +39,7 @@ internal_links = set()
 for row in pages.values():
     if row['status'] != 200: continue
     route = m.page_path(row['url'])
+    if row['sha256']!=routes.get(route,{}).get('source_sha256'):continue
     if route in checked: continue
     checked.add(route)
     source = (W / 'source' / row['file']).read_text()
@@ -97,6 +98,7 @@ result=dict(status='passed' if not errors else 'failed',
             'original JS/image/font bytes unchanged','internal routes and local assets resolve'],
     errors=sorted(set(errors)), warnings=sorted(set(warnings)),
     note='This is source/file verification. Actual browser/visual review is recorded separately.')
+result['reconstructed_archive_pages']=[r['url'] for r in pages.values() if r.get('reconstructed_from')]
 path=W/'qa/source-verification.json';path.parent.mkdir(exist_ok=True);path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({k:v for k,v in result.items() if k not in {'checks'}},ensure_ascii=False,indent=2))
 sys.exit(bool(errors))

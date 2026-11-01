@@ -303,5 +303,15 @@
     "source_url": "https://najlaashutter.com/author/pw-admin_uydw1x6s/",
     "file": "author/pw-admin_uydw1x6s/index.html",
     "source_sha256": "82a31a8ee5c36906862ddc97b33eeaa49e0564a374309c6403a3211279d29512"
+  },
+  "/category/blog/page/2/": {
+    "source_url": "https://najlaashutter.com/category/blog/page/2/",
+    "file": "category/blog/page/2/index.html",
+    "source_sha256": "087a2588fcb732a81011b72d24af7571e53cf848077d7c4dafde9fa41b4d5aa9"
+  },
+  "/tag/نجلاء-للشتر/page/2/": {
+    "source_url": "https://najlaashutter.com/tag/%D9%86%D8%AC%D9%84%D8%A7%D8%A1-%D9%84%D9%84%D8%B4%D8%AA%D8%B1/page/2/",
+    "file": "tag/نجلاء-للشتر/page/2/index.html",
+    "source_sha256": "af08e2887db6450e54805d7671b6a471e5528ebf6880d9bd9443db558616cba7"
   }
 }

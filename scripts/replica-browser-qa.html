@@ -1,9 +1,10 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><title>Replica browser verification</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Replica browser verification</title>
 <style>body{font:16px system-ui;margin:18px;background:#f4f5f6;color:#13304e}h1{font-size:24px}#status{font-weight:bold;font-size:22px}.pass{color:#087b3d}.fail{color:#b52d23}li{padding:3px}iframe{border:1px solid #aab;position:absolute;left:430px;top:16px;transform:scale(.60);transform-origin:top left;background:white}#results{width:390px}</style>
-<h1>Najlaa static replica — actual browser QA</h1><p id="status">Loading…</p><p id="case"></p><ol id="results"></ol><iframe id="page"></iframe>
+</head><body><h1>Najlaa static replica — actual browser QA</h1><p id="status">Loading…</p><p id="case"></p><ol id="results"></ol><iframe id="page"></iframe>
 <script>
 const prefix='__PREFIX__';
-const params=new URLSearchParams(location.search);
+const current=new URL(location.hostname==='htmlpreview.github.io'?location.search.slice(1):location.href);
+const params=new URLSearchParams(current.search);
 const route=params.get('route')||'/';
 const width=Number(params.get('width')||1200);
 const frame=document.querySelector('#page');
@@ -58,5 +59,5 @@ async function main(){
 }
 let started=false;
 frame.onload=()=>{if(started||frame.contentDocument.documentElement.dataset.replicaReady!=='true')return;started=true;main().catch(e=>{document.querySelector('#status').textContent='ERROR: '+e.message;document.querySelector('#status').className='fail';});};
-frame.src=prefix+route.replace(/^\//,'')+'index.html'+(route.startsWith('/search')?'?s='+encodeURIComponent('شتر'):'');
+frame.src='https://htmlpreview.github.io/?https://raw.githubusercontent.com'+prefix+route.replace(/^\//,'')+'index.html'+(route.startsWith('/search')?'?s='+encodeURIComponent('شتر'):'');
 </script></html>

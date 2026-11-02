@@ -5,6 +5,7 @@ const run=(bin,args,options={})=>execFileSync(bin,args,{stdio:'inherit',...optio
 run('python3',['scripts/mirror-wordpress.py','build']);
 run('python3',['scripts/verify-replica.py']);
 run('python3',['scripts/improve-replica.py',...(staging?[]:['--production'])]);
+run('python3',['scripts/prepare-performance-seo.py']);
 run(process.execPath,['scripts/optimize-replica.mjs']);
 run(process.execPath,['node_modules/astro/bin/astro.mjs','build'],{env:{...process.env,PUBLIC_DISABLE_GTM:staging?'true':'false'}});
 fs.cpSync('wordpress-static/fixed-site','dist',{recursive:true});
@@ -15,6 +16,9 @@ for(const route of ['window-shutters-jeddah','en']) {
  const file=`dist/${route}/index.html`;let html=fs.readFileSync(file,'utf8');
  html=html.replace(/<meta\s+name=["']robots["'][^>]*>/gi,'').replace('</head>','<meta name="robots" content="noindex, follow"></head>');fs.writeFileSync(file,html);
 }
+run('python3',['scripts/prepare-performance-seo.py','--ads-only']);
 run('python3',['scripts/verify-full-export.py']);
+run('python3',['scripts/verify-performance-seo.py',...(staging?['--staging']:[])]);
+run(process.execPath,['scripts/test-template-runtime.mjs']);
 if(!staging) run(process.execPath,['scripts/test-full-site.mjs']);
 console.log('Combined full site and Arabic/English landing pages in dist/');

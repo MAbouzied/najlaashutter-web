@@ -1,0 +1,107 @@
+{
+  "note": "Static transfer inventory; not measured browser speed. No tracking removed from production.",
+  "routes": [
+    {
+      "route": "/",
+      "before": {
+        "local_js_files": 12,
+        "local_js_bytes": 586652,
+        "local_js_gzip_bytes": 182439,
+        "stylesheet_requests": 10,
+        "stylesheet_bytes": 492042
+      },
+      "after": {
+        "local_js_files": 10,
+        "local_js_bytes": 572065,
+        "local_js_gzip_bytes": 176947,
+        "stylesheet_requests": 10,
+        "stylesheet_bytes": 481890
+      }
+    },
+    {
+      "route": "/contact-us/",
+      "before": {
+        "local_js_files": 12,
+        "local_js_bytes": 586652,
+        "local_js_gzip_bytes": 182439,
+        "stylesheet_requests": 10,
+        "stylesheet_bytes": 492042
+      },
+      "after": {
+        "local_js_files": 8,
+        "local_js_bytes": 275107,
+        "local_js_gzip_bytes": 91624,
+        "stylesheet_requests": 8,
+        "stylesheet_bytes": 439125
+      }
+    },
+    {
+      "route": "/our-works/",
+      "before": {
+        "local_js_files": 12,
+        "local_js_bytes": 586652,
+        "local_js_gzip_bytes": 182439,
+        "stylesheet_requests": 10,
+        "stylesheet_bytes": 492042
+      },
+      "after": {
+        "local_js_files": 9,
+        "local_js_bytes": 417468,
+        "local_js_gzip_bytes": 133971,
+        "stylesheet_requests": 9,
+        "stylesheet_bytes": 463949
+      }
+    },
+    {
+      "route": "/category/services/",
+      "before": {
+        "local_js_files": 12,
+        "local_js_bytes": 586652,
+        "local_js_gzip_bytes": 182439,
+        "stylesheet_requests": 10,
+        "stylesheet_bytes": 492042
+      },
+      "after": {
+        "local_js_files": 8,
+        "local_js_bytes": 275107,
+        "local_js_gzip_bytes": 91624,
+        "stylesheet_requests": 8,
+        "stylesheet_bytes": 439125
+      }
+    },
+    {
+      "route": "/category/blog/",
+      "before": {
+        "local_js_files": 12,
+        "local_js_bytes": 586652,
+        "local_js_gzip_bytes": 182439,
+        "stylesheet_requests": 10,
+        "stylesheet_bytes": 492042
+      },
+      "after": {
+        "local_js_files": 8,
+        "local_js_bytes": 275107,
+        "local_js_gzip_bytes": 91624,
+        "stylesheet_requests": 8,
+        "stylesheet_bytes": 439125
+      }
+    },
+    {
+      "route": "/external-window-shutters/",
+      "before": {
+        "local_js_files": 12,
+        "local_js_bytes": 586652,
+        "local_js_gzip_bytes": 182439,
+        "stylesheet_requests": 10,
+        "stylesheet_bytes": 492042
+      },
+      "after": {
+        "local_js_files": 8,
+        "local_js_bytes": 275107,
+        "local_js_gzip_bytes": 91624,
+        "stylesheet_requests": 8,
+        "stylesheet_bytes": 439125
+      }
+    }
+  ]
+}

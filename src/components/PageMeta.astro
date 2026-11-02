@@ -10,9 +10,10 @@ interface Props {
   ogImage?: ImageMetadata;
   noindex?: boolean;
   nofollow?: boolean;
+  locale?: string;
 }
 
-const { title, description, canonicalPath, ogImage, noindex = false, nofollow = false } =
+const { title, description, canonicalPath, ogImage, noindex = false, nofollow = false, locale = site.locale } =
   Astro.props;
 
 const canonical = new URL(canonicalPath, site.landingUrl).href;
@@ -32,7 +33,7 @@ const ogImageUrl = new URL(socialImage?.src ?? '/favicon.png', site.landingUrl).
 }
 
 <meta property="og:type" content="website" />
-<meta property="og:locale" content={site.locale} />
+<meta property="og:locale" content={locale} />
 <meta property="og:site_name" content={site.name} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />

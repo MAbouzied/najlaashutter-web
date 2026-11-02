@@ -1,0 +1,408 @@
+{
+  "success": true,
+  "data": {
+    "summary": {
+      "checked": 8,
+      "ok": 0,
+      "warning": 8,
+      "critical": 0,
+      "unknown": 0
+    },
+    "results": [
+      {
+        "input": "https://najlaashutter.com/",
+        "url": "https://najlaashutter.com/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "render-blocking-insight",
+            "severity": "warning",
+            "message": "Render-blocking requests",
+            "savings_ms": 300
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 100
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 50
+          }
+        ],
+        "final_url": "https://najlaashutter.com/",
+        "strategy": "DESKTOP",
+        "scores": {
+          "performance": 98,
+          "accessibility": 90,
+          "best_practices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "lcp": "1.1 s",
+          "cls": "0.046",
+          "tbt": "60 ms",
+          "fcp": "0.3 s",
+          "speed_index": "0.7 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T11:46:56+00:00",
+        "cached": true
+      },
+      {
+        "input": "https://najlaashutter.com/contact-us/",
+        "url": "https://najlaashutter.com/contact-us/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 70/100",
+            "score": 70
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 1100
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimize main-thread work",
+            "savings_ms": 1100
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "Reduce JavaScript execution time",
+            "savings_ms": 1100
+          }
+        ],
+        "final_url": "https://najlaashutter.com/contact-us/",
+        "strategy": "DESKTOP",
+        "scores": {
+          "performance": 70,
+          "accessibility": 91,
+          "best_practices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "lcp": "0.9 s",
+          "cls": "0.047",
+          "tbt": "1,100 ms",
+          "fcp": "0.4 s",
+          "speed_index": "1.0 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T11:47:01+00:00",
+        "cached": true
+      },
+      {
+        "input": "https://najlaashutter.com/our-works/",
+        "url": "https://najlaashutter.com/our-works/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 82/100",
+            "score": 82
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 450
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 400
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 400
+          }
+        ],
+        "final_url": "https://najlaashutter.com/our-works/",
+        "strategy": "DESKTOP",
+        "scores": {
+          "performance": 82,
+          "accessibility": 91,
+          "best_practices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "lcp": "0.8 s",
+          "cls": "0.008",
+          "tbt": "390 ms",
+          "fcp": "0.4 s",
+          "speed_index": "0.5 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T11:47:02+00:00",
+        "cached": true
+      },
+      {
+        "input": "https://najlaashutter.com/category/services/",
+        "url": "https://najlaashutter.com/category/services/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 88/100",
+            "score": 88
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 350
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 300
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 300
+          }
+        ],
+        "final_url": "https://najlaashutter.com/category/services/",
+        "strategy": "DESKTOP",
+        "scores": {
+          "performance": 88,
+          "accessibility": 91,
+          "best_practices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "lcp": "0.8 s",
+          "cls": "0.015",
+          "tbt": "290 ms",
+          "fcp": "0.4 s",
+          "speed_index": "0.5 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T12:31:50+00:00"
+      },
+      {
+        "input": "https://najlaashutter.com/category/blog/",
+        "url": "https://najlaashutter.com/category/blog/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "render-blocking-insight",
+            "severity": "warning",
+            "message": "Render-blocking requests",
+            "savings_ms": 300
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 300
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 200
+          }
+        ],
+        "final_url": "https://najlaashutter.com/category/blog/",
+        "strategy": "DESKTOP",
+        "scores": {
+          "performance": 92,
+          "accessibility": 91,
+          "best_practices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "lcp": "0.9 s",
+          "cls": "0.015",
+          "tbt": "210 ms",
+          "fcp": "0.4 s",
+          "speed_index": "0.5 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T12:31:46+00:00"
+      },
+      {
+        "input": "https://najlaashutter.com/external-window-shutters/",
+        "url": "https://najlaashutter.com/external-window-shutters/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 78/100",
+            "score": 78
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 500
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 500
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 450
+          }
+        ],
+        "final_url": "https://najlaashutter.com/external-window-shutters/",
+        "strategy": "DESKTOP",
+        "scores": {
+          "performance": 78,
+          "accessibility": 93,
+          "best_practices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "lcp": "0.8 s",
+          "cls": "0",
+          "tbt": "500 ms",
+          "fcp": "0.4 s",
+          "speed_index": "0.6 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T12:31:48+00:00"
+      },
+      {
+        "input": "https://najlaashutter.com/window-shutters-jeddah/",
+        "url": "https://najlaashutter.com/window-shutters-jeddah/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 78/100",
+            "score": 78
+          },
+          {
+            "code": "low_seo_score",
+            "severity": "warning",
+            "message": "SEO score is 69/100",
+            "score": 69
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 400
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 350
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 350
+          }
+        ],
+        "final_url": "https://najlaashutter.com/window-shutters-jeddah/",
+        "strategy": "DESKTOP",
+        "scores": {
+          "performance": 78,
+          "accessibility": 95,
+          "best_practices": 100,
+          "seo": 69
+        },
+        "lab": {
+          "lcp": "1.6 s",
+          "cls": "0",
+          "tbt": "370 ms",
+          "fcp": "0.7 s",
+          "speed_index": "0.7 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T12:31:46+00:00"
+      },
+      {
+        "input": "https://najlaashutter.com/en/",
+        "url": "https://najlaashutter.com/en/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 78/100",
+            "score": 78
+          },
+          {
+            "code": "low_seo_score",
+            "severity": "warning",
+            "message": "SEO score is 69/100",
+            "score": 69
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 450
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 400
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 400
+          }
+        ],
+        "final_url": "https://najlaashutter.com/en/",
+        "strategy": "DESKTOP",
+        "scores": {
+          "performance": 78,
+          "accessibility": 100,
+          "best_practices": 100,
+          "seo": 69
+        },
+        "lab": {
+          "lcp": "1.5 s",
+          "cls": "0",
+          "tbt": "380 ms",
+          "fcp": "0.2 s",
+          "speed_index": "0.5 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T12:31:44+00:00"
+      }
+    ]
+  },
+  "error": null,
+  "notes": null,
+  "business_context": null,
+  "metadata": {
+    "tool_version": "1.26.17",
+    "span_id": "22fc14ff51823391"
+  }
+}

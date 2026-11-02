@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checks": {
+    "pages": 65,
+    "schema_nodes": 239,
+    "deferred_scripts": 386
+  },
+  "errors": [],
+  "address_limit": "Locality, region and country only. Street/unit not supplied or invented.",
+  "browser_click_test": "blocked: native browser sandbox startup failure",
+  "rich_results_test": "not run; local graph checks only"
+}

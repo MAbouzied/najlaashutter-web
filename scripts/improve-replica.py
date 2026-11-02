@@ -82,7 +82,7 @@ def transform(s,route,production):
    if alt is None:new=new[:-1]+' alt="نجلاء شتر — حلول النوافذ في جدة ومكة">'
    elif alt in ['', 'Logo', 'Why Choose Us']:new=new.replace('alt="'+alt+'"','alt="'+('من أعمال نجلاء شتر' if 'pw-hgal' in a.get('class','') else 'نجلاء شتر')+'"')
    if route=='/' and a.get('src','').endswith('c82f779d382d6eef160d38aa.jpg'):new=new.replace(' loading="lazy"','').replace(' decoding="async"',' decoding="async" fetchpriority="high"')
-   elif a.get('fetchpriority')=='high':new=new.replace(' fetchpriority="high"','').replace('src="','loading="lazy" src="',1)
+   elif a.get('fetchpriority')=='high':new=new.replace(' loading="lazy"','')
    if new!=s[n['start']:n['open_end']]:changes.append((n['start'],n['open_end'],new))
  s=change(s,changes)
  # Geography can span strong/link elements in the original article.

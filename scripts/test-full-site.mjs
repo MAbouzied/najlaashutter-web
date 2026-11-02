@@ -33,3 +33,12 @@ for(const host of ['najlaashutter.com','ads.najlaashutter.com','preview.workers.
 const sample=fs.readdirSync('dist/mirror-assets').find(x=>x.endsWith('.webp'));const cached=await worker.fetch(new Request('https://najlaashutter.com/mirror-assets/'+sample),{ASSETS:assets});assert.ok(cached.headers.get('Cache-Control').includes('immutable'));checks++;
 for(const p of ['/','/window-shutters-jeddah/','/en/']) {const f='dist'+p+'index.html',s=fs.readFileSync(f,'utf8');assert.ok(s.includes('GTM-WXVGK7F4'));assert.ok(!s.includes('GT-5D482QCG'));if(p==='/')assert.ok(s.includes('data-contact-form'));else assert.ok(s.includes('data-conversion="whatsapp"')&&s.includes('data-conversion="phone"'));checks++;}
 console.log(JSON.stringify({status:'passed',checks,scope:'Actual Worker module with local static binding; no live deployment assertion.'},null,2));
+
+const robots = await (await worker.fetch(new Request('https://najlaashutter.com/robots.txt'),{ASSETS:assets})).text();
+assert.ok(!robots.includes('Disallow: /en/'),'Google can crawl the ads noindex directive');
+const runtime = await worker.fetch(new Request('https://najlaashutter.com/fixes-runtime.js'),{ASSETS:assets});
+assert.equal(runtime.headers.get('Cache-Control'),'public, max-age=0, must-revalidate');
+const paid = await worker.fetch(new Request('https://ads.najlaashutter.com/?gclid=test-click&utm_campaign=test-campaign'),{ASSETS:assets});
+assert.equal(calls.at(-1).searchParams.get('gclid'),'test-click');
+assert.equal(calls.at(-1).searchParams.get('utm_campaign'),'test-campaign');
+console.log('Additional crawler, mutable-asset cache and ad attribution checks passed.');

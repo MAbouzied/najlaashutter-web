@@ -2,7 +2,7 @@
 interface Env { ASSETS: Fetcher; }
 const PROD = new Set(['najlaashutter.com', 'www.najlaashutter.com']);
 const ADS = 'ads.najlaashutter.com';
-const RELEASE = 'full-site-20261102';
+const RELEASE = 'performance-seo-20261102';
 const PAID = /^\/(?:window-shutters-jeddah|en)(?:\/|$)/;
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
@@ -12,7 +12,7 @@ export default {
     if (url.pathname === '/about' || url.pathname === '/about/') {url.pathname='/about-us/';return Response.redirect(url,301);}
     if (url.pathname === '/robots.txt') {
       const body = production
-        ? 'User-agent: AdsBot-Google\nAllow: /\n\nUser-agent: AdsBot-Google-Mobile\nAllow: /\n\nUser-agent: *\nAllow: /\nDisallow: /search/\nDisallow: /window-shutters-jeddah/\nDisallow: /en/\nSitemap: https://najlaashutter.com/sitemap.xml\n'
+        ? 'User-agent: AdsBot-Google\nAllow: /\n\nUser-agent: AdsBot-Google-Mobile\nAllow: /\n\nUser-agent: *\nAllow: /\nDisallow: /search/\nSitemap: https://najlaashutter.com/sitemap.xml\n'
         : 'User-agent: AdsBot-Google\nAllow: /\n\nUser-agent: AdsBot-Google-Mobile\nAllow: /\n\nUser-agent: *\nDisallow: /\n';
       return new Response(body,{headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'public, max-age=300','X-Najlaa-Release':RELEASE}});
     }
@@ -41,6 +41,7 @@ export default {
       return new Response(html,{status:response.status,headers});
     }
     if (/^\/(?:mirror-assets|_astro|fonts)\//.test(url.pathname) && response.ok) headers.set('Cache-Control','public, max-age=31536000, immutable');
+    else if (/\.(?:js|css|json)$/.test(url.pathname) && response.ok) headers.set('Cache-Control','public, max-age=0, must-revalidate');
     return new Response(response.body,{status:response.status,headers});
   }
 };

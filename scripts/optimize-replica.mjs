@@ -2,6 +2,7 @@ import sharp from 'sharp';
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
+import {transform} from 'esbuild';
 const root=path.resolve('wordpress-static/fixed-site');
 const dir=path.join(root,'mirror-assets');
 const replacements=new Map();let before=0,after=0;
@@ -19,6 +20,40 @@ for(const file of walk(root)) {
  let s=fs.readFileSync(file,'utf8');for(const [a,b] of replacements)s=s.split(a).join(b);
  if(file.endsWith('.html'))s=s.replace(/<img\b[^>]*>/g,tag=> /pw-hgal-img/.test(tag)&&!tag.includes('loading=')?tag.replace('<img','<img loading="lazy" decoding="async"'):tag);
  fs.writeFileSync(file,s);
+}
+// Reserve intrinsic image space and provide responsive versions of first content
+// images. Existing CSS and explicit dimensions continue to control layout.
+const imageInfo=new Map();
+for(const file of walk(root).filter(f=>f.endsWith('.html'))) {
+ let text=fs.readFileSync(file,'utf8');
+ const tags=[...text.matchAll(/<img\b[^>]*>/g)];
+ for(const match of tags) {
+  let tag=match[0];const src=/\bsrc=["']([^"']+)/.exec(tag)?.[1];
+  if(!src?.startsWith('/mirror-assets/'))continue;
+  const filePath=path.join(root,src);
+  if(!fs.existsSync(filePath))continue;
+  if(!imageInfo.has(src)) {try {imageInfo.set(src,await sharp(filePath).metadata());}catch {imageInfo.set(src,{});}}
+  const info=imageInfo.get(src);if(!info.width||!info.height)continue;
+  if(!/\bwidth=/.test(tag)&&!/\bheight=/.test(tag))tag=tag.replace('<img',`<img width="${info.width}" height="${info.height}"`);
+  if(/fetchpriority="high"/.test(tag)&&!tag.includes('srcset=')&&info.width>768) {
+   const sizes=[];
+   for(const width of [480,768,1200].filter(w=>w<info.width)) {
+    const variant=src.replace(/\.[^.]+$/,`-w${width}.webp`);
+    if(!fs.existsSync(path.join(root,variant)))await sharp(filePath).resize({width,withoutEnlargement:true}).webp({quality:82,effort:5}).toFile(path.join(root,variant));
+    sizes.push(`${variant} ${width}w`);
+   }
+   sizes.push(`${src} ${info.width}w`);
+   const hero=tag.includes('d-block w-100');
+   tag=tag.replace('<img',`<img srcset="${sizes.join(', ')}" sizes="${hero?'100vw':'(max-width: 767px) calc(100vw - 24px), (max-width: 991px) 72vw, 760px'}"`);
+  }
+  text=text.replace(match[0],tag);
+ }
+ fs.writeFileSync(file,text);
+}
+// Minification retains selectors, ordering and animations; no CSS purge.
+for(const file of walk(root).filter(f=>f.endsWith('.css'))) {
+ const result=await transform(fs.readFileSync(file,'utf8'),{loader:'css',minify:true,target:'es2020'});
+ fs.writeFileSync(file,result.code);
 }
 // Content-address every served resource before assigning immutable cache headers.
 for (const css of [false,true]) {

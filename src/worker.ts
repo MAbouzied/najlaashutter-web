@@ -1,116 +1,47 @@
-import { isAdsHost, shouldBlockIndexing } from './config/indexing';
-
-interface Env {
-  ASSETS: Fetcher;
-}
-
-const STAGING_ROBOTS = `User-agent: AdsBot-Google
-Allow: /
-
-User-agent: AdsBot-Google-Mobile
-Allow: /
-
-User-agent: *
-Disallow: /
-`;
-
-const LEGACY_LP_PATHS = new Set(['/window-shutters-jeddah', '/window-shutters-jeddah/']);
-
-/** WordPress inner routes — must not expose unfinished Astro pages. */
-const BLOCKED_SITE_PATHS = [
-  '/about',
-  '/about-us',
-  '/services',
-  '/category/services',
-  '/our-works',
-  '/category/blog',
-  '/faq',
-  '/contact-us',
-];
-
-function normalizePath(pathname: string): string {
-  if (pathname.length > 1 && pathname.endsWith('/')) return pathname.slice(0, -1);
-  return pathname || '/';
-}
-
-function isBlockedSitePath(pathname: string): boolean {
-  const p = normalizePath(pathname);
-  return BLOCKED_SITE_PATHS.some((blocked) => p === blocked || p.startsWith(`${blocked}/`));
-}
-
-function isStaticAsset(pathname: string): boolean {
-  return (
-    pathname.startsWith('/_astro/') ||
-    pathname.startsWith('/fonts/') ||
-    pathname.startsWith('/assets/') ||
-    pathname === '/favicon.svg' ||
-    pathname === '/favicon.png' ||
-    pathname === '/robots.txt'
-  );
-}
-
+/** One static release: repaired full site plus both existing ads pages. */
+interface Env { ASSETS: Fetcher; }
+const PROD = new Set(['najlaashutter.com', 'www.najlaashutter.com']);
+const ADS = 'ads.najlaashutter.com';
+const RELEASE = 'full-site-20261102';
+const PAID = /^\/(?:window-shutters-jeddah|en)(?:\/|$)/;
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
-    const url = new URL(request.url);
-    const block = shouldBlockIndexing(url.hostname);
-    const path = url.pathname;
-
-    if (LEGACY_LP_PATHS.has(path)) {
-      return Response.redirect(new URL('/', url), 301);
+    const url = new URL(request.url), host = url.hostname.toLowerCase();
+    const production = PROD.has(host), ads = host === ADS;
+    if (host === 'www.najlaashutter.com') {url.hostname='najlaashutter.com';return Response.redirect(url,301);}
+    if (url.pathname === '/about' || url.pathname === '/about/') {url.pathname='/about-us/';return Response.redirect(url,301);}
+    if (url.pathname === '/robots.txt') {
+      const body = production
+        ? 'User-agent: AdsBot-Google\nAllow: /\n\nUser-agent: AdsBot-Google-Mobile\nAllow: /\n\nUser-agent: *\nAllow: /\nDisallow: /search/\nDisallow: /window-shutters-jeddah/\nDisallow: /en/\nSitemap: https://najlaashutter.com/sitemap.xml\n'
+        : 'User-agent: AdsBot-Google\nAllow: /\n\nUser-agent: AdsBot-Google-Mobile\nAllow: /\n\nUser-agent: *\nDisallow: /\n';
+      return new Response(body,{headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'public, max-age=300','X-Najlaa-Release':RELEASE}});
     }
-
-    if (isBlockedSitePath(path) && !isStaticAsset(path)) {
-      return new Response('Not Found', { status: 404 });
-    }
-
-    if (block && path === '/robots.txt') {
-      return new Response(STAGING_ROBOTS, {
-        headers: {
-          'Content-Type': 'text/plain; charset=UTF-8',
-          'Cache-Control': 'public, max-age=300',
-        },
-      });
-    }
-
-    const response = await env.ASSETS.fetch(request);
-    if (!block || !response.ok) return response;
-
-    const type = response.headers.get('content-type') ?? '';
-    if (!type.includes('text/html')) return response;
-
-    let html = await response.text();
-    const hasRobotsMeta = /name=["']robots["']/i.test(html);
-    const robotsContent = isAdsHost(url.hostname) ? 'noindex, follow' : 'noindex, nofollow';
-
-    if (isAdsHost(url.hostname)) {
-      const adsOrigin = `https://${url.hostname.toLowerCase().split(':')[0]}`;
-      html = html
-        .replace(
-          /<link rel="canonical" href="[^"]*"/i,
-          `<link rel="canonical" href="${adsOrigin}${url.pathname}"`,
-        )
-        .replace(
-          /<meta property="og:url" content="[^"]*"/i,
-          `<meta property="og:url" content="${adsOrigin}${url.pathname}"`,
-        );
-    }
-
-    if (hasRobotsMeta) {
-      html = html.replace(
-        /<meta name="robots" content="[^"]*"/i,
-        `<meta name="robots" content="${robotsContent}"`,
-      );
-    } else {
-      html = html.replace(
-        /<head(\s[^>]*)?>/i,
-        `<head$1>\n<meta name="robots" content="${robotsContent}" />`,
-      );
-    }
-
+    const assetUrl = new URL(url);
+    if (ads && url.pathname === '/') assetUrl.pathname='/window-shutters-jeddah/';
+    const response = await env.ASSETS.fetch(new Request(assetUrl,request));
     const headers = new Headers(response.headers);
-    headers.delete('content-length');
-    return new Response(html, { status: response.status, headers });
-  },
+    headers.set('X-Najlaa-Release',RELEASE);
+    const type = headers.get('content-type') || '';
+    const noindex = !production || PAID.test(url.pathname);
+    if (type.includes('text/html')) {
+      let html = await response.text();
+      if (noindex) {
+        const robots = production || ads ? 'noindex, follow' : 'noindex, nofollow';
+        html=html.replace(/<meta\s+name=["']robots["'][^>]*>/gi,'');
+        html=html.replace('</head>',`<meta name="robots" content="${robots}"></head>`);
+        headers.set('X-Robots-Tag',robots);
+      } else headers.delete('X-Robots-Tag');
+      if (ads) {
+        const canonical = `https://${ADS}${url.pathname}`;
+        html=html.replace(/(<link\s+rel="canonical"\s+href=")[^"]*/i,'$1'+canonical).replace(/(<meta\s+property="og:url"\s+content=")[^"]*/i,'$1'+canonical);
+      }
+      if (!production && !ads) html=html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,s=>/gtm\.start|googletagmanager\.com/.test(s)?'':s).replace(/<noscript>[\s\S]*?googletagmanager\.com[\s\S]*?<\/noscript>/gi,'');
+      headers.delete('content-length');headers.delete('content-encoding');
+      headers.set('Cache-Control','public, max-age=0, must-revalidate');
+      return new Response(html,{status:response.status,headers});
+    }
+    if (/^\/(?:mirror-assets|_astro|fonts)\//.test(url.pathname) && response.ok) headers.set('Cache-Control','public, max-age=31536000, immutable');
+    return new Response(response.body,{status:response.status,headers});
+  }
 };
-
-export type { Env };
+export type {Env};

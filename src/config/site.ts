@@ -6,7 +6,7 @@ export const site = {
   description:
     'تركيب شتر نوافذ في جدة — شتر يدوي وكهربائي، داخلي وخارجي، بجودة عالية وتركيب احترافي.',
   url: 'https://najlaashutter.com',
-  landingUrl: 'https://ads.najlaashutter.com',
+  landingUrl: 'https://najlaashutter.com',
   locale: 'ar_SA',
   language: 'ar',
   direction: 'rtl' as const,
@@ -38,30 +38,30 @@ export const site = {
     region: 'مكة المكرمة',
     country: 'المملكة العربية السعودية',
     /** From existing contact page — verify exact storefront if needed. */
-    shortLabel: 'جدة — حي غران',
-    mapsUrl: 'https://maps.app.goo.gl/A5XTwRhtwWvPCETU6',
+    shortLabel: 'عسفان، جدة',
+    mapsUrl: 'https://maps.app.goo.gl/bLh4sDaxyG6zkRJ57',
   },
 
   /**
    * Homepage / main-site service area (Jeddah + Makkah).
-   * TODO: SERVICE AREA REQUIRES BUSINESS CONFIRMATION BEFORE PRODUCTION.
+   * Service area confirmed by the owner on 2 November 2026.
    * Do not broaden to “all Saudi Arabia” until confirmed. LP remains Jeddah-only.
    */
   serviceArea: {
     homepagePromo: 'تركيب شتر النوافذ في جدة ومكة',
     footerNote: 'تركيب شتر النوافذ في جدة ومكة',
-    needsBusinessConfirmation: true as const,
+    needsBusinessConfirmation: false as const,
   },
 
   /** Verified Google Business Profile (reviews sync deferred). */
-  googleBusinessProfileUrl: 'https://maps.app.goo.gl/GLKGw6Q6KkzqDohA6',
+  googleBusinessProfileUrl: 'https://maps.app.goo.gl/bLh4sDaxyG6zkRJ57',
 
   /** @deprecated Use serviceArea.homepagePromo */
   serviceAreaNote: 'تركيب شتر النوافذ في جدة ومكة',
 
   offers: {
-    /** UNVERIFIED in audit — do not surface until confirmed. */
-    freeInstallOver500Sar: false,
+    /** Confirmed by owner on 2 November 2026. */
+    freeInstallOver500Sar: true,
   },
 
   social: {
@@ -84,9 +84,9 @@ export const site = {
 
   paths: {
     privacyPolicy: '/privacy-policy/',
-    /** Legacy WP/Google Ads path — 301 to `/` at the edge. */
+    /** Preserved Arabic Google Ads destination. */
     landingJeddahLegacy: '/window-shutters-jeddah/',
-    landingJeddah: '/',
+    landingJeddah: '/window-shutters-jeddah/',
   },
 } as const;
 

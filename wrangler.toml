@@ -2,6 +2,13 @@
 name = "najlaashutter-web"
 compatibility_date = "2024-09-01"
 workers_dev = true
+
+# Intercept the proxied production hosts before the former WordPress origin.
+routes = [
+  { pattern = "najlaashutter.com/*", zone_name = "najlaashutter.com" },
+  { pattern = "www.najlaashutter.com/*", zone_name = "najlaashutter.com" },
+  { pattern = "ads.najlaashutter.com/*", zone_name = "najlaashutter.com" }
+]
 main = "src/worker.ts"
 
 # Astro static output + hostname-aware noindex on non-production hosts.

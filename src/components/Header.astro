@@ -39,7 +39,7 @@ const whatsappMessage = english ? 'Hello, I would like a quote for window roller
         </nav>
       )
     }
-    <a class="site-header__language" href={english ? '/' : '/en/'} lang={english ? 'ar' : 'en'} dir={english ? 'rtl' : 'ltr'}>{english ? 'العربية' : 'English'}</a>
+    <a class="site-header__language" href={english ? '/window-shutters-jeddah/' : '/en/'} lang={english ? 'ar' : 'en'} dir={english ? 'rtl' : 'ltr'}>{english ? 'العربية' : 'English'}</a>
     <div class="site-header__actions">
       <Button href={site.phone.telHref} variant="ghost" conversion="phone" ariaLabel={english ? 'Call Najlaa Shutter' : 'اتصل بنجلاء شتر'}>{english ? 'Call now' : 'اتصل الآن'}</Button>
       <Button href={site.whatsapp.href(whatsappMessage)} variant="whatsapp" external conversion="whatsapp" ariaLabel={english ? 'Contact Najlaa Shutter on WhatsApp' : 'تواصل مع نجلاء شتر عبر واتساب'}>{english ? 'WhatsApp' : 'واتساب'}</Button>

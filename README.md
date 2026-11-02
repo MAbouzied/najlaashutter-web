@@ -1,20 +1,22 @@
-# Najlaa Shutter — Jeddah ads landing pages
+# Najlaa Shutter — full static site and Jeddah ads pages
 
-Static Astro landing pages, deployed by the existing Cloudflare Workers Builds integration.
+Repaired static WordPress export plus the existing Arabic and English Astro ads pages.
+The original exact copy is preserved on `wordpress-copy`; see `docs/ADS-HOST-ROUTING.md` for routing, rollback and verification.
 
 ## Routes
 
-- `/`: Arabic landing page
+- `/`: repaired full website
 - `/en/`: English landing page
 - `/privacy-policy/`: privacy policy
-- `/window-shutters-jeddah/`: legacy redirect to `/`
+- `/window-shutters-jeddah/`: Arabic landing page; no redirect to the website homepage
 
 Preview: https://najlaashutter-web.mohamed-abouzied.workers.dev/
 Planned ads host: https://ads.najlaashutter.com/
 
 ## Build and deploy
 
-Use Node 22.12+ and `npm ci`, then `npm run build`.
+Use Node 22.12+, Python 3, and `npm ci`, then `npm run build`.
+The build runs source verification, image optimization, export link/resource verification and Worker routing tests.
 Cloudflare build command: `npm run build`.
 Cloudflare deploy command: `npx wrangler deploy` (or `npm run deploy`).
 The Worker name is `najlaashutter-web`; static assets come from `dist/`.

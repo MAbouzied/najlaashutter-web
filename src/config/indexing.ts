@@ -1,7 +1,7 @@
-/** Production hosts that may be indexed (main WordPress site only). */
+/** Production hosts that may be indexed (main static website). */
 export const PRODUCTION_HOSTS = new Set(['najlaashutter.com', 'www.najlaashutter.com']);
 
-/** Paid ads landing host — never index; Worker serves LP at `/` via internal rewrite. */
+/** Paid ads landing host — never index; Worker serves the Arabic LP at `/` via internal rewrite. */
 export const ADS_HOSTS = new Set(['ads.najlaashutter.com']);
 
 export function isAdsHost(hostname: string): boolean {

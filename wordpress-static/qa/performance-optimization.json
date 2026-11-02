@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "optimized_images": 145,
+  "source_bytes": 9996410,
+  "optimized_bytes": 5447206,
+  "reduction_percent": 46,
+  "note": "Stored image sizes only; not a measured page-load or Lighthouse score."
+}

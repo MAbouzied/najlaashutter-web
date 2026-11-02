@@ -31,3 +31,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible 
 .motion-paused .heart-beat,.motion-paused .heart-beat-1 {animation:none!important;}
 @media (prefers-reduced-motion:reduce) {html {scroll-behavior:auto!important;}*,*::before,*::after {animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}[data-aos] {opacity:1!important;transform:none!important;}}
 @media (max-width:991px) {body {padding-bottom:90px;}#pwCarouselMob .carousel-caption {display:none;}#pwCarouselMob .top-image {aspect-ratio:1;}#pwCarouselMob .top-image img {width:100%;height:100%;object-fit:cover;} .pw-fixed-footer {z-index:1040;}}
+
+.carousel-caption .animate__animated{animation:none!important;opacity:1!important;}
+h1,h2,h3{font-family:"Noto Kufi Arabic",sans-serif;}

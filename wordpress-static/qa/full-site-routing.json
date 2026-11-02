@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "checks": 18,
+  "scope": "Actual Worker module with local static binding; no live deployment assertion."
+}

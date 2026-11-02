@@ -30,7 +30,11 @@ def transform(s,route,production):
  for n in d.nodes:
   a=n['attrs'];txt=d.inner(n)
   if n['tag']=='script' and ('var name1' in txt or 'let pwShr' in txt):changes.append((n['start'],n['end'],''))
-  elif not production and n['tag'] in ['script','noscript'] and (any(t in txt for t in ['gtag(', 'GTM-', 'sc_project=', 'statcounter']) or any(t in a.get('src','') for t in ['googletagmanager.com','statcounter.com'])):
+  elif n['tag']=='link' and (a.get('rel') in ['preconnect','dns-prefetch','EditURI','https://api.w.org/'] or a.get('rel')=='alternate'):
+   changes.append((n['start'],n['end'],''))
+  elif n['tag']=='meta' and a.get('name')=='generator':
+   changes.append((n['start'],n['end'],''))
+  elif n['tag'] in ['script','noscript'] and (any(t in txt for t in ['gtag(', 'GTM-', 'sc_project=', 'statcounter']) or any(t in a.get('src','') for t in ['googletagmanager.com','statcounter.com'])):
    changes.append((n['start'],n['end'],''))
  s=change(s,changes)
  # Replace complete contact forms, retaining unique original IDs and layout.
@@ -147,6 +151,12 @@ def transform(s,route,production):
  schema={'@context':'https://schema.org','@type':'HomeAndConstructionBusiness','name':'نجلاء شتر','url':'https://najlaashutter.com/','telephone':'+966535344170','email':'info@najlaashutter.com','areaServed':['جدة','مكة'],'hasMap':MAP}
  metadata+='<script type="application/ld+json">'+json.dumps(schema,ensure_ascii=False)+'</script>'
  s=s.replace('</head>',metadata+'<link rel="stylesheet" href="/fixes.css"><script src="/fixes-runtime.js" defer></script></head>')
+ if production:
+  gtm="<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WXVGK7F4');</script>"
+  s=s.replace('</head>',gtm+'</head>')
+ if production and route.startswith(('/search/','/tag/','/author/','/category/slider/','/slide/','/slide-2/')):
+  s=re.sub(r'<meta name=[\'\"]robots[\'\"][^>]*>','',s)
+  s=s.replace('</head>','<meta name="robots" content="noindex,follow"></head>')
  if not production:
   s=re.sub(r'<meta name=[\'"]robots[\'"][^>]*>','',s)
   s=s.replace('</head>','<meta name="robots" content="noindex,nofollow"></head>')

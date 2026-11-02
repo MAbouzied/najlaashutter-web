@@ -1,0 +1,35 @@
+[
+  {
+    "url": "https://najlaashutter.com/",
+    "samples": [
+      {
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "error": "HTTP Error 403: Forbidden"
+      }
+    ]
+  },
+  {
+    "url": "https://najlaashutter-web.mohamed-abouzied.workers.dev/",
+    "samples": [
+      {
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "error": "HTTP Error 403: Forbidden"
+      }
+    ]
+  },
+  {
+    "url": "https://ads.najlaashutter.com/",
+    "samples": [
+      {
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "error": "HTTP Error 403: Forbidden"
+      }
+    ]
+  }
+]

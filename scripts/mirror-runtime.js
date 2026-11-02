@@ -75,6 +75,10 @@
     }
     document.title = 'نتائج البحث عن «' + query + '» – نجلاء شتر';
     document.querySelectorAll('input[name="s"]').forEach(input => {input.value = query;});
+    // Replacing WordPress's placeholder results moves the footer. AOS only
+    // recalculates automatically for mutations that add/remove AOS elements;
+    // search cards have none, so its old footer offsets can remain unreachable.
+    requestAnimationFrame(() => window.AOS?.refresh());
   }).catch(() => {
     const count = header.querySelector('.fs-6');
     if (count) count.textContent = 'تعذر تحميل نتائج البحث. يرجى إعادة المحاولة.';

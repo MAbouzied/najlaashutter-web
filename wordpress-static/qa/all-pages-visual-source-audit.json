@@ -1,5 +1,5 @@
 {
-  "status": "source_checked_visual_incomplete",
+  "status": "source_checked_browser_review_complete_with_findings",
   "pages": 67,
   "body_attribute_changes": 0,
   "rows": [
@@ -7,470 +7,471 @@
       "route": "/404.html",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/about/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/about-us/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/author/admin_23hgtr/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/author/pw-admin_uydw1x6s/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/benefits-of-installing-electric-shutters-in-modern-homes/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/category/blog/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/category/blog/page/2/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/category/services/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/category/slider/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/contact-us/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/en/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/external-window-shutters/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/faq/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/how-do-you-choose-the-right-type-of-shutter-for-your-home/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/how-does-the-shutter-help-improve-energy-efficiency/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/interior-window-shutters/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/manual-shutter/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/our-works/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/privacy-policy/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/search/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/slide/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/slide-2/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/smart-shutter-windows/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/shutter/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/أسعار-شتر-النوافذ-بجدة/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/أشباك-النامس/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/تركيب-شبك-النامس-في-جدة/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/تركيب-شتر-جدة/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/جدة/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/حامي-الحشرات/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/حماية-من-الحشرات/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/ستائر-شتر/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شبك/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شبك-النامس/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شبك-النامس-للنوافذ/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شبك-نامس/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شتر/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شتر-أبواب/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شتر-جدة/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شتر-حديث/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شتر-رول/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شتر-شبابيك/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شتر-شبابيك-في-جدة/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شتر-كهربائي/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شتر-مودرن/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شتر-نوافذ/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شتر-نوافذ-جدة/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شترات/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/شترات-جدة/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/نجلاء-للشتر/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/نجلاء-للشتر/page/2/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/نوافذ-الشتر/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/tag/نوافذ-شتر/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/the-importance-of-window-screens-in-protecting-the-home/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/window-shutters-jeddah/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/window-shutters-with-remote-control/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/أفضل-أنواع-شتر-النوافذ-في-جدة-دليل-الأس/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/أفضل-شركة-تركيب-شتر-في-جدة-رول-شتر-للنو/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/الدقة-في-العمل/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/الدليل-الشامل-لأفضل-أنواع-الشتر-في-جدة-2/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/الماكينة-الكهربائية-لشتر-النوافذ-سر-ا/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/شبك-النامس-والحشرات/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/شبك-النوافذ/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/شتر-النوافذ-ومقاومة-الغبار/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     },
     {
       "route": "/شرائح-شتر-النوافذ-في-جدة/",
       "body_geometry_match": true,
       "source_differences": [],
-      "full_page_visual": "NOT_REVIEWED",
-      "reason": "Native browser unavailable; source comparison is not visual sign-off"
+      "full_page_visual": "REVIEWED_WITH_FINDINGS",
+      "reason": "Desktop and responsive iframe reviewed; retained findings and scope in full-browser-visual-audit.json"
     }
-  ]
+  ],
+  "visual_evidence": "full-browser-visual-audit.json"
 }

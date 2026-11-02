@@ -47,5 +47,5 @@ for f in D.rglob('index.html'):
   for logo in logos:
    if 'height' in logo['attrs'] or 'width' in logo['attrs']:errors.append('Footer logo has added fixed dimensions '+route)
 if len(set(descriptions.values()))!=len(descriptions):errors.append('Duplicate blog descriptions')
-result={'status':'passed' if not errors else 'failed','checks':counts,'errors':errors,'address_limit':'Locality, region and country only. Street/unit not supplied or invented.','browser_click_test':'blocked: native browser sandbox startup failure','rich_results_test':'not run; local graph checks only'}
+result={'status':'passed' if not errors else 'failed','checks':counts,'errors':errors,'address_limit':'Locality, region and country only. Street/unit not supplied or invented.','browser_click_test':'separate manual browser evidence: see FULL-PAGE-VISUAL-AUDIT.md; this script does not run browser tests','rich_results_test':'not run; local graph checks only'}
 (R/'wordpress-static/qa/performance-seo-verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print(json.dumps(result,ensure_ascii=False,indent=2));sys.exit(bool(errors))

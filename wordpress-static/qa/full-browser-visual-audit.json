@@ -1,0 +1,4153 @@
+{
+  "date": "2026-11-03",
+  "status": "visual_review_complete_with_findings_not_approved_for_production",
+  "route_count": 67,
+  "desktop_viewport": "1363x936",
+  "mobile_viewport": "390x844 same-origin iframe, not touch or physical-device emulation",
+  "capture_counts": {
+    "desktop": 165,
+    "mobile": 364
+  },
+  "review_method": "Every route opened and scrolled through to document bottom; overlapping viewport screenshots inspected in contact sheets. Search rechecked after repair in empty/results/no-results/pagination states. Selected evidence retained here; screenshot counts are coverage, not a claim every image is attached.",
+  "baseline_comparison": "Live about-us page verified for the existing header clipping; all-page body geometry and shared CSS comparison remains a separate source-level check. Not a new side-by-side browser comparison of all 67 live pages.",
+  "production_published": false,
+  "screenshots": [
+    {
+      "file": "about-footer-desktop.jpg",
+      "sha256": "1cddc7fb6b4dc9ce1fb8bcd6ddba48a7f96e846b41ef64003a4621bce43c1f38"
+    },
+    {
+      "file": "footer-logo-mobile.jpg",
+      "sha256": "03fd37bcca2d0af3f74221c079e8dc05bf789ba02ab23d177463610c140d4e7f"
+    },
+    {
+      "file": "footer-bottom-mobile.jpg",
+      "sha256": "13d1744395dc24c55ee6823b50345974dfdfe082c00063a4e46f04ee7b5f6810"
+    },
+    {
+      "file": "search-footer-before-desktop.jpg",
+      "sha256": "4e645517df9f06f52ab603f1ef89ce1e869e7cbf350c2549b4516aa591fc5727"
+    },
+    {
+      "file": "search-footer-after-desktop.jpg",
+      "sha256": "b4c34f10dc68bd0cfc90090ab6e1209037624f00d5ff022e42fcd3a8e41a2914"
+    },
+    {
+      "file": "search-footer-before-mobile.jpg",
+      "sha256": "00289f860c495715254f0f42e631312983833e1d34831db1d8c47e7d71961683"
+    },
+    {
+      "file": "search-footer-links-after-mobile.jpg",
+      "sha256": "5b8b3a02bc6b7e774517c7ea713af10f900dd5cbe5ec1442af55bb10be66a8d0"
+    },
+    {
+      "file": "search-footer-bottom-after-mobile.jpg",
+      "sha256": "9c4fe3e46eea626d6dff1592806ea715063f9952758043a8c7946dd8ec8d3742"
+    },
+    {
+      "file": "gallery-next-desktop.jpg",
+      "sha256": "9ec19342b08b6e0d288c7886794b7d089b0cb23619258235be172786dc8bd2ec"
+    },
+    {
+      "file": "home-faq-open-desktop.jpg",
+      "sha256": "ec000fa4d20923549fe09e6d3eeb1fa6a8ccbc2b206316244f46cafd21d8b1b1"
+    },
+    {
+      "file": "arabic-ads-faq-open-mobile.jpg",
+      "sha256": "76276087c4962a1890862d77527ffec943f3b2983c1339b7dbc1ec710d49fe55"
+    },
+    {
+      "file": "english-ads-faq-open-mobile.jpg",
+      "sha256": "d7e1a509398ed8776cdf453efd34c599ffd6d6fbf98a19e6893a302bed3fde42"
+    }
+  ],
+  "routes": [
+    {
+      "route": "/404.html",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": false,
+        "h1": [
+          "الصفحة غير موجودة"
+        ],
+        "height": 936,
+        "overflow": false,
+        "width": 1363,
+        "y": 0
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": false,
+        "h1": [
+          "الصفحة غير موجودة"
+        ],
+        "height": 844,
+        "overflow": false,
+        "width": 390,
+        "y": 0
+      },
+      "desktop_screenshots": 1,
+      "mobile_screenshots": 1,
+      "mobile_scroll_positions": [
+        {
+          "h": 844,
+          "v": 844,
+          "y": 0
+        }
+      ],
+      "findings": [
+        "standalone_404_intentionally_has_no_footer"
+      ],
+      "header_note": null
+    },
+    {
+      "route": "/about/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "من نحن"
+        ],
+        "height": 1828,
+        "overflow": false,
+        "width": 1363,
+        "y": 892
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "من نحن"
+        ],
+        "height": 2851,
+        "overflow": false,
+        "width": 390,
+        "y": 2007
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2851,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2851,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2851,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2851,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 2851,
+          "v": 844,
+          "y": 2007
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/about-us/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "من نحن"
+        ],
+        "height": 1828,
+        "overflow": false,
+        "width": 1363,
+        "y": 892
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "من نحن"
+        ],
+        "height": 2851,
+        "overflow": false,
+        "width": 390,
+        "y": 2007
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2851,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2851,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2851,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2851,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 2851,
+          "v": 844,
+          "y": 2007
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/author/admin_23hgtr/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "All posts by Najlaa Shutter"
+        ],
+        "height": 936,
+        "overflow": false,
+        "width": 1363,
+        "y": 0
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "All posts by Najlaa Shutter"
+        ],
+        "height": 1444,
+        "overflow": false,
+        "width": 390,
+        "y": 600
+      },
+      "desktop_screenshots": 1,
+      "mobile_screenshots": 3,
+      "mobile_scroll_positions": [
+        {
+          "h": 1444,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 1444,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 1444,
+          "v": 844,
+          "y": 600
+        }
+      ],
+      "findings": [
+        "empty_author_archive_english_heading"
+      ],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/author/pw-admin_uydw1x6s/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "All posts by admin"
+        ],
+        "height": 936,
+        "overflow": false,
+        "width": 1363,
+        "y": 0
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "All posts by admin"
+        ],
+        "height": 1410,
+        "overflow": false,
+        "width": 390,
+        "y": 566
+      },
+      "desktop_screenshots": 1,
+      "mobile_screenshots": 3,
+      "mobile_scroll_positions": [
+        {
+          "h": 1410,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 1410,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 1410,
+          "v": 844,
+          "y": 566
+        }
+      ],
+      "findings": [
+        "empty_author_archive_english_heading"
+      ],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/benefits-of-installing-electric-shutters-in-modern-homes/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "فوائد تركيب الشتر الكهربائي للمنازل الحديثة"
+        ],
+        "height": 1537,
+        "overflow": false,
+        "width": 1363,
+        "y": 601
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "فوائد تركيب الشتر الكهربائي للمنازل الحديثة"
+        ],
+        "height": 2951,
+        "overflow": false,
+        "width": 390,
+        "y": 2107
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 2107
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/category/blog/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "المدونة"
+        ],
+        "height": 3040,
+        "overflow": false,
+        "width": 1363,
+        "y": 2104
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "المدونة"
+        ],
+        "height": 4043,
+        "overflow": false,
+        "width": 390,
+        "y": 3199
+      },
+      "desktop_screenshots": 4,
+      "mobile_screenshots": 7,
+      "mobile_scroll_positions": [
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 2808
+        },
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 3199
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/category/blog/page/2/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "المدونة"
+        ],
+        "height": 1401,
+        "overflow": false,
+        "width": 1363,
+        "y": 465
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "المدونة"
+        ],
+        "height": 2261,
+        "overflow": false,
+        "width": 390,
+        "y": 1417
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2261,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2261,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2261,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2261,
+          "v": 844,
+          "y": 1417
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/category/services/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "الخدمات"
+        ],
+        "height": 1612,
+        "overflow": false,
+        "width": 1363,
+        "y": 676
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "الخدمات"
+        ],
+        "height": 2818,
+        "overflow": false,
+        "width": 390,
+        "y": 1974
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2818,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2818,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2818,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2818,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 2818,
+          "v": 844,
+          "y": 1974
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/category/slider/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "Slider"
+        ],
+        "height": 1216,
+        "overflow": false,
+        "width": 1363,
+        "y": 280
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "Slider"
+        ],
+        "height": 2472,
+        "overflow": false,
+        "width": 390,
+        "y": 1628
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2472,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2472,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2472,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2472,
+          "v": 844,
+          "y": 1628
+        }
+      ],
+      "findings": [
+        "utility_archive_english_heading"
+      ],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/contact-us/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "تواصل معنا"
+        ],
+        "height": 1666,
+        "overflow": false,
+        "width": 1363,
+        "y": 730
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "تواصل معنا"
+        ],
+        "height": 2480,
+        "overflow": false,
+        "width": 390,
+        "y": 1636
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2480,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2480,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2480,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2480,
+          "v": 844,
+          "y": 1636
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/en/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "Window Roller Shutters in Jeddah"
+        ],
+        "height": 3158,
+        "overflow": false,
+        "width": 1363,
+        "y": 2222
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "Window Roller Shutters in Jeddah"
+        ],
+        "height": 4492,
+        "overflow": false,
+        "width": 390,
+        "y": 3648
+      },
+      "desktop_screenshots": 4,
+      "mobile_screenshots": 8,
+      "mobile_scroll_positions": [
+        {
+          "h": 4492,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 4492,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 4492,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 4492,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 4492,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 4492,
+          "v": 844,
+          "y": 2808
+        },
+        {
+          "h": 4492,
+          "v": 844,
+          "y": 3370
+        },
+        {
+          "h": 4492,
+          "v": 844,
+          "y": 3648
+        }
+      ],
+      "findings": [],
+      "header_note": null
+    },
+    {
+      "route": "/external-window-shutters/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ الخارجي"
+        ],
+        "height": 1693,
+        "overflow": false,
+        "width": 1363,
+        "y": 757
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ الخارجي"
+        ],
+        "height": 3385,
+        "overflow": false,
+        "width": 390,
+        "y": 2541
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 6,
+      "mobile_scroll_positions": [
+        {
+          "h": 3385,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 3385,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 3385,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 3385,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 3385,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 3385,
+          "v": 844,
+          "y": 2541
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/faq/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "الأسئلة الشائعة"
+        ],
+        "height": 2181,
+        "overflow": false,
+        "width": 1363,
+        "y": 1245
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "الأسئلة الشائعة"
+        ],
+        "height": 3496,
+        "overflow": false,
+        "width": 390,
+        "y": 2652
+      },
+      "desktop_screenshots": 3,
+      "mobile_screenshots": 6,
+      "mobile_scroll_positions": [
+        {
+          "h": 3496,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 3496,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 3496,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 3496,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 3496,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 3496,
+          "v": 844,
+          "y": 2652
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/how-do-you-choose-the-right-type-of-shutter-for-your-home/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "كيف تختار نوع الشتر المناسب لمنزلك؟"
+        ],
+        "height": 1561,
+        "overflow": false,
+        "width": 1363,
+        "y": 625
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "كيف تختار نوع الشتر المناسب لمنزلك؟"
+        ],
+        "height": 2951,
+        "overflow": false,
+        "width": 390,
+        "y": 2107
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 2107
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/how-does-the-shutter-help-improve-energy-efficiency/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "كيف يساعد الشتر في تحسين كفاءة استهلاك الطاقة؟"
+        ],
+        "height": 1585,
+        "overflow": false,
+        "width": 1363,
+        "y": 649
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "كيف يساعد الشتر في تحسين كفاءة استهلاك الطاقة؟"
+        ],
+        "height": 3009,
+        "overflow": false,
+        "width": 390,
+        "y": 2165
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 3009,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 3009,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 3009,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 3009,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 3009,
+          "v": 844,
+          "y": 2165
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "نجلاء شتر — شتر النوافذ في جدة ومكة"
+        ],
+        "height": 5912,
+        "overflow": false,
+        "width": 1363,
+        "y": 4976
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "نجلاء شتر — شتر النوافذ في جدة ومكة"
+        ],
+        "height": 7153,
+        "overflow": false,
+        "width": 390,
+        "y": 6309
+      },
+      "desktop_screenshots": 7,
+      "mobile_screenshots": 13,
+      "mobile_scroll_positions": [
+        {
+          "h": 6814,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 7153,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 7169,
+          "v": 844,
+          "y": 1126
+        },
+        {
+          "h": 7153,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 7153,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 7153,
+          "v": 844,
+          "y": 2808
+        },
+        {
+          "h": 7170,
+          "v": 844,
+          "y": 3391
+        },
+        {
+          "h": 7153,
+          "v": 844,
+          "y": 3931
+        },
+        {
+          "h": 7153,
+          "v": 844,
+          "y": 4493
+        },
+        {
+          "h": 7153,
+          "v": 844,
+          "y": 5054
+        },
+        {
+          "h": 7153,
+          "v": 844,
+          "y": 5616
+        },
+        {
+          "h": 7153,
+          "v": 844,
+          "y": 6178
+        },
+        {
+          "h": 7153,
+          "v": 844,
+          "y": 6309
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/interior-window-shutters/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ الداخلي"
+        ],
+        "height": 1693,
+        "overflow": false,
+        "width": 1363,
+        "y": 757
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ الداخلي"
+        ],
+        "height": 3353,
+        "overflow": false,
+        "width": 390,
+        "y": 2509
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 6,
+      "mobile_scroll_positions": [
+        {
+          "h": 3353,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 3353,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 3353,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 3353,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 3353,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 3353,
+          "v": 844,
+          "y": 2509
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/manual-shutter/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ اليدوي"
+        ],
+        "height": 1693,
+        "overflow": false,
+        "width": 1363,
+        "y": 757
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ اليدوي"
+        ],
+        "height": 3409,
+        "overflow": false,
+        "width": 390,
+        "y": 2565
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 6,
+      "mobile_scroll_positions": [
+        {
+          "h": 3409,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 3409,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 3409,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 3409,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 3409,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 3409,
+          "v": 844,
+          "y": 2565
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/our-works/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "أعمالنا"
+        ],
+        "height": 2326,
+        "overflow": false,
+        "width": 1363,
+        "y": 1390
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "أعمالنا"
+        ],
+        "height": 2773,
+        "overflow": false,
+        "width": 390,
+        "y": 1929
+      },
+      "desktop_screenshots": 3,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2773,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2795,
+          "v": 844,
+          "y": 569
+        },
+        {
+          "h": 2773,
+          "v": 844,
+          "y": 1115
+        },
+        {
+          "h": 2773,
+          "v": 844,
+          "y": 1677
+        },
+        {
+          "h": 2773,
+          "v": 844,
+          "y": 1929
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/privacy-policy/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "سياسة الخصوصية"
+        ],
+        "height": 1750,
+        "overflow": false,
+        "width": 1363,
+        "y": 814
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "سياسة الخصوصية"
+        ],
+        "height": 2965,
+        "overflow": false,
+        "width": 390,
+        "y": 2121
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2965,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2965,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2965,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2965,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 2965,
+          "v": 844,
+          "y": 2121
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/search/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "نتائج البحث عن: \"\""
+        ],
+        "height": 1047,
+        "overflow": false,
+        "width": 1363,
+        "y": 111
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "نتائج البحث عن: \"\""
+        ],
+        "height": 1788,
+        "overflow": false,
+        "width": 390,
+        "y": 944
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 3,
+      "mobile_scroll_positions": [
+        {
+          "h": 1788,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 1788,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 1788,
+          "v": 844,
+          "y": 944
+        }
+      ],
+      "findings": [
+        "footer_AOS_offsets_fixed_and_retested"
+      ],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/slide/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر نوافذ وأبواب حديث بتقنية متطورة"
+        ],
+        "height": 1271,
+        "overflow": false,
+        "width": 1363,
+        "y": 335
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر نوافذ وأبواب حديث بتقنية متطورة"
+        ],
+        "height": 2185,
+        "overflow": false,
+        "width": 390,
+        "y": 1341
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2185,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2185,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2185,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2185,
+          "v": 844,
+          "y": 1341
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/slide-2/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ والأبواب اليدوي بتصاميم عصرية"
+        ],
+        "height": 1271,
+        "overflow": false,
+        "width": 1363,
+        "y": 335
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ والأبواب اليدوي بتصاميم عصرية"
+        ],
+        "height": 2137,
+        "overflow": false,
+        "width": 390,
+        "y": 1293
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2137,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2137,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2137,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2137,
+          "v": 844,
+          "y": 1293
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/smart-shutter-windows/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ الذكي"
+        ],
+        "height": 1725,
+        "overflow": false,
+        "width": 1363,
+        "y": 789
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ الذكي"
+        ],
+        "height": 3417,
+        "overflow": false,
+        "width": 390,
+        "y": 2573
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 6,
+      "mobile_scroll_positions": [
+        {
+          "h": 3417,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 3417,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 3417,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 3417,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 3417,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 3417,
+          "v": 844,
+          "y": 2573
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/shutter/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "shutter"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "shutter"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/أسعار-شتر-النوافذ-بجدة/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "أسعار شتر النوافذ بجدة"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "أسعار شتر النوافذ بجدة"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/أشباك-النامس/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "أشباك النامس"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "أشباك النامس"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/تركيب-شبك-النامس-في-جدة/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "تركيب شبك النامس في جدة"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "تركيب شبك النامس في جدة"
+        ],
+        "height": 2260,
+        "overflow": false,
+        "width": 390,
+        "y": 1416
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2260,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2260,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2260,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2260,
+          "v": 844,
+          "y": 1416
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/تركيب-شتر-جدة/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "تركيب شتر جدة"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "تركيب شتر جدة"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/جدة/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "جدة"
+        ],
+        "height": 2308,
+        "overflow": false,
+        "width": 1363,
+        "y": 1372
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "جدة"
+        ],
+        "height": 3463,
+        "overflow": false,
+        "width": 390,
+        "y": 2619
+      },
+      "desktop_screenshots": 3,
+      "mobile_screenshots": 6,
+      "mobile_scroll_positions": [
+        {
+          "h": 3463,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 3463,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 3463,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 3463,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 3463,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 3463,
+          "v": 844,
+          "y": 2619
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/حامي-الحشرات/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "حامي الحشرات"
+        ],
+        "height": 1216,
+        "overflow": false,
+        "width": 1363,
+        "y": 280
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "حامي الحشرات"
+        ],
+        "height": 2126,
+        "overflow": false,
+        "width": 390,
+        "y": 1282
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2126,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2126,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2126,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2126,
+          "v": 844,
+          "y": 1282
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/حماية-من-الحشرات/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "حماية من الحشرات"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "حماية من الحشرات"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/ستائر-شتر/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "ستائر شتر"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "ستائر شتر"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شبك/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شبك"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شبك"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شبك-النامس/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شبك النامس"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شبك النامس"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شبك-النامس-للنوافذ/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شبك النامس للنوافذ"
+        ],
+        "height": 1216,
+        "overflow": false,
+        "width": 1363,
+        "y": 280
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شبك النامس للنوافذ"
+        ],
+        "height": 2126,
+        "overflow": false,
+        "width": 390,
+        "y": 1282
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2126,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2126,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2126,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2126,
+          "v": 844,
+          "y": 1282
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شبك-نامس/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شبك نامس"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شبك نامس"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شتر/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر"
+        ],
+        "height": 2672,
+        "overflow": false,
+        "width": 390,
+        "y": 1828
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1828
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شتر-أبواب/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر أبواب"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر أبواب"
+        ],
+        "height": 2672,
+        "overflow": false,
+        "width": 390,
+        "y": 1828
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1828
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شتر-جدة/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر جدة"
+        ],
+        "height": 1913,
+        "overflow": false,
+        "width": 1363,
+        "y": 977
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر جدة"
+        ],
+        "height": 2672,
+        "overflow": false,
+        "width": 390,
+        "y": 1828
+      },
+      "desktop_screenshots": 3,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1828
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شتر-حديث/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر حديث"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر حديث"
+        ],
+        "height": 2672,
+        "overflow": false,
+        "width": 390,
+        "y": 1828
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1828
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شتر-رول/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر رول"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر رول"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شتر-شبابيك/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر شبابيك"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر شبابيك"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شتر-شبابيك-في-جدة/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر شبابيك في جدة"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر شبابيك في جدة"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شتر-كهربائي/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر كهربائي"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر كهربائي"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شتر-مودرن/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر مودرن"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر مودرن"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شتر-نوافذ/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر نوافذ"
+        ],
+        "height": 2459,
+        "overflow": false,
+        "width": 1363,
+        "y": 1523
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر نوافذ"
+        ],
+        "height": 3563,
+        "overflow": false,
+        "width": 390,
+        "y": 2719
+      },
+      "desktop_screenshots": 3,
+      "mobile_screenshots": 6,
+      "mobile_scroll_positions": [
+        {
+          "h": 3563,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 3563,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 3563,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 3563,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 3563,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 3563,
+          "v": 844,
+          "y": 2719
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شتر-نوافذ-جدة/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر نوافذ جدة"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر نوافذ جدة"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شترات/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شترات"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شترات"
+        ],
+        "height": 2672,
+        "overflow": false,
+        "width": 390,
+        "y": 1828
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1828
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/شترات-جدة/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شترات جدة"
+        ],
+        "height": 1913,
+        "overflow": false,
+        "width": 1363,
+        "y": 977
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شترات جدة"
+        ],
+        "height": 2672,
+        "overflow": false,
+        "width": 390,
+        "y": 1828
+      },
+      "desktop_screenshots": 3,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 2672,
+          "v": 844,
+          "y": 1828
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/نجلاء-للشتر/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "نجلاء للشتر"
+        ],
+        "height": 3040,
+        "overflow": false,
+        "width": 1363,
+        "y": 2104
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "نجلاء للشتر"
+        ],
+        "height": 4043,
+        "overflow": false,
+        "width": 390,
+        "y": 3199
+      },
+      "desktop_screenshots": 4,
+      "mobile_screenshots": 7,
+      "mobile_scroll_positions": [
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 2808
+        },
+        {
+          "h": 4043,
+          "v": 844,
+          "y": 3199
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/نجلاء-للشتر/page/2/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "نجلاء للشتر"
+        ],
+        "height": 1401,
+        "overflow": false,
+        "width": 1363,
+        "y": 465
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "نجلاء للشتر"
+        ],
+        "height": 2261,
+        "overflow": false,
+        "width": 390,
+        "y": 1417
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2261,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2261,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2261,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2261,
+          "v": 844,
+          "y": 1417
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/نوافذ-الشتر/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "نوافذ الشتر"
+        ],
+        "height": 1366,
+        "overflow": false,
+        "width": 1363,
+        "y": 430
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "نوافذ الشتر"
+        ],
+        "height": 2226,
+        "overflow": false,
+        "width": 390,
+        "y": 1382
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2226,
+          "v": 844,
+          "y": 1382
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/tag/نوافذ-شتر/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "نوافذ شتر"
+        ],
+        "height": 1913,
+        "overflow": false,
+        "width": 1363,
+        "y": 977
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "نوافذ شتر"
+        ],
+        "height": 3117,
+        "overflow": false,
+        "width": 390,
+        "y": 2273
+      },
+      "desktop_screenshots": 3,
+      "mobile_screenshots": 6,
+      "mobile_scroll_positions": [
+        {
+          "h": 3117,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 3117,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 3117,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 3117,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 3117,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 3117,
+          "v": 844,
+          "y": 2273
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/the-importance-of-window-screens-in-protecting-the-home/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "أهمية شبك النوافذ في حماية المنزل"
+        ],
+        "height": 1561,
+        "overflow": false,
+        "width": 1363,
+        "y": 625
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "أهمية شبك النوافذ في حماية المنزل"
+        ],
+        "height": 2951,
+        "overflow": false,
+        "width": 390,
+        "y": 2107
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 5,
+      "mobile_scroll_positions": [
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 2951,
+          "v": 844,
+          "y": 2107
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/window-shutters-jeddah/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "توريد وتركيب شتر شبابيك ونوافذ في جدة"
+        ],
+        "height": 5283,
+        "overflow": false,
+        "width": 1363,
+        "y": 4347
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "توريد وتركيب شتر شبابيك ونوافذ في جدة"
+        ],
+        "height": 6744,
+        "overflow": false,
+        "width": 390,
+        "y": 5900
+      },
+      "desktop_screenshots": 6,
+      "mobile_screenshots": 12,
+      "mobile_scroll_positions": [
+        {
+          "h": 6744,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 6744,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 6744,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 6744,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 6744,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 6744,
+          "v": 844,
+          "y": 2808
+        },
+        {
+          "h": 6744,
+          "v": 844,
+          "y": 3370
+        },
+        {
+          "h": 6744,
+          "v": 844,
+          "y": 3931
+        },
+        {
+          "h": 6744,
+          "v": 844,
+          "y": 4493
+        },
+        {
+          "h": 6744,
+          "v": 844,
+          "y": 5054
+        },
+        {
+          "h": 6744,
+          "v": 844,
+          "y": 5616
+        },
+        {
+          "h": 6744,
+          "v": 844,
+          "y": 5900
+        }
+      ],
+      "findings": [],
+      "header_note": null
+    },
+    {
+      "route": "/window-shutters-with-remote-control/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ بالتحكم عن بعد"
+        ],
+        "height": 1693,
+        "overflow": false,
+        "width": 1363,
+        "y": 757
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ بالتحكم عن بعد"
+        ],
+        "height": 3418,
+        "overflow": false,
+        "width": 390,
+        "y": 2574
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 6,
+      "mobile_scroll_positions": [
+        {
+          "h": 3418,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 3418,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 3418,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 3418,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 3418,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 3418,
+          "v": 844,
+          "y": 2574
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/أفضل-أنواع-شتر-النوافذ-في-جدة-دليل-الأس/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "أفضل أنواع شتر النوافذ في جدة: دليل الأسعار، التركيب، وفوائد الشتر العازل 2026"
+        ],
+        "height": 4461,
+        "overflow": false,
+        "width": 1363,
+        "y": 3525
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "أفضل أنواع شتر النوافذ في جدة: دليل الأسعار، التركيب، وفوائد الشتر العازل 2026"
+        ],
+        "height": 7130,
+        "overflow": false,
+        "width": 390,
+        "y": 6286
+      },
+      "desktop_screenshots": 5,
+      "mobile_screenshots": 13,
+      "mobile_scroll_positions": [
+        {
+          "h": 7130,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 7130,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 7130,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 7130,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 7130,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 7130,
+          "v": 844,
+          "y": 2808
+        },
+        {
+          "h": 7130,
+          "v": 844,
+          "y": 3370
+        },
+        {
+          "h": 7130,
+          "v": 844,
+          "y": 3931
+        },
+        {
+          "h": 7130,
+          "v": 844,
+          "y": 4493
+        },
+        {
+          "h": 7130,
+          "v": 844,
+          "y": 5054
+        },
+        {
+          "h": 7130,
+          "v": 844,
+          "y": 5616
+        },
+        {
+          "h": 7130,
+          "v": 844,
+          "y": 6178
+        },
+        {
+          "h": 7130,
+          "v": 844,
+          "y": 6286
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/أفضل-شركة-تركيب-شتر-في-جدة-رول-شتر-للنو/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "أفضل شركة تركيب شتر في جدة | رول شتر للنوافذ بأسعار تنافسية | نجلاء شتر"
+        ],
+        "height": 3540,
+        "overflow": false,
+        "width": 1363,
+        "y": 2604
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "أفضل شركة تركيب شتر في جدة | رول شتر للنوافذ بأسعار تنافسية | نجلاء شتر"
+        ],
+        "height": 5930,
+        "overflow": false,
+        "width": 390,
+        "y": 5086
+      },
+      "desktop_screenshots": 4,
+      "mobile_screenshots": 11,
+      "mobile_scroll_positions": [
+        {
+          "h": 5930,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 5930,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 5930,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 5930,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 5930,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 5930,
+          "v": 844,
+          "y": 2808
+        },
+        {
+          "h": 5930,
+          "v": 844,
+          "y": 3370
+        },
+        {
+          "h": 5930,
+          "v": 844,
+          "y": 3931
+        },
+        {
+          "h": 5930,
+          "v": 844,
+          "y": 4493
+        },
+        {
+          "h": 5930,
+          "v": 844,
+          "y": 5054
+        },
+        {
+          "h": 5930,
+          "v": 844,
+          "y": 5086
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/الدقة-في-العمل/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "الدقة في العمل"
+        ],
+        "height": 2713,
+        "overflow": false,
+        "width": 1363,
+        "y": 1777
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "الدقة في العمل"
+        ],
+        "height": 4822,
+        "overflow": false,
+        "width": 390,
+        "y": 3978
+      },
+      "desktop_screenshots": 3,
+      "mobile_screenshots": 9,
+      "mobile_scroll_positions": [
+        {
+          "h": 4822,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 4822,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 4822,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 4822,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 4822,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 4822,
+          "v": 844,
+          "y": 2808
+        },
+        {
+          "h": 4822,
+          "v": 844,
+          "y": 3370
+        },
+        {
+          "h": 4822,
+          "v": 844,
+          "y": 3931
+        },
+        {
+          "h": 4822,
+          "v": 844,
+          "y": 3978
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/الدليل-الشامل-لأفضل-أنواع-الشتر-في-جدة-2/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "الدليل الشامل لأفضل أنواع الشتر في جدة 2026: رفاهية الأتمتة وكفاءة العزل القصوى"
+        ],
+        "height": 4030,
+        "overflow": false,
+        "width": 1363,
+        "y": 3094
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "الدليل الشامل لأفضل أنواع الشتر في جدة 2026: رفاهية الأتمتة وكفاءة العزل القصوى"
+        ],
+        "height": 7242,
+        "overflow": false,
+        "width": 390,
+        "y": 6398
+      },
+      "desktop_screenshots": 5,
+      "mobile_screenshots": 13,
+      "mobile_scroll_positions": [
+        {
+          "h": 7242,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 7242,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 7242,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 7242,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 7242,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 7242,
+          "v": 844,
+          "y": 2808
+        },
+        {
+          "h": 7242,
+          "v": 844,
+          "y": 3370
+        },
+        {
+          "h": 7242,
+          "v": 844,
+          "y": 3931
+        },
+        {
+          "h": 7242,
+          "v": 844,
+          "y": 4493
+        },
+        {
+          "h": 7242,
+          "v": 844,
+          "y": 5054
+        },
+        {
+          "h": 7242,
+          "v": 844,
+          "y": 5616
+        },
+        {
+          "h": 7242,
+          "v": 844,
+          "y": 6178
+        },
+        {
+          "h": 7242,
+          "v": 844,
+          "y": 6398
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/الماكينة-الكهربائية-لشتر-النوافذ-سر-ا/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "الماكينة الكهربائية لشتر النوافذ: سر الرفاهية والأمان في “نجلاء للشتر بجدة”"
+        ],
+        "height": 1830,
+        "overflow": false,
+        "width": 1363,
+        "y": 894
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "الماكينة الكهربائية لشتر النوافذ: سر الرفاهية والأمان في “نجلاء للشتر بجدة”"
+        ],
+        "height": 3287,
+        "overflow": false,
+        "width": 390,
+        "y": 2443
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 6,
+      "mobile_scroll_positions": [
+        {
+          "h": 3287,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 3287,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 3287,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 3287,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 3287,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 3287,
+          "v": 844,
+          "y": 2443
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/شبك-النامس-والحشرات/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شبك النامس والحشرات"
+        ],
+        "height": 2699,
+        "overflow": false,
+        "width": 1363,
+        "y": 1763
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شبك النامس والحشرات"
+        ],
+        "height": 3971,
+        "overflow": false,
+        "width": 390,
+        "y": 3127
+      },
+      "desktop_screenshots": 3,
+      "mobile_screenshots": 7,
+      "mobile_scroll_positions": [
+        {
+          "h": 3971,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 3971,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 3971,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 3971,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 3971,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 3971,
+          "v": 844,
+          "y": 2808
+        },
+        {
+          "h": 3971,
+          "v": 844,
+          "y": 3127
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/شبك-النوافذ/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "حماية النوافذ بشبك متين وآمن"
+        ],
+        "height": 1257,
+        "overflow": false,
+        "width": 1363,
+        "y": 321
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "حماية النوافذ بشبك متين وآمن"
+        ],
+        "height": 2243,
+        "overflow": false,
+        "width": 390,
+        "y": 1399
+      },
+      "desktop_screenshots": 2,
+      "mobile_screenshots": 4,
+      "mobile_scroll_positions": [
+        {
+          "h": 2243,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 2243,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 2243,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 2243,
+          "v": 844,
+          "y": 1399
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/شتر-النوافذ-ومقاومة-الغبار/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ ومقاومة الغبار"
+        ],
+        "height": 2323,
+        "overflow": false,
+        "width": 1363,
+        "y": 1387
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شتر النوافذ ومقاومة الغبار"
+        ],
+        "height": 3682,
+        "overflow": false,
+        "width": 390,
+        "y": 2838
+      },
+      "desktop_screenshots": 3,
+      "mobile_screenshots": 7,
+      "mobile_scroll_positions": [
+        {
+          "h": 3682,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 3682,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 3682,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 3682,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 3682,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 3682,
+          "v": 844,
+          "y": 2808
+        },
+        {
+          "h": 3682,
+          "v": 844,
+          "y": 2838
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    },
+    {
+      "route": "/شرائح-شتر-النوافذ-في-جدة/",
+      "desktop_review": "REVIEWED",
+      "mobile_review": "REVIEWED_390x844_IFRAME",
+      "desktop_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شرائح شتر النوافذ في جدة"
+        ],
+        "height": 2486,
+        "overflow": false,
+        "width": 1363,
+        "y": 1550
+      },
+      "mobile_checks": {
+        "brokenImages": [],
+        "footer": true,
+        "h1": [
+          "شرائح شتر النوافذ في جدة"
+        ],
+        "height": 4435,
+        "overflow": false,
+        "width": 390,
+        "y": 3591
+      },
+      "desktop_screenshots": 3,
+      "mobile_screenshots": 8,
+      "mobile_scroll_positions": [
+        {
+          "h": 4435,
+          "v": 844,
+          "y": 0
+        },
+        {
+          "h": 4435,
+          "v": 844,
+          "y": 562
+        },
+        {
+          "h": 4435,
+          "v": 844,
+          "y": 1123
+        },
+        {
+          "h": 4435,
+          "v": 844,
+          "y": 1685
+        },
+        {
+          "h": 4435,
+          "v": 844,
+          "y": 2246
+        },
+        {
+          "h": 4435,
+          "v": 844,
+          "y": 2808
+        },
+        {
+          "h": 4435,
+          "v": 844,
+          "y": 3370
+        },
+        {
+          "h": 4435,
+          "v": 844,
+          "y": 3591
+        }
+      ],
+      "findings": [],
+      "header_note": "Initial header logo clipping observed; present in live about-us baseline too."
+    }
+  ],
+  "interaction_checks": [
+    {
+      "test": "desktop header navigation to contact",
+      "result": "passed"
+    },
+    {
+      "test": "desktop search modal, query شتر, results and page 3",
+      "result": "passed; 22 results; footer columns visible"
+    },
+    {
+      "test": "mobile menu open, service submenu and backdrop close",
+      "result": "passed; submenu arrow has small click target"
+    },
+    {
+      "test": "gallery open, next image 1/8 to 2/8, close",
+      "result": "passed"
+    },
+    {
+      "test": "consultation modal open/close and empty form validation",
+      "result": "passed"
+    },
+    {
+      "test": "contact page empty form validation",
+      "result": "passed"
+    },
+    {
+      "test": "homepage FAQ open",
+      "result": "passed after scroll/animation settled"
+    },
+    {
+      "test": "Arabic and English ad FAQ open on mobile layout",
+      "result": "passed"
+    },
+    {
+      "test": "automatic carousel/slider motion",
+      "result": "observed; no precise frame-by-frame animation equivalence claim"
+    },
+    {
+      "test": "actual WhatsApp send, telephone call, email send",
+      "result": "not performed"
+    },
+    {
+      "test": "Google rich results, after-change Lighthouse, physical phones",
+      "result": "not performed"
+    }
+  ]
+}

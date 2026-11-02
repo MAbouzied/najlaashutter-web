@@ -1,0 +1,52 @@
+[
+  {
+    "url": "https://najlaashutter.com/contact-us/",
+    "status": 200,
+    "final_url": "https://najlaashutter.com/contact-us/",
+    "release": "full-site-20261102",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "server_timing": "cfCacheStatus;desc=\"HIT\"",
+    "seconds": 5.716,
+    "length": 52256,
+    "title": [
+      "تواصل معنا | نجلاء شتر"
+    ]
+  },
+  {
+    "url": "https://najlaashutter.com/about/",
+    "status": 200,
+    "final_url": "https://najlaashutter.com/about-us/",
+    "release": "full-site-20261102",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "server_timing": "cfCacheStatus;desc=\"HIT\"",
+    "seconds": 11.428,
+    "length": 53875,
+    "title": [
+      "من نحن | نجلاء شتر"
+    ]
+  },
+  {
+    "url": "https://www.najlaashutter.com/en/",
+    "status": 200,
+    "final_url": "https://najlaashutter.com/en/",
+    "release": "full-site-20261102",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "server_timing": "cfCacheStatus;desc=\"HIT\"",
+    "seconds": 11.32,
+    "length": 21222,
+    "title": [
+      "Window Roller Shutters in Jeddah | Manual &amp; Electric | Najlaa Shutter"
+    ]
+  },
+  {
+    "url": "https://najlaashutter.com/sitemap.xml",
+    "status": 200,
+    "final_url": "https://najlaashutter.com/sitemap.xml",
+    "release": "full-site-20261102",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "server_timing": "cfCacheStatus;desc=\"HIT\"",
+    "seconds": 5.71,
+    "length": 2109,
+    "title": []
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "deployed_commit": "c546c2dd839d8d899bdf6fc285ad070a75da02ae",
+  "worker": "najlaashutter-web",
+  "cloudflare_build": "f53766cf-a515-41b9-ae5c-3d3900c3561b",
+  "cloudflare_worker_version": "1d8a8c80-e513-44d1-ab1d-5dc1dea6739c",
+  "cloudflare_check": "success",
+  "verified_at": "2026-11-02",
+  "release_response_header": "full-site-20261102",
+  "verified_200_urls": [
+    "https://najlaashutter.com/",
+    "https://najlaashutter.com/window-shutters-jeddah/",
+    "https://najlaashutter.com/en/",
+    "https://ads.najlaashutter.com/",
+    "https://najlaashutter-web.mohamed-abouzied.workers.dev/",
+    "https://najlaashutter.com/robots.txt"
+  ],
+  "main_indexing": "no X-Robots-Tag restriction",
+  "ads_indexing": "noindex, follow; AdsBot allowed by robots.txt",
+  "image_optimization": {
+    "status": "completed",
+    "optimized_images": 145,
+    "source_bytes": 9996410,
+    "optimized_bytes": 5447206,
+    "reduction_percent": 46,
+    "note": "Stored image sizes only; not a measured page-load or Lighthouse score."
+  },
+  "limits": "No Lighthouse or new browser rendering sign-off; transport timing from this executor includes network/proxy overhead and does not establish real-user LCP."
+}

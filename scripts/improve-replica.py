@@ -129,7 +129,6 @@ def transform(s,route,production):
   else:
    # The original homepage uses sections without main.
    marker='<section class="py-5 services';s=s.replace(marker,'<h1 class="visually-hidden">نجلاء شتر — شتر النوافذ في جدة ومكة</h1>'+marker,1)
-  s=s.replace('</body>','<button type="button" id="pause-motion" class="motion-control" aria-pressed="true">تشغيل الحركة التلقائية</button></body>')
   # Mobile has its own distinct slide set with matching controls.
   d=m.Document(s);mobile=d.find(ident='pwCarouselMob')
   if mobile:

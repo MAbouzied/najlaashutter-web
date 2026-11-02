@@ -52,17 +52,14 @@
       input.setAttribute('aria-label', 'رابط الصفحة للمشاركة'); status.append(input); input.focus(); input.select();
     }
   });
-  const pause = document.getElementById('pause-motion');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  let paused = true;
+  let paused = reduced.matches;
   function applyMotion() {
     document.documentElement.classList.toggle('motion-paused', paused);
     document.querySelectorAll('.swiper').forEach(el => { if (paused) el.swiper?.autoplay?.stop(); else el.swiper?.autoplay?.start(); });
     document.querySelectorAll('.carousel').forEach(el => { const c = window.bootstrap?.Carousel.getOrCreateInstance(el); if (paused) c?.pause(); else c?.cycle(); });
-    if (pause) {pause.textContent = paused ? 'تشغيل الحركة التلقائية' : 'إيقاف الحركة التلقائية'; pause.setAttribute('aria-pressed', String(paused));}
   }
-  pause?.addEventListener('click', () => {paused = !paused; applyMotion();});
-  reduced.addEventListener?.('change', () => {if (reduced.matches) {paused = true; applyMotion();}});
+  reduced.addEventListener?.('change', () => {paused = reduced.matches; applyMotion();});
   addEventListener('load', applyMotion, {once:true});
   applyMotion();
 })();

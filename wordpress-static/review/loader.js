@@ -3,7 +3,7 @@
  * review can run on a read-only static-file CDN without a hosting configuration. */
 (async () => {
   const base = '/MAbouzied/najlaashutter-web/replica-static-exact-2026-11-01/wordpress-static/review/';
-  const revision = '4b611c9b0511';
+  const revision = '91b532ca6138';
   const renderer = 'https://htmlpreview.github.io/?https://raw.githubusercontent.com';
   const current = new URL(location.hostname==='htmlpreview.github.io' ? location.search.slice(1) : location.href);
   const pathname = decodeURI(current.pathname.slice(base.length));

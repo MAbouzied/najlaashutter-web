@@ -36,6 +36,7 @@
     const count = header.querySelector('.fs-6');
     if (count) count.textContent = 'تم العثور على ' + results.length + ' نتائج لبحثك.';
     const column = header.parentElement;
+    column.querySelectorAll('nav.pagination').forEach(nav=>{const holder=nav.parentElement;if(holder.parentElement===column)holder.remove();else nav.remove();});
     column.querySelectorAll(':scope > div.pw-search, :scope > nav, :scope > .pagination').forEach(n => n.remove());
     const currentPage = Math.max(1, Number(params.get('page') || 1));
     for (const r of results.slice((currentPage - 1) * 10, currentPage * 10)) {

@@ -11,7 +11,7 @@ const route=params.get('route')||selected.route||'/';
 const width=Number(params.get('width')||selected.width||1200);
 const frame=document.querySelector('#page');
 frame.style.width=width+'px';frame.style.height='1450px';
-document.querySelector('#case').textContent=route+' — viewport '+width+' px — build 4b611c9b0511';
+document.querySelector('#case').textContent=route+' — viewport '+width+' px — build 91b532ca6138';
 const results=[];
 const delay=ms=>new Promise(r=>setTimeout(r,ms));
 const event=(element,name)=>new Promise(resolve=>{const timeout=setTimeout(()=>resolve(false),2500);element.addEventListener(name,()=>{clearTimeout(timeout);resolve(true);},{once:true});});
@@ -62,5 +62,5 @@ async function main(){
 }
 let started=false;
 frame.onload=()=>{if(started||frame.contentDocument.documentElement.dataset.replicaReady!=='true')return;started=true;main().catch(e=>{document.querySelector('#status').textContent='ERROR: '+e.message;document.querySelector('#status').className='fail';});};
-frame.src='https://htmlpreview.github.io/?https://raw.githubusercontent.com'+prefix+route.replace(/^\//,'')+'index.html'+(route.startsWith('/search')?'?s='+encodeURIComponent('شتر')+'&v=4b611c9b0511':'?v=4b611c9b0511');
+frame.src='https://htmlpreview.github.io/?https://raw.githubusercontent.com'+prefix+route.replace(/^\//,'')+'index.html'+(route.startsWith('/search')?'?s='+encodeURIComponent('شتر')+'&v=91b532ca6138':'?v=91b532ca6138');
 </script></html>

@@ -166,9 +166,12 @@ def fetch(url, dest):
 
 def capture_assets(external_only=False):
     assets = read_json(ASSET_INDEX, {})
-    refs = set()
+    refs = set(read_json(SOURCE/'additional-assets.json',[]))
     for row in read_json(PAGE_INDEX, {}).values():
         refs |= asset_references((SOURCE / row['file']).read_text(), row['url'])
+    for row in assets.values():
+        if row.get('status')==200 and ('text/css' in row.get('content_type','') or row['file'].endswith('.css')):
+            refs |= asset_references(asset_bytes(row).decode(),row['url'],css=True)
     # Original content includes tracker scripts. Keep live tracker endpoints live;
     # they are intentionally not converted into a frozen copy of third-party APIs.
     def runtime_service(u):
@@ -181,7 +184,7 @@ def capture_assets(external_only=False):
         for url in pending:
             visited.add(url)
             old = assets.get(url)
-            if old and old.get('status') == 200 and asset_exists(old):
+            if old and (old.get('status')==404 or old.get('status') == 200 and asset_exists(old)):
                 row = old
             else:
                 ext = Path(unquote(urlsplit(url).path)).suffix.lower()
@@ -210,13 +213,14 @@ def page_path(url):
     if 's' in query: return '/search/'
     return unquote(u.path) or '/'
 
-def build():
+def build(production=False):
     pages = read_json(PAGE_INDEX, {})
     assets = read_json(ASSET_INDEX, {})
     posts = {normalized(p['link']):p for p in read_json(SOURCE/'posts.json',[])}
+    media = {normalized(p['source_url']):p for p in read_json(SOURCE/'media.json',[])}
     if not pages: raise SystemExit('No captured source pages')
     SITE.mkdir(parents=True, exist_ok=True)
-    asset_map = {url: '/mirror-assets/' + Path(row['file']).name for url, row in assets.items() if row.get('status') == 200}
+    asset_map = {url: '/mirror-assets/' + Path(row['file']).name for url, row in assets.items() if row.get('status') in {200,404}}
     aliases = {requested: page_path(row['url']) for requested, row in pages.items()}
     def local_asset(value, base):
         if value.startswith(('data:', 'blob:', '#')): return value
@@ -289,17 +293,26 @@ def build():
             body = d.find(tag='body')
             match = re.search(r'(?:postid-|page-id-)(\d+)', body['attrs'].get('class','')) if body else None
             post=posts.get(normalized(row['url']),{})
+            original_image=Document(source).find(tag='img',cls='wp-post-image')
+            thumbnail=None
+            if original_image:
+                original_url=normalized(urljoin(row['url'],original_image['attrs'].get('src','')))
+                thumbnail=media.get(original_url,{}).get('media_details',{}).get('sizes',{}).get('thumbnail',{}).get('source_url')
             search_records.append(dict(url=path, title=plain(d.inner(title)), text=plain(d.inner(content)),
                 search_text=html.unescape(d.inner(content)), order=int(re.sub(r'\D','',post['date'])) if post else int(match[1]) if match else 0,
                 excerpt=plain(post.get('excerpt',{}).get('rendered','')),
-                image=image['attrs'].get('src', '') if image else ''))
+                image=asset_map.get(normalized(thumbnail),thumbnail) if thumbnail else image['attrs'].get('src', '') if image else ''))
     # Deduplicate aliases before indexing content.
     search_records = list({r['url']:r for r in search_records}.values())
     write_json(SITE / 'search-index.json', search_records)
     write_json(WORK / 'routes.json', routes)
     (SITE / 'mirror-runtime.js').write_text((ROOT / 'scripts' / 'mirror-runtime.js').read_text())
-    (SITE / '_headers').write_text('/*\n  X-Robots-Tag: noindex, nofollow\n')
-    (SITE / 'robots.txt').write_text('User-agent: *\nDisallow: /\n')
+    if production:
+        (SITE/'_headers').unlink(missing_ok=True)
+        (SITE/'robots.txt').write_text('User-agent: *\nAllow: /\n')
+    else:
+        (SITE / '_headers').write_text('/*\n  X-Robots-Tag: noindex, nofollow\n')
+        (SITE / 'robots.txt').write_text('User-agent: *\nDisallow: /\n')
     write_json(WORK / '.openai' / 'hosting.json', {'static': {'directory': 'site'}})
     write_json(WORK / 'package.json', {'name':'najlaa-wordpress-static-replica','private':True,'scripts':{}})
     print('Built routes:', len(routes), 'local assets:', len(asset_map), 'search documents:', len(search_records))
@@ -310,6 +323,7 @@ def main():
     p.add_argument('--cache', type=Path)
     p.add_argument('--external-only', action='store_true')
     p.add_argument('--retry', action='store_true', help='Honor a five-minute cooldown and resume after HTTP 429')
+    p.add_argument('--production', action='store_true', help='Remove review-only indexing restrictions')
     a = p.parse_args()
     if a.command == 'import': import_cache(a.cache)
     elif a.command == 'assets':
@@ -318,6 +332,6 @@ def main():
             for minute in range(5):
                 print('Respecting source rate limit; cooldown minute',minute+1,'of 5',flush=True)
                 time.sleep(60)
-    else: build()
+    else: build(a.production)
 
 if __name__ == '__main__': main()

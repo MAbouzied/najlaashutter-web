@@ -37,6 +37,7 @@ def invariant(d):
 checked = set()
 resource_refs = set()
 internal_links = set()
+known_missing={'/mirror-assets/'+Path(r['file']).name for r in assets.values() if r['status']==404}
 for row in pages.values():
     if row['status'] != 200: continue
     route = m.page_path(row['url'])
@@ -68,6 +69,9 @@ for row in pages.values():
             internal_links.add(path)
 
 for url, row in assets.items():
+    if row['status']==404:
+        warnings.append('Original missing asset preserved as a local 404: '+url)
+        continue
     if row['status'] != 200:
         errors.append('Uncaptured asset '+str(row['status'])+': '+url); continue
     raw=W/'source'/row['file']
@@ -85,7 +89,7 @@ for url, row in assets.items():
     elif raw_bytes!=dest.read_bytes(): errors.append('Asset bytes changed: '+url)
 
 for path in resource_refs:
-    if not (W/'site'/path.lstrip('/')).is_file():errors.append('Missing local resource: '+path)
+    if path not in known_missing and not (W/'site'/path.lstrip('/')).is_file():errors.append('Missing local resource: '+path)
 for path in internal_links:
     if not path: continue
     if path in routes or (W/'site'/path.lstrip('/')).is_file(): continue

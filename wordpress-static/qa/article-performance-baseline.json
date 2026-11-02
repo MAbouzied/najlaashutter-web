@@ -1,0 +1,146 @@
+{
+  "mobile": {
+    "success": true,
+    "data": {
+      "summary": {
+        "checked": 1,
+        "ok": 0,
+        "warning": 1,
+        "critical": 0,
+        "unknown": 0
+      },
+      "results": [
+        {
+          "input": "https://najlaashutter.com/الدقة-في-العمل/",
+          "url": "https://najlaashutter.com/الدقة-في-العمل/",
+          "status": "warning",
+          "findings": [
+            {
+              "code": "low_performance_score",
+              "severity": "warning",
+              "message": "Performance score is 67/100",
+              "score": 67
+            },
+            {
+              "code": "unused-javascript",
+              "severity": "warning",
+              "message": "Reduce unused JavaScript",
+              "savings_ms": 1200
+            },
+            {
+              "code": "render-blocking-insight",
+              "severity": "warning",
+              "message": "Render-blocking requests",
+              "savings_ms": 1000
+            },
+            {
+              "code": "long-tasks",
+              "severity": "warning",
+              "message": "Avoid long main-thread tasks",
+              "savings_ms": 300
+            }
+          ],
+          "final_url": "https://najlaashutter.com/%D8%A7%D9%84%D8%AF%D9%82%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D9%85%D9%84/",
+          "strategy": "MOBILE",
+          "scores": {
+            "performance": 67,
+            "accessibility": 96,
+            "best_practices": 96,
+            "seo": 100
+          },
+          "lab": {
+            "lcp": "7.8 s",
+            "cls": "0",
+            "tbt": "300 ms",
+            "fcp": "1.5 s",
+            "speed_index": "3.9 s"
+          },
+          "field": null,
+          "checked_at": "2026-11-02T12:47:51+00:00"
+        }
+      ]
+    },
+    "error": null,
+    "notes": null,
+    "business_context": null,
+    "metadata": {
+      "tool_version": "1.26.18",
+      "span_id": "d0fbd66e71f77d35"
+    }
+  },
+  "desktop": {
+    "success": true,
+    "data": {
+      "summary": {
+        "checked": 1,
+        "ok": 0,
+        "warning": 1,
+        "critical": 0,
+        "unknown": 0
+      },
+      "results": [
+        {
+          "input": "https://najlaashutter.com/الدقة-في-العمل/",
+          "url": "https://najlaashutter.com/الدقة-في-العمل/",
+          "status": "warning",
+          "findings": [
+            {
+              "code": "low_performance_score",
+              "severity": "warning",
+              "message": "Performance score is 87/100",
+              "score": 87
+            },
+            {
+              "code": "low_accessibility_score",
+              "severity": "warning",
+              "message": "Accessibility score is 89/100",
+              "score": 89
+            },
+            {
+              "code": "bootup-time",
+              "severity": "warning",
+              "message": "JavaScript execution time",
+              "savings_ms": 300
+            },
+            {
+              "code": "long-tasks",
+              "severity": "warning",
+              "message": "Avoid long main-thread tasks",
+              "savings_ms": 250
+            },
+            {
+              "code": "mainthread-work-breakdown",
+              "severity": "warning",
+              "message": "Minimizes main-thread work",
+              "savings_ms": 250
+            }
+          ],
+          "final_url": "https://najlaashutter.com/%D8%A7%D9%84%D8%AF%D9%82%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D9%85%D9%84/",
+          "strategy": "DESKTOP",
+          "scores": {
+            "performance": 87,
+            "accessibility": 89,
+            "best_practices": 96,
+            "seo": 100
+          },
+          "lab": {
+            "lcp": "0.8 s",
+            "cls": "0.099",
+            "tbt": "260 ms",
+            "fcp": "0.4 s",
+            "speed_index": "0.5 s"
+          },
+          "field": null,
+          "checked_at": "2026-11-02T12:47:49+00:00"
+        }
+      ]
+    },
+    "error": null,
+    "notes": null,
+    "business_context": null,
+    "metadata": {
+      "tool_version": "1.26.18",
+      "span_id": "9e6cb37e625f7a10"
+    }
+  }
+}

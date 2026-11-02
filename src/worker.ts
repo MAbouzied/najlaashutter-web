@@ -40,7 +40,8 @@ export default {
       headers.set('Cache-Control','public, max-age=0, must-revalidate');
       return new Response(html,{status:response.status,headers});
     }
-    if (/^\/(?:mirror-assets|_astro|fonts)\//.test(url.pathname) && response.ok) headers.set('Cache-Control','public, max-age=31536000, immutable');
+    if (/^\/(?:mirror-assets|_astro)\//.test(url.pathname) && response.ok) headers.set('Cache-Control','public, max-age=31536000, immutable');
+    else if (/^\/fonts\//.test(url.pathname) && response.ok) headers.set('Cache-Control','public, max-age=86400');
     else if (/\.(?:js|css|json)$/.test(url.pathname) && response.ok) headers.set('Cache-Control','public, max-age=0, must-revalidate');
     return new Response(response.body,{status:response.status,headers});
   }

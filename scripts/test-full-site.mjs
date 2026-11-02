@@ -42,3 +42,7 @@ const paid = await worker.fetch(new Request('https://ads.najlaashutter.com/?gcli
 assert.equal(calls.at(-1).searchParams.get('gclid'),'test-click');
 assert.equal(calls.at(-1).searchParams.get('utm_campaign'),'test-campaign');
 console.log('Additional crawler, mutable-asset cache and ad attribution checks passed.');
+
+const font = await worker.fetch(new Request('https://najlaashutter.com/fonts/noto-kufi-arabic-arabic.woff2'),{ASSETS:assets});
+assert.equal(font.headers.get('Cache-Control'),'public, max-age=86400');
+console.log('Unversioned font cache policy passed.');

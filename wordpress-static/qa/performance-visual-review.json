@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-02",
+  "method": "Sites platform generated real-browser screenshots of private same-origin QA iframe sheets; images manually inspected",
+  "routes": [
+    "/",
+    "/contact-us/",
+    "/category/services/",
+    "/category/blog/",
+    "/our-works/",
+    "/external-window-shutters/",
+    "/الدقة-في-العمل/",
+    "/window-shutters-jeddah/",
+    "/en/",
+    "/about-us/",
+    "/faq/",
+    "/privacy-policy/"
+  ],
+  "desktop": {
+    "viewport": [
+      1200,
+      700
+    ],
+    "scope": "Initial viewport, before/after side by side",
+    "screenshot_sheets": [
+      1,
+      2,
+      3,
+      4,
+      8,
+      9
+    ],
+    "result": "No unintended visible geometry, typography or image changes observed"
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      725
+    ],
+    "scope": "Initial viewport after changes",
+    "screenshot_sheets": [
+      5,
+      6,
+      7,
+      10
+    ],
+    "result": "Visible layout, text, images and fixed contact bars inspected; no unintended overflow observed"
+  },
+  "limits": [
+    "Not full-page scrolling coverage",
+    "No interactive click, animation or transition sign-off: native browser startup unavailable",
+    "Screenshots do not prove speed improvement"
+  ],
+  "production_changed": false
+}

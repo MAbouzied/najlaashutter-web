@@ -1,0 +1,73 @@
+{
+  "reviewed_at": "2026-11-02",
+  "build_revision": "4a7529e8f9e5",
+  "commit_under_test": "1f2cb192ed04235e49c5a4071e75a93a03e018bd",
+  "method": "Real browser rendering through Thum.io screenshots of the HTMLPreview review transport. Native ChatGPT browser was unavailable due to a read-only bwrap session path; TinyFish was not used. Screenshots inspected manually.",
+  "interaction_cases": [
+    {
+      "route": "/",
+      "viewport": 1200,
+      "passed_checks": 22
+    },
+    {
+      "route": "/",
+      "viewport": 390,
+      "passed_checks": 23
+    },
+    {
+      "route": "/search/?s=شتر",
+      "viewport": 1200,
+      "passed_checks": 17
+    },
+    {
+      "route": "/our-works/",
+      "viewport": 1200,
+      "passed_checks": 17
+    },
+    {
+      "route": "/window-shutters-with-remote-control/",
+      "viewport": 1200,
+      "passed_checks": 16
+    }
+  ],
+  "interaction_coverage": [
+    "Original libraries and fonts loaded",
+    "Visible images loaded",
+    "Search and booking modals open and close",
+    "WhatsApp form URL generated without sending",
+    "Mobile offcanvas opens and closes; submenu toggles",
+    "Hero carousel changes slides",
+    "Four original Swiper instances; navigation works",
+    "Homepage FAQ expands",
+    "Gallery Fancybox lightbox opens",
+    "Search returns 22 results; duplicate original pagination removed"
+  ],
+  "visual_comparisons": {
+    "desktop_width": 1200,
+    "mobile_width": 390,
+    "routes": [
+      "/faq/",
+      "/contact-us/",
+      "/category/blog/",
+      "/about-us/",
+      "/window-shutters-with-remote-control/",
+      "/our-works/",
+      "/",
+      "/how-do-you-choose-the-right-type-of-shutter-for-your-home/",
+      "/privacy-policy/"
+    ],
+    "observations": "Inspected equal-viewport original/replica screenshots. Layout, original content, typography, images and footer match on reviewed templates. Autoplay carousel/Swiper phase differs between independent frames; slide changes verified separately. This is manual sampled visual review, not an all-pixel claim across 63 routes.",
+    "mobile_routes": [
+      "/",
+      "/faq/"
+    ]
+  },
+  "limits": [
+    "Screenshots do not independently measure every animation frame, hover state or every scroll position. Original JS, CSS and AOS parameters are preserved and verified.",
+    "Two upstream archive pages returned database errors and were reconstructed from original archive cards and captured taxonomy/post data.",
+    "Original missing overlay.png and broken /about/ destination retained.",
+    "No WhatsApp message, phone call, live deployment or main branch change performed.",
+    "Review iframe screenshots show a narrow scrollbar/gutter difference that can shift wrapping or vertical positions slightly. Production source/CSS remain unchanged; no claim of pixel identity is made for the HTMLPreview transport."
+  ],
+  "preview_url": "https://htmlpreview.github.io/?https://raw.githubusercontent.com/MAbouzied/najlaashutter-web/replica-static-exact-2026-11-01/wordpress-static/review/index.html?v=4a7529e8f9e5"
+}

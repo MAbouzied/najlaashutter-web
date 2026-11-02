@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "files_compared": 301,
+  "method": "Offline rebuild from captured HTML and Base64 assets only; every output SHA-256 matches."
+}

@@ -30,8 +30,34 @@ loader is not part of the production export.
 - `review/qa.html`: actual browser interaction checks.
 - `qa/source-verification.json`: offline source, asset, content and route checks.
 
-## Current status
+## Capture and verification
 
-Capture and verification are in progress. Do not treat an initial review version
-as final parity sign-off; some resources may still reference their original URL
-until resource capture finishes. No live WordPress or ads deployment was changed.
+The export contains 63 routes and 234 captured original resource files. Offline
+source verification passes with zero errors. A clean rebuild using only captured
+HTML and Base64 resources reproduces all 301 output files byte for byte.
+Browser checks and visual review are recorded in `qa/browser-review.json`.
+
+The static search preserves the captured WordPress result order, excerpts and
+10-result pagination. Forms retain the original WhatsApp destinations.
+
+Two upstream archive pagination URLs returned database errors during capture.
+Their cards were reconstructed using the original archive markup and captured
+WordPress post/taxonomy metadata; raw error responses remain in
+`source/upstream-errors/`. The original missing `overlay.png` remains a local 404.
+The broken original `/about/` footer destination is retained; `/about-us/` works.
+
+## Production export
+
+```sh
+python3 scripts/mirror-wordpress.py build --production
+python3 scripts/verify-replica.py
+```
+
+The default review build disables indexing. `--production` removes that review
+restriction. Upload `wordpress-static/site/` to a separately configured static
+host. Do not use `wrangler.replica.toml` without checking its Worker name: it
+currently references the existing Worker. No live deployment, domain change,
+main-branch merge or ads landing-page change was made by this replica work.
+
+The GitHub HTMLPreview URL is a review transport, separate from the production
+static files. It depends on public GitHub and HTMLPreview availability.

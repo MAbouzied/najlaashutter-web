@@ -1,0 +1,162 @@
+{
+  "success": true,
+  "data": {
+    "summary": {
+      "checked": 3,
+      "ok": 0,
+      "warning": 3,
+      "critical": 0,
+      "unknown": 0
+    },
+    "results": [
+      {
+        "input": "https://najlaashutter.com/",
+        "url": "https://najlaashutter.com/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "render-blocking-insight",
+            "severity": "warning",
+            "message": "Render-blocking requests",
+            "savings_ms": 300
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 100
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 50
+          }
+        ],
+        "final_url": "https://najlaashutter.com/",
+        "strategy": "DESKTOP",
+        "scores": {
+          "performance": 98,
+          "accessibility": 90,
+          "best_practices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "lcp": "1.1 s",
+          "cls": "0.046",
+          "tbt": "60 ms",
+          "fcp": "0.3 s",
+          "speed_index": "0.7 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T11:46:56+00:00",
+        "cached": true
+      },
+      {
+        "input": "https://najlaashutter.com/contact-us/",
+        "url": "https://najlaashutter.com/contact-us/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 70/100",
+            "score": 70
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 1100
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimize main-thread work",
+            "savings_ms": 1100
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "Reduce JavaScript execution time",
+            "savings_ms": 1100
+          }
+        ],
+        "final_url": "https://najlaashutter.com/contact-us/",
+        "strategy": "DESKTOP",
+        "scores": {
+          "performance": 70,
+          "accessibility": 91,
+          "best_practices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "lcp": "0.9 s",
+          "cls": "0.047",
+          "tbt": "1,100 ms",
+          "fcp": "0.4 s",
+          "speed_index": "1.0 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T11:47:01+00:00",
+        "cached": true
+      },
+      {
+        "input": "https://najlaashutter.com/our-works/",
+        "url": "https://najlaashutter.com/our-works/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 82/100",
+            "score": 82
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 450
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 400
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 400
+          }
+        ],
+        "final_url": "https://najlaashutter.com/our-works/",
+        "strategy": "DESKTOP",
+        "scores": {
+          "performance": 82,
+          "accessibility": 91,
+          "best_practices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "lcp": "0.8 s",
+          "cls": "0.008",
+          "tbt": "390 ms",
+          "fcp": "0.4 s",
+          "speed_index": "0.5 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T11:47:02+00:00",
+        "cached": true
+      }
+    ]
+  },
+  "error": null,
+  "notes": null,
+  "business_context": null,
+  "metadata": {
+    "tool_version": "1.26.17",
+    "span_id": "2ce7835b59cefc26"
+  }
+}

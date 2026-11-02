@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-02",
+  "method": "Sites generated real-browser desktop screenshot of private footer component using production CSS",
+  "viewport": {
+    "width": 1200,
+    "height": 750
+  },
+  "result": "Footer visibly rendered; unsolicited autoplay button and white strip absent",
+  "scope": "Desktop footer component only; not a complete mobile or full-site visual pass",
+  "productionCommit": "e4fd2cce538368a9d78c553bc4e7bf45345c5240",
+  "cloudflareBuild": "8c544199-d2a6-443d-a649-463ecbd4a2a7",
+  "buildConclusion": "success"
+}

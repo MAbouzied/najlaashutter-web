@@ -1,0 +1,820 @@
+{
+  "success": true,
+  "data": {
+    "summary": {
+      "checked": 6,
+      "ok": 0,
+      "warning": 6,
+      "critical": 0,
+      "unknown": 0
+    },
+    "results": [
+      {
+        "input": "https://najlaashutter.com/",
+        "url": "https://najlaashutter.com/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 55/100",
+            "score": 55
+          },
+          {
+            "code": "unused-javascript",
+            "severity": "warning",
+            "message": "Reduce unused JavaScript",
+            "savings_ms": 1110
+          },
+          {
+            "code": "render-blocking-insight",
+            "severity": "warning",
+            "message": "Render-blocking requests",
+            "savings_ms": 850
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 600
+          },
+          {
+            "code": "image-delivery-insight",
+            "severity": "warning",
+            "message": "Improve image delivery",
+            "savings_ms": 600
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 600
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 550
+          },
+          {
+            "code": "unused-css-rules",
+            "severity": "warning",
+            "message": "Reduce unused CSS",
+            "savings_ms": 210
+          },
+          {
+            "code": "network-dependency-tree-insight",
+            "severity": "warning",
+            "message": "Network dependency tree"
+          },
+          {
+            "code": "forced-reflow-insight",
+            "severity": "warning",
+            "message": "Forced reflow"
+          },
+          {
+            "code": "total-blocking-time",
+            "severity": "warning",
+            "message": "Total Blocking Time",
+            "display": "590 ms"
+          },
+          {
+            "code": "heading-order",
+            "severity": "warning",
+            "message": "Heading elements are not in a sequentially-descending order"
+          },
+          {
+            "code": "font-display-insight",
+            "severity": "warning",
+            "message": "Font display",
+            "display": "Est savings of 20 ms"
+          },
+          {
+            "code": "interactive",
+            "severity": "warning",
+            "message": "Time to Interactive",
+            "display": "10.0 s"
+          },
+          {
+            "code": "speed-index",
+            "severity": "warning",
+            "message": "Speed Index",
+            "display": "5.6 s"
+          },
+          {
+            "code": "max-potential-fid",
+            "severity": "warning",
+            "message": "Max Potential First Input Delay",
+            "display": "450 ms"
+          },
+          {
+            "code": "unsized-images",
+            "severity": "warning",
+            "message": "Image elements do not have explicit `width` and `height`"
+          },
+          {
+            "code": "skip-link",
+            "severity": "warning",
+            "message": "Skip links are not focusable."
+          },
+          {
+            "code": "lcp-discovery-insight",
+            "severity": "warning",
+            "message": "LCP request discovery"
+          },
+          {
+            "code": "color-contrast",
+            "severity": "warning",
+            "message": "Background and foreground colors do not have a sufficient contrast ratio."
+          },
+          {
+            "code": "largest-contentful-paint",
+            "severity": "warning",
+            "message": "Largest Contentful Paint",
+            "display": "9.9 s"
+          }
+        ],
+        "final_url": "https://najlaashutter.com/",
+        "strategy": "MOBILE",
+        "scores": {
+          "performance": 55,
+          "accessibility": 93,
+          "best_practices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "lcp": "9.9 s",
+          "cls": "0",
+          "tbt": "590 ms",
+          "fcp": "1.7 s",
+          "speed_index": "5.6 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T11:43:23+00:00",
+        "cached": true
+      },
+      {
+        "input": "https://najlaashutter.com/contact-us/",
+        "url": "https://najlaashutter.com/contact-us/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 72/100",
+            "score": 72
+          },
+          {
+            "code": "render-blocking-insight",
+            "severity": "warning",
+            "message": "Render-blocking requests",
+            "savings_ms": 1400
+          },
+          {
+            "code": "unused-javascript",
+            "severity": "warning",
+            "message": "Reduce unused JavaScript",
+            "savings_ms": 1350
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 200
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 200
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 200
+          },
+          {
+            "code": "unused-css-rules",
+            "severity": "warning",
+            "message": "Reduce unused CSS",
+            "savings_ms": 150
+          },
+          {
+            "code": "font-display-insight",
+            "severity": "warning",
+            "message": "Font display",
+            "savings_ms": 50
+          },
+          {
+            "code": "color-contrast",
+            "severity": "warning",
+            "message": "Background and foreground colors do not have a sufficient contrast ratio."
+          },
+          {
+            "code": "interactive",
+            "severity": "warning",
+            "message": "Time to Interactive",
+            "display": "7.7 s"
+          },
+          {
+            "code": "link-name",
+            "severity": "warning",
+            "message": "Links do not have a discernible name"
+          },
+          {
+            "code": "heading-order",
+            "severity": "warning",
+            "message": "Heading elements are not in a sequentially-descending order"
+          },
+          {
+            "code": "unsized-images",
+            "severity": "warning",
+            "message": "Image elements do not have explicit `width` and `height`"
+          },
+          {
+            "code": "total-blocking-time",
+            "severity": "warning",
+            "message": "Total Blocking Time",
+            "display": "220 ms"
+          },
+          {
+            "code": "largest-contentful-paint",
+            "severity": "warning",
+            "message": "Largest Contentful Paint",
+            "display": "7.7 s"
+          },
+          {
+            "code": "lcp-discovery-insight",
+            "severity": "warning",
+            "message": "LCP request discovery"
+          },
+          {
+            "code": "network-dependency-tree-insight",
+            "severity": "warning",
+            "message": "Network dependency tree"
+          },
+          {
+            "code": "forced-reflow-insight",
+            "severity": "warning",
+            "message": "Forced reflow"
+          },
+          {
+            "code": "max-potential-fid",
+            "severity": "warning",
+            "message": "Max Potential First Input Delay",
+            "display": "220 ms"
+          }
+        ],
+        "final_url": "https://najlaashutter.com/contact-us/",
+        "strategy": "MOBILE",
+        "scores": {
+          "performance": 72,
+          "accessibility": 91,
+          "best_practices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "lcp": "7.7 s",
+          "cls": "0",
+          "tbt": "220 ms",
+          "fcp": "1.4 s",
+          "speed_index": "2.5 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T11:43:14+00:00",
+        "cached": true
+      },
+      {
+        "input": "https://najlaashutter.com/category/services/",
+        "url": "https://najlaashutter.com/category/services/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 73/100",
+            "score": 73
+          },
+          {
+            "code": "render-blocking-insight",
+            "severity": "warning",
+            "message": "Render-blocking requests",
+            "savings_ms": 1400
+          },
+          {
+            "code": "unused-javascript",
+            "severity": "warning",
+            "message": "Reduce unused JavaScript",
+            "savings_ms": 1200
+          },
+          {
+            "code": "unused-css-rules",
+            "severity": "warning",
+            "message": "Reduce unused CSS",
+            "savings_ms": 320
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 150
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 150
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 150
+          },
+          {
+            "code": "font-display-insight",
+            "severity": "warning",
+            "message": "Font display",
+            "savings_ms": 50
+          },
+          {
+            "code": "max-potential-fid",
+            "severity": "warning",
+            "message": "Max Potential First Input Delay",
+            "display": "180 ms"
+          },
+          {
+            "code": "image-delivery-insight",
+            "severity": "warning",
+            "message": "Improve image delivery",
+            "display": "Est savings of 64 KiB"
+          },
+          {
+            "code": "interactive",
+            "severity": "warning",
+            "message": "Time to Interactive",
+            "display": "7.3 s"
+          },
+          {
+            "code": "heading-order",
+            "severity": "warning",
+            "message": "Heading elements are not in a sequentially-descending order"
+          },
+          {
+            "code": "color-contrast",
+            "severity": "warning",
+            "message": "Background and foreground colors do not have a sufficient contrast ratio."
+          },
+          {
+            "code": "network-dependency-tree-insight",
+            "severity": "warning",
+            "message": "Network dependency tree"
+          },
+          {
+            "code": "largest-contentful-paint",
+            "severity": "warning",
+            "message": "Largest Contentful Paint",
+            "display": "7.3 s"
+          },
+          {
+            "code": "unsized-images",
+            "severity": "warning",
+            "message": "Image elements do not have explicit `width` and `height`"
+          },
+          {
+            "code": "lcp-discovery-insight",
+            "severity": "warning",
+            "message": "LCP request discovery"
+          }
+        ],
+        "final_url": "https://najlaashutter.com/category/services/",
+        "strategy": "MOBILE",
+        "scores": {
+          "performance": 73,
+          "accessibility": 95,
+          "best_practices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "lcp": "7.3 s",
+          "cls": "0",
+          "tbt": "140 ms",
+          "fcp": "1.4 s",
+          "speed_index": "3.4 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T11:43:14+00:00",
+        "cached": true
+      },
+      {
+        "input": "https://najlaashutter.com/our-works/",
+        "url": "https://najlaashutter.com/our-works/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 63/100",
+            "score": 63
+          },
+          {
+            "code": "render-blocking-insight",
+            "severity": "warning",
+            "message": "Render-blocking requests",
+            "savings_ms": 1400
+          },
+          {
+            "code": "unused-javascript",
+            "severity": "warning",
+            "message": "Reduce unused JavaScript",
+            "savings_ms": 1160
+          },
+          {
+            "code": "image-delivery-insight",
+            "severity": "warning",
+            "message": "Improve image delivery",
+            "savings_ms": 450
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 400
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 400
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 400
+          },
+          {
+            "code": "unused-css-rules",
+            "severity": "warning",
+            "message": "Reduce unused CSS",
+            "savings_ms": 210
+          },
+          {
+            "code": "font-display-insight",
+            "severity": "warning",
+            "message": "Font display",
+            "savings_ms": 50
+          },
+          {
+            "code": "color-contrast",
+            "severity": "warning",
+            "message": "Background and foreground colors do not have a sufficient contrast ratio."
+          },
+          {
+            "code": "total-blocking-time",
+            "severity": "warning",
+            "message": "Total Blocking Time",
+            "display": "400 ms"
+          },
+          {
+            "code": "max-potential-fid",
+            "severity": "warning",
+            "message": "Max Potential First Input Delay",
+            "display": "350 ms"
+          },
+          {
+            "code": "lcp-discovery-insight",
+            "severity": "warning",
+            "message": "LCP request discovery"
+          },
+          {
+            "code": "largest-contentful-paint",
+            "severity": "warning",
+            "message": "Largest Contentful Paint",
+            "display": "8.5 s"
+          },
+          {
+            "code": "network-dependency-tree-insight",
+            "severity": "warning",
+            "message": "Network dependency tree"
+          },
+          {
+            "code": "speed-index",
+            "severity": "warning",
+            "message": "Speed Index",
+            "display": "4.2 s"
+          },
+          {
+            "code": "unsized-images",
+            "severity": "warning",
+            "message": "Image elements do not have explicit `width` and `height`"
+          },
+          {
+            "code": "forced-reflow-insight",
+            "severity": "warning",
+            "message": "Forced reflow"
+          },
+          {
+            "code": "interactive",
+            "severity": "warning",
+            "message": "Time to Interactive",
+            "display": "8.6 s"
+          },
+          {
+            "code": "heading-order",
+            "severity": "warning",
+            "message": "Heading elements are not in a sequentially-descending order"
+          }
+        ],
+        "final_url": "https://najlaashutter.com/our-works/",
+        "strategy": "MOBILE",
+        "scores": {
+          "performance": 63,
+          "accessibility": 95,
+          "best_practices": 100,
+          "seo": 100
+        },
+        "lab": {
+          "lcp": "8.5 s",
+          "cls": "0",
+          "tbt": "400 ms",
+          "fcp": "1.4 s",
+          "speed_index": "4.2 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T11:43:21+00:00",
+        "cached": true
+      },
+      {
+        "input": "https://najlaashutter.com/en/",
+        "url": "https://najlaashutter.com/en/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 64/100",
+            "score": 64
+          },
+          {
+            "code": "low_seo_score",
+            "severity": "warning",
+            "message": "SEO score is 69/100",
+            "score": 69
+          },
+          {
+            "code": "unused-javascript",
+            "severity": "warning",
+            "message": "Reduce unused JavaScript",
+            "savings_ms": 600
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 200
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 200
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 200
+          },
+          {
+            "code": "speed-index",
+            "severity": "warning",
+            "message": "Speed Index",
+            "display": "5.5 s"
+          },
+          {
+            "code": "network-dependency-tree-insight",
+            "severity": "warning",
+            "message": "Network dependency tree"
+          },
+          {
+            "code": "first-contentful-paint",
+            "severity": "warning",
+            "message": "First Contentful Paint",
+            "display": "3.7 s"
+          },
+          {
+            "code": "interactive",
+            "severity": "warning",
+            "message": "Time to Interactive",
+            "display": "5.6 s"
+          },
+          {
+            "code": "max-potential-fid",
+            "severity": "warning",
+            "message": "Max Potential First Input Delay",
+            "display": "270 ms"
+          },
+          {
+            "code": "image-delivery-insight",
+            "severity": "warning",
+            "message": "Improve image delivery",
+            "display": "Est savings of 8 KiB"
+          },
+          {
+            "code": "label-content-name-mismatch",
+            "severity": "warning",
+            "message": "Elements with visible text labels do not have matching accessible names."
+          },
+          {
+            "code": "largest-contentful-paint",
+            "severity": "warning",
+            "message": "Largest Contentful Paint",
+            "display": "5.6 s"
+          },
+          {
+            "code": "total-blocking-time",
+            "severity": "warning",
+            "message": "Total Blocking Time",
+            "display": "220 ms"
+          },
+          {
+            "code": "render-blocking-insight",
+            "severity": "warning",
+            "message": "Render-blocking requests"
+          },
+          {
+            "code": "is-crawlable",
+            "severity": "warning",
+            "message": "Page is blocked from indexing"
+          },
+          {
+            "code": "forced-reflow-insight",
+            "severity": "warning",
+            "message": "Forced reflow"
+          }
+        ],
+        "final_url": "https://najlaashutter.com/en/",
+        "strategy": "MOBILE",
+        "scores": {
+          "performance": 64,
+          "accessibility": 100,
+          "best_practices": 100,
+          "seo": 69
+        },
+        "lab": {
+          "lcp": "5.6 s",
+          "cls": "0",
+          "tbt": "220 ms",
+          "fcp": "3.7 s",
+          "speed_index": "5.5 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T11:43:15+00:00",
+        "cached": true
+      },
+      {
+        "input": "https://najlaashutter.com/window-shutters-jeddah/",
+        "url": "https://najlaashutter.com/window-shutters-jeddah/",
+        "status": "warning",
+        "findings": [
+          {
+            "code": "low_performance_score",
+            "severity": "warning",
+            "message": "Performance score is 63/100",
+            "score": 63
+          },
+          {
+            "code": "low_seo_score",
+            "severity": "warning",
+            "message": "SEO score is 69/100",
+            "score": 69
+          },
+          {
+            "code": "unused-javascript",
+            "severity": "warning",
+            "message": "Reduce unused JavaScript",
+            "savings_ms": 900
+          },
+          {
+            "code": "long-tasks",
+            "severity": "warning",
+            "message": "Avoid long main-thread tasks",
+            "savings_ms": 250
+          },
+          {
+            "code": "mainthread-work-breakdown",
+            "severity": "warning",
+            "message": "Minimizes main-thread work",
+            "savings_ms": 250
+          },
+          {
+            "code": "bootup-time",
+            "severity": "warning",
+            "message": "JavaScript execution time",
+            "savings_ms": 250
+          },
+          {
+            "code": "render-blocking-insight",
+            "severity": "warning",
+            "message": "Render-blocking requests",
+            "savings_ms": 150
+          },
+          {
+            "code": "speed-index",
+            "severity": "warning",
+            "message": "Speed Index",
+            "display": "5.3 s"
+          },
+          {
+            "code": "largest-contentful-paint",
+            "severity": "warning",
+            "message": "Largest Contentful Paint",
+            "display": "5.9 s"
+          },
+          {
+            "code": "is-crawlable",
+            "severity": "warning",
+            "message": "Page is blocked from indexing"
+          },
+          {
+            "code": "image-delivery-insight",
+            "severity": "warning",
+            "message": "Improve image delivery",
+            "display": "Est savings of 8 KiB"
+          },
+          {
+            "code": "forced-reflow-insight",
+            "severity": "warning",
+            "message": "Forced reflow"
+          },
+          {
+            "code": "network-dependency-tree-insight",
+            "severity": "warning",
+            "message": "Network dependency tree"
+          },
+          {
+            "code": "interactive",
+            "severity": "warning",
+            "message": "Time to Interactive",
+            "display": "5.9 s"
+          },
+          {
+            "code": "color-contrast",
+            "severity": "warning",
+            "message": "Background and foreground colors do not have a sufficient contrast ratio."
+          },
+          {
+            "code": "first-contentful-paint",
+            "severity": "warning",
+            "message": "First Contentful Paint",
+            "display": "3.6 s"
+          },
+          {
+            "code": "label-content-name-mismatch",
+            "severity": "warning",
+            "message": "Elements with visible text labels do not have matching accessible names."
+          },
+          {
+            "code": "max-potential-fid",
+            "severity": "warning",
+            "message": "Max Potential First Input Delay",
+            "display": "290 ms"
+          },
+          {
+            "code": "total-blocking-time",
+            "severity": "warning",
+            "message": "Total Blocking Time",
+            "display": "240 ms"
+          }
+        ],
+        "final_url": "https://najlaashutter.com/window-shutters-jeddah/",
+        "strategy": "MOBILE",
+        "scores": {
+          "performance": 63,
+          "accessibility": 96,
+          "best_practices": 100,
+          "seo": 69
+        },
+        "lab": {
+          "lcp": "5.9 s",
+          "cls": "0",
+          "tbt": "240 ms",
+          "fcp": "3.6 s",
+          "speed_index": "5.3 s"
+        },
+        "field": null,
+        "checked_at": "2026-11-02T11:43:15+00:00",
+        "cached": true
+      }
+    ]
+  },
+  "error": null,
+  "notes": null,
+  "business_context": null,
+  "metadata": {
+    "tool_version": "1.26.17",
+    "span_id": "167c7a909499c7a6"
+  }
+}

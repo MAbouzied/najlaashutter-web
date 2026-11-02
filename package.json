@@ -15,7 +15,8 @@
     "review:overflow": "node scripts/verify-mobile-overflow.mjs",
     "astro": "astro",
     "build:replica": "python3 scripts/mirror-wordpress.py build",
-    "verify:replica": "python3 scripts/verify-replica.py"
+    "verify:replica": "python3 scripts/verify-replica.py",
+    "build:replica:fixed": "python3 scripts/mirror-wordpress.py build && python3 scripts/verify-replica.py && python3 scripts/improve-replica.py && python3 scripts/verify-fixes.py && node scripts/test-contact-fixes.mjs"
   },
   "devDependencies": {
     "playwright": "^1.55.0",

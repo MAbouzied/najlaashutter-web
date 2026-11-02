@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "checks": 11,
+  "scope": "Actual repair runtime with form/clipboard/window adapters; no messages sent and no real browser claim."
+}

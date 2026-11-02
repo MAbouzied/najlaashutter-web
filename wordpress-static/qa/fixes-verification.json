@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "checks": {
+    "pages": 63,
+    "contact_forms": 123
+  },
+  "verified_review_cards": 3,
+  "errors": [],
+  "browser_qa": "Native browser unavailable; no new visual sign-off claimed."
+}

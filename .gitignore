@@ -28,3 +28,5 @@ wordpress-static/site/
 wordpress-static/source/assets/*
 !wordpress-static/source/assets/*.b64
 scripts/__pycache__/
+
+wordpress-static/fixed-site/

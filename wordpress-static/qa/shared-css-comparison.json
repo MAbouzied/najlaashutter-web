@@ -1,0 +1,73 @@
+{
+  "note": "Source transformation comparison only; not computed-style or browser validation.",
+  "stylesheets": [
+    {
+      "file": "cf28d53979fba25db19dd500.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "7636a69486e8cf7bb3f844b7.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "5d59a4af98a4e5f12aa8d566.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "4762f17e3c1de5b4bc88fd9a.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "84f433fe8738d06e728cb37d.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "8a53705aa7c0a63985524131.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "bc8e939d689174d0f339c0d6.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "86bf8aa9a02ef9e86401c5d9.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "4873da0656d236792ef8f86e.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "cdfcff214a863c3f6b6416ec.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "bc511f608ca993a64425d15a.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "4558354277b08e395c01643d.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "a601722e0232d933a4ad1dcc.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "8d53c11dfbd5645ec2381816.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "71348fd1a737947cfeb477e4.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "e4c016988ac4b62d72571309.css",
+      "equivalent_after_normalization": true
+    },
+    {
+      "file": "91189c85fdc7f9545fe9f7c5.css",
+      "equivalent_after_normalization": true
+    }
+  ]
+}

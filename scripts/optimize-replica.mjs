@@ -21,8 +21,9 @@ for(const file of walk(root)) {
  if(file.endsWith('.html'))s=s.replace(/<img\b[^>]*>/g,tag=> /pw-hgal-img/.test(tag)&&!tag.includes('loading=')?tag.replace('<img','<img loading="lazy" decoding="async"'):tag);
  fs.writeFileSync(file,s);
 }
-// Reserve intrinsic image space and provide responsive versions of first content
-// images. Existing CSS and explicit dimensions continue to control layout.
+// Preserve captured image geometry. Adding HTML height to a width:100% image
+// can stretch it: footer logos use w-100 without Bootstrap img-fluid.
+// Responsive variants change only the image source candidates, not geometry.
 const imageInfo=new Map();
 for(const file of walk(root).filter(f=>f.endsWith('.html'))) {
  let text=fs.readFileSync(file,'utf8');
@@ -34,7 +35,6 @@ for(const file of walk(root).filter(f=>f.endsWith('.html'))) {
   if(!fs.existsSync(filePath))continue;
   if(!imageInfo.has(src)) {try {imageInfo.set(src,await sharp(filePath).metadata());}catch {imageInfo.set(src,{});}}
   const info=imageInfo.get(src);if(!info.width||!info.height)continue;
-  if(!/\bwidth=/.test(tag)&&!/\bheight=/.test(tag))tag=tag.replace('<img',`<img width="${info.width}" height="${info.height}"`);
   if(/fetchpriority="high"/.test(tag)&&!tag.includes('srcset=')&&info.width>768) {
    const sizes=[];
    for(const width of [480,768,1200].filter(w=>w<info.width)) {

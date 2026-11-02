@@ -50,5 +50,8 @@
     "No interactive click, animation or transition sign-off: native browser startup unavailable",
     "Screenshots do not prove speed improvement"
   ],
-  "production_changed": false
+  "production_changed": false,
+  "release_signoff": "WITHDRAWN: initial-viewport screenshots missed footer image distortion",
+  "known_missed_regression": "Automatically added image heights stretched responsive footer logos in 63 pages",
+  "full_page_visual_review": "NOT COMPLETED"
 }

@@ -41,6 +41,11 @@ for f in D.rglob('index.html'):
  if route.startswith(('/tag/','/author/','/search/')) and 'noindex' not in s:errors.append('Utility became indexable '+route)
  if '--staging' not in sys.argv and route in ['/category/services/','/category/blog/','/category/blog/page/2/'] and 'noindex' in s:errors.append('Archive unexpectedly noindex '+route)
  if 'pause-motion' in s:errors.append('Removed button returned '+route)
+ footer=d.find(ident='footer')
+ if footer:
+  logos=[n for n in d.nodes if n['tag']=='img' and footer['start']<n['start']<footer['end'] and 'bg-light' in n['attrs'].get('class','') and 'w-100' in n['attrs'].get('class','')]
+  for logo in logos:
+   if 'height' in logo['attrs'] or 'width' in logo['attrs']:errors.append('Footer logo has added fixed dimensions '+route)
 if len(set(descriptions.values()))!=len(descriptions):errors.append('Duplicate blog descriptions')
 result={'status':'passed' if not errors else 'failed','checks':counts,'errors':errors,'address_limit':'Locality, region and country only. Street/unit not supplied or invented.','browser_click_test':'blocked: native browser sandbox startup failure','rich_results_test':'not run; local graph checks only'}
 (R/'wordpress-static/qa/performance-seo-verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print(json.dumps(result,ensure_ascii=False,indent=2));sys.exit(bool(errors))

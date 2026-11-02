@@ -1,0 +1,1270 @@
+{
+  "affected_pages": 63,
+  "image_classes": {
+    "pw-hgal-img w-100 rounded shadow-sm": 8,
+    "": 1,
+    "w-100 p-2 bg-light rounded shadow": 126
+  },
+  "pages": [
+    {
+      "route": "/",
+      "images": [
+        {
+          "index": 14,
+          "class": "pw-hgal-img w-100 rounded shadow-sm",
+          "width": "1038",
+          "height": "1280",
+          "src": "/mirror-assets/8a828b5ab396-858a2995cdecb96e883c0ef9.webp"
+        },
+        {
+          "index": 15,
+          "class": "pw-hgal-img w-100 rounded shadow-sm",
+          "width": "1038",
+          "height": "1280",
+          "src": "/mirror-assets/318031863cf9-22a9ce49789abe6377616136.jpeg"
+        },
+        {
+          "index": 16,
+          "class": "pw-hgal-img w-100 rounded shadow-sm",
+          "width": "1038",
+          "height": "1280",
+          "src": "/mirror-assets/93b0d0216ae6-c7b666c9b54c73686ce972d8.webp"
+        },
+        {
+          "index": 17,
+          "class": "pw-hgal-img w-100 rounded shadow-sm",
+          "width": "1038",
+          "height": "1280",
+          "src": "/mirror-assets/b2d9069bbf7e-9f8fef66ade886f50065ac2b.webp"
+        },
+        {
+          "index": 18,
+          "class": "pw-hgal-img w-100 rounded shadow-sm",
+          "width": "1038",
+          "height": "1280",
+          "src": "/mirror-assets/a6629bb50e4e-23ad8266b687c90be92ace07.webp"
+        },
+        {
+          "index": 19,
+          "class": "pw-hgal-img w-100 rounded shadow-sm",
+          "width": "1038",
+          "height": "1280",
+          "src": "/mirror-assets/568cdd55852c-caf488cfd29d7845e47e12bb.webp"
+        },
+        {
+          "index": 20,
+          "class": "pw-hgal-img w-100 rounded shadow-sm",
+          "width": "1038",
+          "height": "1280",
+          "src": "/mirror-assets/0cca50036a52-063d4942f233655bb227c532.webp"
+        },
+        {
+          "index": 21,
+          "class": "pw-hgal-img w-100 rounded shadow-sm",
+          "width": "1038",
+          "height": "1280",
+          "src": "/mirror-assets/8ebf767474c9-4617d71fac619b3063d5beba.webp"
+        },
+        {
+          "index": 22,
+          "class": null,
+          "width": "549",
+          "height": "613",
+          "src": "/mirror-assets/ea3e96258d28-3b84155b7bcc59817f74cee9.webp"
+        },
+        {
+          "index": 30,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 31,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/contact-us/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/شبك-النامس-والحشرات/",
+      "images": [
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/about-us/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/interior-window-shutters/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/شرائح-شتر-النوافذ-في-جدة/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/slide-2/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/شتر-النوافذ-ومقاومة-الغبار/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/الدليل-الشامل-لأفضل-أنواع-الشتر-في-جدة-2/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/أفضل-أنواع-شتر-النوافذ-في-جدة-دليل-الأس/",
+      "images": [
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/external-window-shutters/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/manual-shutter/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/faq/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/slide/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/privacy-policy/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/الدقة-في-العمل/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/how-does-the-shutter-help-improve-energy-efficiency/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/benefits-of-installing-electric-shutters-in-modern-homes/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/الماكينة-الكهربائية-لشتر-النوافذ-سر-ا/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/our-works/",
+      "images": [
+        {
+          "index": 11,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 12,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/the-importance-of-window-screens-in-protecting-the-home/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/window-shutters-with-remote-control/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/how-do-you-choose-the-right-type-of-shutter-for-your-home/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/أفضل-شركة-تركيب-شتر-في-جدة-رول-شتر-للنو/",
+      "images": [
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/smart-shutter-windows/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/search/",
+      "images": [
+        {
+          "index": 12,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 13,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/شبك-النوافذ/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/author/admin_23hgtr/",
+      "images": [
+        {
+          "index": 2,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/author/pw-admin_uydw1x6s/",
+      "images": [
+        {
+          "index": 2,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شبك-النامس-للنوافذ/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/نوافذ-الشتر/",
+      "images": [
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/حماية-من-الحشرات/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/تركيب-شبك-النامس-في-جدة/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شتر-جدة/",
+      "images": [
+        {
+          "index": 6,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 7,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/shutter/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/حامي-الحشرات/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شتر-شبابيك/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شتر-رول/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شتر/",
+      "images": [
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 6,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/نوافذ-شتر/",
+      "images": [
+        {
+          "index": 7,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 8,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شبك-النامس/",
+      "images": [
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/أسعار-شتر-النوافذ-بجدة/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شبك-نامس/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/جدة/",
+      "images": [
+        {
+          "index": 9,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 10,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/تركيب-شتر-جدة/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شتر-مودرن/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/أشباك-النامس/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شتر-نوافذ/",
+      "images": [
+        {
+          "index": 9,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 10,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شترات-جدة/",
+      "images": [
+        {
+          "index": 6,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 7,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شبك/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شتر-نوافذ-جدة/",
+      "images": [
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شتر-أبواب/",
+      "images": [
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 6,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شتر-حديث/",
+      "images": [
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 6,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/ستائر-شتر/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شترات/",
+      "images": [
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 6,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شتر-شبابيك-في-جدة/",
+      "images": [
+        {
+          "index": 3,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/شتر-كهربائي/",
+      "images": [
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/نجلاء-للشتر/",
+      "images": [
+        {
+          "index": 12,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 13,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/tag/نجلاء-للشتر/page/2/",
+      "images": [
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/category/services/",
+      "images": [
+        {
+          "index": 7,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 8,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/category/slider/",
+      "images": [
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 6,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/category/blog/",
+      "images": [
+        {
+          "index": 12,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 13,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    },
+    {
+      "route": "/category/blog/page/2/",
+      "images": [
+        {
+          "index": 4,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        },
+        {
+          "index": 5,
+          "class": "w-100 p-2 bg-light rounded shadow",
+          "width": "200",
+          "height": "184",
+          "src": "/mirror-assets/dadb0318a1b0-8fc2280707d32e4675870cc0.png"
+        }
+      ]
+    }
+  ]
+}

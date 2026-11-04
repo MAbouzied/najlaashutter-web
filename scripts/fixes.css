@@ -34,10 +34,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible 
 .carousel-caption .animate__animated{animation:none!important;opacity:1!important;}
 h1,h2,h3{font-family:"Noto Kufi Arabic",sans-serif;}
 
-/* Follow-up repairs: pending build and visual review before publication. */
+/* Header, mobile disclosure and skip-link repairs. */
 #pw-header .nav-logo.naj {margin-top:0;margin-bottom:0;max-width:72px;height:auto;}
 .pw-side-menu .menu-item-has-children {position:relative;}
 .pw-side-menu .menu-item-has-children>.ox-btn {position:absolute;inset-inline-end:5px;inset-block-start:5px;display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;cursor:pointer;}
 .pw-side-menu .menu-item-has-children>a {padding-inline-end:44px;min-height:44px;display:flex;align-items:center;}
 .pw-side-menu .ox-btn:focus-visible {outline:3px solid #0969b5;outline-offset:2px;}
 .skip-content-target {scroll-margin-top:7rem;}
+
+@media (max-width: 991.98px) {
+  .pw-logo img { max-width: 70px; height: auto; }
+}

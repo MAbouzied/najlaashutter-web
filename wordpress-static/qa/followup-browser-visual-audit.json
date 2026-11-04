@@ -1,0 +1,867 @@
+{
+  "status": "browser_visual_review_completed_private_preview_ready",
+  "routes": 67,
+  "viewports": {
+    "desktop": "1363x936",
+    "mobile": "390x844 same-origin iframe; responsive layout, not touch-device emulation",
+    "additional": [
+      768,
+      991
+    ]
+  },
+  "capture_counts": {
+    "desktop": 206,
+    "mobile": 364
+  },
+  "coverage": [
+    {
+      "i": 0,
+      "route": "/",
+      "mode": "desktop",
+      "frames": 10
+    },
+    {
+      "i": 1,
+      "route": "/about-us/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 2,
+      "route": "/about/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 3,
+      "route": "/author/admin_23hgtr/",
+      "mode": "desktop",
+      "frames": 1
+    },
+    {
+      "i": 4,
+      "route": "/author/pw-admin_uydw1x6s/",
+      "mode": "desktop",
+      "frames": 1
+    },
+    {
+      "i": 5,
+      "route": "/benefits-of-installing-electric-shutters-in-modern-homes/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 6,
+      "route": "/category/blog/",
+      "mode": "desktop",
+      "frames": 5
+    },
+    {
+      "i": 7,
+      "route": "/category/blog/page/2/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 8,
+      "route": "/category/services/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 9,
+      "route": "/category/slider/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 10,
+      "route": "/contact-us/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 11,
+      "route": "/en/",
+      "mode": "desktop",
+      "frames": 5
+    },
+    {
+      "i": 12,
+      "route": "/external-window-shutters/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 13,
+      "route": "/faq/",
+      "mode": "desktop",
+      "frames": 4
+    },
+    {
+      "i": 14,
+      "route": "/how-do-you-choose-the-right-type-of-shutter-for-your-home/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 15,
+      "route": "/how-does-the-shutter-help-improve-energy-efficiency/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 16,
+      "route": "/interior-window-shutters/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 17,
+      "route": "/manual-shutter/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 18,
+      "route": "/our-works/",
+      "mode": "desktop",
+      "frames": 4
+    },
+    {
+      "i": 19,
+      "route": "/privacy-policy/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 20,
+      "route": "/search/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 21,
+      "route": "/slide-2/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 22,
+      "route": "/slide/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 23,
+      "route": "/smart-shutter-windows/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 24,
+      "route": "/tag/shutter/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 25,
+      "route": "/tag/أسعار-شتر-النوافذ-بجدة/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 26,
+      "route": "/tag/أشباك-النامس/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 27,
+      "route": "/tag/تركيب-شبك-النامس-في-جدة/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 28,
+      "route": "/tag/تركيب-شتر-جدة/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 29,
+      "route": "/tag/جدة/",
+      "mode": "desktop",
+      "frames": 4
+    },
+    {
+      "i": 30,
+      "route": "/tag/حامي-الحشرات/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 31,
+      "route": "/tag/حماية-من-الحشرات/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 32,
+      "route": "/tag/ستائر-شتر/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 33,
+      "route": "/tag/شبك-النامس-للنوافذ/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 34,
+      "route": "/tag/شبك-النامس/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 35,
+      "route": "/tag/شبك-نامس/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 36,
+      "route": "/tag/شبك/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 37,
+      "route": "/tag/شتر-أبواب/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 38,
+      "route": "/tag/شتر-جدة/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 39,
+      "route": "/tag/شتر-حديث/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 40,
+      "route": "/tag/شتر-رول/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 41,
+      "route": "/tag/شتر-شبابيك-في-جدة/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 42,
+      "route": "/tag/شتر-شبابيك/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 43,
+      "route": "/tag/شتر-كهربائي/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 44,
+      "route": "/tag/شتر-مودرن/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 45,
+      "route": "/tag/شتر-نوافذ-جدة/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 46,
+      "route": "/tag/شتر-نوافذ/",
+      "mode": "desktop",
+      "frames": 4
+    },
+    {
+      "i": 47,
+      "route": "/tag/شتر/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 48,
+      "route": "/tag/شترات-جدة/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 49,
+      "route": "/tag/شترات/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 50,
+      "route": "/tag/نجلاء-للشتر/",
+      "mode": "desktop",
+      "frames": 5
+    },
+    {
+      "i": 51,
+      "route": "/tag/نجلاء-للشتر/page/2/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 52,
+      "route": "/tag/نوافذ-الشتر/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 53,
+      "route": "/tag/نوافذ-شتر/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 54,
+      "route": "/the-importance-of-window-screens-in-protecting-the-home/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 55,
+      "route": "/window-shutters-jeddah/",
+      "mode": "desktop",
+      "frames": 9
+    },
+    {
+      "i": 56,
+      "route": "/window-shutters-with-remote-control/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 57,
+      "route": "/أفضل-أنواع-شتر-النوافذ-في-جدة-دليل-الأس/",
+      "mode": "desktop",
+      "frames": 8
+    },
+    {
+      "i": 58,
+      "route": "/أفضل-شركة-تركيب-شتر-في-جدة-رول-شتر-للنو/",
+      "mode": "desktop",
+      "frames": 6
+    },
+    {
+      "i": 59,
+      "route": "/الدقة-في-العمل/",
+      "mode": "desktop",
+      "frames": 5
+    },
+    {
+      "i": 60,
+      "route": "/الدليل-الشامل-لأفضل-أنواع-الشتر-في-جدة-2/",
+      "mode": "desktop",
+      "frames": 7
+    },
+    {
+      "i": 61,
+      "route": "/الماكينة-الكهربائية-لشتر-النوافذ-سر-ا/",
+      "mode": "desktop",
+      "frames": 3
+    },
+    {
+      "i": 62,
+      "route": "/شبك-النامس-والحشرات/",
+      "mode": "desktop",
+      "frames": 5
+    },
+    {
+      "i": 63,
+      "route": "/شبك-النوافذ/",
+      "mode": "desktop",
+      "frames": 2
+    },
+    {
+      "i": 64,
+      "route": "/شتر-النوافذ-ومقاومة-الغبار/",
+      "mode": "desktop",
+      "frames": 4
+    },
+    {
+      "i": 65,
+      "route": "/شرائح-شتر-النوافذ-في-جدة/",
+      "mode": "desktop",
+      "frames": 4
+    },
+    {
+      "i": 66,
+      "route": "/404.html",
+      "mode": "desktop",
+      "frames": 1
+    },
+    {
+      "i": 0,
+      "route": "/",
+      "mode": "mobile",
+      "frames": 13
+    },
+    {
+      "i": 1,
+      "route": "/about-us/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 2,
+      "route": "/about/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 3,
+      "route": "/author/admin_23hgtr/",
+      "mode": "mobile",
+      "frames": 3
+    },
+    {
+      "i": 4,
+      "route": "/author/pw-admin_uydw1x6s/",
+      "mode": "mobile",
+      "frames": 3
+    },
+    {
+      "i": 5,
+      "route": "/benefits-of-installing-electric-shutters-in-modern-homes/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 6,
+      "route": "/category/blog/",
+      "mode": "mobile",
+      "frames": 7
+    },
+    {
+      "i": 7,
+      "route": "/category/blog/page/2/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 8,
+      "route": "/category/services/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 9,
+      "route": "/category/slider/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 10,
+      "route": "/contact-us/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 11,
+      "route": "/en/",
+      "mode": "mobile",
+      "frames": 8
+    },
+    {
+      "i": 12,
+      "route": "/external-window-shutters/",
+      "mode": "mobile",
+      "frames": 6
+    },
+    {
+      "i": 13,
+      "route": "/faq/",
+      "mode": "mobile",
+      "frames": 6
+    },
+    {
+      "i": 14,
+      "route": "/how-do-you-choose-the-right-type-of-shutter-for-your-home/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 15,
+      "route": "/how-does-the-shutter-help-improve-energy-efficiency/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 16,
+      "route": "/interior-window-shutters/",
+      "mode": "mobile",
+      "frames": 6
+    },
+    {
+      "i": 17,
+      "route": "/manual-shutter/",
+      "mode": "mobile",
+      "frames": 6
+    },
+    {
+      "i": 18,
+      "route": "/our-works/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 19,
+      "route": "/privacy-policy/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 20,
+      "route": "/search/",
+      "mode": "mobile",
+      "frames": 3
+    },
+    {
+      "i": 21,
+      "route": "/slide-2/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 22,
+      "route": "/slide/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 23,
+      "route": "/smart-shutter-windows/",
+      "mode": "mobile",
+      "frames": 6
+    },
+    {
+      "i": 24,
+      "route": "/tag/shutter/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 25,
+      "route": "/tag/أسعار-شتر-النوافذ-بجدة/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 26,
+      "route": "/tag/أشباك-النامس/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 27,
+      "route": "/tag/تركيب-شبك-النامس-في-جدة/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 28,
+      "route": "/tag/تركيب-شتر-جدة/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 29,
+      "route": "/tag/جدة/",
+      "mode": "mobile",
+      "frames": 6
+    },
+    {
+      "i": 30,
+      "route": "/tag/حامي-الحشرات/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 31,
+      "route": "/tag/حماية-من-الحشرات/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 32,
+      "route": "/tag/ستائر-شتر/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 33,
+      "route": "/tag/شبك-النامس-للنوافذ/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 34,
+      "route": "/tag/شبك-النامس/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 35,
+      "route": "/tag/شبك-نامس/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 36,
+      "route": "/tag/شبك/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 37,
+      "route": "/tag/شتر-أبواب/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 38,
+      "route": "/tag/شتر-جدة/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 39,
+      "route": "/tag/شتر-حديث/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 40,
+      "route": "/tag/شتر-رول/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 41,
+      "route": "/tag/شتر-شبابيك-في-جدة/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 42,
+      "route": "/tag/شتر-شبابيك/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 43,
+      "route": "/tag/شتر-كهربائي/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 44,
+      "route": "/tag/شتر-مودرن/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 45,
+      "route": "/tag/شتر-نوافذ-جدة/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 46,
+      "route": "/tag/شتر-نوافذ/",
+      "mode": "mobile",
+      "frames": 6
+    },
+    {
+      "i": 47,
+      "route": "/tag/شتر/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 48,
+      "route": "/tag/شترات-جدة/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 49,
+      "route": "/tag/شترات/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 50,
+      "route": "/tag/نجلاء-للشتر/",
+      "mode": "mobile",
+      "frames": 7
+    },
+    {
+      "i": 51,
+      "route": "/tag/نجلاء-للشتر/page/2/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 52,
+      "route": "/tag/نوافذ-الشتر/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 53,
+      "route": "/tag/نوافذ-شتر/",
+      "mode": "mobile",
+      "frames": 6
+    },
+    {
+      "i": 54,
+      "route": "/the-importance-of-window-screens-in-protecting-the-home/",
+      "mode": "mobile",
+      "frames": 5
+    },
+    {
+      "i": 55,
+      "route": "/window-shutters-jeddah/",
+      "mode": "mobile",
+      "frames": 12
+    },
+    {
+      "i": 56,
+      "route": "/window-shutters-with-remote-control/",
+      "mode": "mobile",
+      "frames": 6
+    },
+    {
+      "i": 57,
+      "route": "/أفضل-أنواع-شتر-النوافذ-في-جدة-دليل-الأس/",
+      "mode": "mobile",
+      "frames": 13
+    },
+    {
+      "i": 58,
+      "route": "/أفضل-شركة-تركيب-شتر-في-جدة-رول-شتر-للنو/",
+      "mode": "mobile",
+      "frames": 11
+    },
+    {
+      "i": 59,
+      "route": "/الدقة-في-العمل/",
+      "mode": "mobile",
+      "frames": 9
+    },
+    {
+      "i": 60,
+      "route": "/الدليل-الشامل-لأفضل-أنواع-الشتر-في-جدة-2/",
+      "mode": "mobile",
+      "frames": 13
+    },
+    {
+      "i": 61,
+      "route": "/الماكينة-الكهربائية-لشتر-النوافذ-سر-ا/",
+      "mode": "mobile",
+      "frames": 6
+    },
+    {
+      "i": 62,
+      "route": "/شبك-النامس-والحشرات/",
+      "mode": "mobile",
+      "frames": 7
+    },
+    {
+      "i": 63,
+      "route": "/شبك-النوافذ/",
+      "mode": "mobile",
+      "frames": 4
+    },
+    {
+      "i": 64,
+      "route": "/شتر-النوافذ-ومقاومة-الغبار/",
+      "mode": "mobile",
+      "frames": 7
+    },
+    {
+      "i": 65,
+      "route": "/شرائح-شتر-النوافذ-في-جدة/",
+      "mode": "mobile",
+      "frames": 8
+    },
+    {
+      "i": 66,
+      "route": "/404.html",
+      "mode": "mobile",
+      "frames": 1
+    }
+  ],
+  "checks": {
+    "build": "passed",
+    "mobile_disclosure": "44x44; click, Enter, Space and child navigation passed",
+    "skip_links": "home, about-us and both author archives: local hash, unique target and focused content passed",
+    "author_archives": "both visually reviewed through footer; blog link navigation passed",
+    "tablet_logo": "991px oversized 200px image found and fixed to70px; visually rechecked at768 and991",
+    "footer": "logo proportions and columns visually inspected across all routes; AOS transitions retained"
+  },
+  "limitations": [
+    "Private review has indexing disabled intentionally. Production metadata tested in build output separately.",
+    "No new Lighthouse score or public-network Core Web Vitals measurement. Local browser tool-inclusive navigation observations are not a speed benchmark.",
+    "Not a new all-route side-by-side comparison against live WordPress."
+  ],
+  "evidence": [
+    {
+      "file": "followup-evidence/d3-v0.jpg",
+      "sha256": "7c2fbf36bf933e88c34e3538f2f67f398a2a6ca0d994946b1e5576fb71a6a947"
+    },
+    {
+      "file": "followup-evidence/footer-desktop-fixed.jpg",
+      "sha256": "35b825e3688c795415ee591d9b1d810ff87b95d03bddb1e49137debf8e035992"
+    },
+    {
+      "file": "followup-evidence/header-991-fixed.jpg",
+      "sha256": "211f7048449dc6edf5f97ac275bfe402d1f964722ee7a8471c27710c631895ea"
+    },
+    {
+      "file": "followup-evidence/header-desktop-fixed.jpg",
+      "sha256": "8c2dccb41959cfeb4e316f49306073bfa2e2a087f52a7568677b0b7927160d5b"
+    },
+    {
+      "file": "followup-evidence/m1-v4.jpg",
+      "sha256": "fc1db6e0d15d4b59e0771c7cd53491d65bc9208a363570c11fb4f2f817c097e1"
+    },
+    {
+      "file": "followup-evidence/mobile-menu.jpg",
+      "sha256": "f67ffecfdf3cf464df0acb416141f6ba1288980f107892182a2efad386df3adb"
+    }
+  ],
+  "private_preview": {
+    "url": "https://najlaa-shutter-review.mohamed-abouzied1.chatgpt.site",
+    "source_commit": "e7c24cbd727020b5fb32ff7bb1bc7e5ed8f2e3f2",
+    "deployment_status": "succeeded",
+    "browser_hosted_check": "Owner-private login gate seen. Full visual QA used identical built local output; hosted site content not inspected past authentication."
+  }
+}

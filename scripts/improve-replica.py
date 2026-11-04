@@ -24,6 +24,43 @@ def service_body(title,intro,check):
 
 PRIVACY='''<div class="service-details"><h2>بيانات التواصل</h2><p>تحتوي نماذج الموقع على الاسم ورسالة الاستفسار. عند اختيار الإرسال، يفتح الموقع رابطًا إلى واتساب يتضمن البيانات التي أدخلتها وعنوان الصفحة. يمكنك مراجعة الرسالة داخل واتساب قبل إرسالها. يخضع استخدام واتساب لسياسة الخدمة الخاصة به.</p><h2>لماذا نستخدم البيانات؟</h2><p>تُستخدم البيانات التي ترسلها للتواصل بشأن طلبك والاستفسار عن الخدمة في جدة أو مكة. لا ترسل بيانات دفع أو وثائق شخصية حساسة داخل رسالة الاستفسار.</p><h2>الخدمات الخارجية والقياس</h2><p>روابط خرائط جوجل وواتساب والبريد تفتح خدمات خارجية لها سياساتها الخاصة. قد تستخدم نسخة الموقع العامة أدوات لقياس الزيارات والتفاعل. </p><h2>صور الأعمال</h2><p>إذا أردت إرسال صور لتوضيح المقاسات أو موضع التركيب، تجنب ظهور الأشخاص أو المستندات أو المعلومات الخاصة في الصورة.</p><h2>الاستفسار عن بياناتك</h2><p>للاستفسار عن المعلومات التي أرسلتها أو طلب تحديثها أو حذفها، تواصل عبر <a href="mailto:info@najlaashutter.com">info@najlaashutter.com</a> أو رقم التواصل <a href="tel:+966535344170" dir="ltr">+966 535 344 170</a>.</p></div>'''
 
+
+def repair_skip_link(s):
+ d=m.Document(s)
+ links=[n for n in d.nodes if n['tag']=='a' and 'skip-link' in n['attrs'].get('class','').split()]
+ if not links:return s
+ changes=[]
+ target=d.find(ident='content') or d.find(tag='main')
+ target_id='content'
+ if target:
+  attrs=dict(target['attrs']);target_id=attrs.get('id') or 'content'
+  attrs['id']=target_id
+  attrs.setdefault('tabindex','-1')
+  classes=attrs.get('class','').split()
+  if 'skip-content-target' not in classes:classes.append('skip-content-target')
+  attrs['class']=' '.join(classes)
+  tag='<'+target['tag']+' '+ ' '.join(k if v is None else k+'="'+html.escape(str(v),quote=True)+'"' for k,v in attrs.items())+'>'
+  changes.append((target['start'],target['open_end'],tag))
+ else:
+  header=d.find(tag='header',ident='pw-header')
+  if not header:return s
+  changes.append((header['end'],header['end'],'<div id="content" class="skip-content-target" tabindex="-1"></div>'))
+ for link in links:
+  attrs={**link['attrs'],'href':'#'+target_id}
+  tag='<a '+' '.join(k if v is None else k+'="'+html.escape(str(v),quote=True)+'"' for k,v in attrs.items())+'>تخطَّ إلى المحتوى</a>'
+  changes.append((link['start'],link['end'],tag))
+ return change(s,changes)
+
+def repair_author_empty_state(s,route):
+ if route not in ['/author/admin_23hgtr/','/author/pw-admin_uydw1x6s/']:return s
+ d=m.Document(s)
+ main=d.find(tag='main',cls='pw-author')
+ header=d.find(cls='author-header')
+ title=d.find(tag='h1',cls='author-title')
+ if not main or not header or not title or d.find(tag='article'):return s
+ empty='<div class="author-empty-state bg-white rounded p-4 my-3"><p>لا توجد مقالات معروضة في هذا الأرشيف حاليًا. يمكنك تصفح جميع المقالات في المدونة.</p><a class="pw-btn btn-main d-inline-block" href="/category/blog/">تصفح المدونة</a></div>'
+ return change(s,[(title['open_end'],title['close_start'],'أرشيف الكاتب'),(header['end'],header['end'],empty)])
+
 def transform(s,route,production):
  # Remove broken inline handlers before adding one shared implementation.
  d=m.Document(s);changes=[]
@@ -137,6 +174,8 @@ def transform(s,route,production):
    needle='/mirror-assets/0e772b8af647ae615cb30380.jpeg';last=block.rfind(needle)
    if last>=0:block=block[:last]+block[last:].replace(needle,'/mirror-assets/faa36f5cab724efc624d8a65.jpg',1)
    s=s[:mobile['start']]+block+s[mobile['end']:]
+ s=repair_author_empty_state(s,route)
+ s=repair_skip_link(s)
  # Page metadata and explicit staging indexing.
  d=m.Document(s);title=m.plain(d.inner(d.find(tag='h1'))) or m.plain(d.inner(d.find(tag='title')))
  if route=='/':title='شتر النوافذ في جدة ومكة | نجلاء شتر'
